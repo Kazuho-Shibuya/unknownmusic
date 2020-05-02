@@ -1,0 +1,112 @@
+@import "bootstrap";
+
+/* universal */
+// body {
+//   overflow: hidden;
+// }
+
+.img-layout {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+label {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.form_control {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+//ボタンスタイル
+.btn-style {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  border: solid 2px white;
+  border-radius: 3px;
+  transition: 0.4s;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+
+/* errors */
+
+.error_explanation {
+  color: red;
+  width: 100%;
+  ul {
+    color: red;
+  }
+}
+
+/* header */
+
+.logo {
+  font-size: 1.7rem;
+  color: white;
+  letter-spacing: -1px;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: none;
+    color: #ca046e;
+  }
+}
+
+.link-style {
+  color: white;
+  margin: 1rem;
+
+  &:hover {
+    text-decoration: none;
+    color: #c84289;
+  }
+}
+
+/* main */
+
+.top-img {
+  background-image: image-url("top.JPG");
+}
+
+// 背景画像
+.signup-img {
+  background-image: image-url("signup.jpg");
+}
+
+.container-top {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.container-signup {
+  position: absolute;
+  top: 35%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.container-signup h1 {
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.btn-signup {
+  width: 100%;
+}
