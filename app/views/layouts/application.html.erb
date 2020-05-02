@@ -11,6 +11,9 @@
   <body>
     <%= render 'layouts/header' %>
     <main class="cotainer-fuild">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
       <%= yield %>
     </main>
   </body>
