@@ -7,14 +7,14 @@
         <%= form_for(@user, url: signup_path) do |f| %>
           <%= render 'shared/error_messages'%>
           <%= f.label :name, '名前'%>
-          <%= f.text_field :name, class: 'form_control'%>
+          <%= f.text_field :name, class: 'form-layout'%>
           <%= f.label :email, 'メールアドレス'%>
-          <%= f.email_field :email, class: 'form_control'%>
+          <%= f.email_field :email, class: 'form-layout'%>
           <%= f.label :password, 'パスワード'%>
-          <%= f.password_field :password, class: 'form_control'%>
+          <%= f.password_field :password, class: 'form-layout'%>
           <%= f.label :password_confirmation, 'パスワード（確認）'%>
-          <%= f.password_field :password_confirmation, class: 'form_control'%>
-          <%= f.submit '登録する', class: 'btn btn-lg btn-style btn-signup'%>
+          <%= f.password_field :password_confirmation, class: 'form-layout'%>
+          <%= f.submit '登録する', class: 'btn btn-style btn-signup'%>
         <% end %>
       </div>
     </div>
