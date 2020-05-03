@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # 保存の成功
+      log_in @user
       flash[:success] = 'ようこそ！未知の音楽領域へ'
       redirect_to @user
     else
