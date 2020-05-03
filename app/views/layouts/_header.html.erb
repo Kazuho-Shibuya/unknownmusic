@@ -7,9 +7,12 @@
     <div class="collapse navbar-collapse justify-content-end" id ="navbar">
       <ul class="nav navbar-nav">
         <li class="nav-item"><%= link_to '曲検索', '#', class: 'link-style' %></li>
-        <li class="nav-item"><%= link_to 'ログアウト', '#', class: 'link-style' %></li>
-        <li class="nav-item"><%= link_to '新規登録', signup_path, class: 'link-style' %></li>
-        <li class="nav-item"><%= link_to 'ログイン', login_path, class: 'link-style' %></li>
+        <% if logged_in? %>
+          <li class="nav-item"><%= link_to 'ログアウト', '#', class: 'link-style' %></li>
+        <% else %>
+          <li class="nav-item"><%= link_to 'ログイン', login_path, class: 'link-style' %></li>
+          <li class="nav-item"><%= link_to '新規登録', signup_path, class: 'link-style' %></li>
+        <% end %>
       </ul>
     </div>
   </div>
