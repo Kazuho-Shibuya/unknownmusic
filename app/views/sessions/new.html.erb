@@ -1,0 +1,19 @@
+<% provide(:title, "ログイン") %>
+<div class='img-layout login-img'>
+  <div class='container-login'>
+    <h1>ログイン</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <%= form_for(:session, url: login_path) do |f| %>
+          <%= f.label :email, 'メールアドレス' %>
+          <%= f.email_field :email, class: 'form-layout' %>
+          <%= f.label :password, 'パスワード' %>
+          <%= f.password_field :password, class: 'form-layout' %>
+          <%= f.submit "ログイン", class: "btn btn-style btn-login" %>
+        <% end %>
+        <p>または</p>
+        <%= link_to "新規登録", signup_path, class: "btn btn-style btn-to-signup" %>
+      </div>
+    </div>
+  </div>
+</div>
