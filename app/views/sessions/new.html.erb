@@ -9,6 +9,10 @@
           <%= f.email_field :email, class: 'form-layout' %>
           <%= f.label :password, 'パスワード' %>
           <%= f.password_field :password, class: 'form-layout' %>
+          <%= f.label :remember_me, class: "checkbox inline" do %>
+            <%= f.check_box :remember_me %>
+            <span>ログイン状態を保持</span>
+          <% end %>
           <%= f.submit "ログイン", class: "btn btn-style btn-login" %>
         <% end %>
         <p>または</p>
