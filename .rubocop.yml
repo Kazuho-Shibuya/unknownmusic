@@ -62,3 +62,12 @@ Style/HashTransformKeys:
 
 Style/HashTransformValues:
   Enabled: true
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 20
+
+Rails/HelperInstanceVariable:
+  Enabled: false
