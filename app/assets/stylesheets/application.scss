@@ -19,7 +19,7 @@ label {
 
 .form-layout {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 //ボタンスタイル
@@ -74,13 +74,16 @@ label {
   background-image: image-url("top.jpg");
 }
 
-// 背景画像
 .signup-img {
   background-image: image-url("signup.jpg");
 }
 
 .login-img {
   background-image: image-url("login.jpg");
+}
+
+.edit-img {
+  background-image: image-url("edit.jpg");
 }
 
 .container-top {
@@ -108,6 +111,14 @@ label {
   color: black;
 }
 
+.container-edit {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
 .container-signup h1 {
   margin-top: 10rem;
   margin-bottom: 1rem;
@@ -115,6 +126,12 @@ label {
 }
 
 .container-login h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.container-edit h1 {
+  margin-top: 5rem;
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -148,6 +165,17 @@ label {
   }
 }
 
+.btn-edit {
+  width: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  border: solid 2px white;
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+
 .btn-to-signup {
   width: 100%;
   color: black;
@@ -155,4 +183,14 @@ label {
     background: white;
     color: black;
   }
+}
+
+.gravatar_edit {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gravater {
+  display: block;
+  border: solid 1px white;
 }

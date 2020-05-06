@@ -27,6 +27,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:success] = 'プロフィールを更新しました'
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   # params[:user]の代わりで、任意の属性のみ許可する。（admin="1")を渡されて、管理者権限を奪われないため
