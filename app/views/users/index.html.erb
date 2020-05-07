@@ -1,0 +1,7 @@
+<% provide(:title, '全てのユーザ') %>
+<h1>全てのユーザ</h1>
+　<%= will_paginate @users, :previous_label => '前', :next_label => '次' %>
+<ul class="users">
+  <%= render @users %>
+</ul>
+　<%= will_paginate @users, :previous_label => '前', :next_label => '次' %>
