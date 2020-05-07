@@ -1,9 +1,9 @@
 @import "bootstrap";
 
 /* universal */
-body {
-  overflow: hidden;
-}
+// body {
+//   overflow: hidden;
+// }
 
 .img-layout {
   position: relative;
@@ -193,4 +193,16 @@ label {
 .gravater {
   display: block;
   border: solid 1px white;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+  }
 }
