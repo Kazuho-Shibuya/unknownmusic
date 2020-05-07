@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   patch '/users/:id/edit', to: 'users#update'
   resources :users
+  resources :account_activations, only: [:edit]
 end

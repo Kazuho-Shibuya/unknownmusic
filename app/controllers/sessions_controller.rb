@@ -5,9 +5,16 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     # ユーザがデータベースにあり、かつ、認証に成功した場合
     if user&.authenticate(params[:session][:password])
-      log_in user
-      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      redirect_back_or user
+      if user.activated?
+        log_in user
+        params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+        redirect_back_or user
+      else
+        message = 'アカウントが有効ではありません'
+        message += 'メールの有効化リンクをクリックしてください'
+        flash[:warning] = message
+        redirect_to root_url
+      end
     else
       flash.now[:danger] = 'メールアドレスとパスワードの組み合わせが無効です'
       render 'new'

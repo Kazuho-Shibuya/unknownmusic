@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.where(activated: true).paginate(page: params[:page])
   end
 
   def show
@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     # id: '1'は /users/:idから取得した値
     # それによってid=1のユーザーを検索できる
     @user = User.find(params[:id])
+    redirect_to(root_url) && return unless @user.activated?
   end
 
   def new
@@ -26,9 +27,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # 保存の成功
-      log_in @user
-      flash[:success] = 'ようこそ！未知の音楽領域へ'
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = 'アカウントの有効化が完了しているかメールを確認してください'
+      redirect_to root_url
     else
       # 保存の失敗
       render 'new'
