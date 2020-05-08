@@ -71,3 +71,6 @@ Metrics/AbcSize:
 
 Rails/HelperInstanceVariable:
   Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
