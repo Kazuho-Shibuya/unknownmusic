@@ -3,7 +3,7 @@
   <div class="container-edit">
     <h1>プロフィールを編集</h1>
     <div class="row justify-content-center">
-      <%= render 'shared/error_messages'%>
+      <%= render 'shared/error_messages', object: f.object %>
       <div class="col-md-2">
         <div class="gravatar_edit">
           <%= gravatar_for @user %>
