@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   post '/login',   to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
   patch '/users/:id/edit', to: 'users#update'
+  get '/home', to: 'static_pages#home'
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: %i[new create edit update]
+  resources :microposts,          only: %i[create destroy]
 end
