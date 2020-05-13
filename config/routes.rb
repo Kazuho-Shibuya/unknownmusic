@@ -11,8 +11,14 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   patch '/users/:id/edit', to: 'users#update'
   get '/home', to: 'static_pages#home'
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: %i[new create edit update]
   resources :microposts,          only: %i[create destroy]
+  resources :relationships,       only: %i[create destroy]
 end
