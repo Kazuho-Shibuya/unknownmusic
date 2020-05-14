@@ -1,9 +1,6 @@
 @import "bootstrap";
 
 /* universal */
-// body {
-//   overflow: hidden;
-// }
 
 .img-layout {
   position: relative;
@@ -68,7 +65,16 @@ label {
   }
 }
 
+/* footer */
+.footer {
+  margin-top: 1rem;
+}
+
 /* main */
+
+.overflow-hidden {
+  overflow: hidden;
+}
 
 .top-img {
   background-image: image-url("top.jpg");
