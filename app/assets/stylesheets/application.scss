@@ -19,6 +19,12 @@ label {
   margin-bottom: 2rem;
 }
 
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 //ボタンスタイル
 .btn-style {
   text-decoration: none;
@@ -70,8 +76,8 @@ header {
 }
 
 /* footer */
-.footer {
-  margin-top: 1rem;
+footer {
+  margin-top: auto;
 }
 
 /* main */
