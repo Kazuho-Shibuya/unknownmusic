@@ -43,6 +43,10 @@ label {
 
 /* header */
 
+header {
+  z-index: 10;
+}
+
 .logo {
   font-size: 1.7rem;
   color: white;
@@ -102,6 +106,7 @@ label {
 }
 
 .container-signup {
+  margin-top: 5rem;
   position: absolute;
   top: 35%;
   left: 75%;
@@ -126,7 +131,6 @@ label {
 }
 
 .container-signup h1 {
-  margin-top: 10rem;
   margin-bottom: 1rem;
   text-align: center;
 }

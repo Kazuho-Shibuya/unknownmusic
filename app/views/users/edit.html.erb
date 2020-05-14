@@ -3,7 +3,6 @@
   <div class="container-edit">
     <h1>プロフィールを編集</h1>
     <div class="row justify-content-center">
-      <%= render 'shared/error_messages', object: f.object %>
       <div class="col-md-2">
         <div class="gravatar_edit">
           <%= gravatar_for @user %>
@@ -12,6 +11,7 @@
       </div>
       <div class="col-md-6">
         <%= form_for(@user, url: edit_user_path) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
           <%= f.label :name, '名前'%>
           <%= f.text_field :name, class: 'form-layout'%>
           <%= f.label :email, 'メールアドレス'%>
