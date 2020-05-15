@@ -21,4 +21,7 @@ Rails.application.routes.draw do
   resources :password_resets,     only: %i[new create edit update]
   resources :microposts,          only: %i[create destroy]
   resources :relationships,       only: %i[create destroy]
+  resources :songs do
+    collection { get 'search' }
+  end
 end
