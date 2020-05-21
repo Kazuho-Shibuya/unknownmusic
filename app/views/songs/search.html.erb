@@ -9,6 +9,10 @@
     <% @searchartists.each do |searchartist| %>
       <div>
         <h3><%= searchartist.name %></h3>
+        <% am = searchartist.albums.first %>
+        <% tracks = am.tracks %>
+        <% do_i_wanna_know = tracks.first %>
+        <h3><%= link_to 'start', do_i_wanna_know.preview_url %></h3>
         <% if searchartist.images.any?%>
           <%image = searchartist.images[1]%>
           <%= image_tag(image["url"])%>
