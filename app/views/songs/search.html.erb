@@ -1,17 +1,26 @@
-<h3>アーティスト名で検索</h3>
-<%= form_with url: search_songs_path, method: :get, local: true do |form| %>
-  <%= form.text_field :search %>
-  <%= form.submit 'アーティスト名検索', name: nil %>
+<%= form_with url: songs_search_path, method: :get, local: true do |form| %>
+  <%= form.text_field :search, :placeholder => "アーティスト名か曲名で検索", :size=>"60" %>
+  <%= form.submit '曲検索', name: nil %>
 <% end %>
-<h1>検索結果</h1>
+<div>
+  <% if @searchtracks.present? %>
+    <h3>曲名</h3>
+    <% @searchtracks.each do |searchtrack| %>
+      <div>
+        <h3><%= link_to searchtrack.name, searchtrack.preview_url %></h3>
+      </div>
+    <% end %>
+  <% end %>
+</div>
 <div>
   <% if @searchartists.present? %>
+    <h3>アーティスト名</h3>
     <% @searchartists.each do |searchartist| %>
       <div>
         <h3><%= searchartist.name %></h3>
-        <% am = searchartist.albums.first %>
-        <% tracks = am.tracks %>
-        <% do_i_wanna_know = tracks.first %>
+        <h3><% am = searchartist.albums.first %></h3>
+        <h3><% tracks = am.tracks %></h3>
+        <h3><% do_i_wanna_know = tracks.first %></h3>
         <h3><%= link_to 'start', do_i_wanna_know.preview_url %></h3>
         <% if searchartist.images.any?%>
           <%image = searchartist.images[1]%>
