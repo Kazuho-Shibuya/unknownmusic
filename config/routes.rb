@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   patch '/users/:id/edit', to: 'users#update'
   get '/home', to: 'static_pages#home'
+  get 'songs/search', to: 'songs#search'
   resources :users do
     member do
       get :following, :followers
@@ -21,7 +22,4 @@ Rails.application.routes.draw do
   resources :password_resets,     only: %i[new create edit update]
   resources :microposts,          only: %i[create destroy]
   resources :relationships,       only: %i[create destroy]
-  resources :songs do
-    collection { get 'search' }
-  end
 end
