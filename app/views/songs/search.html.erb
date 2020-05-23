@@ -4,31 +4,44 @@
 <% end %>
 <div>
   <% if @searchtracks.present? %>
-    <h3>曲名</h3>
     <% @searchtracks.each do |searchtrack| %>
       <div>
-        <h3><%= link_to searchtrack.name, searchtrack.preview_url %></h3>
-      </div>
-    <% end %>
-  <% end %>
-</div>
-<div>
-  <% if @searchartists.present? %>
-    <h3>アーティスト名</h3>
-    <% @searchartists.each do |searchartist| %>
-      <div>
-        <h3><%= searchartist.name %></h3>
-        <h3><% am = searchartist.albums.first %></h3>
-        <h3><% tracks = am.tracks %></h3>
-        <h3><% do_i_wanna_know = tracks.first %></h3>
-        <h3><%= link_to 'start', do_i_wanna_know.preview_url %></h3>
-        <% if searchartist.images.any?%>
-          <%image = searchartist.images[1]%>
+        <h3><%= searchtrack.artists.first.name %></h3>
+        <h3><%= searchtrack.name %></h3>
+        <% if searchtrack.artists.first.images.any?%>
+          <%image = searchtrack.artists.first.images[1]%>
           <%= image_tag(image["url"])%>
         <%else%>
-          検索結果はありません
+          <h3>No image</h3>
         <%end%>
+        <% if searchtrack.preview_url.present? %>
+          <h3><%= link_to '試聴する', searchtrack.preview_url %></h3>
+        <% else %>
+          <h3>No preview</h3>
+        <% end %>
       </div>
     <% end %>
   <% end %>
 </div>
+<% if false %>
+  <div>
+    <% if @searchartists.present? %>
+      <h3>アーティスト名</h3>
+      <% @searchartists.each do |searchartist| %>
+        <div>
+          <h3><%= searchartist.name %></h3>
+          <h3><% am = searchartist.albums.first %></h3>
+          <h3><% tracks = am.tracks %></h3>
+          <h3><% do_i_wanna_know = tracks.first %></h3>
+          <h3><%= link_to 'start', do_i_wanna_know.preview_url %></h3>
+          <% if searchartist.images.any?%>
+            <%image = searchartist.images[1]%>
+            <%= image_tag(image["url"])%>
+          <%else%>
+            検索結果はありません
+          <%end%>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
