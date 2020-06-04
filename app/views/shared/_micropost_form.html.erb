@@ -3,5 +3,6 @@
   <div class="field">
     <%= f.text_area :content, placeholder: "Compose new micropost..." %>
   </div>
+  <%= link_to '曲検索', songs_search_path, class: 'btn btn-primary' %>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
