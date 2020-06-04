@@ -16,6 +16,7 @@
         <%end%>
         <% if searchtrack.preview_url.present? %>
           <h3><%= link_to '試聴する', searchtrack.preview_url, class: 'btn btn-default', target: :_blank %></h3>
+          <h3><%= link_to '投稿する', home_path, class: 'btn btn-default', target: :_blank %></h3>
         <% else %>
           <h3>No preview</h3>
         <% end %>
