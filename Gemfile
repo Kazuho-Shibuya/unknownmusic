@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
+gem 'actionpack', '>= 5.2.4.3'
+gem 'activestorage', '>= 5.2.4.3'
+gem 'activesupport', '>= 5.2.4.3'
 gem 'bcrypt', '3.1.12'
 gem 'bootstrap', '>= 4.3.1'
 gem 'dotenv-rails'
@@ -9,6 +12,7 @@ gem 'faker', '1.7.3'
 gem 'jquery-rails'
 gem 'rails-i18n'
 gem 'rspotify'
+gem 'websocket-extensions', '>= 0.1.5'
 gem 'will_paginate', '3.1.7'
 gem 'will_paginate-bootstrap4'
 

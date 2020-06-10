@@ -2,21 +2,21 @@
   <%= form.text_field :search, :placeholder => "アーティスト名か曲名で検索", :size=>"60" %>
   <%= form.submit '曲検索', name: nil %>
 <% end %>
-<div>
-  <% if @searchtracks.present? %>
-    <% @searchtracks.each do |searchtrack| %>
-      <div>
-        <h3><%= searchtrack.artists.first.name %></h3>
-        <h3><%= searchtrack.name %></h3>
-        <% if searchtrack.artists.first.images.any?%>
-          <%image = searchtrack.artists.first.images[1]%>
-          <%= image_tag(image["url"])%>
-        <%else%>
-          <h3>No image</h3>
-        <%end%>
-        <% if searchtrack.preview_url.present? %>
-          <h3><%= link_to '試聴する', searchtrack.preview_url, class: 'btn btn-default', target: :_blank %></h3>
-          <h3><%= link_to '投稿する', home_path, class: 'btn btn-default', target: :_blank %></h3>
+<%= form_with url: home_path, method: :get, local: true do |form| %>
+  <div>
+    <% if @searchtracks.present? %>
+      <% @searchtracks.each do |searchtrack| %>
+        <div>
+          <%= searchtrack.artists.first.name + ' - ' + searchtrack.name %><br>
+          <% if searchtrack.artists.first.images.any?%>
+            <%image = searchtrack.artists.first.images[2]%>
+            <%= image_tag(image["url"])%>
+          <%else%>
+            <h3>No image</h3>
+          <%end%>
+          <% if searchtrack.preview_url.present? %>
+            <%= link_to '試聴', searchtrack.preview_url, class: 'btn btn-primary', target: :_blank %></h3>
+          <%= form.submit '投稿', name: nil %>
         <% else %>
           <h3>No preview</h3>
         <% end %>
@@ -45,4 +45,5 @@
       <% end %>
     <% end %>
   </div>
+<% end %>
 <% end %>
