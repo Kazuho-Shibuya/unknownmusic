@@ -2,12 +2,16 @@
   <%= form.text_field :search, :placeholder => "アーティスト名か曲名で検索", :size=>"60" %>
   <%= form.submit '曲検索', name: nil %>
 <% end %>
-<%= form_with url: home_path, method: :get, local: true do |form| %>
+<%= @result_artists_name %>
+<%= @result_track %>
+<%= form_with url: search_result_path, local: true do |f| %>
   <div>
     <% if @searchtracks.present? %>
       <% @searchtracks.each do |searchtrack| %>
         <div>
           <%= searchtrack.artists.first.name + ' - ' + searchtrack.name %><br>
+          <%= f.hidden_field :name, :value => searchtrack.artists.first.name %>
+          <%= f.hidden_field :track, :value => searchtrack.name %>
           <% if searchtrack.artists.first.images.any?%>
             <%image = searchtrack.artists.first.images[2]%>
             <%= image_tag(image["url"])%>
@@ -16,7 +20,7 @@
           <%end%>
           <% if searchtrack.preview_url.present? %>
             <%= link_to '試聴', searchtrack.preview_url, class: 'btn btn-primary', target: :_blank %>
-            <%= form.submit '投稿', name: nil %>
+            <%= f.submit '投稿', name: nil %>
           <% else %>
             <h3>No preview</h3>
           <% end %>
