@@ -8,4 +8,10 @@ class SongsController < ApplicationController
       @searchtracks = RSpotify::Track.search(params[:search])
     end
   end
+
+  def search_result
+    @result_artists_name = params[:name]
+    @result_track = params[:track]
+    render 'songs/search'
+  end
 end

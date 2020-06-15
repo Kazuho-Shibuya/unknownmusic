@@ -4,12 +4,18 @@
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
+      <%= @result_artists_name %>
+      <%= @result_track %>
       <section class="stats">
         <%= render 'shared/stats' %>
       </section>
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
       </section>
+      <% if @result_artists_name.nil? %>
+        a
+      <% end %>
+      <% @result_artists_name %>
     </aside>
     <div class="col-md-8">
       <h3>Micropost Feed</h3>
