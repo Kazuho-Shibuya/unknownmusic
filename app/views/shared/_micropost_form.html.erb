@@ -1,7 +1,14 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.label :song, '曲名'%><br>
+    <%= f.text_field :song %><br>
+    <%= f.label :artist, 'アーティスト名'%><br>
+    <%= f.text_field :artist %><br>
+    <%= f.label :listening_url, '試聴URL'%><br>
+    <%= f.text_field :listening_url %><br>
+    <%= f.label :content, '一言'%><br>
+    <%= f.text_field :content %><br>
   </div>
   <%= link_to '曲検索', songs_search_path, class: 'btn btn-primary' %>
   <%= f.submit "Post", class: "btn btn-primary" %>
