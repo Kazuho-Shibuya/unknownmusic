@@ -21,6 +21,7 @@
           <% if searchtrack.preview_url.present? %>
             <%= link_to '試聴', searchtrack.preview_url, class: 'btn btn-primary', target: :_blank %>
             <%= f.submit '投稿', name: nil %>
+            <%= f.hidden_field :listening_url, :value => searchtrack.preview_url %>
           <% else %>
             <h3>No preview</h3>
           <% end %>

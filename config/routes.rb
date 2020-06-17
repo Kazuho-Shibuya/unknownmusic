@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   patch '/users/:id/edit', to: 'users#update'
   get '/home', to: 'static_pages#home'
   get 'songs/search', to: 'songs#search'
-  post '/search_result', to: 'songs#search_result'
+  post '/search_result', to: 'static_pages#search_result'
   resources :users do
     member do
       get :following, :followers
