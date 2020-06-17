@@ -12,9 +12,8 @@
           <%= searchtrack.artists.first.name + ' - ' + searchtrack.name %><br>
           <%= f.hidden_field :name, :value => searchtrack.artists.first.name %>
           <%= f.hidden_field :track, :value => searchtrack.name %>
-          <% if searchtrack.artists.first.images.any?%>
-            <%image = searchtrack.artists.first.images[2]%>
-            <%= image_tag(image["url"])%>
+          <% if searchtrack.artists.first.images.any? %>
+            <%= image_tag searchtrack.artists.first.images[2]["url"], :size =>'200x200' %>
           <%else%>
             <h3>No image</h3>
           <%end%>
