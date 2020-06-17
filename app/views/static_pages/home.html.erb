@@ -4,14 +4,15 @@
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
-      <%= @result_artists_name %>
-      <%= @result_track %>
       <section class="stats">
         <%= render 'shared/stats' %>
       </section>
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
       </section>
+      <h3><%= @result_artists_name %></h3>
+      <h2><%= @result_track %></h2>
+      <h1><%= @result_listening_url %></h1>
     </aside>
     <div class="col-md-8">
       <h3>Micropost Feed</h3>
