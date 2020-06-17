@@ -1,12 +1,15 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.label :song, '曲名'%><br>
-    <%= f.text_field :song %><br>
     <%= f.label :artist, 'アーティスト名'%><br>
-    <%= f.text_field :artist %><br>
+    <%= f.label :artist,  @result_artist_name %><br>
+    <%= f.hidden_field :artist, :value => @result_artist_name %>
+    <%= f.label :song, '曲名'%><br>
+    <%= f.label :song,  @result_track %><br>
+    <%= f.hidden_field :song, :value => @result_track %>
     <%= f.label :listening_url, '試聴URL'%><br>
-    <%= f.text_field :listening_url %><br>
+    <%= f.hidden_field :listening_url, :value => @result_listening_url %>
+    <%= link_to '試聴', @result_listening_url, class: 'btn btn-primary', target: :_blank %><br>
     <%= f.label :content, '一言'%><br>
     <%= f.text_field :content %><br>
   </div>
