@@ -2,14 +2,26 @@
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
     <%= f.label :artist, 'アーティスト名'%><br>
-    <%= f.label :artist,  @result_artist_name %><br>
-    <%= f.hidden_field :artist, :value => @result_artist_name %>
+    <% if @result_artist_name.nil? %>
+      <%= f.label :artist,  '検索してください' %><br>
+    <% else %>
+      <%= f.label :artist,  @result_artist_name %><br>
+      <%= f.hidden_field :artist, :value => @result_artist_name %>
+    <% end %>
     <%= f.label :song, '曲名'%><br>
-    <%= f.label :song,  @result_track %><br>
-    <%= f.hidden_field :song, :value => @result_track %>
-    <%= f.label :listening_url, '試聴URL'%><br>
-    <%= f.hidden_field :listening_url, :value => @result_listening_url %>
-    <%= link_to '試聴', @result_listening_url, class: 'btn btn-primary', target: :_blank %><br>
+    <% if @result_track.nil? %>
+      <%= f.label :song,  '検索してください' %><br>
+    <% else %>
+      <%= f.label :song,  @result_track %><br>
+      <%= f.hidden_field :song, :value => @result_track %>
+    <% end %>
+    <%= f.label :listening_url, '試聴'%><br>
+    <% if @result_listening_url.nil? %>
+      <%= f.label :listening_url,  '検索してください' %><br>
+    <% else %>
+      <%= link_to '試聴', @result_listening_url, class: 'btn btn-primary', target: :_blank %><br>
+      <%= f.hidden_field :listening_url, :value => @result_listening_url %>
+    <% end %>
     <%= f.label :content, '一言'%><br>
     <%= f.text_field :content %><br>
   </div>
