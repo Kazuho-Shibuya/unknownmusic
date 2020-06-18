@@ -8,6 +8,9 @@ class MicropostsController < ApplicationController
       flash[:success] = 'Micropost created!'
       redirect_to home_url
     else
+      @result_artist_name = @micropost.artist
+      @result_track = @micropost.song
+      @result_listening_url = @micropost.listening_url
       @feed_items = []
       render 'static_pages/home'
     end
