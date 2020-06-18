@@ -10,8 +10,8 @@
       <div>
         <%= form_with url: search_result_path, local: true do |f| %>
           <%= searchtrack.artists.first.name + ' - ' + searchtrack.name %><br>
-          <%= f.hidden_field :name, :value => searchtrack.artists.first.name %>
-          <%= f.hidden_field :track, :value => searchtrack.name %>
+          <%= f.hidden_field :artist, :value => searchtrack.artists.first.name %>
+          <%= f.hidden_field :song, :value => searchtrack.name %>
           <% if searchtrack.artists.first.images.any? %>
             <%= image_tag searchtrack.artists.first.images[2]["url"], :size =>'200x200' %>
           <%else%>

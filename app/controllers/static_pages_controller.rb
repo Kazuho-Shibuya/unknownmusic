@@ -4,8 +4,8 @@ class StaticPagesController < ApplicationController
   def home; end
 
   def search_result
-    @result_artist_name = params[:name]
-    @result_track = params[:track]
+    @result_artist_name = params[:artist]
+    @result_track = params[:song]
     @result_listening_url = params[:listening_url]
     render 'static_pages/home'
   end
