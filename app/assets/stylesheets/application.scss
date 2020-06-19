@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 /* universal */
 
@@ -308,4 +309,13 @@ span.picture {
 
 .users.follow {
   padding: 0;
+}
+
+/* likes */
+.fa-heart {
+  color: red;
+}
+
+.fa-heart-o {
+  color: red;
 }
