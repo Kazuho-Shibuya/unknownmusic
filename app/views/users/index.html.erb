@@ -1,6 +1,10 @@
 <% provide(:title, '全てのユーザ') %>
 <h1>全てのユーザ</h1>
 　<%= will_paginate @users, :previous_label => '前', :next_label => '次' %>
+<%= form_with url: users_path, method: :get, local: true do |form| %>
+  <%= form.text_field :search, :placeholder => "ユーザ名を検索", :size=>"60" %>
+  <%= form.submit '曲検索', name: nil %>
+<% end %>
 <ul class="users">
   <%= render @users %>
 </ul>
