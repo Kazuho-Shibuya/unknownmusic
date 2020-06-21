@@ -23,4 +23,12 @@ class Micropost < ApplicationRecord
   def favorite?(user)
     favorite_users.include?(user)
   end
+
+  def self.search(search)
+    if search
+      where(['content LIKE ? OR song LIKE ? OR artist LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%"])
+    else
+      all
+    end
+  end
 end
