@@ -13,6 +13,14 @@
     </aside>
     <div class="col-md-8">
       <h3>Micropost Feed</h3>
+      <!--検索拡張機能  -->
+      <p>content serch</p>
+      <%= form_with url: home_path, method: :get, local: true do |form| %>
+        <p>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Search", :name => nil %>
+        </p>
+      <% end %>
       <%= render 'shared/feed' %>
     </div>
   </div>
