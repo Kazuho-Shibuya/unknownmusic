@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     # id: '1'は /users/:idから取得した値
     # それによってid=1のユーザーを検索できる
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
+    @microposts = @user.microposts.paginate(page: params[:page]).search(params[:search])
     redirect_to(root_url) && return unless @user.activated?
   end
 
