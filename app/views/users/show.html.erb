@@ -15,6 +15,14 @@
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <!--検索拡張機能  -->
+      <p>content serch</p>
+      <%= form_with url: users_path, method: :get, local: true do |form| %>
+        <p>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Search", :name => nil %>
+        </p>
+      <% end %>
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
