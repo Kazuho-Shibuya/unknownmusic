@@ -1,0 +1,4 @@
+<%= form_with url: yield(:path), method: :get, local: true do |form| %>
+  <%= text_field_tag :search, params[:search], placeholder: yield(:placeholder) %>
+  <%= submit_tag '検索', :name => nil %>
+<% end %>
