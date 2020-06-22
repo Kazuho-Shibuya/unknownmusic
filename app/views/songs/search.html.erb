@@ -1,7 +1,6 @@
-<%= form_with url: songs_search_path, method: :get, local: true do |form| %>
-  <%= form.text_field :search, :placeholder => "アーティスト名か曲名で検索", :size=>"60" %>
-  <%= form.submit '曲検索', name: nil %>
-<% end %>
+<% provide(:path, songs_search_path) %>
+<% provide(:placeholder, 'アーティスト名か曲名で検索') %>
+<%= render 'users/search'%>
 <%= @result_artists_name %>
 <%= @result_track %>
 <div>
