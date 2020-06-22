@@ -2,6 +2,7 @@ class PasswordResetsController < ApplicationController
   before_action :get_user,   only: %i[edit update]
   before_action :valid_user, only: %i[edit update]
   before_action :check_expiration, only: %i[edit update]
+  before_action :check_test_user, only: :create
 
   def new; end
 
@@ -59,5 +60,14 @@ class PasswordResetsController < ApplicationController
 
     flash[:danger] = 'パスワードリセットは期限ぎれです'
     redirect_to new_password_reset_url
+  end
+
+  # テストユーザかどうか確認する
+  def check_test_user
+    email = params[:password_reset][:email].downcase
+    if email == 'test@example.com'
+      flash[:notice] = 'テストユーザーのため変更できません'
+      redirect_to root_path
+    end
   end
 end
