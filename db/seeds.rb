@@ -1,15 +1,15 @@
 # ユーザー
-User.create!(name: 'Example User',
-             email: 'example@railstutorial.org',
+User.create!(name: '渋谷一帆',
+             email: 'shibuyak0213@gmail.com',
              password: 'foobar',
              password_confirmation: 'foobar',
              admin: true,
              activated: true,
              activated_at: Time.zone.now)
 
-99.times do |n|
+99.times do |_n|
   name = Faker::Name.name
-  email = "example-#{n + 1}@railstutorial.org"
+  email = Faker::Internet.email
   password = 'password'
   User.create!(name: name,
                email: email,
@@ -22,8 +22,11 @@ end
 # マイクロポスト
 users = User.order(:created_at).take(6)
 50.times do
-  content = Faker::Lorem.sentence(5)
-  users.each { |user| user.microposts.create!(content: content) }
+  song = 'Love so Sweet'
+  artist = '嵐'
+  content = 'これぞラブソング！！！'
+  listening_url = 'https://p.scdn.co/mp3-preview/49846ff4faf7a04f86aeab2b9dc3fd29f18da9e0?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
+  users.each { |user| user.microposts.create!(song: song, artist: artist, content: content, listening_url: listening_url) }
 end
 
 # リレーションシップ
@@ -33,3 +36,12 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+
+# テストユーザー
+User.create!(name: 'テストユーザー',
+             email: 'test@example.com',
+             password: 'password',
+             password_confirmation: 'password',
+             admin: false,
+             activated: true,
+             activated_at: Time.zone.now)

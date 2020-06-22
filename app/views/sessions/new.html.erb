@@ -16,6 +16,7 @@
           <% end %>
           <%= f.submit "ログイン", class: "btn btn-style btn-login" %>
         <% end %>
+        <%= link_to 'かんたんログイン', test_sessions_path, method: :post, class:"btn btn-lg btn-success center-block" %>
         <p>または</p>
         <%= link_to "新規登録", signup_path, class: "btn btn-style btn-to-signup" %>
       </div>
