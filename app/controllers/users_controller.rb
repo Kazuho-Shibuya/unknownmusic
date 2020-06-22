@@ -3,6 +3,7 @@ class UsersController < ApplicationController
                                           following followers]
   before_action :correct_user,   only: %i[edit update]
   before_action :admin_user,     only: :destroy
+  before_action :check_test_user, { only: %i[edit update destroy] }
 
   def index
     @users = User.where(activated: true).paginate(page: params[:page]).search(params[:search])
@@ -87,5 +88,14 @@ class UsersController < ApplicationController
   # 管理者かどうか確認
   def admin_user
     redirect_to(root_url) unless current_user.admin?
+  end
+
+  # テストユーザかどうか確認する
+  def check_test_user
+    email = @user.email
+    if email == 'test@example.com'
+      flash[:notice] = 'テストユーザーのため変更できません'
+      redirect_to root_path
+    end
   end
 end
