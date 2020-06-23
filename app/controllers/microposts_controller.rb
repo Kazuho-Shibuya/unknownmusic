@@ -22,6 +22,12 @@ class MicropostsController < ApplicationController
     redirect_to request.referer || root_url
   end
 
+  def index
+    sort_except = Micropost.except(:order)
+    count_like = Like.group(:micropost_id).order('count(micropost_id) desc').pluck(:micropost_id)
+    @all_ranks = sort_except.find(count_like)
+  end
+
   private
 
   def micropost_params
