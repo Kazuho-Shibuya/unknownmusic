@@ -7,7 +7,16 @@ User.create!(name: '渋谷一帆',
              activated: true,
              activated_at: Time.zone.now)
 
-99.times do |_n|
+# テストユーザー
+User.create!(name: 'テストユーザー',
+             email: 'test@example.com',
+             password: 'password',
+             password_confirmation: 'password',
+             admin: false,
+             activated: true,
+             activated_at: Time.zone.now)
+
+98.times do |_n|
   name = Faker::Name.name
   email = Faker::Internet.email
   password = 'password'
@@ -36,12 +45,3 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
-
-# テストユーザー
-User.create!(name: 'テストユーザー',
-             email: 'test@example.com',
-             password: 'password',
-             password_confirmation: 'password',
-             admin: false,
-             activated: true,
-             activated_at: Time.zone.now)
