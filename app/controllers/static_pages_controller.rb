@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   before_action :set_micropost, only: %i[home search_result]
+  before_action :logged_in_user, only: %i[search_result]
 
   def home
     @micropost  = current_user.microposts.build
