@@ -1,4 +1,5 @@
 class Micropost < ApplicationRecord
+  require 'kakasi'
   belongs_to :user
   has_many :likes, dependent: :destroy
   has_many :favorite_users, through: :likes, source: :user
@@ -26,7 +27,11 @@ class Micropost < ApplicationRecord
 
   def self.search(search)
     if search
-      where(['content LIKE ? OR song LIKE ? OR artist LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%"])
+      column = 'content LIKE ? OR content LIKE ? OR song LIKE ? OR song LIKE ? OR artist LIKE ? OR artist LIKE ?'
+      value = "%#{search}%"
+      english_change = Kakasi.kakasi('-Ja -Ha -Ka', search)
+      value_english = "%#{english_change}%"
+      where([column, value, value_english, value, value_english, value, value_english])
     else
       all
     end
