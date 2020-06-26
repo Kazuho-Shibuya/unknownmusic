@@ -3,9 +3,8 @@ class StaticPagesController < ApplicationController
   before_action :logged_in_user, only: %i[search_result]
 
   def home
-    @micropost  = current_user.microposts.build
     # 検索拡張機能として.search(params[:search])を追加
-    @feed_items = current_user.feed.paginate(page: params[:page]).search(params[:search])
+    @feed_items = @feed_items.search(params[:search])
   end
 
   def search_result
