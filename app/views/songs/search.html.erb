@@ -1,32 +1,29 @@
 <% provide(:path, songs_search_path) %>
 <% provide(:placeholder, 'アーティスト名か曲名で検索') %>
 <%= render 'users/search'%>
-<%= @result_artists_name %>
-<%= @result_track %>
 <div>
-  <% if @searchtracks.present? %>
-    <%= @searchtracks["tracks"]["items"][0]["artists"][0]["name"] %>
-    <% @searchtracks.each do |searchtrack| %>
-      <div>
+  <% if @search_infomations.present? %>
+    <% search_tracks_items = @search_infomations["tracks"]["items"] %>
+    <% if search_tracks_items.present? %>
+      <% search_tracks_items.each do |search_tracks_item| %>
         <%= form_with url: search_result_path, local: true do |f| %>
-          <%#= searchtrack.artists.first.name + ' - ' + searchtrack.name %><br>
-          <% searchtrack %>
-          <%#= f.hidden_field :artist, :value => searchtrack.artists.first.name %>
-          <%#= f.hidden_field :song, :value => searchtrack.name %>
-          <%# if searchtrack.artists.first.images.any? %>
-          <%#= image_tag searchtrack.artists.first.images[0]["url"], :size =>'200x200' %>
-          <%#else%>
-          <h3>No image</h3>
-          <%#end%>
-          <%# if searchtrack.preview_url.present? %>
-          <%#= link_to '試聴', searchtrack.preview_url, class: 'btn btn-primary', target: :_blank %>
-          <%#= f.submit '投稿', name: nil %>
-          <%#= f.hidden_field :listening_url, :value => searchtrack.preview_url %>
-          <%# else %>
-          <h3>No preview</h3>
-          <%# end %>
+          <%= search_tracks_item["artists"][0]["name"] + ' - ' + search_tracks_item["name"] %><br>
+          <% f.hidden_field :artist, :value => search_tracks_item["artists"][0]["name"] %>
+          <% f.hidden_field :song, :value => search_tracks_item["name"] %>
+          <% if search_tracks_item["album"]["images"][0].any? %>
+            <%= image_tag search_tracks_item["album"]["images"][0]["url"], :size =>'200x200' %><br>
+          <% else %>
+            <h3>No image</h3>
+          <% end %>
+          <% if search_tracks_item["preview_url"].present? %>
+            <%= link_to '試聴', search_tracks_item["preview_url"], class: 'btn btn-primary', target: :_blank %>
+            <%= f.submit '投稿', name: nil %><br>
+            <% f.hidden_field :listening_url, :value => search_tracks_item["preview_url"] %>
+          <% else %>
+            <h3>No preview</h3>
+          <% end %>
         <% end %>
-      </div>
+      <% end %>
     <% end %>
   <% end %>
 </div>
