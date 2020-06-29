@@ -44,7 +44,7 @@ class SongsController < ApplicationController
       end
 
       response_hash = response.body
-      @searchtracks = JSON.parse(response_hash)
+      @search_infomations = JSON.parse(response_hash)
     end
   end
 end
