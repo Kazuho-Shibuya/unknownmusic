@@ -1,4 +1,5 @@
 class Micropost < ApplicationRecord
+  require 'nkf'
   belongs_to :user
   has_many :likes, dependent: :destroy
   has_many :favorite_users, through: :likes, source: :user
@@ -26,9 +27,27 @@ class Micropost < ApplicationRecord
 
   def self.search(search)
     if search
-      column = 'content LIKE ? OR song LIKE ? OR artist LIKE ?'
+      column = 'content LIKE ? OR content LIKE ? OR song LIKE ? OR song LIKE ? OR artist LIKE ? OR artist LIKE ?'
       value = "%#{search}%"
-      where([column, value, value, value])
+      if search.is_japanese?
+        if search.is_kana?
+          change_romaji = search.to_roman
+        else
+          if search.is_hira?
+            change_romaji = search.to_roma
+          else
+            change_hira = search.to_kanhira
+            change_romaji = change_hira.to_roma
+          end
+        end
+        value_romaji = "%#{change_romaji}%"
+        where([column, value, value_romaji, value, value_romaji, value, value_romaji])
+      else
+        change_hira = search.to_kana
+        change_kana = NKF.nkf('-w --katakana', change_hira)
+        value_kana = "%#{change_kana}%"
+        where([column, value, value_kana, value, value_kana, value, value_kana])
+      end
     else
       all
     end
