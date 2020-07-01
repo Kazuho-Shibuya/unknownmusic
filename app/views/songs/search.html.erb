@@ -8,8 +8,8 @@
       <% search_tracks_items.each do |search_tracks_item| %>
         <%= form_with url: search_result_path, local: true do |f| %>
           <%= search_tracks_item["artists"][0]["name"] + ' - ' + search_tracks_item["name"] %><br>
-          <% f.hidden_field :artist, :value => search_tracks_item["artists"][0]["name"] %>
-          <% f.hidden_field :song, :value => search_tracks_item["name"] %>
+          <%= f.hidden_field :artist, :value => search_tracks_item["artists"][0]["name"] %>
+          <%= f.hidden_field :song, :value => search_tracks_item["name"] %>
           <% if search_tracks_item["album"]["images"][0].any? %>
             <%= image_tag search_tracks_item["album"]["images"][0]["url"], :size =>'200x200' %><br>
           <% else %>
@@ -18,7 +18,7 @@
           <% if search_tracks_item["preview_url"].present? %>
             <%= link_to '試聴', search_tracks_item["preview_url"], class: 'btn btn-primary', target: :_blank %>
             <%= f.submit '投稿', name: nil %><br>
-            <% f.hidden_field :listening_url, :value => search_tracks_item["preview_url"] %>
+            <%= f.hidden_field :listening_url, :value => search_tracks_item["preview_url"] %>
           <% else %>
             <h3>No preview</h3>
           <% end %>
