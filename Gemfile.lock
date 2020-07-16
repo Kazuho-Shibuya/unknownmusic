@@ -87,6 +87,7 @@ GEM
       activesupport (>= 3.0.0)
       after_commit_action (~> 1.0)
     crass (1.0.6)
+    database_cleaner (1.8.5)
     diff-lcs (1.4.4)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
@@ -289,6 +290,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   counter_culture (~> 1.8)
+  database_cleaner
   dotenv-rails
   faker (= 1.7.3)
   font-awesome-rails
