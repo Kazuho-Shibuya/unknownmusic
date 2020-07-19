@@ -33,8 +33,8 @@ RSpec.describe User, type: :model do
   end
 
   it '登録済みのメールアドレスは登録できない' do
-    FactoryBot.create(:user)
-    user = FactoryBot.build(:user)
+    FactoryBot.create(:user, email: 'tester@example.com')
+    user = FactoryBot.build(:user, email: 'tester@example.com')
     user.valid?
     expect(user.errors[:email]).to include('はすでに存在します')
   end
