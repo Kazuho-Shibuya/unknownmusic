@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  it '有効なファクトリも持つこと' do
+    expect(FactoryBot.build(:user)).to be_valid
+  end
+
   it '名前、メール、パスワードがあれば登録できる' do
     user = User.new(
       name: '佐藤太郎',
@@ -11,34 +15,26 @@ RSpec.describe User, type: :model do
   end
 
   it '名前が空欄だと登録できない' do
-    user = User.new(name: nil)
+    user = FactoryBot.build(:user, name: nil)
     user.valid?
     expect(user.errors[:name]).to include('を入力してください')
   end
 
   it 'メールアドレスが空欄だと登録できない' do
-    user = User.new(email: nil)
+    user = FactoryBot.build(:user, email: nil)
     user.valid?
     expect(user.errors[:email]).to include('を入力してください')
   end
 
   it 'パスワードが空欄だと登録できない' do
-    user = User.new(password: nil)
+    user = FactoryBot.build(:user, password: nil)
     user.valid?
     expect(user.errors[:password]).to include('を入力してください')
   end
 
   it '登録済みのメールアドレスは登録できない' do
-    user = User.create(
-      name: '佐藤太郎',
-      email: 'tester@example.com',
-      password: 'foobar'
-    )
-    user = User.new(
-      name: '佐藤太郎',
-      email: 'tester@example.com',
-      password: 'foobar'
-    )
+    FactoryBot.create(:user)
+    user = FactoryBot.build(:user)
     user.valid?
     expect(user.errors[:email]).to include('はすでに存在します')
   end
