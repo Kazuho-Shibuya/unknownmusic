@@ -13,6 +13,35 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+  describe '#show' do
+    it '正常にレスポンスを返していないこと' do
+      user = FactoryBot.create(:user)
+      get :show, params: { id: user.id }
+      expect(response).to_not be_successful
+    end
+
+    it 'ステータスが302であること' do
+      user = FactoryBot.create(:user)
+      get :show, params: { id: user.id }
+      expect(response.status).to eq 302
+    end
+  end
+
+  describe '#new' do
+    it '正常にレスポンスを返すこと' do
+      get :new
+      expect(response).to be_successful
+    end
+
+    it 'ステータスが200であること' do
+      get :new
+      expect(response.status).to eq 200
+    end
+  end
+
+  describe '#create' do
+  end
+
   describe '#edit' do
     it 'ログインページに遷移すること' do
       user = FactoryBot.create(:user)
