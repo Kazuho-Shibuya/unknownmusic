@@ -40,6 +40,17 @@ RSpec.describe UsersController, type: :controller do
   end
 
   describe '#create' do
+    it '正常にレスポンスを返していないこと' do
+      user_params = FactoryBot.attributes_for(:user)
+      post :create, params: { user: user_params }
+      expect(response).to_not be_successful
+    end
+
+    it 'ステータスが302であること' do
+      user_params = FactoryBot.attributes_for(:user)
+      post :create, params: { user: user_params }
+      expect(response.status).to eq 302
+    end
   end
 
   describe '#edit' do
