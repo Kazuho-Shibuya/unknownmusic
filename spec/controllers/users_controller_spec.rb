@@ -40,16 +40,34 @@ RSpec.describe UsersController, type: :controller do
   end
 
   describe '#create' do
-    it '正常にレスポンスを返していないこと' do
-      user_params = FactoryBot.attributes_for(:user)
-      post :create, params: { user: user_params }
-      expect(response).to_not be_successful
+    context '有効な属性値の場合' do
+      it 'ユーザを作成できること' do
+        user_params = FactoryBot.attributes_for(:user)
+        expect do
+          post :create, params: { user: user_params }
+        end.to change(User, :count).by(1)
+      end
+
+      it 'ステータスが302であること' do
+        user_params = FactoryBot.attributes_for(:user)
+        post :create, params: { user: user_params }
+        expect(response.status).to eq 302
+      end
+
+      it 'トップ画面に遷移すること' do
+        user_params = FactoryBot.attributes_for(:user)
+        post :create, params: { user: user_params }
+        expect(response).to redirect_to root_url
+      end
     end
 
-    it 'ステータスが302であること' do
-      user_params = FactoryBot.attributes_for(:user)
-      post :create, params: { user: user_params }
-      expect(response.status).to eq 302
+    context '無効な属性値の場合' do
+      it 'ユーザを作成できないこと' do
+        user_params = FactoryBot.attributes_for(:user, :invalid)
+        expect do
+          post :create, params: { user: user_params }
+        end.to_not change(User, :count)
+      end
     end
   end
 
