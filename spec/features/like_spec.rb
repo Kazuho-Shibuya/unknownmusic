@@ -8,7 +8,7 @@ RSpec.feature 'Like', type: :feature do
 
     expect(page).to have_content('テスト投稿')
     expect do
-      first('.btn').click
+      first('.btn-like-non').click
     end.to change(Like, :count).by(1)
   end
 end
