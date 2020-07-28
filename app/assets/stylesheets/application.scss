@@ -312,10 +312,16 @@ span.picture {
 }
 
 /* likes */
-.fa-heart {
+.btn-like {
   color: red;
+  &:hover {
+    color: red;
+  }
 }
 
-.fa-heart-o {
-  color: red;
+.btn-like-non {
+  color: black;
+  &:hover {
+    color: red;
+  }
 }
