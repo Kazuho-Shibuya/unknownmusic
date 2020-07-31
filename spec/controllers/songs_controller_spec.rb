@@ -8,7 +8,7 @@ RSpec.describe SongsController, type: :controller do
     end
 
     it 'ステータスが200であること' do
-      post :search
+      get :search
       expect(response.status).to eq 200
     end
   end
