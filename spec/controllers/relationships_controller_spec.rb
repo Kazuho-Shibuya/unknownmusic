@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe RelationshipsController, type: :controller do
-  let(:user) { user = FactoryBot.create(:user) }
+  let(:user) { FactoryBot.create(:user) }
   describe '#create' do
     before do
       post :create
