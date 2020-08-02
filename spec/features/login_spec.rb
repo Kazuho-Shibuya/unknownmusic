@@ -1,18 +1,14 @@
 require 'rails_helper'
 
-RSpec.feature 'Login', type: :feature do
-  scenario 'ユーザがログインをする' do
+RSpec.feature 'LoginLogout', type: :feature do
+  scenario 'ユーザがログイン、ログアウトをする' do
     user = FactoryBot.create(:user)
     user.activate
 
-    visit root_path
-    click_link '始める'
-
-    click_link 'ログイン'
-    fill_in 'メールアドレス', with: user.email
-    fill_in 'パスワード', with: user.password
-    click_button 'ログイン'
-
+    login(user)
     expect(current_path).to eq user_path(user)
+
+    logout
+    expect(current_path).to eq root_path
   end
 end
