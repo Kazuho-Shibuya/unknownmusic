@@ -1,40 +1,46 @@
 require 'rails_helper'
 
 RSpec.describe MicropostsController, type: :controller do
+  let(:user) { FactoryBot.create(:user) }
+
   describe '#create' do
-    it '正常にレスポンスを返さないこと' do
+    before do
       post :create
+    end
+
+    it '正常にレスポンスを返さないこと' do
       expect(response).to_not be_successful
     end
 
     it 'ステータスが302であること' do
-      post :create
       expect(response.status).to eq 302
     end
   end
 
   describe '#destroy' do
-    it '正常にレスポンスを返さないこと' do
-      user = FactoryBot.create(:user)
+    before do
       delete :destroy, params: { id: user.id }
+    end
+
+    it '正常にレスポンスを返さないこと' do
       expect(response).to_not be_successful
     end
 
     it 'ステータスが302であること' do
-      user = FactoryBot.create(:user)
-      delete :destroy, params: { id: user.id }
       expect(response.status).to eq 302
     end
   end
 
   describe '#index' do
-    it '正常にレスポンスを返すこと' do
+    before do
       get :index
+    end
+
+    it '正常にレスポンスを返すこと' do
       expect(response).to be_successful
     end
 
     it 'ステータスが200であること' do
-      get :index
       expect(response.status).to eq 200
     end
   end
