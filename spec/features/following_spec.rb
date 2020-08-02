@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'Like', type: :feature do
+RSpec.feature 'Following', type: :feature do
   scenario 'ユーザがフォロー、フォロー解除する' do
     user = FactoryBot.create(:user)
     FactoryBot.create(:user, name: '佐藤清')
