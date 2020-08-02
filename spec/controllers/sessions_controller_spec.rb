@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
   let(:user) { FactoryBot.create(:user) }
+
   describe '#new' do
     before do
       get :new
