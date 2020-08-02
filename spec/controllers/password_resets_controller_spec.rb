@@ -1,54 +1,60 @@
 require 'rails_helper'
 
 RSpec.describe PasswordResetsController, type: :controller do
+  let(:user) { FactoryBot.create(:user) }
+
   describe '#new' do
-    it '正常にレスポンスを返すこと' do
+    before do
       get :new
+    end
+
+    it '正常にレスポンスを返すこと' do
       expect(response).to be_successful
     end
 
     it 'ステータスが200であること' do
-      get :new
       expect(response.status).to eq 200
     end
   end
 
   describe '#create' do
-    it '正常にレスポンスを返さないこと' do
-      user = FactoryBot.create(:user)
+    before do
       post :create, params: { password_reset: { email: user.email } }
+    end
+
+    it '正常にレスポンスを返さないこと' do
       expect(response).to_not be_successful
     end
 
     it 'ステータスが302であること' do
-      user = FactoryBot.create(:user)
-      post :create, params: { password_reset: { email: user.email } }
       expect(response.status).to eq 302
     end
   end
 
   describe '#edit' do
-    it '正常にレスポンスを返さないこと' do
+    before do
       get :edit
+    end
+
+    it '正常にレスポンスを返さないこと' do
       expect(response).to_not be_successful
     end
 
     it 'ステータスが302であること' do
-      get :edit
       expect(response.status).to eq 302
     end
   end
 
   describe '#update' do
-    it '正常にレスポンスを返さないこと' do
-      user = FactoryBot.create(:user)
+    before do
       patch :update, params: { id: user.id }
+    end
+
+    it '正常にレスポンスを返さないこと' do
       expect(response).to_not be_successful
     end
 
     it 'ステータスが302であること' do
-      user = FactoryBot.create(:user)
-      patch :update, params: { id: user.id }
       expect(response.status).to eq 302
     end
   end
