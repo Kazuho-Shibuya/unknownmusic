@@ -91,6 +91,7 @@ RSpec.describe UsersController, type: :controller do
     before do
       patch :update, params: { id: user.id }
     end
+
     it 'ログインページに遷移すること' do
       expect(response).to redirect_to login_url
     end
@@ -116,6 +117,7 @@ RSpec.describe UsersController, type: :controller do
     before do
       get :following, params: { id: user.id }
     end
+
     it 'ログインページに遷移すること' do
       expect(response).to redirect_to login_url
     end
