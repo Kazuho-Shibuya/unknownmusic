@@ -1,16 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe AccountActivationsController, type: :controller do
+  let(:user) { FactoryBot.create(:user) }
+
   describe '#edit' do
-    it '正常にレスポンスを返さないこと' do
-      user = FactoryBot.create(:user)
+    before do
       get :edit, params: { id: user.id }
+    end
+
+    it '正常にレスポンスを返さないこと' do
       expect(response).to_not be_successful
     end
 
     it 'ステータスが302であること' do
-      user = FactoryBot.create(:user)
-      get :edit, params: { id: user.id }
       expect(response.status).to eq 302
     end
   end
