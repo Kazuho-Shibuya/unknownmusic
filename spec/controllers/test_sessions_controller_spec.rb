@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe TestSessionsController, type: :controller do
-  before do
-    post :create
-  end
-
   describe '#create' do
+    before do
+      post :create
+    end
+
     it '正常にレスポンスを返すこと' do
       expect(response).to be_successful
     end
