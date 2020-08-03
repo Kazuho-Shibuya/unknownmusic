@@ -15,6 +15,7 @@ gem 'http_accept_language'
 gem 'jquery-rails'
 gem 'miyabi'
 gem 'rails-i18n'
+gem 'rails_12factor', group: :production
 gem 'romkan', '~> 0.4.0'
 gem 'websocket-extensions', '>= 0.1.5'
 gem 'will_paginate', '3.1.7'
