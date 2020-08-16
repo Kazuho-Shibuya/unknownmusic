@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     if @user.save
       # 保存の成功
       @user.send_activation_email
-      flash[:info] = 'アカウントの有効化が完了しているかメールを確認してください'
+      flash[:info] = 'メールを確認して、アカウントを有効にしてください。'
       redirect_to root_url
     else
       # 保存の失敗

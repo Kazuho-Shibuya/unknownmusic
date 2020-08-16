@@ -1,7 +1,7 @@
-<h1>Sample App</h1>
-<p>Hi <%= @user.name %>,</p>
+<h1>Unknown Music</h1>
+<p>初めまして。<%= @user.name %>さん。</p>
 <p>
-  Welcome to the Sample App! Click on the link below to activate your account:
+  ようこそ。Unknown Musicへ！ 以下のリンクをクリックしてアカウントを有効化してください。
 </p>
-<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+<%= link_to "有効化", edit_account_activation_url(@user.activation_token,
                                                     email: @user.email) %>
