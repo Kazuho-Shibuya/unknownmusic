@@ -73,4 +73,4 @@ bower.json
 # アップロードされたテスト画像を無視する
 /public/uploads
 
-config/secrets.yml
+config/credentials.yml.enc
