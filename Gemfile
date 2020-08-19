@@ -86,5 +86,6 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :production, :staging do
+  gem 'aws-ses', '~> 0.6'
   gem 'unicorn'
 end
