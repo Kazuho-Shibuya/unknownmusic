@@ -72,15 +72,15 @@ Rails.application.configure do
 
   # ActionMailer Setting with AWS SES
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_caching = true
-  config.action_mailer.default_url_options = { host: 'unknownmusic.net', protocol: 'https' }
-  config.action_mailer.smtp_settings = {
-    address: 'email-smtp.ap-northeast-1.amazonaws.com',
-    port: 587,
-    domain: ENV['DOMAIN'],
-    authentication: :login,
-    user_name: ENV['AWS_ACCESS_KEY_ID'],
-    password: ENV['AWS_SECRET_ACCESS_KEY']
+  config.action_mailer.default_url_options = { host: 'www.unknownmusic.net' }
+    config.action_mailer.smtp_settings = {
+      :address => 'email-smtp.ap-northeast-1.amazonaws.com',
+      :port => 587,
+      :authetication => :login,
+      :user_name => ENV['SMTP_USER_NAME'],
+      :domain => 'unknownmusic.net',
+      :password => ENV['SMTP_PASSWORD'],
+      :enable_starttls_auto => true
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
