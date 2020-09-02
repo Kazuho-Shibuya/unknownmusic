@@ -12,14 +12,14 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
   username: root
-  password:
-  socket: /tmp/mysql.sock
+  password: password
 
 development:
   <<: *default
-  database: unknownmusic_development
+  host: db
+  database: docker_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
