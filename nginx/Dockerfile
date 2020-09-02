@@ -1,5 +1,5 @@
 FROM nginx:stable
-#デフォルトのnginxファイルを削除して作成したものコンテナないにコピー
+#デフォルトのnginxファイルを削除して作成したものコンテナ内にコピー
 RUN rm -f /etc/nginx/conf.d/*
 
 COPY nginx.conf /etc/nginx/conf.d/myapp.conf
