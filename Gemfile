@@ -14,6 +14,7 @@ gem 'font-awesome-rails'
 gem 'http_accept_language'
 gem 'jquery-rails'
 gem 'miyabi'
+gem 'unicorn'
 gem 'rails-i18n'
 gem 'rails_12factor', group: :production
 gem 'romkan', '~> 0.4.0'
@@ -88,5 +89,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :production, :staging do
   gem 'aws-ses', '~> 0.6'
-  gem 'unicorn'
 end
