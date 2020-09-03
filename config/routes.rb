@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
   get 'songs/search', to: 'songs#search'
   post '/search_result', to: 'static_pages#search_result'
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   resources :users do
     member do
       get :following, :followers
