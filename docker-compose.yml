@@ -26,13 +26,23 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: docker_development
+      MYSQL_DATABASE: unknownmusic_development
       MYSQL_ROOT_PASSWORD: password
       MYSQL_USER: kazuho
       MYSQL_PASSWORD: password
     #dbのデータを永続化しておく
     volumes:
       - mysql-data:/var/lib/mysql
+
+  test-db:
+    image: mysql:5.7
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: unknownmusic_test
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: kazuho
+      MYSQL_PASSWORD: password
 
   nginx:
     build:

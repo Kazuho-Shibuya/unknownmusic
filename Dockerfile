@@ -22,6 +22,6 @@ COPY Gemfile /var/www/rails/unknownmusic/Gemfile
 COPY Gemfile.lock /var/www/rails/unknownmusic/Gemfile.lock
 
 RUN gem install bundler
-RUN bundle install
+RUN bundle install --without production
 
 COPY . /var/www/rails/unknownmusic
