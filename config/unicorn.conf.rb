@@ -2,7 +2,7 @@
   $worker  = 2
   $timeout = 30
   $app_dir = "/var/www/rails/unknownmusic"
-  $listen  = File.expand_path 'tmp/sockets/unicorn.sock', $app_dir
+  $listen  = File.expand_path 'tmp/sockets/.unicorn.sock', $app_dir
   $pid     = File.expand_path 'tmp/pids/unicorn.pid', $app_dir
   $stderr_log = File.expand_path 'log/unicorn_stderr.log', $app_dir
   $stdout_log = File.expand_path 'log/unicorn_stdout.log', $app_dir
