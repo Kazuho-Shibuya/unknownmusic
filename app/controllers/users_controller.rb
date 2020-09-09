@@ -74,7 +74,7 @@ class UsersController < ApplicationController
 
   # params[:user]の代わりで、任意の属性のみ許可する。（admin="1")を渡されて、管理者権限を奪われないため
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :image)
   end
 
   # beforeフィルター
