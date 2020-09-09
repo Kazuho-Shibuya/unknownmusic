@@ -3,14 +3,12 @@
   <div class="container-edit">
     <h1>プロフィールを編集</h1>
     <div class="row justify-content-center">
-      <div class="col-md-2">
-        <div class="gravatar_edit">
-          <%= gravatar_for @user %>
-          <a href="http://gravatar.com/emails" target="_blank" class="gravater btn btn-sm btn-style btn-edit" rel="noopener">画像を変更</a>
+      <%= form_for(@user, url: edit_user_path) do |f| %>
+        <div class="col-md-2">
+          <%= f.label :image %>
+          <%= f.file_field :image %>
         </div>
-      </div>
-      <div class="col-md-6">
-        <%= form_for(@user, url: edit_user_path) do |f| %>
+        <div class="col-md-6">
           <%= render 'shared/error_messages', object: f.object %>
           <%= f.label :name, '名前'%>
           <%= f.text_field :name, class: 'form-layout'%>
@@ -21,8 +19,8 @@
           <%= f.label :password_confirmation, 'パスワード（確認）'%>
           <%= f.password_field :password_confirmation, class: 'form-layout'%>
           <%= f.submit '更新する', class: 'btn btn-style btn-edit'%>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
