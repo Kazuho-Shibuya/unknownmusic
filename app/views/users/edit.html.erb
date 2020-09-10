@@ -5,7 +5,11 @@
     <div class="row justify-content-center">
       <%= form_for(@user, url: edit_user_path) do |f| %>
         <div class="col-md-2">
-          <%= f.label :image %>
+          <% if @user.image? %>
+            <%= image_tag @user.image.url %>
+          <% else %>
+            <%= image_tag "/assets/default.jpg", :size => '100x100' %>
+          <% end %>
           <%= f.file_field :image %>
         </div>
         <div class="col-md-6">
