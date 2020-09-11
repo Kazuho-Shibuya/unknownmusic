@@ -2,9 +2,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
-  process resize_to_fill: [100, 100, "Center"]
+  process resize_to_fill: [100, 100, 'Center']
 
-  #サムネイルの為に画像をリサイズ
+  # サムネイルの為に画像をリサイズ
   version :thumb80 do
     process resize_to_fit: [80, 80]
   end
@@ -48,12 +48,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_whitelist
-    %w(jpg png)
+    %w[jpg png]
   end
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
-    original_filename if original_filename
+    original_filename
   end
 end
