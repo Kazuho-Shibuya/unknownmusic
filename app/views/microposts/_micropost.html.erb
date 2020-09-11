@@ -1,5 +1,5 @@
 <li id="micropost-<%= micropost.id %>">
-  <%= image_tag micropost.user.image.to_s %>
+  <%= image_tag micropost.user.image.thumb50.to_s %>
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span><br>
   <span class="artist"><%= micropost.artist %></span> -
   <span class="song"><%= micropost.song %></span>

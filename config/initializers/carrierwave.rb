@@ -1,5 +1,5 @@
-unless Rails.env.development? || Rails.env.test?
-  CarrierWave.configure do |config|
+CarrierWave.configure do |config|
+  if Rails.env.production?
     config.fog_credentials = {
       provider: 'AWS',
       aws_access_key_id: ENV['S3_ACCESS_KEY_ID'],
@@ -9,5 +9,29 @@ unless Rails.env.development? || Rails.env.test?
 
     config.fog_directory  = 'unknownmusic-image'
     config.cache_storage = :fog
+    config.storage = :fog
+  else
+    config.storage :file
+    config.enable_processing = false if Rails.env.test?
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

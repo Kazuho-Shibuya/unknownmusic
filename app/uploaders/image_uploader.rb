@@ -1,7 +1,16 @@
 class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
+  process resize_to_fill: [100, 100, "Center"]
+
+  #サムネイルの為に画像をリサイズ
+  version :thumb80 do
+    process resize_to_fit: [80, 80]
+  end
+  version :thumb50 do
+    process resize_to_fit: [50, 50]
+  end
 
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
