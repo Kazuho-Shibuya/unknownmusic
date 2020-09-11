@@ -7,7 +7,7 @@ CarrierWave.configure do |config|
       region: 'ap-northeast-1'
     }
 
-    config.fog_directory  = 'unknownmusic-image'
+    config.fog_directory = 'unknownmusic-image'
     config.cache_storage = :fog
     config.storage = :fog
   else
@@ -15,23 +15,3 @@ CarrierWave.configure do |config|
     config.enable_processing = false if Rails.env.test?
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
