@@ -3,6 +3,22 @@
 
 /* universal */
 
+html {
+  font-size: calc(112.5% + 0.25vw);
+}
+@media screen and (max-width: 767px) {
+  /*　画面サイズが767px以下の場合読み込む　*/
+  h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  /*　画面サイズが768px以上の場合読み込む　*/
+  h1 {
+    font-size: 3rem;
+  }
+}
+
 .img-layout {
   position: relative;
   height: 100vh;
@@ -110,6 +126,7 @@ footer {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  white-space: nowrap;
 }
 
 .container-signup {
