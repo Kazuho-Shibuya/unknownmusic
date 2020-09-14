@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "font-awesome";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
 
 /* universal */
 
@@ -127,6 +128,10 @@ footer {
   color: white;
   text-align: center;
   white-space: nowrap;
+}
+
+.container-top h1 {
+  font-family: "Roboto", sans-serif;
 }
 
 .container-signup {
