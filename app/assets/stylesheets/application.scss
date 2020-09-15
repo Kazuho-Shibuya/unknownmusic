@@ -5,19 +5,13 @@
 /* universal */
 
 html {
-  font-size: calc(112.5% + 0.25vw);
+  //10px
+  font-size: 62.5%;
 }
-@media screen and (max-width: 767px) {
-  /*　画面サイズが767px以下の場合読み込む　*/
-  h1 {
-    font-size: 2rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  /*　画面サイズが768px以上の場合読み込む　*/
-  h1 {
-    font-size: 3rem;
-  }
+
+label {
+  text-align: left;
+  margin-bottom: 0;
 }
 
 .img-layout {
@@ -27,28 +21,19 @@ html {
   background-position: center center;
 }
 
-label {
-  text-align: left;
-  margin-bottom: 0;
-}
-
-.form-layout {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-#wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-//ボタンスタイル
 .btn-style {
   text-decoration: none;
   border-radius: 3px;
   transition: 0.4s;
   border: solid 2px white;
+}
+
+.form-layout {
+  width: 100%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 /* errors */
@@ -94,30 +79,21 @@ header {
 }
 
 /* footer */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 footer {
   margin-top: auto;
 }
 
-/* main */
-
-.overflow-hidden {
-  overflow: hidden;
-}
+/* TOP */
 
 .top-img {
   background-image: image-url("top.jpg");
-}
-
-.signup-img {
-  background-image: image-url("signup.jpg");
-}
-
-.login-img {
-  background-image: image-url("login.jpg");
-}
-
-.edit-img {
-  background-image: image-url("edit.jpg");
 }
 
 .container-top {
@@ -132,47 +108,11 @@ footer {
 
 .container-top h1 {
   font-family: "Roboto", sans-serif;
+  font-size: 8rem;
 }
 
-.container-signup {
-  margin-top: 5rem;
-  position: absolute;
-  top: 35%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-.container-login {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-}
-
-.container-edit {
-  position: absolute;
-  top: 40%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-.container-signup h1 {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.container-login h1 {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.container-edit h1 {
-  margin-top: 5rem;
-  margin-bottom: 1rem;
-  text-align: center;
+.container-top p {
+  font-size: 2.5rem;
 }
 
 .btn-top {
@@ -184,31 +124,30 @@ footer {
   }
 }
 
+/* SIGN UP */
+
+.signup-img {
+  background-image: image-url("signup.jpg");
+}
+
+.container-signup {
+  margin-top: 5rem;
+  position: absolute;
+  top: 35%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.container-signup h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 .btn-signup {
   width: 100%;
   color: white;
   background: rgba(0, 0, 0, 0.2);
-  &:hover {
-    background: white;
-    color: black;
-  }
-}
-
-.btn-login {
-  width: 100%;
-  color: black;
-  margin-bottom: 1rem;
-  &:hover {
-    background: black;
-    color: white;
-  }
-}
-
-.btn-edit {
-  width: 100%;
-  color: white;
-  background: rgba(0, 0, 0, 0.2);
-  border: solid 2px white;
   &:hover {
     background: white;
     color: black;
@@ -224,17 +163,67 @@ footer {
   }
 }
 
-.gravatar_edit {
-  text-align: center;
+/* LOGIN */
+
+.login-img {
+  background-image: image-url("login.jpg");
+}
+
+.container-login {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.btn-login {
+  width: 100%;
+  color: black;
   margin-bottom: 1rem;
+  &:hover {
+    background: black;
+    color: white;
+  }
 }
 
-.gravater {
-  display: block;
-  border: solid 1px white;
+.container-login h1 {
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-/* Users index */
+/* EDIT */
+
+.edit-img {
+  background-image: image-url("edit.jpg");
+}
+
+.container-edit {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.container-edit h1 {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.btn-edit {
+  width: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  border: solid 2px white;
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+
+/* Users */
 
 .users {
   list-style: none;
@@ -246,7 +235,7 @@ footer {
   }
 }
 
-/* microposts */
+/* Microposts */
 
 .microposts {
   list-style: none;
@@ -271,20 +260,6 @@ footer {
     color: gray;
     display: block;
     margin-left: 60px;
-  }
-}
-
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
-
-span.picture {
-  margin-top: 10px;
-  input {
-    border: 0;
   }
 }
 
@@ -324,10 +299,6 @@ span.picture {
   }
 }
 
-.users.follow {
-  padding: 0;
-}
-
 /* likes */
 .btn-like {
   color: red;
@@ -340,5 +311,569 @@ span.picture {
   color: black;
   &:hover {
     color: red;
+  }
+}
+
+/* Responsive */
+
+/*　画面サイズが768px以上の場合読み込む　*/
+@media screen and (min-width: 768px) {
+  /* errors */
+
+  .error_explanation {
+    color: red;
+    width: 100%;
+    ul {
+      color: red;
+    }
+  }
+
+  .alert {
+    margin-bottom: 0;
+  }
+
+  /* header */
+
+  header {
+    z-index: 10;
+  }
+
+  .logo {
+    font-size: 1.7rem;
+    color: white;
+    letter-spacing: -1px;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: none;
+      color: #ca046e;
+    }
+  }
+
+  .link-style {
+    color: white;
+    margin: 1rem;
+
+    &:hover {
+      text-decoration: none;
+      color: #c84289;
+    }
+  }
+
+  /* footer */
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  footer {
+    margin-top: auto;
+  }
+
+  /* TOP */
+
+  .top-img {
+    background-image: image-url("top.jpg");
+  }
+
+  .container-top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .container-top h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 8rem;
+  }
+
+  .container-top p {
+    font-size: 2.5rem;
+  }
+
+  .btn-top {
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  /* SIGN UP */
+
+  .signup-img {
+    background-image: image-url("signup.jpg");
+  }
+
+  .container-signup {
+    margin-top: 5rem;
+    position: absolute;
+    top: 35%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .container-signup h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .btn-signup {
+    width: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  .btn-to-signup {
+    width: 100%;
+    color: black;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  /* LOGIN */
+
+  .login-img {
+    background-image: image-url("login.jpg");
+  }
+
+  .container-login {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+  }
+
+  .btn-login {
+    width: 100%;
+    color: black;
+    margin-bottom: 1rem;
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+
+  .container-login h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  /* EDIT */
+
+  .edit-img {
+    background-image: image-url("edit.jpg");
+  }
+
+  .container-edit {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .container-edit h1 {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .btn-edit {
+    width: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    border: solid 2px white;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  /* Users */
+
+  .users {
+    list-style: none;
+    margin: 0;
+    li {
+      overflow: auto;
+      padding: 10px 0;
+      border-bottom: 1px solid gray;
+    }
+  }
+
+  /* Microposts */
+
+  .microposts {
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 10px 0;
+      border-top: 1px solid #e8e8e8;
+    }
+    .user {
+      margin-top: 5em;
+      padding-top: 0;
+    }
+    .content {
+      display: block;
+      margin-left: 60px;
+      img {
+        display: block;
+        padding: 5px 0;
+      }
+    }
+    .timestamp {
+      color: gray;
+      display: block;
+      margin-left: 60px;
+    }
+  }
+
+  /* sidebar */
+
+  .stats {
+    overflow: auto;
+    margin-top: 0;
+    padding: 0;
+    a {
+      float: left;
+      padding: 0 10px;
+      border-left: 1px solid #eeeeee;
+      color: gray;
+      &:first-child {
+        padding-left: 0;
+        border: 0;
+      }
+      &:hover {
+        text-decoration: none;
+        color: blue;
+      }
+    }
+    strong {
+      display: block;
+    }
+  }
+
+  .user_avatars {
+    overflow: auto;
+    margin-top: 10px;
+    .gravatar {
+      margin: 1px 1px;
+    }
+    a {
+      padding: 0;
+    }
+  }
+
+  /* likes */
+  .btn-like {
+    color: red;
+    &:hover {
+      color: red;
+    }
+  }
+
+  .btn-like-non {
+    color: black;
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+/*　画面サイズが767px以下の場合読み込む　*/
+@media screen and (max-width: 767px) {
+  /* errors */
+
+  .error_explanation {
+    color: red;
+    width: 100%;
+    ul {
+      color: red;
+    }
+  }
+
+  .alert {
+    margin-bottom: 0;
+  }
+
+  /* header */
+
+  header {
+    z-index: 10;
+  }
+
+  .logo {
+    font-size: 1.7rem;
+    color: white;
+    letter-spacing: -1px;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: none;
+      color: #ca046e;
+    }
+  }
+
+  .link-style {
+    color: white;
+    margin: 1rem;
+
+    &:hover {
+      text-decoration: none;
+      color: #c84289;
+    }
+  }
+
+  /* footer */
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  footer {
+    margin-top: auto;
+  }
+
+  /* TOP */
+
+  .top-img {
+    background-image: image-url("top.jpg");
+  }
+
+  .container-top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .container-top h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+  }
+
+  .container-top p {
+    font-size: 1.25rem;
+  }
+
+  .btn-top {
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  /* SIGN UP */
+
+  .signup-img {
+    background-image: image-url("signup.jpg");
+  }
+
+  .container-signup {
+    margin-top: 5rem;
+    position: absolute;
+    top: 35%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .container-signup h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .btn-signup {
+    width: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  .btn-to-signup {
+    width: 100%;
+    color: black;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  /* LOGIN */
+
+  .login-img {
+    background-image: image-url("login.jpg");
+  }
+
+  .container-login {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+  }
+
+  .btn-login {
+    width: 100%;
+    color: black;
+    margin-bottom: 1rem;
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+
+  .container-login h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  /* EDIT */
+
+  .edit-img {
+    background-image: image-url("edit.jpg");
+  }
+
+  .container-edit {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .container-edit h1 {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .btn-edit {
+    width: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    border: solid 2px white;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  /* Users */
+
+  .users {
+    list-style: none;
+    margin: 0;
+    li {
+      overflow: auto;
+      padding: 10px 0;
+      border-bottom: 1px solid gray;
+    }
+  }
+
+  /* Microposts */
+
+  .microposts {
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 10px 0;
+      border-top: 1px solid #e8e8e8;
+    }
+    .user {
+      margin-top: 5em;
+      padding-top: 0;
+    }
+    .content {
+      display: block;
+      margin-left: 60px;
+      img {
+        display: block;
+        padding: 5px 0;
+      }
+    }
+    .timestamp {
+      color: gray;
+      display: block;
+      margin-left: 60px;
+    }
+  }
+
+  /* sidebar */
+
+  .stats {
+    overflow: auto;
+    margin-top: 0;
+    padding: 0;
+    a {
+      float: left;
+      padding: 0 10px;
+      border-left: 1px solid #eeeeee;
+      color: gray;
+      &:first-child {
+        padding-left: 0;
+        border: 0;
+      }
+      &:hover {
+        text-decoration: none;
+        color: blue;
+      }
+    }
+    strong {
+      display: block;
+    }
+  }
+
+  .user_avatars {
+    overflow: auto;
+    margin-top: 10px;
+    .gravatar {
+      margin: 1px 1px;
+    }
+    a {
+      padding: 0;
+    }
+  }
+
+  /* likes */
+  .btn-like {
+    color: red;
+    &:hover {
+      color: red;
+    }
+  }
+
+  .btn-like-non {
+    color: black;
+    &:hover {
+      color: red;
+    }
   }
 }
