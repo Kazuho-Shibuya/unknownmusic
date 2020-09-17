@@ -288,11 +288,6 @@ footer {
 
 /*　画面サイズが768px以上の場合読み込む　*/
 @media screen and (min-width: 768px) {
-  /* universal */
-  .btn-style {
-    border: solid 2px white;
-  }
-
   /* header */
 
   .logo {
@@ -305,6 +300,10 @@ footer {
   }
 
   /* TOP */
+
+  .btn-top {
+    border: solid 2px white;
+  }
 
   .container-top h1 {
     font-size: 8rem;
@@ -394,11 +393,6 @@ footer {
 
 /*　画面サイズが767px以下の場合読み込む　*/
 @media screen and (max-width: 767px) {
-  /* universal */
-  .btn-style {
-    border: solid 2px white;
-  }
-
   /* header */
 
   .logo {
@@ -411,6 +405,10 @@ footer {
   }
 
   /* TOP */
+
+  .btn-top {
+    border: solid 2px white;
+  }
 
   .container-top h1 {
     font-size: 4rem;
