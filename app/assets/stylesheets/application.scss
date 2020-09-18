@@ -117,6 +117,9 @@ footer {
   color: white;
   background: rgba(0, 0, 0, 0.2);
   font-family: "Noto Sans JP", sans-serif;
+  border: solid 0.2rem white;
+  padding: 1rem 2rem;
+  font-size: 2rem;
   &:hover {
     background: white;
     color: black;
@@ -299,7 +302,7 @@ footer {
 
   .logo {
     font-size: 1.7rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.1rem;
   }
 
   .link-style {
@@ -307,12 +310,6 @@ footer {
   }
 
   /* TOP */
-
-  .btn-top {
-    border: solid 0.2rem white;
-    padding: 1rem 2rem;
-    font-size: 2.5rem;
-  }
 
   .container-top h1 {
     font-size: 8rem;
@@ -350,15 +347,15 @@ footer {
   }
 
   .btn-edit {
-    border: solid 2px white;
+    border: solid 0.2rem white;
   }
 
   /* Users */
 
   .users {
     li {
-      padding: 10px 0;
-      border-bottom: 1px solid gray;
+      padding: 1rem 0;
+      border-bottom: 0.1rem solid gray;
     }
   }
 
@@ -366,20 +363,20 @@ footer {
 
   .microposts {
     li {
-      padding: 10px 0;
-      border-top: 1px solid #e8e8e8;
+      padding: 0.1rem 0;
+      border-top: 0.1rem solid #e8e8e8;
     }
     .user {
-      margin-top: 5em;
+      margin-top: 5rem;
     }
     .content {
-      margin-left: 60px;
+      margin-left: 6rem;
       img {
-        padding: 5px 0;
+        padding: 0.5rem 0;
       }
     }
     .timestamp {
-      margin-left: 60px;
+      margin-left: 6rem;
     }
   }
 
@@ -387,15 +384,15 @@ footer {
 
   .stats {
     a {
-      padding: 0 10px;
-      border-left: 1px solid #eeeeee;
+      padding: 0.1rem;
+      border-left: 0.1rem solid #eeeeee;
     }
   }
 
   .user_avatars {
-    margin-top: 10px;
+    margin-top: 1rem;
     .gravatar {
-      margin: 1px 1px;
+      margin: 0.1rem 0.1rem;
     }
   }
 }
@@ -406,7 +403,7 @@ footer {
 
   .logo {
     font-size: 1.7rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.1rem;
   }
 
   .link-style {
@@ -414,12 +411,6 @@ footer {
   }
 
   /* TOP */
-
-  .btn-top {
-    border: solid 0.1rem white;
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-  }
 
   .container-top h1 {
     font-size: 4rem;
@@ -457,15 +448,15 @@ footer {
   }
 
   .btn-edit {
-    border: solid 2px white;
+    border: solid 0.2rem white;
   }
 
   /* Users */
 
   .users {
     li {
-      padding: 10px 0;
-      border-bottom: 1px solid gray;
+      padding: 1rem 0;
+      border-bottom: 0.1rem solid gray;
     }
   }
 
@@ -473,20 +464,20 @@ footer {
 
   .microposts {
     li {
-      padding: 10px 0;
-      border-top: 1px solid #e8e8e8;
+      padding: 1rem 0;
+      border-top: 0.1rem solid #e8e8e8;
     }
     .user {
-      margin-top: 5em;
+      margin-top: 5rem;
     }
     .content {
-      margin-left: 60px;
+      margin-left: 6rem;
       img {
-        padding: 5px 0;
+        padding: 0.5rem 0;
       }
     }
     .timestamp {
-      margin-left: 60px;
+      margin-left: 6rem;
     }
   }
 
@@ -494,15 +485,15 @@ footer {
 
   .stats {
     a {
-      padding: 0 10px;
-      border-left: 1px solid #eeeeee;
+      padding: 0 1rem;
+      border-left: 0.1rem solid #eeeeee;
     }
   }
 
   .user_avatars {
-    margin-top: 10px;
+    margin-top: 1rem;
     .gravatar {
-      margin: 1px 1px;
+      margin: 0.1rem 0.1rem;
     }
   }
 }
