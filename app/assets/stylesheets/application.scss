@@ -27,9 +27,9 @@ p {
 
 .btn-style {
   text-decoration: none;
-  border-radius: 3rem;
   transition: 0.4s;
   font-family: "Noto Sans JP", sans-serif;
+  border-radius: 4rem;
 }
 
 .form-layout {
@@ -63,6 +63,8 @@ header {
 .logo {
   color: white;
   font-weight: bold;
+  font-size: 1.7rem;
+  letter-spacing: -0.1rem;
 
   &:hover {
     text-decoration: none;
@@ -72,7 +74,7 @@ header {
 
 .link-style {
   color: white;
-
+  margin: 1rem;
   &:hover {
     text-decoration: none;
     color: #c84289;
@@ -111,20 +113,20 @@ footer {
 .container-top h1 {
   font-family: "Roboto", sans-serif;
   margin-bottom: 0;
+  font-size: 4rem;
 }
 
 .container-top p {
+  letter-spacing: 0.3rem;
   margin-bottom: 6rem;
-
-  letter-spacing: 0.1rem;
+  font-size: 1.25rem;
 }
 
 .btn-top {
   color: white;
   background: rgba(0, 0, 0, 0.3);
-
   border: solid 0.2rem white;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   font-size: 2rem;
   &:hover {
     background: white;
@@ -144,10 +146,12 @@ footer {
   left: 75%;
   transform: translate(-50%, -50%);
   color: white;
+  margin-top: 5rem;
 }
 
 .container-signup h1 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .btn-signup {
@@ -186,6 +190,8 @@ footer {
 .btn-login {
   width: 100%;
   color: black;
+  margin-bottom: 1rem;
+
   &:hover {
     background: black;
     color: white;
@@ -194,6 +200,7 @@ footer {
 
 .container-login h1 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 /* EDIT */
@@ -212,12 +219,16 @@ footer {
 
 .container-edit h1 {
   text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 
 .btn-edit {
   width: 100%;
   color: white;
   background: rgba(0, 0, 0, 0.2);
+  border: solid 0.2rem white;
+
   &:hover {
     background: white;
     color: black;
@@ -231,6 +242,8 @@ footer {
   margin: 0;
   li {
     overflow: auto;
+    padding: 1rem 0;
+    border-bottom: 0.1rem solid gray;
   }
 }
 
@@ -239,19 +252,28 @@ footer {
 .microposts {
   list-style: none;
   padding: 0;
+  li {
+    padding: 1rem 0;
+    border-top: 0.1rem solid #e8e8e8;
+  }
 
   .user {
     padding-top: 0;
+    margin-top: 5rem;
   }
   .content {
     display: block;
+    margin-left: 6rem;
+
     img {
       display: block;
+      padding: 0.5rem 0;
     }
   }
   .timestamp {
     color: gray;
     display: block;
+    margin-left: 6rem;
   }
 }
 
@@ -264,6 +286,8 @@ footer {
   a {
     float: left;
     color: gray;
+    padding: 0 1rem;
+    border-left: 0.1rem solid #eeeeee;
     &:first-child {
       padding-left: 0;
       border: 0;
@@ -280,8 +304,20 @@ footer {
 
 .user_avatars {
   overflow: auto;
+  margin-top: 1rem;
+
   a {
     padding: 0;
+  }
+  .gravatar {
+    margin: 0.1rem 0.1rem;
+  }
+}
+
+.stats {
+  a {
+    padding: 0 1rem;
+    border-left: 0.1rem solid #eeeeee;
   }
 }
 
@@ -302,8 +338,8 @@ footer {
 
 /* Responsive */
 
-/*　画面サイズが768px以上の場合読み込む　*/
-@media screen and (min-width: 768px) {
+/*　モバイルサイズ対応　*/
+@media (min-width: 576px) {
   /* header */
 
   .logo {
@@ -318,11 +354,127 @@ footer {
   /* TOP */
 
   .container-top h1 {
-    font-size: 8rem;
+    font-size: 4rem;
   }
 
   .container-top p {
-    font-size: 3rem;
+    margin-bottom: 6rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .btn-top {
+    border: solid 0.2rem white;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+  }
+
+  /* SIGN UP */
+
+  .container-signup {
+    margin-top: 5rem;
+  }
+
+  .container-signup h1 {
+    margin-bottom: 1rem;
+  }
+
+  /* LOGIN */
+
+  .btn-login {
+    margin-bottom: 1rem;
+  }
+
+  .container-login h1 {
+    margin-bottom: 1rem;
+  }
+
+  /* EDIT */
+
+  .container-edit h1 {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn-edit {
+    border: solid 0.2rem white;
+  }
+
+  /* Users */
+
+  .users {
+    li {
+      padding: 1rem 0;
+      border-bottom: 0.1rem solid gray;
+    }
+  }
+
+  /* Microposts */
+
+  .microposts {
+    li {
+      padding: 1rem 0;
+      border-top: 0.1rem solid #e8e8e8;
+    }
+    .user {
+      margin-top: 5rem;
+    }
+    .content {
+      margin-left: 6rem;
+      img {
+        padding: 0.5rem 0;
+      }
+    }
+    .timestamp {
+      margin-left: 6rem;
+    }
+  }
+
+  /* sidebar */
+
+  .stats {
+    a {
+      padding: 0 1rem;
+      border-left: 0.1rem solid #eeeeee;
+    }
+  }
+
+  .user_avatars {
+    margin-top: 1rem;
+    .gravatar {
+      margin: 0.1rem 0.1rem;
+    }
+  }
+}
+
+/*　タブレットサイズ対応　*/
+@media (min-width: 768px) {
+  /* header */
+
+  .logo {
+    font-size: 1.7rem;
+    letter-spacing: -0.1rem;
+  }
+
+  .link-style {
+    margin: 1rem;
+  }
+
+  /* TOP */
+
+  .container-top h1 {
+    font-size: 7rem;
+  }
+
+  .container-top p {
+    margin-bottom: 11rem;
+    font-size: 2rem;
+  }
+
+  .btn-top {
+    border: solid 0.2rem white;
+    padding: 1rem 3rem;
+    font-size: 2rem;
   }
 
   /* SIGN UP */
@@ -403,8 +555,8 @@ footer {
   }
 }
 
-/*　画面サイズが767px以下の場合読み込む　*/
-@media screen and (max-width: 767px) {
+/*　PCサイズ対応　*/
+@media (min-width: 992px) {
   /* header */
 
   .logo {
@@ -419,11 +571,18 @@ footer {
   /* TOP */
 
   .container-top h1 {
-    font-size: 4rem;
+    font-size: 7rem;
   }
 
   .container-top p {
-    font-size: 1.25rem;
+    margin-bottom: 10rem;
+    font-size: 2rem;
+  }
+
+  .btn-top {
+    border: solid 0.2rem white;
+    padding: 1rem 3rem;
+    font-size: 2rem;
   }
 
   /* SIGN UP */
@@ -470,7 +629,7 @@ footer {
 
   .microposts {
     li {
-      padding: 1rem 0;
+      padding: 0.1rem 0;
       border-top: 0.1rem solid #e8e8e8;
     }
     .user {
@@ -491,7 +650,7 @@ footer {
 
   .stats {
     a {
-      padding: 0 1rem;
+      padding: 0.1rem;
       border-left: 0.1rem solid #eeeeee;
     }
   }
