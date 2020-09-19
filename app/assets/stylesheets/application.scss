@@ -105,17 +105,18 @@ footer {
 
 .container-top h1 {
   font-family: "Roboto", sans-serif;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .container-top p {
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
   font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 .btn-top {
   color: white;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   font-family: "Noto Sans JP", sans-serif;
   border: solid 0.2rem white;
   padding: 1rem 2rem;
@@ -316,7 +317,7 @@ footer {
   }
 
   .container-top p {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   /* SIGN UP */
