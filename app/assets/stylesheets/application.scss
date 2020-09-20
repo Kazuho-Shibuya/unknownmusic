@@ -124,13 +124,15 @@ footer {
 
 .btn-top {
   color: white;
-  background: rgba(0, 0, 0, 0.3);
-  border: solid 0.2rem white;
+  background: rgba(0, 0, 0, 0.25);
+  border: solid 0.1rem white;
   padding: 1rem 3rem;
   font-size: 2rem;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
   &:hover {
     background: white;
     color: black;
+    box-shadow: none;
   }
 }
 
@@ -364,7 +366,7 @@ footer {
   }
 
   .btn-top {
-    border: solid 0.2rem white;
+    border: solid 0.1rem white;
     padding: 1rem 3rem;
     font-size: 2rem;
   }
@@ -472,7 +474,7 @@ footer {
   }
 
   .btn-top {
-    border: solid 0.2rem white;
+    border: solid 0.1rem white;
     padding: 1rem 3rem;
     font-size: 2rem;
   }
@@ -580,7 +582,7 @@ footer {
   }
 
   .btn-top {
-    border: solid 0.2rem white;
+    border: solid 0.1rem white;
     padding: 1rem 3rem;
     font-size: 2rem;
   }
