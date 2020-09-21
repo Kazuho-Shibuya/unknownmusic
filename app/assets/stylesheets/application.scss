@@ -126,8 +126,10 @@ footer {
   color: white;
   background: rgba(0, 0, 0, 0.25);
   border: solid 0.1rem white;
-  padding: 1rem 3rem;
-  font-size: 2rem;
+  padding: 0.75rem 2.25rem;
+  font-size: 1.25rem;
+  text-indent: 0.3rem;
+  letter-spacing: 0.3rem;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
   &:hover {
     background: white;
@@ -366,9 +368,10 @@ footer {
   }
 
   .btn-top {
-    border: solid 0.1rem white;
-    padding: 1rem 3rem;
-    font-size: 2rem;
+    padding: 0.75rem 2.25rem;
+    font-size: 1.25rem;
+    text-indent: 0.3rem;
+    letter-spacing: 0.3rem;
   }
 
   /* SIGN UP */
@@ -475,9 +478,10 @@ footer {
   }
 
   .btn-top {
-    border: solid 0.1rem white;
     padding: 1rem 3rem;
     font-size: 2rem;
+    text-indent: 1rem;
+    letter-spacing: 1rem;
   }
 
   /* SIGN UP */
@@ -584,9 +588,10 @@ footer {
   }
 
   .btn-top {
-    border: solid 0.1rem white;
     padding: 1rem 3rem;
     font-size: 2rem;
+    text-indent: 1rem;
+    letter-spacing: 1rem;
   }
 
   /* SIGN UP */
