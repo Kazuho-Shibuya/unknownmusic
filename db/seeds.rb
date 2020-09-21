@@ -35,7 +35,8 @@ users = User.order(:created_at).take(6)
   artist = '嵐'
   content = 'これぞラブソング！！！'
   listening_url = 'https://p.scdn.co/mp3-preview/49846ff4faf7a04f86aeab2b9dc3fd29f18da9e0?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
-  users.each { |user| user.microposts.create!(song: song, artist: artist, content: content, listening_url: listening_url) }
+  likes_count = 3
+  users.each { |user| user.microposts.create!(song: song, artist: artist, content: content, listening_url: listening_url, likes_count: likes_count) }
 end
 
 # リレーションシップ
