@@ -26,7 +26,8 @@ User.create!(name: 'テストユーザー',
                password: password,
                password_confirmation: password,
                activated: true,
-               activated_at: Time.zone.now)
+               activated_at: Time.zone.now,
+               image: File.open('./app/assets/images/test_user.jpg'))
 end
 
 # マイクロポスト

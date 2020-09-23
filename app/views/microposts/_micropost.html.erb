@@ -1,17 +1,27 @@
-<li id="micropost-<%= micropost.id %>">
-  <%= image_tag micropost.user.image.thumb50.to_s %>
-  <span class="user"><%= link_to micropost.user.name, micropost.user %></span><br>
-  <span class="artist"><%= micropost.artist %></span> -
-  <span class="song"><%= micropost.song %></span>
-  <span class="content"><%= micropost.content %></span>
-  <span class="timestamp">
-    <i class="fa fa-clock-o "></i>
-    <%= time_ago_in_words(micropost.created_at) %>前
-    <% if current_user?(micropost.user) %>
-      <%= link_to "delete", micropost, method: :delete,
+<ol class="microposts">
+  <li id="micropost-<%= micropost.id %>">
+    <div class="row">
+      <div class="col-2">
+        <span class="user_image"><%= image_tag micropost.user.image.thumb50.to_s %></span>
+      </div>
+      <div class="col-10">
+        <span class="user"><%= link_to micropost.user.name, micropost.user %></span><br>
+        <span class="artist"><%= micropost.artist %></span> -
+        <span class="song"><%= micropost.song %></span>
+        <span class="content"><%= micropost.content %></span><br>
+        <span class="listening"><%= link_to '', micropost.listening_url, class: 'fa fa-play', target: :_blank %></span>
+        <%= render 'likes/like', micropost: micropost %>
+        <span class="delete">
+          <% if current_user?(micropost.user) %>
+            <%= link_to "", micropost, method: :delete, class: 'fa fa-trash-o',
                                        data: { confirm: "本当に削除しますか？" } %>
-    <% end %>
-  </span>
-  <%= link_to '', micropost.listening_url, class: 'fa fa-play', target: :_blank %>
-  <%= render 'likes/like', micropost: micropost %>
-</li>
+          <% end %>
+        </span>
+        <span class="timestamp">
+          <i class="fa fa-clock-o"></i>
+          <%= time_ago_in_words(micropost.created_at) %>前
+        </span>
+      </div>
+    </div>
+  </li>
+</ol>

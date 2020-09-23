@@ -40,10 +40,6 @@ p {
   overflow: hidden;
 }
 
-.center {
-  text-align: center;
-}
-
 /* errors */
 
 .error_explanation {
@@ -110,7 +106,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-
+  text-align: center;
   white-space: nowrap;
 }
 
@@ -257,28 +253,37 @@ footer {
 .microposts {
   list-style: none;
   padding: 0;
-  li {
+  .row {
     padding: 1rem 0;
     border-top: 0.1rem solid #e8e8e8;
   }
 
+  .user_image {
+    padding-top: 0;
+  }
+
   .user {
     padding-top: 0;
-    margin-top: 5rem;
+  }
+  .artist {
+    padding-top: 0;
+  }
+  .song {
+    padding-top: 0;
   }
   .content {
-    display: block;
-    margin-left: 6rem;
-
-    img {
-      display: block;
-      padding: 0.5rem 0;
-    }
   }
   .timestamp {
     color: gray;
-    display: block;
-    margin-left: 6rem;
+  }
+  .listening {
+    display: inline;
+  }
+  .like-inline {
+    display: inline;
+  }
+
+  .delete {
   }
 }
 
@@ -338,6 +343,15 @@ footer {
   color: black;
   &:hover {
     color: red;
+  }
+}
+
+/* popular posts */
+.popular-posts {
+  font-size: 2rem;
+  h1 {
+    font-size: 3rem;
+    text-align: center;
   }
 }
 
@@ -427,9 +441,6 @@ footer {
     }
     .content {
       margin-left: 6rem;
-      img {
-        padding: 0.5rem 0;
-      }
     }
     .timestamp {
       margin-left: 6rem;
@@ -537,9 +548,6 @@ footer {
     }
     .content {
       margin-left: 6rem;
-      img {
-        padding: 0.5rem 0;
-      }
     }
     .timestamp {
       margin-left: 6rem;
@@ -647,9 +655,6 @@ footer {
     }
     .content {
       margin-left: 6rem;
-      img {
-        padding: 0.5rem 0;
-      }
     }
     .timestamp {
       margin-left: 6rem;
