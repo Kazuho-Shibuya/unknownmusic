@@ -1,13 +1,13 @@
 <span class="like">
   <% if micropost.favorite?(current_user) %>
-    <%= form_for(micropost.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %>
+    <%= form_for(micropost.likes.find_by(user_id: current_user.id), method: :delete, remote: true, html: { class: "like-inline" }) do |f| %>
       <%= button_tag(class: "btn btn-sm btn-like") do %>
         <%= content_tag :span, "#{micropost.likes_count}", class: "fa fa-heart" %>
       <% end %>
     <% end %>
   <% else %>
-    <%= form_for(micropost.likes.build, remote: true) do |f| %>
-      <div><%= hidden_field_tag :micropost_id, micropost.id %></div>
+    <%= form_for(micropost.likes.build, remote: true, html: { class: "like-inline" }) do |f| %>
+      <%= hidden_field_tag :micropost_id, micropost.id %>
       <%= button_tag(class: "btn btn-sm btn-like-non") do %>
         <%= content_tag :span, "#{micropost.likes_count}", class: "fa fa-heart-o" %>
       <% end %>
