@@ -2,11 +2,32 @@
 @import "font-awesome";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap");
 /* universal */
 
 html {
   //10px
   font-size: 62.5%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.container-fiuld {
+}
+
+main {
+}
+// #wrapper {
+//   display: flex;
+//   flex-flow: column;
+//   min-height: 100vh;
+// }
+
+footer {
+  margin-top: auto;
 }
 
 label {
@@ -16,13 +37,10 @@ label {
 
 p {
   font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
 }
 
 .img-layout {
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
 }
 
 .btn-style {
@@ -81,23 +99,14 @@ header {
   }
 }
 
-/* footer */
-
-.wrapper {
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-footer {
-  margin-top: auto;
-}
-
 /* TOP */
 
 .top-img {
   background-image: image-url("top.jpg");
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
 }
 
 .container-top {
@@ -253,9 +262,14 @@ footer {
 .microposts {
   list-style: none;
   padding: 0;
+  color: white;
+  // background-color: white;
+  // background: rgba(255, 255, 255, 0.7);
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 1);
+  border-radius: 4rem;
+  border: solid 0.1rem white;
   .row {
-    padding: 1rem 0;
-    border-top: 0.1rem solid #e8e8e8;
+    padding: 0.5rem 0;
   }
 
   .user_image {
@@ -347,11 +361,20 @@ footer {
 }
 
 /* popular posts */
-.popular-posts {
+.popular-img {
+  background-image: image-url("popular.jpg");
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+.container-popular {
   font-size: 2rem;
+  color: black;
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
   }
 }
 
@@ -434,7 +457,6 @@ footer {
   .microposts {
     li {
       padding: 1rem 0;
-      border-top: 0.1rem solid #e8e8e8;
     }
     .user {
       margin-top: 5rem;
@@ -541,7 +563,6 @@ footer {
   .microposts {
     li {
       padding: 0.1rem 0;
-      border-top: 0.1rem solid #e8e8e8;
     }
     .user {
       margin-top: 5rem;
@@ -648,7 +669,6 @@ footer {
   .microposts {
     li {
       padding: 0.1rem 0;
-      border-top: 0.1rem solid #e8e8e8;
     }
     .user {
       margin-top: 5rem;
