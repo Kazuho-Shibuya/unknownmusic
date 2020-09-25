@@ -262,22 +262,33 @@ header {
 .microposts {
   list-style: none;
   padding: 0;
-  color: white;
+  margin-bottom: 1rem;
   // background-color: white;
-  // background: rgba(255, 255, 255, 0.7);
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 1);
-  border-radius: 4rem;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 3rem;
   border: solid 0.1rem white;
   .row {
-    padding: 0.5rem 0;
+    padding: 0;
+  }
+
+  .col-2 {
+    padding: 0;
+  }
+
+  .col-8 {
+    padding: 0;
   }
 
   .user_image {
     padding-top: 0;
+    text-align: center;
   }
 
   .user {
     padding-top: 0;
+    color: white;
+    text-decoration: none;
   }
   .artist {
     padding-top: 0;
@@ -366,10 +377,11 @@ header {
   position: relative;
   background-size: cover;
   background-position: center center;
+  background-color: #15202b;
 }
 .container-popular {
   font-size: 2rem;
-  color: black;
+  color: white;
   h1 {
     font-size: 4rem;
     text-align: center;

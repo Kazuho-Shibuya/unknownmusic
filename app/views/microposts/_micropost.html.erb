@@ -2,10 +2,10 @@
   <li id="micropost-<%= micropost.id %>">
     <div class="row">
       <div class="col-2">
-        <span class="user_image"><%= image_tag micropost.user.image.thumb50.to_s %></span>
+        <span class="user_image mx-auto d-block"><%= image_tag micropost.user.image.thumb80.to_s %></span>
       </div>
-      <div class="col-10">
-        <span class="user"><%= link_to micropost.user.name, micropost.user %></span><br>
+      <div class="col-8">
+        <span class="user"><%= link_to micropost.user.name, micropost.user, class: "user" %></span><br>
         <span class="artist"><%= micropost.artist %></span> -
         <span class="song"><%= micropost.song %></span>
         <span class="content"><%= micropost.content %></span><br>
