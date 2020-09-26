@@ -264,51 +264,45 @@ header {
   padding: 0;
   margin-bottom: 1rem;
   // background-color: white;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
   border-radius: 3rem;
   border: solid 0.1rem white;
   .row {
     padding: 0;
-  }
+    .col-2 {
+      padding: 0;
+      .user_image {
+        padding-top: 0;
+        text-align: center;
+      }
+    }
 
-  .col-2 {
-    padding: 0;
-  }
-
-  .col-8 {
-    padding: 0;
-  }
-
-  .user_image {
-    padding-top: 0;
-    text-align: center;
-  }
-
-  .user {
-    padding-top: 0;
-    color: white;
-    text-decoration: none;
-  }
-  .artist {
-    padding-top: 0;
-  }
-  .song {
-    padding-top: 0;
-  }
-  .content {
-  }
-  .timestamp {
-    color: gray;
-  }
-  .listening {
-    display: inline;
-  }
-  .like-inline {
-    display: inline;
-  }
-
-  .delete {
+    .col-10 {
+      padding: 0;
+      margin: 0;
+      .user {
+        color: white;
+        text-decoration: none;
+      }
+      .content {
+        // margin-right: 20rem;
+      }
+      .like {
+        .like-inline {
+          display: inline;
+        }
+      }
+      .trash {
+        // margin-right: 4rem;
+      }
+      .timestamp {
+        // margin-right: 4rem;
+      }
+      .btn-size {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
 
@@ -359,13 +353,17 @@ header {
 /* likes */
 .btn-like {
   color: red;
+  padding: 0;
+  border: 0;
   &:hover {
     color: red;
   }
 }
 
 .btn-like-non {
-  color: black;
+  color: white;
+  padding: 0;
+  border: 0;
   &:hover {
     color: red;
   }
@@ -374,15 +372,14 @@ header {
 /* popular posts */
 .popular-img {
   background-image: image-url("popular.jpg");
-  position: relative;
   background-size: cover;
   background-position: center center;
-  background-color: #15202b;
 }
 .container-popular {
   font-size: 2rem;
   color: white;
   h1 {
+    margin: 3rem 0;
     font-size: 4rem;
     text-align: center;
     font-family: "Noto Sans JP", sans-serif;
@@ -466,20 +463,20 @@ header {
 
   /* Microposts */
 
-  .microposts {
-    li {
-      padding: 1rem 0;
-    }
-    .user {
-      margin-top: 5rem;
-    }
-    .content {
-      margin-left: 6rem;
-    }
-    .timestamp {
-      margin-left: 6rem;
-    }
-  }
+  // .microposts {
+  //   li {
+  //     padding: 1rem 0;
+  //   }
+  //   .user {
+  //     margin-top: 5rem;
+  //   }
+  //   .content {
+  //     margin-left: 6rem;
+  //   }
+  //   .timestamp {
+  //     margin-left: 6rem;
+  //   }
+  // }
 
   /* sidebar */
 
@@ -572,20 +569,20 @@ header {
 
   /* Microposts */
 
-  .microposts {
-    li {
-      padding: 0.1rem 0;
-    }
-    .user {
-      margin-top: 5rem;
-    }
-    .content {
-      margin-left: 6rem;
-    }
-    .timestamp {
-      margin-left: 6rem;
-    }
-  }
+  // .microposts {
+  //   li {
+  //     padding: 0.1rem 0;
+  //   }
+  //   .user {
+  //     margin-top: 5rem;
+  //   }
+  //   .content {
+  //     margin-left: 6rem;
+  //   }
+  //   .timestamp {
+  //     margin-left: 6rem;
+  //   }
+  // }
 
   /* sidebar */
 
@@ -678,20 +675,20 @@ header {
 
   /* Microposts */
 
-  .microposts {
-    li {
-      padding: 0.1rem 0;
-    }
-    .user {
-      margin-top: 5rem;
-    }
-    .content {
-      margin-left: 6rem;
-    }
-    .timestamp {
-      margin-left: 6rem;
-    }
-  }
+  // .microposts {
+  //   li {
+  //     padding: 0.1rem 0;
+  //   }
+  //   .user {
+  //     margin-top: 5rem;
+  //   }
+  //   .content {
+  //     margin-left: 6rem;
+  //   }
+  //   .timestamp {
+  //     margin-left: 6rem;
+  //   }
+  // }
 
   /* sidebar */
 
