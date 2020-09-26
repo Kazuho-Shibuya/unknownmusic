@@ -4,24 +4,30 @@
       <div class="col-2">
         <span class="user_image mx-auto d-block"><%= image_tag micropost.user.image.thumb80.to_s %></span>
       </div>
-      <div class="col-8">
-        <span class="user"><%= link_to micropost.user.name, micropost.user, class: "user" %></span><br>
-        <span class="artist"><%= micropost.artist %></span> -
-        <span class="song"><%= micropost.song %></span>
-        <span class="content"><%= micropost.content %></span><br>
-        <span class="listening"><%= link_to '', micropost.listening_url, class: 'fa fa-play', target: :_blank %></span>
-        <%= render 'likes/like', micropost: micropost %>
-        <span class="delete">
-          <% if current_user?(micropost.user) %>
-            <%= link_to "", micropost, method: :delete, class: 'fa fa-trash-o',
+      <div class="col-10">
+        <span><%= link_to micropost.user.name, micropost.user, class: "user" %></span><br>
+        <div class="row">
+          <span class="col">
+            <span class="artist"><%= micropost.artist %></span> -
+            <span class="song"><%= micropost.song %></span>
+          </span>
+          <span class="col">
+            <span class="content"><%= micropost.content %></span><br>
+          </span>
+        </div>
+        <div class="row">
+          <span class="col"><span class="listening"><%= link_to '', micropost.listening_url, class: 'fa fa-play btn-size', target: :_blank %></span></span>
+          <span class="col"><%= render 'likes/like', micropost: micropost %></span>
+          <span class="col">          <span>
+              <% if current_user?(micropost.user) %>
+                <%= link_to "", micropost, method: :delete, class: 'fa fa-trash-o btn-size trash',
                                        data: { confirm: "本当に削除しますか？" } %>
-          <% end %>
-        </span>
-        <span class="timestamp">
-          <i class="fa fa-clock-o"></i>
-          <%= time_ago_in_words(micropost.created_at) %>前
-        </span>
+              <% end %>
+            </span></span>
+          <span class="col">          <span class="fa fa-clock-o btn-size timestamp">
+              <%= time_ago_in_words(micropost.created_at) %>前
+            </span></span>
+        </div>
       </div>
-    </div>
-  </li>
-</ol>
+    </li>
+  </ol>
