@@ -272,9 +272,17 @@ header {
     padding: 0;
     .col-2 {
       padding: 0;
-      .user_image {
-        padding-top: 0;
-        text-align: center;
+      position: relative;
+      .user-img {
+        // text-align: center;
+        // height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .img-rounded {
+        border-radius: 50%;
       }
     }
 
@@ -284,19 +292,54 @@ header {
       .user {
         color: white;
         text-decoration: none;
+        &:hover {
+          color: #246d97;
+          font-weight: bold;
+        }
       }
       .content {
         // margin-right: 20rem;
+      }
+      .listening {
+        // color: #0b94e4;
+        // color: white;
+        background-color: rgba(0, 0, 0, 0);
+        &:hover {
+          color: blue;
+          text-decoration: none;
+        }
       }
       .like {
         .like-inline {
           display: inline;
         }
+        .btn-like {
+          color: #ca046e;
+          padding: 0;
+          border: 0;
+          &:hover {
+            color: #ca046e;
+          }
+        }
+
+        .btn-like-non {
+          color: white;
+          padding: 0;
+          border: 0;
+          &:hover {
+            color: #ca046e;
+          }
+        }
       }
       .trash {
+        color: rgb(164, 247, 164);
         // margin-right: 4rem;
+        &:hover {
+          color: green;
+        }
       }
       .timestamp {
+        color: gray;
         // margin-right: 4rem;
       }
       .btn-size {
@@ -347,25 +390,6 @@ header {
   a {
     padding: 0 1rem;
     border-left: 0.1rem solid #eeeeee;
-  }
-}
-
-/* likes */
-.btn-like {
-  color: red;
-  padding: 0;
-  border: 0;
-  &:hover {
-    color: red;
-  }
-}
-
-.btn-like-non {
-  color: white;
-  padding: 0;
-  border: 0;
-  &:hover {
-    color: red;
   }
 }
 

@@ -5,7 +5,8 @@ User.create!(name: '渋谷一帆',
              password_confirmation: 'foobar',
              admin: true,
              activated: true,
-             activated_at: Time.zone.now)
+             activated_at: Time.zone.now,
+             image: File.open('./app/assets/images/admin_user.jpg'))
 
 # テストログインユーザー
 User.create!(name: 'テストユーザー',
@@ -14,7 +15,8 @@ User.create!(name: 'テストユーザー',
              password_confirmation: 'password',
              admin: false,
              activated: true,
-             activated_at: Time.zone.now)
+             activated_at: Time.zone.now,
+             image: File.open('./app/assets/images/test_login_user.jpg'))
 
 # テストユーザー
 98.times do |_n|
