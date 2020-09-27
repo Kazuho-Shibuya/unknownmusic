@@ -2,7 +2,7 @@
   <li id="micropost-<%= micropost.id %>">
     <div class="row">
       <div class="col-2">
-        <span class="user_image mx-auto d-block"><%= image_tag micropost.user.image.thumb80.to_s %></span>
+        <span><%= image_tag micropost.user.image.thumb75.to_s, class: "user-img mx-auto d-block img-rounded" %></span>
       </div>
       <div class="col-10">
         <span><%= link_to micropost.user.name, micropost.user, class: "user" %></span><br>
@@ -16,17 +16,21 @@
           </span>
         </div>
         <div class="row">
-          <span class="col"><span class="listening"><%= link_to '', micropost.listening_url, class: 'fa fa-play btn-size', target: :_blank %></span></span>
+          <span class="col"><span class="listening"><%= link_to '', micropost.listening_url, class: 'fa fa-play btn-size listening', target: :_blank %></span></span>
           <span class="col"><%= render 'likes/like', micropost: micropost %></span>
-          <span class="col">          <span>
+          <span class="col">
+            <span>
               <% if current_user?(micropost.user) %>
                 <%= link_to "", micropost, method: :delete, class: 'fa fa-trash-o btn-size trash',
                                        data: { confirm: "本当に削除しますか？" } %>
               <% end %>
-            </span></span>
-          <span class="col">          <span class="fa fa-clock-o btn-size timestamp">
+            </span>
+          </span>
+          <span class="col">
+            <span class="fa fa-clock-o btn-size timestamp">
               <%= time_ago_in_words(micropost.created_at) %>前
-            </span></span>
+            </span>
+          </span>
         </div>
       </div>
     </li>
