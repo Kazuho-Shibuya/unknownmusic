@@ -47,18 +47,18 @@ RSpec.describe Micropost, type: :model do
     end
   end
 
-  context '内容が100文字以内の場合' do
+  context '内容が40文字以内の場合' do
     it '投稿できる' do
-      micropost = FactoryBot.build(:micropost, content: 'a' * 100)
+      micropost = FactoryBot.build(:micropost, content: 'あ' * 40)
       expect(micropost).to be_valid
     end
   end
 
-  context '内容が101文字以上の場合' do
+  context '内容が41文字以上の場合' do
     it '投稿できない' do
-      micropost = FactoryBot.build(:micropost, content: 'a' * 101)
+      micropost = FactoryBot.build(:micropost, content: 'あ' * 41)
       micropost.valid?
-      expect(micropost.errors[:content]).to include('は100文字以内で入力してください')
+      expect(micropost.errors[:content]).to include('は40文字以内で入力してください')
     end
   end
 end
