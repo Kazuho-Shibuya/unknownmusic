@@ -1,7 +1,9 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
 @import "font-awesome";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap");
 /* universal */
 
@@ -38,6 +40,9 @@ label {
 p {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 300;
+}
+span {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .img-layout {
@@ -293,20 +298,23 @@ header {
         color: white;
         text-decoration: none;
         &:hover {
-          color: #246d97;
-          font-weight: bold;
+          // color: #246d97;
+          // font-weight: bold;
+          text-decoration: underline;
         }
       }
       .content {
         // margin-right: 20rem;
       }
       .listening {
-        // color: #0b94e4;
-        // color: white;
+        color: #0b9ff5;
         background-color: rgba(0, 0, 0, 0);
         &:hover {
-          color: blue;
+          color: gold;
           text-decoration: none;
+        }
+        .play {
+          color: white;
         }
       }
       .like {
@@ -318,10 +326,8 @@ header {
           padding: 0;
           border: 0;
           &:hover {
-            color: #ca046e;
           }
         }
-
         .btn-like-non {
           color: white;
           padding: 0;
@@ -332,14 +338,16 @@ header {
         }
       }
       .trash {
-        color: rgb(164, 247, 164);
+        color: white;
         // margin-right: 4rem;
         &:hover {
-          color: green;
+          color: rgb(164, 247, 164);
         }
       }
-      .timestamp {
+      .history-color {
         color: gray;
+        // font-family: "Noto Sans JP", sans-serif;
+        // font-weight: 300;
         // margin-right: 4rem;
       }
       .btn-size {
