@@ -17,10 +17,10 @@ body {
   margin: 0;
 }
 
-.container-fiuld {
-}
-
 main {
+  // display: flex;
+  // flex-flow: column;
+  // min-height: 100vh;
 }
 // #wrapper {
 //   display: flex;
@@ -29,7 +29,7 @@ main {
 // }
 
 footer {
-  margin-top: auto;
+  background-color: black;
 }
 
 label {
@@ -51,7 +51,8 @@ p {
   font-weight: 300;
 }
 
-.img-layout {
+.container-fluid {
+  padding: 0;
 }
 
 .btn-style {
@@ -136,9 +137,9 @@ header {
 }
 
 .container-top p {
-  letter-spacing: 0.3rem;
   margin-bottom: 6rem;
   font-size: 1.25rem;
+  letter-spacing: 0.3rem;
 }
 
 .btn-top {
@@ -161,6 +162,10 @@ header {
 
 .signup-img {
   background-image: image-url("signup.jpg");
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
 }
 
 .container-signup {
@@ -199,6 +204,10 @@ header {
 
 .login-img {
   background-image: image-url("login.jpg");
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
 }
 
 .container-login {
@@ -228,6 +237,10 @@ header {
 
 .edit-img {
   background-image: image-url("edit.jpg");
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
 }
 
 .container-edit {
@@ -271,92 +284,77 @@ header {
 
 .microposts {
   list-style: none;
-  padding: 0;
+  padding: 0 1rem;
   margin-bottom: 1rem;
   // background-color: white;
   background: rgba(0, 0, 0, 0.3);
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
   border-radius: 3rem;
   border: solid 0.1rem white;
-  .row {
+  font-size: 1.5rem;
+  .row-micropost {
     padding: 0;
-    .col-2 {
-      padding: 0;
-      position: relative;
-      .user-img {
-        // text-align: center;
-        // height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      .img-rounded {
-        border-radius: 50%;
+    // .col-2 {
+    padding: 0;
+    // position: relative;
+    .icon-size {
+      font-size: 1rem;
+    }
+    .user-img {
+      margin-top: 1rem;
+      // text-align: center;
+      // height: auto;
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -75%);
+    }
+    // }
+
+    // .col-10 {
+    padding: 0;
+    margin: 0;
+    .user {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        // color: #246d97;
+        // font-weight: bold;
+        text-decoration: underline;
       }
     }
-
-    .col-10 {
-      padding: 0;
-      margin: 0;
-      .user {
-        color: white;
+    .history {
+      color: gray;
+      // font-family: "Noto Sans JP", sans-serif;
+      // font-weight: 300;
+      // margin-right: 4rem;
+    }
+    .listening {
+      color: #0b9ff5;
+      &:hover {
+        color: gold;
         text-decoration: none;
-        &:hover {
-          // color: #246d97;
-          // font-weight: bold;
-          text-decoration: underline;
-        }
       }
-      .content {
-        // margin-right: 20rem;
+    }
+    .btn-like {
+      color: #ca046e;
+      padding: 0;
+      &:hover {
       }
-      .listening {
-        color: #0b9ff5;
-        background-color: rgba(0, 0, 0, 0);
-        &:hover {
-          color: gold;
-          text-decoration: none;
-        }
-        .play {
-          color: white;
-        }
+    }
+    .btn-like-non {
+      color: white;
+      padding: 0;
+      &:hover {
+        color: #ca046e;
       }
-      .like {
-        .like-inline {
-          display: inline;
-        }
-        .btn-like {
-          color: #ca046e;
-          padding: 0;
-          border: 0;
-          &:hover {
-          }
-        }
-        .btn-like-non {
-          color: white;
-          padding: 0;
-          border: 0;
-          &:hover {
-            color: #ca046e;
-          }
-        }
-      }
-      .trash {
-        color: white;
-        // margin-right: 4rem;
-        &:hover {
-          color: rgb(164, 247, 164);
-        }
-      }
-      .history-color {
-        color: gray;
-        // font-family: "Noto Sans JP", sans-serif;
-        // font-weight: 300;
-        // margin-right: 4rem;
-      }
-      .btn-size {
-        font-size: 1.5rem;
+    }
+    // }
+    .trash {
+      color: white;
+      // margin-right: 4rem;
+      &:hover {
+        color: rgb(164, 247, 164);
       }
     }
   }
@@ -409,11 +407,12 @@ header {
 /* popular posts */
 .popular-img {
   background-image: image-url("popular.jpg");
+  position: relative;
+  min-height: 100vh;
   background-size: cover;
   background-position: center center;
 }
 .container-popular {
-  font-size: 2rem;
   color: white;
   h1 {
     margin: 3rem 0;
@@ -423,112 +422,6 @@ header {
 }
 
 /* Responsive */
-
-/*　モバイルサイズ対応　*/
-@media (min-width: 576px) {
-  /* header */
-
-  .logo {
-    font-size: 1.7rem;
-    letter-spacing: -0.1rem;
-  }
-
-  .link-style {
-    margin: 1rem;
-  }
-
-  /* TOP */
-
-  .container-top h1 {
-    font-size: 4rem;
-  }
-
-  .container-top p {
-    margin-bottom: 6rem;
-    font-size: 1.25rem;
-    letter-spacing: 0.3rem;
-  }
-
-  .btn-top {
-    padding: 0.75rem 2.25rem;
-    font-size: 1.25rem;
-    text-indent: 0.3rem;
-    letter-spacing: 0.3rem;
-  }
-
-  /* SIGN UP */
-
-  .container-signup {
-    margin-top: 5rem;
-  }
-
-  .container-signup h1 {
-    margin-bottom: 1rem;
-  }
-
-  /* LOGIN */
-
-  .btn-login {
-    margin-bottom: 1rem;
-  }
-
-  .container-login h1 {
-    margin-bottom: 1rem;
-  }
-
-  /* EDIT */
-
-  .container-edit h1 {
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-  }
-
-  .btn-edit {
-    border: solid 0.2rem white;
-  }
-
-  /* Users */
-
-  .users {
-    li {
-      padding: 1rem 0;
-      border-bottom: 0.1rem solid gray;
-    }
-  }
-
-  /* Microposts */
-
-  // .microposts {
-  //   li {
-  //     padding: 1rem 0;
-  //   }
-  //   .user {
-  //     margin-top: 5rem;
-  //   }
-  //   .content {
-  //     margin-left: 6rem;
-  //   }
-  //   .timestamp {
-  //     margin-left: 6rem;
-  //   }
-  // }
-
-  /* sidebar */
-
-  .stats {
-    a {
-      padding: 0 1rem;
-      border-left: 0.1rem solid #eeeeee;
-    }
-  }
-
-  .user_avatars {
-    margin-top: 1rem;
-    .gravatar {
-      margin: 0.1rem 0.1rem;
-    }
-  }
-}
 
 /*　タブレットサイズ対応　*/
 @media (min-width: 768px) {
@@ -604,20 +497,27 @@ header {
 
   /* Microposts */
 
-  // .microposts {
-  //   li {
-  //     padding: 0.1rem 0;
-  //   }
-  //   .user {
-  //     margin-top: 5rem;
-  //   }
-  //   .content {
-  //     margin-left: 6rem;
-  //   }
-  //   .timestamp {
-  //     margin-left: 6rem;
-  //   }
-  // }
+  .microposts {
+    padding: 0 1.5rem;
+    font-size: 1.5rem;
+    .row-micropost {
+      .icon-size {
+        font-size: 1rem;
+      }
+      // .col-2 {
+      .user-img {
+      }
+      // }
+
+      // .col-10 {
+      .user {
+      }
+      .history {
+      }
+
+      // }
+    }
+  }
 
   /* sidebar */
 
@@ -632,6 +532,14 @@ header {
     margin-top: 1rem;
     .gravatar {
       margin: 0.1rem 0.1rem;
+    }
+  }
+
+  /* popular posts */
+  .container-popular {
+    h1 {
+      margin: 2rem 0;
+      font-size: 3rem;
     }
   }
 }
@@ -710,20 +618,27 @@ header {
 
   /* Microposts */
 
-  // .microposts {
-  //   li {
-  //     padding: 0.1rem 0;
-  //   }
-  //   .user {
-  //     margin-top: 5rem;
-  //   }
-  //   .content {
-  //     margin-left: 6rem;
-  //   }
-  //   .timestamp {
-  //     margin-left: 6rem;
-  //   }
-  // }
+  .microposts {
+    padding: 0 2rem;
+    font-size: 2rem;
+    .row-micropost {
+      .icon-size {
+        font-size: 1.5rem;
+      }
+      //   .col-2 {
+      .user-img {
+      }
+      // }
+
+      // .col-10 {
+      .user {
+      }
+      .history {
+      }
+
+      //   }
+    }
+  }
 
   /* sidebar */
 
@@ -738,6 +653,14 @@ header {
     margin-top: 1rem;
     .gravatar {
       margin: 0.1rem 0.1rem;
+    }
+  }
+
+  /* popular posts */
+  .container-popular {
+    h1 {
+      margin: 3rem 0;
+      font-size: 4rem;
     }
   }
 }

@@ -5,7 +5,7 @@ class Micropost < ApplicationRecord
   has_many :favorite_users, through: :likes, source: :user
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
-  validates :content, presence: true, length: { maximum: 40 }
+  validates :content, presence: true, length: { maximum: 35 }
   validates :song, presence: true
   validates :artist, presence: true
   validates :listening_url, presence: true

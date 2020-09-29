@@ -1,43 +1,43 @@
 <ol class="microposts">
   <li id="micropost-<%= micropost.id %>">
-    <div class="row">
+    <div class="row row-micropost">
       <div class="col-2">
-        <span><%= image_tag micropost.user.image.thumb75.to_s, class: "user-img mx-auto d-block img-rounded" %></span>
+        <%= image_tag micropost.user.image.to_s, class: "img-fluid rounded-circle user-img" %>
       </div>
       <div class="col-10">
         <div class="row">
           <span class="col">
             <%= link_to micropost.user.name, micropost.user, class: "user" %>
           </span>
-        </div>
-        <div class="row">
-          <span class="col">
-            <span class="artist"><%= micropost.artist %></span> -
-            <span class="song"><%= micropost.song %></span>
+          <span class="col text-right">
+            <span class="fas fa-history icon-size history">
+              <%= time_ago_in_words(micropost.created_at) %>
+            </span>
           </span>
         </div>
         <div class="row">
           <span class="col">
-            <span class="content"><%= micropost.content %></span>
+            <span><%= micropost.artist %></span> -
+            <span><%= micropost.song %></span>
           </span>
         </div>
         <div class="row">
-          <span class="col"><span class="listening"><%= link_to "", micropost.listening_url, class: 'fa fa-play btn-size listening', target: :_blank %></span></span>
-          <span class="col"><%= render 'likes/like', micropost: micropost %></span>
           <span class="col">
-            <span>
-              <% if current_user?(micropost.user) %>
-                <%= link_to "", micropost, method: :delete, class: 'far fa-trash-alt btn-size trash',
+            <%= micropost.content %>
+          </span>
+        </div>
+        <div class="row">
+          <span class="col">
+            <%= link_to "", micropost.listening_url, class: 'fa fa-play icon-size listening', target: :_blank %>
+          </span>
+          <span class="col">
+            <%= render 'likes/like', micropost: micropost %>
+          </span>
+          <span class="col">
+            <% if current_user?(micropost.user) %>
+              <%= link_to "", micropost, method: :delete, class: 'far fa-trash-alt icon-size trash',
                                        data: { confirm: "本当に削除しますか？" } %>
-              <% end %>
-            </span>
-          </span>
-          <span class="col">
-            <span class="fas fa-history btn-size history-color">
-              <span>
-                <%= time_ago_in_words(micropost.created_at) %>前
-              </span>
-            </span>
+            <% end %>
           </span>
         </div>
       </div>
