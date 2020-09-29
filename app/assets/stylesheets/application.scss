@@ -37,12 +37,18 @@ label {
   margin-bottom: 0;
 }
 
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+span {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
 p {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 300;
-}
-span {
-  font-family: "Noto Sans JP", sans-serif;
 }
 
 .img-layout {
@@ -125,7 +131,6 @@ header {
 }
 
 .container-top h1 {
-  font-family: "Roboto", sans-serif;
   margin-bottom: 0;
   font-size: 4rem;
 }
@@ -414,8 +419,6 @@ header {
     margin: 3rem 0;
     font-size: 4rem;
     text-align: center;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 700;
   }
 }
 
