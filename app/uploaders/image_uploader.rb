@@ -6,7 +6,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # サムネイルの為に画像をリサイズ
   version :thumb75 do
-    process resize_to_fit: [75, 75]
+    process resize_to_fit: [65, 65]
   end
   version :thumb50 do
     process resize_to_fit: [50, 50]
