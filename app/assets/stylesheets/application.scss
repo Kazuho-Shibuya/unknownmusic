@@ -283,51 +283,31 @@ header {
 /* Microposts */
 
 .microposts {
+  padding: 0 2rem;
+  font-size: 1.25rem;
   list-style: none;
-  padding: 0 1rem;
   margin-bottom: 1rem;
-  // background-color: white;
   background: rgba(0, 0, 0, 0.3);
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
   border-radius: 3rem;
   border: solid 0.1rem white;
-  font-size: 1.5rem;
   .row-micropost {
     padding: 0;
-    // .col-2 {
-    padding: 0;
-    // position: relative;
     .icon-size {
       font-size: 1rem;
     }
     .user-img {
       margin-top: 1rem;
-      // text-align: center;
-      // height: auto;
-      // position: absolute;
-      // top: 50%;
-      // left: 50%;
-      // transform: translate(-50%, -75%);
     }
-    // }
-
-    // .col-10 {
-    padding: 0;
-    margin: 0;
     .user {
       color: white;
       text-decoration: none;
       &:hover {
-        // color: #246d97;
-        // font-weight: bold;
         text-decoration: underline;
       }
     }
     .history {
       color: gray;
-      // font-family: "Noto Sans JP", sans-serif;
-      // font-weight: 300;
-      // margin-right: 4rem;
     }
     .listening {
       color: #0b9ff5;
@@ -349,10 +329,8 @@ header {
         color: #ca046e;
       }
     }
-    // }
     .trash {
       color: white;
-      // margin-right: 4rem;
       &:hover {
         color: rgb(164, 247, 164);
       }
@@ -415,8 +393,8 @@ header {
 .container-popular {
   color: white;
   h1 {
-    margin: 3rem 0;
-    font-size: 4rem;
+    margin: 2rem 0;
+    font-size: 3rem;
     text-align: center;
   }
 }
@@ -498,24 +476,12 @@ header {
   /* Microposts */
 
   .microposts {
-    padding: 0 1.5rem;
+    padding: 0 2.5rem;
     font-size: 1.5rem;
     .row-micropost {
-      .icon-size {
-        font-size: 1rem;
-      }
-      // .col-2 {
       .user-img {
+        margin: 1rem 0;
       }
-      // }
-
-      // .col-10 {
-      .user {
-      }
-      .history {
-      }
-
-      // }
     }
   }
 
@@ -532,14 +498,6 @@ header {
     margin-top: 1rem;
     .gravatar {
       margin: 0.1rem 0.1rem;
-    }
-  }
-
-  /* popular posts */
-  .container-popular {
-    h1 {
-      margin: 2rem 0;
-      font-size: 3rem;
     }
   }
 }
@@ -619,24 +577,12 @@ header {
   /* Microposts */
 
   .microposts {
-    padding: 0 2rem;
+    padding: 0 3rem;
     font-size: 2rem;
     .row-micropost {
       .icon-size {
         font-size: 1.5rem;
       }
-      //   .col-2 {
-      .user-img {
-      }
-      // }
-
-      // .col-10 {
-      .user {
-      }
-      .history {
-      }
-
-      //   }
     }
   }
 
