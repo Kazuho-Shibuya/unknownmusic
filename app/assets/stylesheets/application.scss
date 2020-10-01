@@ -28,6 +28,31 @@ main {
 //   min-height: 100vh;
 // }
 
+/* header */
+
+header {
+  font-size: 1.5rem;
+  .logo {
+    color: white;
+    // background-color: rgba(0, 0, 0, 0.2);
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    &:hover {
+      text-decoration: none;
+      color: #003ea6;
+    }
+  }
+  .link-style {
+    color: white;
+    margin: 1rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 footer {
   background-color: black;
 }
@@ -82,33 +107,6 @@ p {
 
 .alert {
   margin-bottom: 0;
-}
-
-/* header */
-
-header {
-  z-index: 10;
-}
-
-.logo {
-  color: white;
-  font-weight: bold;
-  font-size: 1.7rem;
-  letter-spacing: -0.1rem;
-
-  &:hover {
-    text-decoration: none;
-    color: #ca046e;
-  }
-}
-
-.link-style {
-  color: white;
-  margin: 1rem;
-  &:hover {
-    text-decoration: none;
-    color: #c84289;
-  }
 }
 
 /* TOP */
