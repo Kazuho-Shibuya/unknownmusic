@@ -17,6 +17,14 @@ body {
   margin: 0;
 }
 
+.jpn-style {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.eng-style {
+  font-family: "Roboto", sans-serif;
+}
+
 main {
   // display: flex;
   // flex-flow: column;
@@ -48,7 +56,22 @@ header {
     color: white;
     margin: 1rem;
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
+    }
+    .eng-link {
+      font-style: italic;
+      font-size: 0.5rem;
+      margin: 0;
+      padding-bottom: 0.3rem;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .jpn-link {
+      margin: 0;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
