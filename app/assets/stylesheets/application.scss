@@ -2,6 +2,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap");
@@ -351,9 +352,23 @@ p {
     .user {
       color: white;
       text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
+      position: relative;
+      display: inline-block;
+    }
+    .user::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.1rem;
+      width: 100%;
+      height: 0.1rem;
+      background-color: white;
+      transform: scale(0, 1);
+      transform-origin: left top;
+      transition: transform 0.3s;
+    }
+    .user:hover::after {
+      transform: scale(1, 1);
     }
     .history {
       color: gray;
@@ -441,10 +456,19 @@ p {
 }
 .container-popular {
   color: white;
-  h1 {
-    margin: 2rem 0;
+  .eng-title {
+    margin: 5rem 0 0.25rem 0;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+
+  .jpn-title {
+    margin: 0 0 4rem 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
     font-size: 3rem;
-    text-align: center;
   }
 }
 
@@ -679,8 +703,15 @@ p {
 
   /* popular posts */
   .container-popular {
-    h1 {
-      margin: 3rem 0;
+    .eng-title {
+      margin: 5rem 0 0.25rem 0;
+      font-weight: 300;
+      font-size: 2rem;
+    }
+
+    .jpn-title {
+      margin: 0 0 4rem 0;
+      font-weight: 700;
       font-size: 4rem;
     }
   }
