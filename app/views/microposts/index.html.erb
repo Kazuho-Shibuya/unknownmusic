@@ -1,7 +1,7 @@
 <% provide(:path, microposts_path) %>
 <% provide(:placeholder, 'アーティスト、曲名、投稿を検索') %>
 <div class="popular-img">
-  <div class="container-popular">
+  <div id="wrapper" class="container-popular">
     <%= render 'layouts/header' %>
     <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8">
@@ -9,5 +9,6 @@
         <%= render @all_ranks %>
       </div>
     </div>
+    <%= render 'layouts/footer' %>
   </div>
 </div>

@@ -10,11 +10,13 @@
 html {
   //10px
   font-size: 62.5%;
-  margin: 0;
 }
 
 body {
-  margin: 0;
+  // margin: 0;
+  // display: flex;
+  // flex-flow: column;
+  // min-height: 100vh;
 }
 
 .jpn-style {
@@ -30,11 +32,11 @@ main {
   // flex-flow: column;
   // min-height: 100vh;
 }
-// #wrapper {
-//   display: flex;
-//   flex-flow: column;
-//   min-height: 100vh;
-// }
+#wrapper {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
 
 /* header */
 
@@ -96,8 +98,14 @@ header {
   }
 }
 
+/* footer */
+
 footer {
-  background-color: black;
+  margin-top: auto;
+  padding: 2rem 0;
+  p {
+    margin: 0;
+  }
 }
 
 label {
