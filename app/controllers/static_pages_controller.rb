@@ -2,6 +2,8 @@ class StaticPagesController < ApplicationController
   before_action :logged_in_user, only: %i[home search_result]
   before_action :set_micropost, only: %i[home search_result]
 
+  def top; end
+
   def home
     # 検索拡張機能として.search(params[:search])を追加
     @feed_items = @feed_items.search(params[:search])
