@@ -1,29 +1,57 @@
 <% provide(:path, songs_search_path) %>
 <% provide(:placeholder, 'アーティスト名か曲名で検索') %>
-<%= render 'users/search'%>
-<div>
-  <% if @search_infomations.present? %>
-    <% search_tracks_items = @search_infomations["tracks"]["items"] %>
-    <% if search_tracks_items.present? %>
-      <% search_tracks_items.each do |search_tracks_item| %>
-        <%= form_with url: search_result_path, local: true do |f| %>
-          <%= search_tracks_item["artists"][0]["name"] + ' - ' + search_tracks_item["name"] %><br>
-          <%= f.hidden_field :artist, :value => search_tracks_item["artists"][0]["name"] %>
-          <%= f.hidden_field :song, :value => search_tracks_item["name"] %>
-          <% if search_tracks_item["album"]["images"][0].any? %>
-            <%= image_tag search_tracks_item["album"]["images"][0]["url"], :size =>'200x200' %><br>
-          <% else %>
-            <h3>No image</h3>
-          <% end %>
-          <% if search_tracks_item["preview_url"].present? %>
-            <%= link_to '試聴', search_tracks_item["preview_url"], class: 'btn btn-primary', target: :_blank %>
-            <%= f.submit '投稿', name: nil %><br>
-            <%= f.hidden_field :listening_url, :value => search_tracks_item["preview_url"] %>
-          <% else %>
-            <h3>No preview</h3>
-          <% end %>
+<div class="song-img">
+  <div id="wrapper" class="container-song">
+    <%= render 'layouts/header' %>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <p class="eng-title text-center">Music search</p>
+        <h1 class="jpn-title text-center">音楽検索</h1>
+        <%= form_with url: yield(:path), method: :get, local: true, class: "text-center" do |form| %>
+          <div><%= text_field_tag :search, params[:search], placeholder: yield(:placeholder), class: "text-center search-form" %></div>
+          <div><%= submit_tag '検索', :name => nil, class: "btn-style btn-song" %></div>
         <% end %>
-      <% end %>
-    <% end %>
-  <% end %>
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <% if @search_infomations.present? %>
+              <% search_tracks_items = @search_infomations["tracks"]["items"] %>
+              <% if search_tracks_items.present? %>
+                <% search_tracks_items.each do |search_tracks_item| %>
+                  <%= form_with url: search_result_path, local: true, class: "search-content justify-content-center text-center" do |f| %>
+                    <div class="artist-song">
+                      <span class="artist">
+                        <%= search_tracks_item["artists"][0]["name"] %> /
+                      </span>
+                      <span class="song">
+                        <%= search_tracks_item["name"] %>
+                      </span>
+                      <%= f.hidden_field :artist, :value => search_tracks_item["artists"][0]["name"] %>
+                      <%= f.hidden_field :song, :value => search_tracks_item["name"] %>
+                    </div>
+                    <div class="album-image">
+                      <% if search_tracks_item["album"]["images"][0].any? %>
+                        <%= image_tag search_tracks_item["album"]["images"][0]["url"], class: "song-jacket" %>
+                      <% else %>
+                        <h3>No image</h3>
+                      <% end %>
+                    </div>
+                    <div class="icon">
+                      <% if search_tracks_item["preview_url"].present? %>
+                        <%= link_to '試聴', search_tracks_item["preview_url"], class: 'btn btn-primary', target: :_blank %>
+                        <%= f.submit '投稿', name: nil %>
+                        <%= f.hidden_field :listening_url, :value => search_tracks_item["preview_url"] %>
+                      <% else %>
+                        <p>No preview</p>
+                      <% end %>
+                    </div>
+                  <% end %>
+                <% end %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= render 'layouts/footer' %>
+  </div>
 </div>
