@@ -440,6 +440,80 @@ footer {
   }
 }
 
+/* Music search */
+
+.song-img {
+  background-image: image-url("song.jpg");
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.container-song {
+  color: white;
+  .eng-title {
+    margin: 5rem 0 0.25rem 0;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  .jpn-title {
+    margin: 0 0 2rem 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  .search-form {
+    height: 5rem;
+    width: 50rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    border: solid 0.1rem white;
+  }
+  .btn-song {
+    color: white;
+    background: rgba(0, 0, 0, 0.25);
+    border: solid 0.1rem white;
+    padding: 0.75rem 2.25rem;
+    font-size: 1.25rem;
+    text-indent: 0.3rem;
+    letter-spacing: 0.3rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+    &:hover {
+      background: white;
+      color: black;
+      box-shadow: none;
+    }
+  }
+  .search-content {
+    color: white;
+    display: inline-block;
+    margin: 2rem 3rem;
+    font-size: 1.5rem;
+    height: 25rem;
+    width: 25rem;
+    .artist-song {
+      .artist {
+        overflow-wrap: break-word;
+      }
+      .song {
+        overflow-wrap: break-word;
+      }
+    }
+    .album-image {
+      .song-jacket {
+        height: 25rem;
+        width: 25rem;
+      }
+    }
+    .icon {
+    }
+  }
+}
+
 /* Responsive */
 
 /*　タブレットサイズ対応　*/
