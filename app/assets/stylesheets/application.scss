@@ -453,25 +453,23 @@ footer {
 .container-song {
   color: white;
   .song-search {
-    margin-bottom: 2rem;
     .eng-title {
-      margin: 5rem 0 0.25rem 0;
+      margin: 2rem 0 0.125rem 0;
       font-family: "Roboto", sans-serif;
       font-style: italic;
       font-weight: 300;
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
     .jpn-title {
-      margin: 0 0 2rem 0;
       font-family: "Noto Sans JP", sans-serif;
       font-weight: 700;
-      font-size: 3rem;
+      font-size: 2rem;
+      margin: 0;
     }
     .search-form {
-      height: 5rem;
-      width: 50rem;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      width: 50%;
+      font-size: 1rem;
+      margin: 1rem 0;
       border-radius: 1rem;
       border: solid 0.1rem white;
     }
@@ -479,11 +477,10 @@ footer {
       color: white;
       background: rgba(0, 0, 0, 0.25);
       border: solid 0.1rem white;
-      padding: 0.75rem 2.25rem;
-      font-size: 1.25rem;
-      text-indent: 0.3rem;
-      letter-spacing: 0.3rem;
-      box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+      padding: 0.25rem 1.75rem;
+      font-size: 0.75rem;
+      text-indent: 0.2rem;
+      letter-spacing: 0.2rem;
       &:hover {
         background: white;
         color: black;
@@ -495,7 +492,7 @@ footer {
   .search-content {
     color: white;
     display: inline-block;
-    margin: 3rem;
+    margin: 1rem;
     font-size: 1.5rem;
     height: 30rem;
     width: 30rem;
@@ -515,8 +512,6 @@ footer {
       }
     }
     .icon {
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: 400;
       .listening {
         color: #0b9ff5;
         &:hover {
@@ -525,9 +520,7 @@ footer {
         }
       }
 
-      .btn-share {
-        font-family: "Noto Sans JP", sans-serif;
-        font-weight: 300;
+      .share {
         color: #07f1bf;
         background-color: rgba(0, 0, 0, 0);
         border: none;
@@ -656,6 +649,13 @@ footer {
       margin: 0.1rem 0.1rem;
     }
   }
+  /* Music search */
+
+  .container-song {
+    .search-content {
+      margin: 2rem;
+    }
+  }
 }
 
 /*　PCサイズ対応　*/
@@ -778,6 +778,34 @@ footer {
       margin: 0 0 4rem 0;
       font-weight: 700;
       font-size: 4rem;
+    }
+  }
+
+  /* Music search */
+
+  .container-song {
+    .song-search {
+      .eng-title {
+        margin: 5rem 0 0.25rem 0;
+        font-size: 1.5rem;
+      }
+      .jpn-title {
+        font-size: 3rem;
+      }
+      .search-form {
+        font-size: 2rem;
+        margin: 2rem 0;
+      }
+      .btn-song {
+        padding: 0.75rem 2.25rem;
+        font-size: 1.25rem;
+        text-indent: 0.3rem;
+        letter-spacing: 0.3rem;
+      }
+    }
+
+    .search-content {
+      margin: 3rem;
     }
   }
 }

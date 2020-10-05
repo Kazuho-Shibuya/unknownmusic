@@ -54,7 +54,7 @@
                     </span>
                     <%# <%= f.submit '投稿', name: nil, class: 'fas fa-share' %>
                     <%# <%= f.hidden_field :listening_url, :value => search_tracks_item["preview_url"] %>
-                    <%= button_tag(class: "btn-share") do %>
+                    <%= button_tag(class: "share") do %>
                       <%= hidden_field_tag :listening_url, search_tracks_item["preview_url"] %>
                       <%= content_tag :span, '', class: "fas fa-share" do %>
                         <span class="icon-style">投稿</span>
