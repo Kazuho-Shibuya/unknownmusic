@@ -491,16 +491,14 @@ footer {
   .search-content {
     color: white;
     display: inline-block;
-    margin: 2rem 3rem;
+    margin: 3rem 3rem 3rem 3rem;
     font-size: 1.5rem;
     height: 25rem;
     width: 25rem;
     .artist-song {
       .artist {
-        overflow-wrap: break-word;
       }
       .song {
-        overflow-wrap: break-word;
       }
     }
     .album-image {
