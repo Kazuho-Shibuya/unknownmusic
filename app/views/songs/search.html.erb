@@ -1,27 +1,39 @@
 <% provide(:path, songs_search_path) %>
-<% provide(:placeholder, 'アーティスト名か曲名で検索') %>
+<% provide(:placeholder, 'アーティスト名と曲名で検索') %>
 <div class="song-img">
   <div id="wrapper" class="container-song">
     <%= render 'layouts/header' %>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center song-search">
       <div class="col-12 text-center justify-content-center">
         <p class="eng-title text-center">Music search</p>
         <h1 class="jpn-title text-center">音楽検索</h1>
         <%= form_with url: yield(:path), method: :get, local: true, class: "text-center" do |form| %>
-          <div><%= text_field_tag :search, params[:search], placeholder: yield(:placeholder), class: "text-center search-form" %></div>
-          <div><%= submit_tag '検索', :name => nil, class: "btn-style btn-song" %></div>
+          <div>
+            <%= text_field_tag :search, params[:search], placeholder: yield(:placeholder), class: "text-center search-form" %>
+          </div>
+          <div>
+            <%= submit_tag '検索', :name => nil, class: "btn-style btn-song" %>
+          </div>
         <% end %>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 text-center justify-content-center">
         <% if @search_infomations.present? %>
           <% search_tracks_items = @search_infomations["tracks"]["items"] %>
           <% if search_tracks_items.present? %>
             <% search_tracks_items.each do |search_tracks_item| %>
               <%= form_with url: search_result_path, local: true, class: "text-center justify-content-center search-content" do |f| %>
                 <div class="artist-song">
-                  <span class="artist fas fa-user">
-                    <%= search_tracks_item["artists"][0]["name"] %> /
+                  <span class="fas fa-user">
+                    <span class="icon-style">
+                      <%= search_tracks_item["artists"][0]["name"] %> /
+                    </span>
                   </span>
-                  <span class="song fas fa-music">
-                    <%= search_tracks_item["name"] %>
+                  <span class="fas fa-music">
+                    <span class="icon-style">
+                      <%= search_tracks_item["name"] %>
+                    </span>
                   </span>
                   <%= f.hidden_field :artist, :value => search_tracks_item["artists"][0]["name"] %>
                   <%= f.hidden_field :song, :value => search_tracks_item["name"] %>
@@ -35,15 +47,21 @@
                 </div>
                 <div class="icon">
                   <% if search_tracks_item["preview_url"].present? %>
-                    <%= link_to '試聴', search_tracks_item["preview_url"], class: 'fa fa-play', target: :_blank %>
+                    <span>
+                      <%= link_to search_tracks_item["preview_url"], class: 'fa fa-play listening', target: :_blank do %>
+                        <span class="icon-style">試聴</span>
+                      <% end %>
+                    </span>
                     <%# <%= f.submit '投稿', name: nil, class: 'fas fa-share' %>
                     <%# <%= f.hidden_field :listening_url, :value => search_tracks_item["preview_url"] %>
-                    <%= button_tag(class: "btn") do %>
+                    <%= button_tag(class: "share") do %>
                       <%= hidden_field_tag :listening_url, search_tracks_item["preview_url"] %>
-                      <%= content_tag :span, '投稿', class: "fas fa-share" %>
+                      <%= content_tag :span, '', class: "fas fa-share" do %>
+                        <span class="icon-style">投稿</span>
+                      <% end %>
                     <% end %>
                   <% else %>
-                    <p>No preview</p>
+                    <p class="icon-style">試聴できません。</p>
                   <% end %>
                 </div>
               <% end %>
