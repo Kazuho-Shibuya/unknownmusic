@@ -1,24 +1,35 @@
 <% provide(:path, home_path) %>
 <% provide(:placeholder, 'アーティスト、曲名、投稿を検索') %>
 <% if logged_in? %>
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render 'shared/user_info' %>
-      </section>
-      <section class="stats">
-        <%= render 'shared/stats' %>
-      </section>
-      <section class="micropost_form">
-        <%= render 'shared/micropost_form' %>
-      </section>
-    </aside>
-    <div class="col-md-8">
-      <h3>Micropost Feed</h3>
-      <%= render 'users/search'%>
-      <%= render 'shared/feed' %>
-    </div>
+  <div class="home-img">
+    <div id="wrapper" class="container-home">
+      <%= render 'layouts/header' %>
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <p class="eng-title text-center">Home</p>
+          <h1 class="jpn-title text-center">ホーム</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <aside class="col-2">
+          <section class="user_info">
+            <%= render 'shared/user_info' %>
+          </section>
+          <section class="stats">
+            <%= render 'shared/stats' %>
+          </section>
+          <section class="micropost_form">
+            <%= render 'shared/micropost_form' %>
+          </section>
+        </aside>
+        <div class="col-6">
+          <%= render 'users/search'%>
+          <%= render 'shared/feed' %>
+        </div>
+      </div>
+    <% else %>
+      <% render root_url %>
+    <% end %>
+    <%= render 'layouts/footer' %>
   </div>
-<% else %>
-  <% render root_url %>
-<% end %>
+</div>

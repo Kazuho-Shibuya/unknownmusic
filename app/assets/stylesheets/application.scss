@@ -297,78 +297,6 @@ footer {
   }
 }
 
-/* Microposts */
-
-.microposts {
-  padding: 0 2rem;
-  font-size: 1.25rem;
-  list-style: none;
-  margin-bottom: 1rem;
-  background: rgba(0, 0, 0, 0.3);
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
-  border-radius: 3rem;
-  border: solid 0.1rem white;
-  .row-micropost {
-    padding: 0;
-    .icon-size {
-      font-size: 1rem;
-    }
-    .user-img {
-      margin-top: 1rem;
-    }
-    .user {
-      color: white;
-      text-decoration: none;
-      position: relative;
-      display: inline-block;
-    }
-    .user::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -0.1rem;
-      width: 100%;
-      height: 0.1rem;
-      background-color: white;
-      transform: scale(0, 1);
-      transform-origin: left top;
-      transition: transform 0.3s;
-    }
-    .user:hover::after {
-      transform: scale(1, 1);
-    }
-    .history {
-      color: gray;
-    }
-    .listening {
-      color: #0b9ff5;
-      &:hover {
-        color: gold;
-        text-decoration: none;
-      }
-    }
-    .btn-like {
-      color: #ca046e;
-      padding: 0;
-      &:hover {
-      }
-    }
-    .btn-like-non {
-      color: white;
-      padding: 0;
-      &:hover {
-        color: #ca046e;
-      }
-    }
-    .trash {
-      color: white;
-      &:hover {
-        color: rgb(164, 247, 164);
-      }
-    }
-  }
-}
-
 /* sidebar */
 
 .stats {
@@ -413,7 +341,7 @@ footer {
   }
 }
 
-/* popular posts */
+/* Popular posts */
 
 .popular-img {
   background-image: image-url("popular.jpg");
@@ -441,6 +369,75 @@ footer {
   .icon-style {
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 400;
+  }
+  .microposts {
+    padding: 0 2rem;
+    font-size: 1.25rem;
+    list-style: none;
+    margin-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+    border-radius: 3rem;
+    border: solid 0.1rem white;
+    .row-micropost {
+      padding: 0;
+      .icon-size {
+        font-size: 1rem;
+      }
+      .user-img {
+        margin-top: 1rem;
+      }
+      .user {
+        color: white;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+      }
+      .user::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.1rem;
+        width: 100%;
+        height: 0.1rem;
+        background-color: white;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform 0.3s;
+      }
+      .user:hover::after {
+        transform: scale(1, 1);
+      }
+      .history {
+        color: gray;
+      }
+      .listening {
+        color: #0b9ff5;
+        &:hover {
+          color: gold;
+          text-decoration: none;
+        }
+      }
+      .btn-like {
+        color: #ca046e;
+        padding: 0;
+        &:hover {
+        }
+      }
+      .btn-like-non {
+        color: white;
+        padding: 0;
+        &:hover {
+          color: #ca046e;
+        }
+      }
+      .trash {
+        color: white;
+        &:hover {
+          color: rgb(164, 247, 164);
+        }
+      }
+    }
   }
 }
 
@@ -538,6 +535,111 @@ footer {
   }
 }
 
+/* Home */
+
+.home-img {
+  background-image: image-url("home.jpg");
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.container-home {
+  color: white;
+  font-size: 1.5rem;
+  .eng-title {
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 3rem;
+  }
+  .eng-title {
+    margin: 5rem 0 0.25rem 0;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  .jpn-title {
+    margin: 0 0 4rem 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+  }
+  .microposts {
+    padding: 0 2rem;
+    font-size: 1.25rem;
+    list-style: none;
+    margin-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+    border-radius: 3rem;
+    border: solid 0.1rem white;
+    .row-micropost {
+      padding: 0;
+      .icon-size {
+        font-size: 1rem;
+      }
+      .user-img {
+        margin: 1rem 0 1rem 2rem;
+        height: 5rem;
+        width: 5rem;
+      }
+      .user {
+        color: white;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+      }
+      .user::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.1rem;
+        width: 100%;
+        height: 0.1rem;
+        background-color: white;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform 0.3s;
+      }
+      .user:hover::after {
+        transform: scale(1, 1);
+      }
+      .history {
+        color: gray;
+      }
+      .listening {
+        color: #0b9ff5;
+        &:hover {
+          color: gold;
+          text-decoration: none;
+        }
+      }
+      .btn-like {
+        color: #ca046e;
+        padding: 0;
+        &:hover {
+        }
+      }
+      .btn-like-non {
+        color: white;
+        padding: 0;
+        &:hover {
+          color: #ca046e;
+        }
+      }
+      .trash {
+        color: white;
+        &:hover {
+          color: rgb(164, 247, 164);
+        }
+      }
+    }
+  }
+}
+
 /* Responsive */
 
 /*　タブレットサイズ対応　*/
@@ -627,14 +729,15 @@ footer {
     }
   }
 
-  /* Microposts */
-
-  .microposts {
-    padding: 0 2.5rem;
-    font-size: 1.5rem;
-    .row-micropost {
-      .user-img {
-        margin: 1rem 0;
+  /* Popular posts */
+  .container-popular {
+    .microposts {
+      padding: 0 2.5rem;
+      font-size: 1.5rem;
+      .row-micropost {
+        .user-img {
+          margin: 1rem 0;
+        }
       }
     }
   }
@@ -743,18 +846,6 @@ footer {
     }
   }
 
-  /* Microposts */
-
-  .microposts {
-    padding: 0 3rem;
-    font-size: 2rem;
-    .row-micropost {
-      .icon-size {
-        font-size: 1.5rem;
-      }
-    }
-  }
-
   /* sidebar */
 
   .stats {
@@ -771,7 +862,7 @@ footer {
     }
   }
 
-  /* popular posts */
+  /* Popular posts */
   .container-popular {
     .eng-title {
       margin: 5rem 0 0.25rem 0;
@@ -783,6 +874,15 @@ footer {
       margin: 0 0 4rem 0;
       font-weight: 700;
       font-size: 4rem;
+    }
+    .microposts {
+      padding: 0 3rem;
+      font-size: 2rem;
+      .row-micropost {
+        .icon-size {
+          font-size: 1.5rem;
+        }
+      }
     }
   }
 
