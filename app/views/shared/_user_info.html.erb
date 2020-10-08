@@ -1,4 +1,2 @@
-  <%= image_tag current_user.image.thumb75.to_s %>
-<h1><%= current_user.name %></h1>
-<span><%= link_to "view my profile", current_user %></span>
-<span><%= pluralize(current_user.microposts.count, "micropost") %></span>
+<%= image_tag current_user.image.to_s, class: "img-fluid rounded-circle user-info-img" %>
+<h1><%= link_to current_user.name, current_user, class: "user" %></h1>
