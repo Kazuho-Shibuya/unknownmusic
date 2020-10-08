@@ -2,23 +2,17 @@
 <% provide(:placeholder, 'アーティスト、曲名、投稿を検索') %>
 <% if logged_in? %>
   <div class="home-img">
+    <%= render 'layouts/header' %>
     <div id="wrapper" class="container-home">
-      <%= render 'layouts/header' %>
-      <div class="row justify-content-center">
-        <div class="col-8">
-          <p class="eng-title text-center">Home</p>
-          <h1 class="jpn-title text-center">ホーム</h1>
-        </div>
-      </div>
       <div class="row justify-content-center">
         <aside class="col-2">
-          <section class="user_info">
+          <section class="user-info">
             <%= render 'shared/user_info' %>
           </section>
           <section class="stats">
             <%= render 'shared/stats' %>
           </section>
-          <section class="micropost_form">
+          <section class="micropost-form">
             <%= render 'shared/micropost_form' %>
           </section>
         </aside>

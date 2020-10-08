@@ -1,30 +1,30 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.label :artist, 'アーティスト名'%><br>
+    <p><%= f.label :artist, 'アーティスト名', class: 'label' %></p>
     <% if @result_artist_name.nil? %>
-      <%= f.label :artist,  '検索してください' %><br>
+      <p><%= f.label :artist,  '検索してください', class: 'not-search' %></p>
     <% else %>
-      <%= f.label :artist,  @result_artist_name %><br>
+      <p><%= f.label :artist,  @result_artist_name, class: 'label'  %></p>
       <%= f.hidden_field :artist, :value => @result_artist_name %>
     <% end %>
-    <%= f.label :song, '曲名'%><br>
+    <p><%= f.label :song, '曲名', class: 'label' %></p>
     <% if @result_track.nil? %>
-      <%= f.label :song,  '検索してください' %><br>
+      <p><%= f.label :song,  '検索してください', class: 'not-search' %></p>
     <% else %>
-      <%= f.label :song,  @result_track %><br>
+      <p><%= f.label :song,  @result_track, class: 'label' %></p>
       <%= f.hidden_field :song, :value => @result_track %>
     <% end %>
-    <%= f.label :listening_url, '試聴'%><br>
+    <p><%= f.label :listening_url, '試聴', class: 'label' %></p>
     <% if @result_listening_url.nil? %>
-      <%= f.label :listening_url,  '検索してください' %><br>
+      <p><%= f.label :listening_url,  '検索してください', class: 'not-search' %></p>
     <% else %>
-      <%= link_to '試聴', @result_listening_url, class: 'btn btn-primary', target: :_blank %><br>
+      <%= link_to '試聴', @result_listening_url, class: 'btn btn-primary', target: :_blank %>
       <%= f.hidden_field :listening_url, :value => @result_listening_url %>
     <% end %>
-    <%= f.label :content, '一言'%><br>
-    <%= f.text_field :content %><br>
+    <%= f.label :content, '内容（３５文字以内）', class: "label" %>
+    <%= f.text_area :content %>
   </div>
-  <%= link_to '曲検索', songs_search_path, class: 'btn btn-primary btn-songs-search' %>
-  <%= f.submit "Post", class: "btn btn-primary" %>
+  <%= link_to '検索', songs_search_path, class: 'btn btn-primary btn-songs-search' %>
+  <%= f.submit "投稿", class: "btn btn-primary" %>
 <% end %>

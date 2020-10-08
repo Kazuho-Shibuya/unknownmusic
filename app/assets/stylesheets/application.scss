@@ -14,11 +14,6 @@ html {
   font-size: 62.5%;
 }
 
-label {
-  text-align: left;
-  margin-bottom: 0;
-}
-
 .container-fluid {
   padding: 0;
 }
@@ -299,29 +294,6 @@ footer {
 
 /* sidebar */
 
-.stats {
-  overflow: auto;
-  margin-top: 0;
-  padding: 0;
-  a {
-    float: left;
-    color: gray;
-    padding: 0 1rem;
-    border-left: 0.1rem solid #eeeeee;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: blue;
-    }
-  }
-  strong {
-    display: block;
-  }
-}
-
 .user_avatars {
   overflow: auto;
   margin-top: 1rem;
@@ -331,13 +303,6 @@ footer {
   }
   .gravatar {
     margin: 0.1rem 0.1rem;
-  }
-}
-
-.stats {
-  a {
-    padding: 0 1rem;
-    border-left: 0.1rem solid #eeeeee;
   }
 }
 
@@ -548,25 +513,75 @@ footer {
 .container-home {
   color: white;
   font-size: 1.5rem;
-  .eng-title {
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 3rem;
+  margin-top: 3rem;
+  aside {
+    .user-info {
+      margin: 1rem 0;
+      .user-info-img {
+        margin-bottom: 2rem;
+        border: solid 0.3rem white;
+      }
+      .user {
+        color: white;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+      }
+      .user::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.1rem;
+        width: 100%;
+        height: 0.1rem;
+        background-color: white;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform 0.3s;
+      }
+      .user:hover::after {
+        transform: scale(1, 1);
+      }
+    }
+    .stats {
+      overflow: auto;
+      margin: 0 0 1rem 0;
+      padding: 0;
+      a {
+        float: left;
+        color: white;
+        padding: 0 1rem;
+        &:first-child {
+          padding-left: 0;
+          border: 0;
+        }
+        &:hover {
+          text-decoration: none;
+          color: #003ea6;
+        }
+      }
+      strong {
+        display: block;
+      }
+    }
+    .micropost-form {
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      .label {
+        text-align: left;
+        margin: 0 0 0.1rem 0;
+        padding: 0;
+      }
+      .not-search {
+        margin: 0 0 1rem 0;
+        padding: 0;
+        color: gray;
+      }
+    }
   }
-  .eng-title {
-    margin: 5rem 0 0.25rem 0;
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 2rem;
-  }
-  .jpn-title {
-    margin: 0 0 4rem 0;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 700;
-    font-size: 4rem;
-  }
+
   .microposts {
     padding: 0 2rem;
     font-size: 1.25rem;
@@ -744,13 +759,6 @@ footer {
 
   /* sidebar */
 
-  .stats {
-    a {
-      padding: 0.1rem;
-      border-left: 0.1rem solid #eeeeee;
-    }
-  }
-
   .user_avatars {
     margin-top: 1rem;
     .gravatar {
@@ -847,13 +855,6 @@ footer {
   }
 
   /* sidebar */
-
-  .stats {
-    a {
-      padding: 0.1rem;
-      border-left: 0.1rem solid #eeeeee;
-    }
-  }
 
   .user_avatars {
     margin-top: 1rem;
