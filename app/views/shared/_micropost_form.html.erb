@@ -3,28 +3,42 @@
   <div class="field">
     <p><%= f.label :artist, 'アーティスト名', class: 'label' %></p>
     <% if @result_artist_name.nil? %>
-      <p><%= f.label :artist,  '検索してください', class: 'not-search' %></p>
+      <p><%= f.label :artist,  '検索してください', class: 'search-result-non' %></p>
     <% else %>
-      <p><%= f.label :artist,  @result_artist_name, class: 'label'  %></p>
+      <p><%= f.label :artist,  @result_artist_name, class: 'search-result' %></p>
       <%= f.hidden_field :artist, :value => @result_artist_name %>
     <% end %>
     <p><%= f.label :song, '曲名', class: 'label' %></p>
     <% if @result_track.nil? %>
-      <p><%= f.label :song,  '検索してください', class: 'not-search' %></p>
+      <p><%= f.label :song,  '検索してください', class: 'search-result-non' %></p>
     <% else %>
-      <p><%= f.label :song,  @result_track, class: 'label' %></p>
+      <p><%= f.label :song,  @result_track, class: 'search-result' %></p>
       <%= f.hidden_field :song, :value => @result_track %>
     <% end %>
-    <p><%= f.label :listening_url, '試聴', class: 'label' %></p>
     <% if @result_listening_url.nil? %>
-      <p><%= f.label :listening_url,  '検索してください', class: 'not-search' %></p>
+      <p><%= f.label :listening_url, '試聴', class: 'label' %></p>
+      <p><%= f.label :listening_url,  '検索してください', class: 'search-result-non' %></p>
     <% else %>
-      <%= link_to '試聴', @result_listening_url, class: 'btn btn-primary', target: :_blank %>
-      <%= f.hidden_field :listening_url, :value => @result_listening_url %>
+      <span>
+        <%= link_to @result_listening_url, class: 'fa fa-play listening', target: :_blank do %>
+          <span class="icon-style">試聴</span>
+          <%= f.hidden_field :listening_url, :value => @result_listening_url %>
+        <% end %>
+      </span>
     <% end %>
-    <%= f.label :content, '内容（３５文字以内）', class: "label" %>
-    <%= f.text_area :content %>
+    <p><%= f.label :content, '内容（３５文字以内）', class: "label" %></p>
+    <p><%= f.text_area :content %></p>
   </div>
-  <%= link_to '検索', songs_search_path, class: 'btn btn-primary btn-songs-search' %>
-  <%= f.submit "投稿", class: "btn btn-primary" %>
+  <div class="icon">
+    <span>
+      <%= link_to songs_search_path, class: 'fas fa-search search', target: :_blank do %>
+        <span class="icon-style">検索</span>
+      <% end %>
+    </span>
+    <%= button_tag(class: "share") do %>
+      <%= content_tag :span, '', class: "fas fa-share" do %>
+        <span class="icon-style">投稿</span>
+      <% end %>
+    <% end %>
+  </div>
 <% end %>
