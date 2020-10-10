@@ -1,4 +1,4 @@
 <% if @feed_items.any? %>
   <%= render @feed_items %>
-  <%= will_paginate @feed_items %>
+  <%= paginate @feed_items, theme: 'twitter-bootstrap-4' %>
 <% end %>

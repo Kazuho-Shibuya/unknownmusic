@@ -2,9 +2,9 @@
 <% provide(:path, users_path) %>
 <% provide(:placeholder, 'ユーザを検索') %>
 <h1>全てのユーザ</h1>
-　<%= will_paginate @users, :previous_label => '前', :next_label => '次' %>
+　<%= paginate @users, theme: 'twitter-bootstrap-4'%>
 <ul class="users">
   <%= render 'users/search' %>
   <%= render @users %>
 </ul>
-　<%= will_paginate @users, :previous_label => '前', :next_label => '次' %>
+　<%= paginate @users, theme: 'twitter-bootstrap-4'%>

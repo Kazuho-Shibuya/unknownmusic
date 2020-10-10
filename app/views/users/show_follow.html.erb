@@ -24,7 +24,7 @@
       <ul class="users follow">
         <%= render @users %>
       </ul>
-      <%= will_paginate %>
+      <%= paginate @users, theme: 'twitter-bootstrap-4' %>
     <% end %>
   </div>
 </div>
