@@ -1,14 +1,26 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <p><%= f.label :artist, 'アーティスト名', class: 'label' %></p>
+    <p>
+      <span class="fas fa-user">
+        <span class="icon-style">
+          <%= f.label :artist, 'アーティスト名', class: 'label' %>
+        </span>
+      </span>
+    </p>
     <% if @result_artist_name.nil? %>
       <p><%= f.label :artist,  '検索してください', class: 'search-result-non' %></p>
     <% else %>
       <p><%= f.label :artist,  @result_artist_name, class: 'search-result' %></p>
       <%= f.hidden_field :artist, :value => @result_artist_name %>
     <% end %>
-    <p><%= f.label :song, '曲名', class: 'label' %></p>
+    <p>
+      <span class="fas fa-music">
+        <span class="icon-style">
+          <%= f.label :song, '曲名', class: 'label' %>
+        </span>
+      </span>
+    </p>
     <% if @result_track.nil? %>
       <p><%= f.label :song,  '検索してください', class: 'search-result-non' %></p>
     <% else %>
@@ -16,7 +28,13 @@
       <%= f.hidden_field :song, :value => @result_track %>
     <% end %>
     <% if @result_listening_url.nil? %>
-      <p><%= f.label :listening_url, '試聴', class: 'label' %></p>
+      <p>
+        <span class="fa fa-play">
+          <span class="icon-style">
+            <%= f.label :listening_url, '試聴URL', class: 'label' %>
+          </span>
+        </span>
+      </p>
       <p><%= f.label :listening_url,  '検索してください', class: 'search-result-non' %></p>
     <% else %>
       <span>
@@ -27,12 +45,12 @@
       </span>
     <% end %>
     <p><%= f.label :content, '内容（３５文字以内）', class: "label" %></p>
-    <p><%= f.text_area :content %></p>
+    <p><%= f.text_area :content, placeholder: '内容を入力してください' %></p>
   </div>
   <div class="icon">
     <span>
       <%= link_to songs_search_path, class: 'fas fa-search search', target: :_blank do %>
-        <span class="icon-style">検索</span>
+        <span class="icon-style">音楽検索</span>
       <% end %>
     </span>
     <%= button_tag(class: "share") do %>
