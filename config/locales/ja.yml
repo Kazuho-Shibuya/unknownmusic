@@ -44,6 +44,11 @@ ja:
         email: メールアドレス
         password: パスワード
         password_confirmation: 確認用パスワード
+      micropost:
+        content: 内容
+        song: 曲名
+        artist: アーティスト名
+        listening_url: 試聴URL
   shared:
     error_messages:
       errors count: "フォームに%{errors_count}個のエラーがあります"

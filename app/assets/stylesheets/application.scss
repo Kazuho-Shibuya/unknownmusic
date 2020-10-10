@@ -592,6 +592,9 @@ footer {
         resize: none;
         width: 80%;
         height: 5rem;
+        border-radius: 0.5rem;
+        padding: 0.1rem 0 0 0.1rem;
+        border: 0;
       }
 
       .listening {
@@ -626,7 +629,31 @@ footer {
       }
     }
   }
-
+  .user-search {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    .search {
+      width: 50%;
+      height: 3rem;
+      border-radius: 0.5rem;
+      padding: 0.1rem 0 0 0.1rem;
+      border: 0;
+    }
+    .btn-song {
+      color: white;
+      background: rgba(0, 0, 0, 0.25);
+      border: solid 0.1rem white;
+      padding: 0.75rem 2.25rem;
+      font-size: 1.25rem;
+      text-indent: 0.3rem;
+      letter-spacing: 0.3rem;
+      &:hover {
+        background: white;
+        color: black;
+        box-shadow: none;
+      }
+    }
+  }
   .microposts {
     padding: 0 2rem;
     font-size: 1.25rem;
