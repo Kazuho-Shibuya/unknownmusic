@@ -22,6 +22,6 @@ class StaticPagesController < ApplicationController
 
   def set_micropost
     @micropost = current_user.microposts.build
-    @feed_items = current_user.feed.paginate(page: params[:page])
+    @feed_items = current_user.feed.page(params[:page]).per(20)
   end
 end

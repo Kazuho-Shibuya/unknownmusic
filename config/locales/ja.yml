@@ -1,4 +1,11 @@
 ja:
+  views:
+    pagination:
+      first: "«"
+      last: "»"
+      previous: "‹"
+      next: "›"
+      truncate: "..."
   datetime:
     distance_in_words:
       half_a_minute: "30秒前後"

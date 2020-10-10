@@ -4,9 +4,10 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: %i[edit update]
   before_action :admin_user,     only: :destroy
   before_action :check_test_user, { only: %i[edit update destroy] }
+  PER = 20
 
   def index
-    @users = User.where(activated: true).paginate(page: params[:page]).search(params[:search])
+    @users = User.where(activated: true).page(params[:page]).per(PER).search(params[:search])
   end
 
   def show
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
     # id: '1'は /users/:idから取得した値
     # それによってid=1のユーザーを検索できる
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page]).search(params[:search])
+    @microposts = @user.microposts.page(params[:page]).per(PER).search(params[:search])
     redirect_to(root_url) && return unless @user.activated?
   end
 
@@ -59,14 +60,14 @@ class UsersController < ApplicationController
   def following
     @title = 'Following'
     @user  = User.find(params[:id])
-    @users = @user.following.paginate(page: params[:page])
+    @users = @user.following.page(params[:page]).per(PER)
     render 'show_follow'
   end
 
   def followers
     @title = 'Followers'
     @user  = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
+    @users = @user.followers.page(params[:page]).per(PER)
     render 'show_follow'
   end
 
