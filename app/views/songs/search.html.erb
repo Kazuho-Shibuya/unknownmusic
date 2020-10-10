@@ -12,7 +12,7 @@
             <%= text_field_tag :search, params[:search], placeholder: yield(:placeholder), class: "text-center search-form" %>
           </div>
           <div>
-            <%= submit_tag '検索', :name => nil, class: "btn-style btn-song" %>
+            <%= submit_tag '音楽検索', :name => nil, class: "btn-style btn-song" %>
           </div>
         <% end %>
       </div>
@@ -52,8 +52,6 @@
                         <span class="icon-style">試聴</span>
                       <% end %>
                     </span>
-                    <%# <%= f.submit '投稿', name: nil, class: 'fas fa-share' %>
-                    <%# <%= f.hidden_field :listening_url, :value => search_tracks_item["preview_url"] %>
                     <%= button_tag(class: "share") do %>
                       <%= hidden_field_tag :listening_url, search_tracks_item["preview_url"] %>
                       <%= content_tag :span, '', class: "fas fa-share" do %>
