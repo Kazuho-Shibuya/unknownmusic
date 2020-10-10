@@ -27,7 +27,7 @@ RSpec.describe Micropost, type: :model do
     it '投稿できない' do
       micropost = FactoryBot.build(:micropost, song: nil)
       micropost.valid?
-      expect(micropost.errors[:song]).to include('を入力してください')
+      expect(micropost.errors[:song]).to include('を検索してください')
     end
   end
 
@@ -35,7 +35,7 @@ RSpec.describe Micropost, type: :model do
     it '投稿できない' do
       micropost = FactoryBot.build(:micropost, artist: nil)
       micropost.valid?
-      expect(micropost.errors[:artist]).to include('を入力してください')
+      expect(micropost.errors[:artist]).to include('を検索してください')
     end
   end
 
@@ -43,7 +43,7 @@ RSpec.describe Micropost, type: :model do
     it '投稿できない' do
       micropost = FactoryBot.build(:micropost, listening_url: nil)
       micropost.valid?
-      expect(micropost.errors[:listening_url]).to include('を入力してください')
+      expect(micropost.errors[:listening_url]).to include('を検索してください')
     end
   end
 

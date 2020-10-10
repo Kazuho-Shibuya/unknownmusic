@@ -8,7 +8,7 @@ module LoginMacros
   end
 
   def logout
-    click_link 'ログアウト'
+    click_link 'logout'
     expect(page).to have_content 'ログアウトしました'
   end
 end

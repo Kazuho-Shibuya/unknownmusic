@@ -7,57 +7,57 @@
     <div class="collapse navbar-collapse justify-content-end" id ="navbar">
       <ul class="nav navbar-nav">
         <li class="nav-item">
-          <%= link_to microposts_path, class: 'link-style' do %>
+          <%= link_to microposts_path, id: 'popular-posts', class: 'link-style' do %>
             <p class="eng-link">Popular posts</p>
             <p class="jpn-link">人気投稿</p>
           <% end %>
         </li>
         <li class="nav-item">
-          <%= link_to songs_search_path, class: 'link-style' do %>
+          <%= link_to songs_search_path, id: 'music-search', class: 'link-style' do %>
             <p class="eng-link">Music search</p>
             <p class="jpn-link">音楽検索</p>
           <% end %>
         </li>
         <li class="nav-item">
-          <%= link_to about_path, class: 'link-style' do %>
+          <%= link_to about_path, id: 'about', class: 'link-style' do %>
             <p class="eng-link">About</p>
             <p class="jpn-link">機能概要</p>
           <% end %>
         </li>
         <% if logged_in? %>
           <li class="nav-item">
-            <%= link_to home_path, class: 'link-style' do %>
+            <%= link_to home_path, id: 'home', class: 'link-style' do %>
               <p class="eng-link">Home</p>
               <p class="jpn-link">ホーム</p>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to users_path, class: 'link-style' do %>
+            <%= link_to users_path, id: 'user-list', class: 'link-style' do %>
               <p class="eng-link">User list</p>
               <p class="jpn-link">ユーザ一覧</p>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to edit_user_path(current_user), class: 'link-style' do %>
+            <%= link_to edit_user_path(current_user), id: 'user-edit', class: 'link-style' do %>
               <p class="eng-link">User edit</p>
               <p class="jpn-link">ユーザ編集</p>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to logout_path, class: 'link-style' do %>
+            <%= link_to logout_path, id: 'logout', class: 'link-style' do %>
               <p class="eng-link">Logout</p>
               <p class="jpn-link">ログアウト</p>
             <% end %>
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to signup_path, class: 'link-style' do %>
+            <%= link_to signup_path, id: 'sign-up', class: 'link-style' do %>
               <p class="eng-link">Sign up</p>
               <p class="jpn-link">新規登録</p>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to login_path, class: 'link-style' do %>
+            <%= link_to login_path, id: 'login', class: 'link-style' do %>
               <p class="eng-link">Login</p>
               <p class="jpn-link">ログイン</p>
             <% end %>
