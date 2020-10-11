@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: %i[index edit update destroy
-                                          following followers]
+                                          following followers home]
   before_action :correct_user,   only: %i[edit update]
   before_action :admin_user,     only: :destroy
   before_action :check_test_user, { only: %i[edit update destroy] }
+  before_action :set_micropost, only: %i[home]
   PER = 20
 
   def index
@@ -71,6 +72,11 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def home
+    # 検索拡張機能として.search(params[:search])を追加
+    @feed_items = @feed_items.search(params[:search])
+  end
+
   private
 
   # params[:user]の代わりで、任意の属性のみ許可する。（admin="1")を渡されて、管理者権限を奪われないため
@@ -98,5 +104,10 @@ class UsersController < ApplicationController
       flash[:notice] = 'テストユーザーのため変更できません'
       redirect_to root_path
     end
+  end
+
+  def set_micropost
+    @micropost = current_user.microposts.build
+    @feed_items = current_user.feed.page(params[:page]).per(20)
   end
 end

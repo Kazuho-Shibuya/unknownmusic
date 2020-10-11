@@ -140,4 +140,18 @@ RSpec.describe UsersController, type: :controller do
       expect(response.status).to eq 302
     end
   end
+
+  describe '#home' do
+    before do
+      get :home
+    end
+
+    it 'ログインページに遷移すること' do
+      expect(response).to redirect_to login_url
+    end
+
+    it 'ステータスが302であること' do
+      expect(response.status).to eq 302
+    end
+  end
 end
