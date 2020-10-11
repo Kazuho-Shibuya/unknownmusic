@@ -12,7 +12,7 @@ class MicropostsController < ApplicationController
       @result_track = @micropost.song
       @result_listening_url = @micropost.listening_url
       @feed_items = []
-      render 'static_pages/home'
+      render 'users/home'
     end
   end
 

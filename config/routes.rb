@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post '/login',   to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
   patch '/users/:id/edit', to: 'users#update'
-  get '/home', to: 'static_pages#home'
+  get '/home', to: 'users#home'
   get '/about', to: 'static_pages#about'
   get 'songs/search', to: 'songs#search'
   post '/search_result', to: 'static_pages#search_result'
