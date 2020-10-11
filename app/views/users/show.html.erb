@@ -1,28 +1,30 @@
 <% provide(:title, @user.name) %>
 <% provide(:path, user_path) %>
 <% provide(:placeholder, 'アーティスト、曲名、投稿を検索') %>
-<%= render 'layouts/header' %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= image_tag @user.image.thumb75.to_s %>
-        <%= @user.name %>
-      </h1>
-    </section>
-    <section class="stats">
-      <%= render 'shared/stats' %>
-    </section>
-  </aside>
-  <div class="col-md-8">
-    <%= render 'follow_form' if logged_in? %>
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-    <% end %>
-    <%= render 'users/search' %>
-    <ol class="microposts">
-      <%= render @microposts %>
-    </ol>
-    <%= paginate @microposts, theme: 'twitter-bootstrap-4' %>
+<div class="show-img">
+  <%= render 'layouts/header' %>
+  <div id="wrapper" class="container-show">
+    <div class="row justify-content-center">
+      <aside class="col-md-4">
+        <section class="user-info">
+          <%= image_tag @user.image.to_s, class: "img-fluid rounded-circle user-info-img" %>
+          <h1>
+            <%= @user.name %>
+          </h1>
+        </section>
+        <section class="stats">
+          <%= render 'shared/stats' %>
+        </section>
+      </aside>
+      <div class="col-md-6">
+        <%= render 'follow_form' if logged_in? %>
+        <section class="text-right user-search">
+          <%= render 'users/search' %>
+        </section>
+        <%= render @microposts %>
+        <%= paginate @microposts, theme: 'twitter-bootstrap-4' %>
+      </div>
+    </div>
+    <%= render 'layouts/footer' %>
   </div>
 </div>
