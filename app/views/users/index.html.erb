@@ -1,10 +1,20 @@
 <% provide(:title, '全てのユーザ') %>
 <% provide(:path, users_path) %>
 <% provide(:placeholder, 'ユーザを検索') %>
-<h1>全てのユーザ</h1>
-　<%= paginate @users, theme: 'twitter-bootstrap-4'%>
-<ul class="users">
-  <%= render 'users/search' %>
-  <%= render @users %>
-</ul>
-　<%= paginate @users, theme: 'twitter-bootstrap-4'%>
+<div class="users-index-img">
+  <div id="wrapper" class="container-users-index">
+    <%= render 'layouts/header' %>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <h1>全てのユーザ</h1>
+        　<%= paginate @users, theme: 'twitter-bootstrap-4'%>
+        <ul class="users">
+          <%= render 'users/search' %>
+          <%= render @users %>
+        </ul>
+        　<%= paginate @users, theme: 'twitter-bootstrap-4'%>
+      </div>
+    </div>
+    <%= render 'layouts/footer' %>
+  </div>
+</div>
