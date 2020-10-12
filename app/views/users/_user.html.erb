@@ -1,5 +1,5 @@
-<li>
-  <%= image_tag user.image.thumb50.to_s %>
+<li class="user">
+  <%= image_tag user.image.to_s, class: "img-fluid rounded-circle user-info-img" %>
   <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user?(user) %>
     | <%= link_to "delete", user, method: :delete,

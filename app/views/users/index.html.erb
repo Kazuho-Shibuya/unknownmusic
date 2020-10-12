@@ -4,12 +4,14 @@
 <div class="users-index-img">
   <div id="wrapper" class="container-users-index">
     <%= render 'layouts/header' %>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center row-users-index">
       <div class="col-12 col-md-10 col-lg-8">
-        <h1>全てのユーザ</h1>
-        　<%= paginate @users, theme: 'twitter-bootstrap-4'%>
+        <p class="eng-title text-center">User list</p>
+        <h1 class="jpn-title text-center">ユーザ一覧</h1>
         <ul class="users">
-          <%= render 'users/search' %>
+          <section class="text-right user-search">
+            <%= render 'users/search' %>
+          </section>
           <%= render @users %>
         </ul>
         　<%= paginate @users, theme: 'twitter-bootstrap-4'%>
