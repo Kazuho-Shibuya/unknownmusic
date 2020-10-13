@@ -1,23 +1,28 @@
-<li class="user">
-  <%= image_tag user.image.to_s, class: "img-fluid rounded-circle user-info-img" %>
-  <%= link_to user.name, user %>
-  <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "delete", user, method: :delete,
-                                  data: { confirm: "本当に削除しますか？" } %>
-  <% end %>
+<li class="user<%= user.id %>">
+  <%= image_tag user.image.to_s, class: "img-fluid rounded-circle user-img" %>
+  <%= link_to user.name, user, class: "user" %>
   <% unless current_user?(user) %>
-    <div id="follow_form">
+    <div class="follow-form">
       <% if current_user.following?(user) %>
         <%= form_for(current_user.active_relationships.find_by(followed_id: user.id),
              html: { method: :delete }) do |f| %>
-          <%= f.submit "フォロー解除", class: "btn" %>
+          <%= button_tag :type => "submit", :class =>"btn-style btn-unfollow" do %>
+            <span class="normal">フォロー中</span>
+            <span class="hover">フォロー解除</span>
+          <% end %>
         <% end %>
       <% else %>
         <%= form_for(current_user.active_relationships.build) do |f| %>
           <div><%= hidden_field_tag :followed_id, user.id %></div>
-          <%= f.submit "フォロー", class: "btn btn-primary" %>
+          <%= f.submit "フォロー", class: "btn-style btn-follow" %>
         <% end %>
       <% end %>
     </div>
   <% end %>
+  <div class='admin-trash'>
+    <% if current_user.admin? && !current_user?(user) %>
+      <%= link_to "", user, method: :delete, class: 'far fa-trash-alt admin-trash',
+                                       data: { confirm: "本当に削除しますか？" } %>
+    <% end %>
+  </div>
 </li>
