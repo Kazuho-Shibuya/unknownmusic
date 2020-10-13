@@ -921,7 +921,7 @@ footer {
 /* User index */
 
 .users-index-img {
-  background-image: image-url("popular.jpg");
+  background-image: image-url("user_index.jpg");
   position: relative;
   min-height: 100vh;
   background-size: cover;
@@ -935,41 +935,41 @@ footer {
     font-family: "Roboto", sans-serif;
     font-style: italic;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .jpn-title {
-    margin: 0 0 4rem 0;
+    margin: 0 0 2rem 0;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 4rem;
   }
-  .users {
-    .user-search {
-      margin: 1rem 0;
+  .user-search {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    .search {
+      width: 25%;
+      height: 3rem;
+      border-radius: 0.5rem;
+      padding: 0.1rem 0 0 0.5rem;
+      border: 0;
+    }
+    .btn-search {
+      color: white;
+      background: rgba(0, 0, 0, 0.25);
+      border: solid 0.1rem white;
+      padding: 0.75rem 2.25rem;
       font-size: 1.25rem;
-      .search {
-        width: 25%;
-        height: 3rem;
-        border-radius: 0.5rem;
-        padding: 0.1rem 0 0 0.1rem;
-        border: 0;
-      }
-      .btn-search {
-        color: white;
-        background: rgba(0, 0, 0, 0.25);
-        border: solid 0.1rem white;
-        padding: 0.75rem 2.25rem;
-        font-size: 1.25rem;
-        text-indent: 0.3rem;
-        letter-spacing: 0.3rem;
-        &:hover {
-          background: white;
-          color: black;
-          box-shadow: none;
-        }
+      text-indent: 0.3rem;
+      letter-spacing: 0.3rem;
+      &:hover {
+        background: white;
+        color: black;
+        box-shadow: none;
       }
     }
-    .user {
+  }
+  .users {
+    li {
       padding: 0 2rem;
       font-size: 1.25rem;
       list-style: none;
@@ -978,8 +978,9 @@ footer {
       box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
       border-radius: 3rem;
       border: solid 0.1rem white;
+      position: relative;
       .user-img {
-        margin: 1rem 0 1rem 2rem;
+        margin: 1rem 1rem 1rem 0;
         height: 5rem;
         width: 5rem;
       }
@@ -1003,6 +1004,62 @@ footer {
       }
       .user:hover::after {
         transform: scale(1, 1);
+      }
+      .follow-form {
+        float: right;
+        margin-top: 1rem;
+        .btn-unfollow {
+          background: white;
+          color: black;
+          border: solid 0.1rem white;
+          padding: 0.75rem 2.25rem;
+          font-size: 1.25rem;
+          text-indent: 0.3rem;
+          letter-spacing: 0.3rem;
+          box-shadow: none;
+          .normal {
+            display: inline;
+          }
+          .hover {
+            display: none;
+          }
+          &:hover {
+            color: white;
+            background: rgb(163, 31, 31);
+            box-shadow: none;
+            border: solid 0.1rem rgb(163, 31, 31);
+            .normal {
+              display: none;
+            }
+            .hover {
+              display: inline;
+            }
+          }
+        }
+        .btn-follow {
+          color: white;
+          background: rgba(0, 0, 0, 0.25);
+          border: solid 0.1rem white;
+          padding: 0.75rem 2.25rem;
+          font-size: 1.25rem;
+          text-indent: 0.3rem;
+          letter-spacing: 0.3rem;
+          &:hover {
+            background-color: #003ea6;
+            color: white;
+            border: solid 0.1rem #003ea6;
+          }
+        }
+      }
+      .admin-trash {
+        margin: 0 2rem 0.1rem 0;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        color: white;
+        &:hover {
+          color: rgb(164, 247, 164);
+        }
       }
     }
   }
