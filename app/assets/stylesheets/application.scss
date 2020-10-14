@@ -921,7 +921,7 @@ footer {
 /* User index */
 
 .users-index-img {
-  background-image: image-url("popular.jpg");
+  background-image: image-url("user_index.jpg");
   position: relative;
   min-height: 100vh;
   background-size: cover;
@@ -935,22 +935,22 @@ footer {
     font-family: "Roboto", sans-serif;
     font-style: italic;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .jpn-title {
     margin: 0 0 2rem 0;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .user-search {
     margin: 1rem 0;
     font-size: 1.25rem;
     .search {
-      width: 25%;
+      width: 50%;
       height: 3rem;
       border-radius: 0.5rem;
-      padding: 0.1rem 0 0 0.1rem;
+      padding: 0.1rem 0 0 0.5rem;
       border: 0;
     }
     .btn-search {
@@ -969,6 +969,7 @@ footer {
     }
   }
   .users {
+    padding: 0;
     li {
       padding: 0 2rem;
       font-size: 1.25rem;
@@ -1073,6 +1074,9 @@ footer {
     .page-link {
       color: white;
       background-color: rgba(0, 0, 0, 0.25);
+      &:hover {
+        border-color: gold;
+      }
     }
   }
 }
@@ -1192,6 +1196,17 @@ footer {
   .container-song {
     .search-content {
       margin: 2rem;
+    }
+  }
+
+  /* User index */
+
+  .container-users-index {
+    .eng-title {
+      font-size: 2rem;
+    }
+    .jpn-title {
+      font-size: 4rem;
     }
   }
 }
@@ -1463,6 +1478,16 @@ footer {
           height: 5rem;
           width: 5rem;
         }
+      }
+    }
+  }
+
+  /* User index */
+
+  .container-users-index {
+    .user-search {
+      .search {
+        width: 25%;
       }
     }
   }
