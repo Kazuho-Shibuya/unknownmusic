@@ -99,11 +99,11 @@ class UsersController < ApplicationController
 
   # テストユーザかどうか確認する
   def check_test_user
-    email = @user.email
-    if email == 'test@example.com'
-      flash[:notice] = 'テストユーザーのため変更できません'
-      redirect_to root_path
-    end
+    @user = User.find(params[:id])
+    return unless @user.email == 'test@example.com'
+
+    flash[:notice] = 'テストユーザーのため変更できません'
+    redirect_to root_path
   end
 
   def set_micropost
