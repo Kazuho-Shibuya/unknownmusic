@@ -1,30 +1,31 @@
 <% provide(:title, @title) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <%= image_tag @user.image.thumb50.to_s %>
-      <h1><%= @user.name %></h1>
-      <span><%= link_to "view my profile", @user %></span>
-      <span><b>Microposts:</b> <%= @user.microposts.count %></span>
-    </section>
-    <section class="stats">
-      <%= render 'shared/stats' %>
-      <% if @users.any? %>
-        <div class="user_avatars">
-          <% @users.each do |user| %>
-            <%= image_tag user.image.thumb50.to_s %>
-          <% end %>
-        </div>
-      <% end %>
-    </section>
-  </aside>
-  <div class="col-md-8">
-    <h3><%= @title %></h3>
-    <% if @users.any? %>
-      <ul class="users follow">
-        <%= render @users %>
-      </ul>
-      <%= paginate @users, theme: 'twitter-bootstrap-4' %>
-    <% end %>
+<div class="show-follow-img">
+  <%= render 'layouts/header' %>
+  <div id="wrapper" class="container-show-follow">
+    <div class="row justify-content-center">
+      <aside class="col-md-4">
+        <section class="user-info">
+          <%= image_tag @user.image.to_s, class: "img-fluid rounded-circle user-info-img" %>
+          <h1>
+            <%= link_to @user.name, @user, class: "user" %>
+          </h1>
+        </section>
+        <section class="stats">
+          <%= render 'shared/stats' %>
+        </section>
+      </aside>
+      <div class="col-md-6">
+        <h2>
+          <%= @title %>
+        </h2>
+        <% if @users.any? %>
+          <ul class="users follow">
+            <%= render @users %>
+          </ul>
+          <%= paginate @users, theme: 'twitter-bootstrap-4' %>
+        <% end %>
+      </div>
+    </div>
+    <%= render 'layouts/footer' %>
   </div>
 </div>
