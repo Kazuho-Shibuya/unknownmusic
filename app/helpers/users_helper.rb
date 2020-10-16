@@ -1,5 +1,5 @@
 module UsersHelper
-  # 引数で与えられたユーザーのGravatar画像を返す
+  # 引数で与えられたユーザのGravatar画像を返す
   def gravatar_for(user, options = { size: 80 })
     # メールアドレスをMD5という仕組みでハッシュ化
     # メールアドレスは大文字と小文字を区別しないが、MD5ハッシュでは区別されるため、hexdigest(MD5のハッシュ化をしているメソッド)の引数を小文字に変換している

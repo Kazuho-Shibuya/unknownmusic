@@ -1,4 +1,4 @@
-# ユーザー
+# ユーザ
 User.create!(name: '渋谷一帆',
              email: 'shibuyak0213@gmail.com',
              password: 'foobar',
@@ -8,8 +8,8 @@ User.create!(name: '渋谷一帆',
              activated_at: Time.zone.now,
              image: File.open('./app/assets/images/admin_user.jpg'))
 
-# テストログインユーザー
-User.create!(name: 'テストユーザー',
+# テストログインユーザ
+User.create!(name: 'テストユーザ',
              email: 'test@example.com',
              password: 'password',
              password_confirmation: 'password',
@@ -18,7 +18,7 @@ User.create!(name: 'テストユーザー',
              activated_at: Time.zone.now,
              image: File.open('./app/assets/images/test_login_user.jpg'))
 
-# テストユーザー
+# テストユーザ
 98.times do |_n|
   name = Faker::Name.name
   email = Faker::Internet.email
