@@ -15,9 +15,11 @@
         <section class="stats">
           <%= render 'shared/stats' %>
         </section>
+        <section>
+          <%= render 'follow_form' if logged_in? %>
+        </section>
       </aside>
       <div class="col-md-6">
-        <%= render 'follow_form' if logged_in? %>
         <section class="text-right user-search">
           <%= render 'users/search' %>
         </section>

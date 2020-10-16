@@ -739,7 +739,7 @@ footer {
   }
 }
 
-/* Show */
+/* User show */
 
 .show-img {
   background-image: image-url("show.jpg");
@@ -758,7 +758,7 @@ footer {
     font-weight: 400;
   }
   aside {
-    margin: 0 0 3rem 2rem;
+    margin: 0 0 1rem 2rem;
     padding: 0;
     .user-info {
       margin: 1rem 0;
@@ -807,6 +807,51 @@ footer {
       }
       strong {
         display: block;
+      }
+    }
+    .follow-form {
+      margin: 0 0 2rem 0;
+      .btn-unfollow {
+        background: white;
+        color: black;
+        border: solid 0.1rem white;
+        padding: 0.75rem 2.25rem;
+        font-size: 1.25rem;
+        text-indent: 0.3rem;
+        letter-spacing: 0.3rem;
+        box-shadow: none;
+        .normal {
+          display: inline;
+        }
+        .hover {
+          display: none;
+        }
+        &:hover {
+          color: white;
+          background: rgb(163, 31, 31);
+          box-shadow: none;
+          border: solid 0.1rem rgb(163, 31, 31);
+          .normal {
+            display: none;
+          }
+          .hover {
+            display: inline;
+          }
+        }
+      }
+      .btn-follow {
+        color: white;
+        background: rgba(0, 0, 0, 0.25);
+        border: solid 0.1rem white;
+        padding: 0.75rem 2.25rem;
+        font-size: 1.25rem;
+        text-indent: 0.3rem;
+        letter-spacing: 0.3rem;
+        &:hover {
+          background-color: #003ea6;
+          color: white;
+          border: solid 0.1rem #003ea6;
+        }
       }
     }
   }
@@ -1199,6 +1244,15 @@ footer {
     }
   }
 
+  /* User show */
+  .container-show {
+    aside {
+      .follow-form {
+        margin: 0 0 3rem 0;
+      }
+    }
+  }
+
   /* User index */
 
   .container-users-index {
@@ -1442,7 +1496,7 @@ footer {
     }
   }
 
-  /* Show */
+  /* User show */
 
   .container-show {
     color: white;
