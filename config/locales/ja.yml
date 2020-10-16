@@ -44,7 +44,7 @@ ja:
         other: "%{count}年以上"
   activerecord:
     models:
-      user: ユーザー
+      user: ユーザ
     attributes:
       user:
         name: 名前

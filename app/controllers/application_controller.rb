@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   private
 
-  # ログイン済みユーザーかどうか確認
+  # ログイン済みユーザかどうか確認
   def logged_in_user
     return if logged_in?
 

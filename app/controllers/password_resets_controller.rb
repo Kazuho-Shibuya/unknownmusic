@@ -66,7 +66,7 @@ class PasswordResetsController < ApplicationController
   def check_test_user
     email = params[:password_reset][:email].downcase
     if email == 'test@example.com'
-      flash[:notice] = 'テストユーザーのため変更できません'
+      flash[:notice] = 'テストユーザのため変更できません'
       redirect_to root_path
     end
   end
