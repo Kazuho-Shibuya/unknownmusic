@@ -1,28 +1,62 @@
 <% provide(:title, '編集') %>
-<div class="img-layout edit-img">
-  <div class="container-edit">
-    <h1>プロフィールを編集</h1>
-    <div class="row justify-content-center">
-      <%= form_for(@user, url: edit_user_path) do |f| %>
-        <div class="col-md-2">
-          <% if @user.image? %>
-            <%= image_tag @user.image.thumb50.url %>
-          <% else %>
-            <%= image_tag "/assets/default.jpg", :size => '100x100' %>
-          <% end %>
-          <%= f.file_field :image %>
-        </div>
-        <div class="col-md-6">
-          <%= render 'shared/error_messages', object: f.object %>
-          <%= f.label :name, '名前'%>
-          <%= f.text_field :name, class: 'form-layout'%>
-          <%= f.label :email, 'メールアドレス'%>
-          <%= f.email_field :email, class: 'form-layout'%>
-          <%= f.label :password, 'パスワード'%>
-          <%= f.password_field :password, class: 'form-layout'%>
-          <%= f.label :password_confirmation, 'パスワード（確認）'%>
-          <%= f.password_field :password_confirmation, class: 'form-layout'%>
-          <%= f.submit '更新する', class: 'btn btn-style btn-edit'%>
+<div class="edit-img">
+  <div id="wrapper" class="container-edit">
+    <%= render 'layouts/header' %>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-6">
+        <p class="eng-title text-center">User edit</p>
+        <h1 class="jpn-title text-center">ユーザ編集</h1>
+        <%= form_for(@user, url: edit_user_path) do |f| %>
+          <div class="img-chenge">
+            <p>
+              <% if @user.image? %>
+                <%= image_tag @user.image.to_s, class: "img-fluid rounded-circle user-img" %>
+              <% else %>
+                <%= image_tag "/assets/default.jpg", class: "img-fluid rounded-circle user-img" %>
+              <% end %>
+            </p>
+            <p>
+              <%= f.label :image, class: "form-image" do %>
+                <i class="far fa-image"></i>
+                <span class="icon-style">
+                  <span>画像変更</span>
+                  <%= f.file_field :image %>
+                </span>
+              <% end %>
+            </p>
+          </div>
+          <div class="user-edit">
+            <p>
+              <%= render 'shared/error_messages', object: f.object %>
+            </p>
+            <p>
+              <%= f.label :name, '名前', class: 'label' %>
+            </p>
+            <p>
+              <%= f.text_field :name, class: 'edit-form' %>
+            </p>
+            <p>
+              <%= f.label :email, 'メールアドレス', class: 'label' %>
+            </p>
+            <p>
+              <%= f.email_field :email, class: 'edit-form' %>
+            </p>
+            <p>
+              <%= f.label :password, 'パスワード', class: 'label' %>
+            </p>
+            <p>
+              <%= f.password_field :password, class: 'edit-form' %>
+            </p>
+            <p>
+              <%= f.label :password_confirmation, 'パスワード（確認）', class: 'label' %>
+            </p>
+            <p>
+              <%= f.password_field :password_confirmation, class: 'edit-form' %>
+            </p>
+            <p>
+              <%= f.submit '更新する', class: 'btn-style btn-edit '%>
+            </p>
+          </div>
         </div>
       <% end %>
     </div>
