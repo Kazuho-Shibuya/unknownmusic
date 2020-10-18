@@ -1,16 +1,17 @@
 ja:
   errors:
     messages:
-      carrierwave_integrity_error: 許可されたファイルタイプではありません。
-      carrierwave_download_error: ダウンロードできません。
-      extension_whitelist_error: "%{extension}拡張子はアップロードできません。%{allowed_types}拡張子をアップロードしてください。"
-      extension_blacklist_error: "%{extension}ファイルをアップロードすることはできません。"
-      content_type_whitelist_error: "%{content_type}ファイルはアップロードできません。"
-      content_type_blacklist_error: "%{content_type}ファイルをアップロードすることはできません。"
-      rmagick_processing_error: "画像ファイルをアップロードしてください。"
-      mini_magick_processing_error: "画像のリサイズに失敗しました。"
-      min_size_error: "%{min_size}以上のファイルをアップロードしてください。"
-      max_size_error: "%{max_size}以下のファイルサイズをアップロードしてください。"
+      carrierwave_processing_error: 処理できませんでした
+      carrierwave_integrity_error: は許可されていないファイルタイプではありません。
+      carrierwave_download_error: はダウンロードできません。
+      extension_whitelist_error: "%{extension}ファイルのアップロードは許可されていません。アップロードできるファイルタイプ: %{allowed_types}"
+      extension_blacklist_error: "%{extension}ファイルのアップロードは許可されていません。アップロードできないファイルタイプ: %{prohibited_types}"
+      content_type_whitelist_error: "%{content_type}ファイルのアップロードは許可されていません。アップロードできるファイルタイプ: %{allowed_types}"
+      content_type_blacklist_error: "%{content_type}ファイルのアップロードは許可されていません"
+      rmagick_processing_error: "ファイルを処理できませんでした。画像を確認してください。"
+      mini_magick_processing_error: "ファイルを処理できませんでした。画像を確認してください。"
+      min_size_error: "を%{min_size}以上のサイズにしてください"
+      max_size_error: "を%{max_size}以下のサイズにしてください"
   views:
     pagination:
       first: "«"
