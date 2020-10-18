@@ -48,6 +48,7 @@ class UsersController < ApplicationController
       flash[:success] = 'プロフィールを更新しました'
       redirect_to @user
     else
+      @user_image = User.find(params[:id]).image.to_s
       render 'edit'
     end
   end

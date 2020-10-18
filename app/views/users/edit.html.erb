@@ -6,59 +6,60 @@
       <div class="col-md-6">
         <p class="eng-title text-center">User edit</p>
         <h1 class="jpn-title text-center">ユーザ編集</h1>
-        <%= form_for(@user, url: edit_user_path) do |f| %>
-          <div class="img-chenge">
-            <p>
-              <% if @user.image? %>
-                <%= image_tag @user.image.to_s, class: "img-fluid rounded-circle user-img" %>
-              <% else %>
-                <%= image_tag "/assets/default.jpg", class: "img-fluid rounded-circle user-img" %>
-              <% end %>
-            </p>
-            <p>
-              <%= f.label :image, class: "form-image" do %>
-                <i class="far fa-image"></i>
-                <span class="icon-style">
-                  <span>画像変更</span>
-                  <%= f.file_field :image %>
-                </span>
-              <% end %>
-            </p>
-          </div>
-          <div class="user-edit">
+        <div class="field">
+          <%= form_for(@user, url: edit_user_path) do |f| %>
             <p>
               <%= render 'shared/error_messages', object: f.object %>
             </p>
-            <p>
-              <%= f.label :name, '名前', class: 'label' %>
-            </p>
-            <p>
-              <%= f.text_field :name, class: 'edit-form' %>
-            </p>
-            <p>
-              <%= f.label :email, 'メールアドレス', class: 'label' %>
-            </p>
-            <p>
-              <%= f.email_field :email, class: 'edit-form' %>
-            </p>
-            <p>
-              <%= f.label :password, 'パスワード', class: 'label' %>
-            </p>
-            <p>
-              <%= f.password_field :password, class: 'edit-form' %>
-            </p>
-            <p>
-              <%= f.label :password_confirmation, 'パスワード（確認）', class: 'label' %>
-            </p>
-            <p>
-              <%= f.password_field :password_confirmation, class: 'edit-form' %>
-            </p>
-            <p>
-              <%= f.submit '更新する', class: 'btn-style btn-edit '%>
-            </p>
-          </div>
+            <div class="img-change">
+              <p>
+                <% if @user_image.nil? %>
+                  <%= image_tag @user.image.to_s, id: "img-prev", class: "img-fluid rounded-circle user-img" %>
+                  <%= f.hidden_field :user_image, :value => @user.image.to_s %>
+                <% else %>
+                  <%= image_tag @user_image, id: "img-prev", class: "img-fluid rounded-circle user-img" %>
+                  <%= f.hidden_field :user_image, :value => @user.image.to_s %>
+                <% end %>
+              </p>
+              <p>
+                <label class="form-image btn-img-change">
+                  画像変更
+                  <%= f.file_field :image, id: "post-img" %>
+                </label>
+              </p>
+            </div>
+            <div class="user-edit">
+              <p>
+                <%= f.label :name, '名前', class: 'label' %>
+              </p>
+              <p>
+                <%= f.text_field :name, class: 'edit-form' %>
+              </p>
+              <p>
+                <%= f.label :email, 'メールアドレス', class: 'label' %>
+              </p>
+              <p>
+                <%= f.email_field :email, class: 'edit-form' %>
+              </p>
+              <p>
+                <%= f.label :password, 'パスワード', class: 'label' %>
+              </p>
+              <p>
+                <%= f.password_field :password, class: 'edit-form' %>
+              </p>
+              <p>
+                <%= f.label :password_confirmation, 'パスワード（確認）', class: 'label' %>
+              </p>
+              <p>
+                <%= f.password_field :password_confirmation, class: 'edit-form' %>
+              </p>
+              <p>
+                <%= f.submit '更新する', class: 'btn-style btn-edit '%>
+              </p>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>

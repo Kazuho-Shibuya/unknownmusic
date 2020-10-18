@@ -21,6 +21,11 @@ module UnknownMusic
     # 認証トークンをremoteフォームに埋め込む
     config.action_view.embed_authenticity_token_in_remote_forms = true
 
+    # field_with_errorsタグを読み込まないようにする。レイアウト崩れ防止。
+    config.action_view.field_error_proc = proc do |html_tag, _instance|
+      html_tag.to_s.html_safe
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
