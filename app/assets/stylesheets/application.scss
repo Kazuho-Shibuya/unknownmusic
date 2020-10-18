@@ -270,65 +270,84 @@ footer {
     font-size: 3rem;
     margin: 0;
   }
-  .img-chenge {
-    margin: 2rem 0;
-    padding: 0;
-    font-size: 1.5rem;
-    .icon-style {
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: 400;
+  .field {
+    .img-change {
+      margin: 2rem 0;
+      padding: 0;
+      font-size: 1.5rem;
+      .user-img {
+        margin-bottom: 2rem;
+        border: solid 0.3rem white;
+        height: 10rem;
+        width: 10rem;
+      }
+      .form-image {
+        display: block;
+        &:hover {
+          cursor: pointer;
+          color: gold;
+        }
+        input {
+          display: none;
+        }
+      }
+      .btn-img-change {
+        color: white;
+        background: rgba(0, 0, 0, 0.25);
+        border: solid 0.1rem white;
+        padding: 0.25rem 1.75rem;
+        font-size: 0.75rem;
+        text-indent: 0.2rem;
+        letter-spacing: 0.2rem;
+        &:hover {
+          background: white;
+          color: black;
+          box-shadow: none;
+        }
+      }
     }
-    .form-image {
-      &:hover {
-        cursor: pointer;
+    .user-edit {
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      .label {
+        margin: 0 0 0.1rem 0;
+        padding: 0;
+        text-align: right;
+      }
+      .edit-form {
+        margin: 0 0 2rem 0;
+        padding: 0.1rem 0 0 0.1rem;
+        border: 0;
+        resize: none;
+        width: 80%;
+        height: 3rem;
+        border-radius: 0.5rem;
+      }
+      .search-result-non {
+        margin: 0 0 1rem 0;
+        padding: 0;
+        color: gray;
+      }
+      .search-result {
+        margin: 0 0 1rem 0;
+        padding: 0;
         color: gold;
       }
-      input {
-        display: none;
-      }
-    }
-  }
-  .user-edit {
-    p {
-      margin: 0;
-      padding: 0;
-    }
-    .label {
-      margin: 0 0 0.1rem 0;
-      padding: 0;
-      text-align: right;
-    }
-    .edit-form {
-      margin: 0 0 2rem 0;
-      padding: 0.1rem 0 0 0.1rem;
-      border: 0;
-      resize: none;
-      width: 80%;
-      height: 3rem;
-      border-radius: 0.5rem;
-    }
-    .search-result-non {
-      margin: 0 0 1rem 0;
-      padding: 0;
-      color: gray;
-    }
-    .search-result {
-      margin: 0 0 1rem 0;
-      padding: 0;
-      color: gold;
-    }
-    .btn-edit {
-      color: white;
-      background: rgba(0, 0, 0, 0.25);
-      border: solid 0.1rem white;
-      padding: 0.25rem 1.75rem;
-      font-size: 0.75rem;
-      text-indent: 0.2rem;
-      letter-spacing: 0.2rem;
-      &:hover {
-        background: white;
-        color: black;
-        box-shadow: none;
+      .btn-edit {
+        color: white;
+        background: rgba(0, 0, 0, 0.25);
+        border: solid 0.1rem white;
+        padding: 0.25rem 1.75rem;
+        font-size: 0.75rem;
+        text-indent: 0.2rem;
+        letter-spacing: 0.2rem;
+        &:hover {
+          background: white;
+          color: black;
+          box-shadow: none;
+        }
       }
     }
   }
