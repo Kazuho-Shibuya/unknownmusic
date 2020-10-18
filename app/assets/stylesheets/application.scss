@@ -248,7 +248,7 @@ footer {
 /* User edit */
 
 .edit-img {
-  background-image: image-url("edit.jpg");
+  background-image: image-url("user_edit.jpg");
   position: relative;
   height: 100vh;
   background-size: cover;
@@ -271,38 +271,26 @@ footer {
     margin: 0;
   }
   .field {
-    .img-change {
-      margin: 2rem 0;
+    font-size: 1.25rem;
+    .img-edit {
+      margin: 2rem 0 4rem 0;
       padding: 0;
-      font-size: 1.5rem;
       .user-img {
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
         border: solid 0.3rem white;
+        object-fit: cover;
         height: 10rem;
         width: 10rem;
       }
-      .form-image {
-        display: block;
+      .img-change {
+        color: white;
+        letter-spacing: 0.2rem;
         &:hover {
           cursor: pointer;
           color: gold;
         }
         input {
           display: none;
-        }
-      }
-      .btn-img-change {
-        color: white;
-        background: rgba(0, 0, 0, 0.25);
-        border: solid 0.1rem white;
-        padding: 0.25rem 1.75rem;
-        font-size: 0.75rem;
-        text-indent: 0.2rem;
-        letter-spacing: 0.2rem;
-        &:hover {
-          background: white;
-          color: black;
-          box-shadow: none;
         }
       }
     }
@@ -314,33 +302,22 @@ footer {
       .label {
         margin: 0 0 0.1rem 0;
         padding: 0;
-        text-align: right;
       }
       .edit-form {
-        margin: 0 0 2rem 0;
+        margin: 0 0 3rem 0;
         padding: 0.1rem 0 0 0.1rem;
         border: 0;
         resize: none;
-        width: 80%;
+        width: 50%;
         height: 3rem;
         border-radius: 0.5rem;
-      }
-      .search-result-non {
-        margin: 0 0 1rem 0;
-        padding: 0;
-        color: gray;
-      }
-      .search-result {
-        margin: 0 0 1rem 0;
-        padding: 0;
-        color: gold;
       }
       .btn-edit {
         color: white;
         background: rgba(0, 0, 0, 0.25);
         border: solid 0.1rem white;
-        padding: 0.25rem 1.75rem;
-        font-size: 0.75rem;
+        padding: 0.75rem 2.25rem;
+        font-size: 1.5rem;
         text-indent: 0.2rem;
         letter-spacing: 0.2rem;
         &:hover {
@@ -1473,6 +1450,24 @@ footer {
     }
     .jpn-title {
       font-size: 4rem;
+    }
+  }
+
+  /* User edit */
+
+  .container-edit {
+    .eng-title {
+      margin: 5rem 0 0.25rem 0;
+      font-family: "Roboto", sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2rem;
+    }
+    .jpn-title {
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 700;
+      font-size: 4rem;
+      margin: 0;
     }
   }
 }
