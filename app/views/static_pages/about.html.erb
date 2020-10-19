@@ -1,16 +1,49 @@
-<h1>ようこそUnknownMusicへ</h1>
-<h2>様々な音楽を発見して、試聴、共有できるアプリになります</h2>
-<h2>あなたの音楽の世界を広げてみませんか</h2>
-<h3>機能紹介</h3>
-<h4>音楽を試聴</h4>
-<p>検索画面で検索して音楽を試聴できる</p>
-<h4>トレンドを把握</h4>
-<p>人気投稿ページからどんな音楽が人気なのか探せる</p>
-<h4>世界に共有</h4>
-<p>お気に入りの曲を投稿して世界に共有できる</p>
-<h4>新しい音楽を発見</h4>
-<p>ワンタップで知らない音楽に出会える</p>
-<%= link_to "人気の投稿を見る", microposts_path, class: "btn btn-lg btn-style btn-top" %>
-<%= link_to "曲を検索してみる", songs_search_path, class: "btn btn-lg btn-style btn-top" %>
-<%= link_to "新規登録はこちら", signup_path, class: "btn btn-lg btn-style btn-top" %>
-<%= link_to "ログインはこちら", login_path, class: "btn btn-lg btn-style btn-top" %>
+<div class="about-img">
+  <div id="wrapper" class="container-about">
+    <%= render 'layouts/header' %>
+    <div class="row justify-content-center">
+      <div class="col-10 col-lg-8 text-center">
+        <p class="eng-title text-center">About</p>
+        <h1 class="jpn-title text-center">機能概要</h1>
+        <div class="about">
+          <h2>このアプリについて</h2>
+          <p>
+            世界には、無数の音楽があります。
+            大手サブスクリプションサービスでの配信曲は、5000万曲以上にもなり、日々曲数は増加しています。
+            その中から、生きている内に出会える音楽は何曲あるでしょうか。
+            「この音楽をもっと早く知りたかった。」「もっと早く聴いておけばよかった。」という経験は、あなたにもあるのではないでしょうか。
+            まだ知らない音楽に出会い、心を豊かに、人生を豊かにして欲しい。
+            「UnknownMusic」には、そのような願いが込められています。
+            ようこそUnknownMusicへ。あなたの人生が音楽で溢れ、幸せな日々を送るお手伝いができたら、これ以上、嬉しいことはありません。
+          </p>
+        </div>
+        <div class="feature">
+          <h2>機能紹介</h2>
+          <div class="popular">
+            <h3>トレンドを把握</h3>
+            <span>人気投稿ページから、流行りの音楽を探せる。</span>
+          </div>
+          <div class="search">
+            <h3>音楽を試聴</h3>
+            <span>音楽検索ページから、気になる音楽を検索し、試聴できる。</span>
+          </div>
+          <div class="share">
+            <h3>世界に共有</h3>
+            <span>ホーム画面から、自分のお気に入りの音楽を投稿して、世界に共有できる。</span>
+          </div>
+          <div class="discover">
+            <h3>新しい音楽を発見</h3>
+            <span>ホーム画面から、他のユーザが投稿した音楽を、ワンタップで試聴できる。</span>
+          </div>
+          <div class="page-move">
+            <%= link_to "人気の投稿を見る", microposts_path, class: "btn-style btn-about" %>
+            <%= link_to "曲を検索してみる", songs_search_path, class: "btn-style btn-about" %>
+            <%= link_to "新規登録はこちら", signup_path, class: "btn-style btn-about" %>
+            <%= link_to "ログインはこちら", login_path, class: "btn-style btn-about" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= render 'layouts/footer' %>
+  </div>
+</div>
