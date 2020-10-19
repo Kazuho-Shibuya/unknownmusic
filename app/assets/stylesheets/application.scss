@@ -375,6 +375,8 @@ footer {
       }
       .user-img {
         margin-top: 1rem;
+        height: 5rem;
+        width: 5rem;
       }
       .user {
         color: white;
@@ -550,6 +552,8 @@ footer {
       .user-info-img {
         margin-bottom: 2rem;
         border: solid 0.3rem white;
+        width: 10rem;
+        height: 10rem;
       }
       .user {
         color: white;
@@ -696,6 +700,8 @@ footer {
       }
       .user-img {
         margin: 1rem 0 0 0;
+        height: 5rem;
+        width: 5rem;
       }
       .user {
         color: white;
@@ -792,6 +798,8 @@ footer {
       .user-info-img {
         margin-bottom: 2rem;
         border: solid 0.3rem white;
+        width: 10rem;
+        height: 10rem;
       }
       .user {
         color: white;
@@ -923,6 +931,8 @@ footer {
       }
       .user-img {
         margin: 1rem 0 0 0;
+        height: 5rem;
+        width: 5rem;
       }
       .user {
         color: white;
@@ -1182,6 +1192,8 @@ footer {
       .user-info-img {
         margin-bottom: 2rem;
         border: solid 0.3rem white;
+        width: 10rem;
+        height: 10rem;
       }
       .user {
         color: white;
@@ -1420,6 +1432,8 @@ footer {
       .row-micropost {
         .user-img {
           margin: 1rem 0;
+          height: 7rem;
+          width: 7rem;
         }
       }
     }
@@ -1432,6 +1446,8 @@ footer {
       margin: 2rem;
     }
   }
+
+  /* Home */
 
   /* User show */
   .container-show {
@@ -1551,6 +1567,10 @@ footer {
       .row-micropost {
         .icon-size {
           font-size: 1.5rem;
+        }
+        .user-img {
+          height: 10rem;
+          width: 10rem;
         }
       }
     }
@@ -1707,8 +1727,6 @@ footer {
       .row-micropost {
         .user-img {
           margin: 1rem 0 1rem 2rem;
-          height: 5rem;
-          width: 5rem;
         }
       }
     }
