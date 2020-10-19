@@ -8,18 +8,18 @@
         <h1 class="jpn-title text-center">ログイン</h1>
         <div class="field text-center">
           <%= form_for(:session, url: login_path) do |f| %>
-            <%= f.email_field :email, class: 'form-layout' %>
-            <%= link_to "：パスワードをお忘れの場合はこちら", new_password_reset_path %>
-            <%= f.password_field :password, class: 'form-layout' %>
-            <%= f.label :remember_me, class: "checkbox inline" do %>
-              <%= f.check_box :remember_me %>
-              <span>ログイン状態を保持</span>
-            <% end %>
-            <%= f.submit "ログイン", class: "btn btn-style btn-login" %>
+            <%= f.email_field :email, class: 'login-form', placeholder: 'メールアドレス' %>
+            <%= f.password_field :password, class: 'login-form mb-2', placeholder: 'パスワード' %>
+            <p>
+              <%= link_to "パスワードをお忘れの場合はこちら", new_password_reset_path, class: "forget-password" %>
+              <%= f.label :remember_me, class: "keep-login" do %>
+                <%= f.check_box :remember_me %>
+                <span>ログイン状態を保持</span>
+              <% end %>
+            </p>
+            <%= f.submit "ログイン", class: "btn-style btn-login justify-content-center" %>
           <% end %>
-          <%= link_to 'かんたんログイン', test_sessions_path, method: :post, class:"btn btn-lg btn-success center-block" %>
-          <p>または</p>
-          <%= link_to "新規登録", signup_path, class: "btn btn-style btn-to-signup" %>
+          <%= link_to 'かんたんログイン（閲覧用）', test_sessions_path, method: :post, class:"btn-style btn-easy-login justify-content-center" %>
         </div>
       </div>
     </div>
