@@ -215,7 +215,7 @@ footer {
 /* LOGIN */
 
 .login-img {
-  background-image: image-url("login.jpg");
+  background-image: image-url("user_edit.jpg");
   position: relative;
   height: 100vh;
   background-size: cover;
@@ -223,26 +223,56 @@ footer {
 }
 
 .container-login {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-}
-
-.btn-login {
-  width: 100%;
-  color: black;
-  margin-bottom: 1rem;
-
-  &:hover {
-    background: black;
-    color: white;
+  color: white;
+  .eng-title {
+    margin: 5rem 0 0.25rem 0;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
   }
-}
-
-.container-login h1 {
-  margin-bottom: 1rem;
+  .jpn-title {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0;
+  }
+  .field {
+    font-size: 1.25rem;
+    .user-edit {
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      .label {
+        margin: 0 0 0.1rem 0;
+        padding: 0;
+      }
+      .edit-form {
+        margin: 0 0 3rem 0;
+        padding: 0.1rem 0 0 0.1rem;
+        border: 0;
+        resize: none;
+        width: 50%;
+        height: 3rem;
+        border-radius: 0.5rem;
+      }
+      .btn-edit {
+        color: white;
+        background: rgba(0, 0, 0, 0.25);
+        border: solid 0.1rem white;
+        padding: 0.75rem 2.25rem;
+        font-size: 1.5rem;
+        text-indent: 0.2rem;
+        letter-spacing: 0.2rem;
+        &:hover {
+          background: white;
+          color: black;
+          box-shadow: none;
+        }
+      }
+    }
+  }
 }
 
 /* User edit */
