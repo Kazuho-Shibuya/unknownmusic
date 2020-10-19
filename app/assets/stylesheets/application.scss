@@ -1355,6 +1355,78 @@ footer {
   }
 }
 
+/* About */
+
+.about-img {
+  background-image: image-url("about.jpg");
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.container-about {
+  color: white;
+  font-size: 1.5rem;
+  .eng-title {
+    margin: 5rem 0 0.25rem 0;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  .jpn-title {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0;
+  }
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .about {
+    margin: 4rem 0 0 0;
+  }
+  .feature {
+    margin: 6rem 0 2rem 0;
+    span {
+      font-size: 1.25rem;
+    }
+    .popular {
+      margin-top: 1.5rem;
+    }
+    .search {
+      margin-top: 1.5rem;
+    }
+    .share {
+      margin-top: 1.5rem;
+    }
+    .discover {
+      margin-top: 1.5rem;
+    }
+    .page-move {
+      margin: 3rem 0 1rem 0;
+      .btn-about {
+        display: inline-block;
+        margin: 0 1rem 1rem 1rem;
+        color: white;
+        background: rgba(0, 0, 0, 0.25);
+        border: solid 0.1rem white;
+        padding: 0.75rem 2.25rem;
+        font-size: 0.75rem;
+        text-indent: 0.2rem;
+        letter-spacing: 0.2rem;
+        &:hover {
+          background: white;
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
 /* Responsive */
 
 /*　タブレットサイズ対応　*/
@@ -1484,6 +1556,13 @@ footer {
       font-weight: 700;
       font-size: 4rem;
       margin: 0;
+    }
+  }
+  /* About */
+
+  .container-about {
+    .feature {
+      margin: 8rem 0 2rem 0;
     }
   }
 }
@@ -1739,6 +1818,20 @@ footer {
       .search {
         width: 25%;
       }
+    }
+  }
+
+  /* About */
+
+  .container-about {
+    .eng-title {
+      font-size: 2rem;
+    }
+    .jpn-title {
+      font-size: 4rem;
+    }
+    .feature {
+      margin: 8rem 0 2rem 0;
     }
   }
 }
