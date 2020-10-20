@@ -181,34 +181,51 @@ footer {
 }
 
 .container-signup {
-  position: absolute;
-  top: 35%;
-  left: 75%;
-  transform: translate(-50%, -50%);
   color: white;
-  margin-top: 5rem;
-}
-
-.container-signup h1 {
-  margin-bottom: 1rem;
-}
-
-.btn-signup {
-  width: 100%;
-  color: white;
-  background: rgba(0, 0, 0, 0.2);
-  &:hover {
-    background: white;
-    color: black;
+  .eng-title {
+    margin: 5rem 0 0.25rem 0;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
   }
-}
-
-.btn-to-signup {
-  width: 100%;
-  color: black;
-  &:hover {
-    background: white;
-    color: black;
+  .jpn-title {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0;
+  }
+  .field {
+    font-size: 1.25rem;
+    margin: 3rem 0 0 0;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    .signup-form {
+      margin: 0 0 4rem 0;
+      padding: 0.1rem 0 0 0.1rem;
+      border: 0;
+      resize: none;
+      width: 50%;
+      height: 3rem;
+      border-radius: 0.5rem;
+    }
+    .btn-signup {
+      color: white;
+      background: rgba(0, 0, 0, 0.1);
+      border: solid 0.1rem white;
+      padding: 0.75rem 2.25rem;
+      font-size: 1.5rem;
+      text-indent: 0.2rem;
+      letter-spacing: 0.2rem;
+      display: block;
+      &:hover {
+        background: white;
+        color: black;
+        text-decoration: none;
+      }
+    }
   }
 }
 
@@ -1546,23 +1563,7 @@ footer {
 
   /* SIGN UP */
 
-  .container-signup {
-    margin-top: 5rem;
-  }
-
-  .container-signup h1 {
-    margin-bottom: 1rem;
-  }
-
   /* LOGIN */
-
-  .btn-login {
-    margin-bottom: 1rem;
-  }
-
-  .container-login h1 {
-    margin-bottom: 1rem;
-  }
 
   /* Popular posts */
   .container-popular {
@@ -1678,22 +1679,15 @@ footer {
   /* SIGN UP */
 
   .container-signup {
-    margin-top: 5rem;
-  }
-
-  .container-signup h1 {
-    margin-bottom: 1rem;
+    .eng-title {
+      font-size: 2rem;
+    }
+    .jpn-title {
+      font-size: 4rem;
+    }
   }
 
   /* LOGIN */
-
-  .btn-login {
-    margin-bottom: 1rem;
-  }
-
-  .container-login h1 {
-    margin-bottom: 1rem;
-  }
 
   /* Popular posts */
   .container-popular {

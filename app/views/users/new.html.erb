@@ -1,22 +1,23 @@
 <% provide(:title, '新規登録') %>
-<div class='img-layout signup-img'>
-  <div class='container-signup'>
-    <h1>新規登録</h1>
-    <div class='row'>
-      <div class='col-md-12'>
-        <%= form_for(@user, url: signup_path) do |f| %>
-          <%= render 'shared/error_messages', object: f.object %>
-          <%= f.label :name, '名前'%>
-          <%= f.text_field :name, class: 'form-layout'%>
-          <%= f.label :email, 'メールアドレス'%>
-          <%= f.email_field :email, class: 'form-layout'%>
-          <%= f.label :password, 'パスワード'%>
-          <%= f.password_field :password, class: 'form-layout'%>
-          <%= f.label :password_confirmation, 'パスワード（確認）'%>
-          <%= f.password_field :password_confirmation, class: 'form-layout'%>
-          <%= f.submit '登録する', class: 'btn btn-style btn-signup'%>
-        <% end %>
+<div class="signup-img">
+  <div id="wrapper" class="container-signup">
+    <%= render 'layouts/header' %>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <p class="eng-title text-center">Sign up</p>
+        <h1 class="jpn-title text-center">新規登録</h1>
+        <div class="field text-center">
+          <%= form_for(@user, url: signup_path) do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
+            <%= f.text_field :name, class: 'signup-form', placeholder: '名前' %>
+            <%= f.email_field :email, class: 'signup-form', placeholder: 'メールアドレス' %>
+            <%= f.password_field :password, class: 'signup-form', placeholder: 'パスワード' %>
+            <%= f.password_field :password_confirmation, class: 'signup-form', placeholder: 'パスワード（確認用）' %>
+            <%= f.submit '登録する', class: 'btn-style btn-signup mx-auto'%>
+          <% end %>
+        </div>
       </div>
     </div>
+    <%= render 'layouts/footer' %>
   </div>
 </div>
