@@ -16,7 +16,7 @@ gem 'fog-aws'
 gem 'font-awesome-sass'
 gem 'http_accept_language'
 gem 'jquery-rails'
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '>= 1.2.1'
 gem 'mini_magick'
 gem 'miyabi'
 gem 'rails_12factor', group: :production
