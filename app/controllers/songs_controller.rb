@@ -23,7 +23,7 @@ class SongsController < ApplicationController
       auth_params = JSON.parse(response.body)
       access_token = auth_params['access_token']
 
-      get_uri = 'https://api.spotify.com/v1/search?q=' + params[:search] + '&type=track'
+      get_uri = 'https://api.spotify.com/v1/search?q=' + params[:search] + '&type=track' + '&market=JP'
       uri_encode = URI.encode(get_uri)
       uri = URI.parse(uri_encode)
       request = Net::HTTP::Get.new(uri)
