@@ -8,7 +8,7 @@ class Micropost < ApplicationRecord
   validates :artist, presence: { message: 'を検索してください' }
   validates :song, presence: { message: 'を検索してください' }
   validates :listening_url, presence: { message: 'を検索してください' }
-  validates :content, presence: true, length: { maximum: 35 }
+  validates :content, presence: true, length: { maximum: 70 }
 
   # マイクロポストをいいねする
   def favorite(user)
