@@ -1801,6 +1801,7 @@ footer {
       }
     }
   }
+
   /* User edit */
 
   .edit-img {
@@ -1830,176 +1831,92 @@ footer {
       }
     }
   }
-}
 
-/* Popular posts */
-.container-popular {
-  .eng-title {
-    margin: 5rem 0 0.25rem 0;
-    font-weight: 300;
-    font-size: 2rem;
-  }
-
-  .jpn-title {
-    margin: 0 0 4rem 0;
-    font-weight: 700;
-    font-size: 4rem;
-  }
-  .microposts {
-    padding: 0 3rem;
-    font-size: 2rem;
-    .row-micropost {
-      .icon-size {
-        font-size: 1.5rem;
-      }
-      .user-img {
-        height: 10rem;
-        width: 10rem;
-      }
-      .user:hover::after {
-        transform: scale(1, 1);
-      }
-      .listening {
-        &:hover {
-          color: gold;
-          text-decoration: none;
-        }
-      }
-      .btn-like-non {
-        &:hover {
-          color: #ca046e;
-        }
-      }
-      .trash {
-        &:hover {
-          color: rgb(164, 247, 164);
-        }
-      }
-    }
-  }
-}
-
-/* Music search */
-
-.container-song {
-  .song-search {
+  /* Popular posts */
+  .container-popular {
     .eng-title {
       margin: 5rem 0 0.25rem 0;
       font-weight: 300;
       font-size: 2rem;
     }
     .jpn-title {
-      font-size: 4rem;
+      margin: 0 0 4rem 0;
       font-weight: 700;
+      font-size: 4rem;
     }
-    .search-form {
+    .microposts {
+      padding: 0 3rem;
       font-size: 2rem;
-      margin: 2rem 0;
-    }
-    .btn-song {
-      padding: 0.75rem 2.25rem;
-      font-size: 1.25rem;
-      text-indent: 0.3rem;
-      letter-spacing: 0.3rem;
-      &:hover {
-        background: white;
-        color: black;
-        box-shadow: none;
+      .row-micropost {
+        .icon-size {
+          font-size: 1.5rem;
+        }
+        .user-img {
+          height: 10rem;
+          width: 10rem;
+        }
+        .user:hover::after {
+          transform: scale(1, 1);
+        }
+        .listening {
+          &:hover {
+            color: gold;
+            text-decoration: none;
+          }
+        }
+        .btn-like-non {
+          &:hover {
+            color: #ca046e;
+          }
+        }
+        .trash {
+          &:hover {
+            color: rgb(164, 247, 164);
+          }
+        }
       }
     }
   }
-  .search-content {
-    margin: 3rem;
-    .icon {
-      .listening {
-        &:hover {
-          color: gold;
-          text-decoration: none;
-        }
-      }
-      .share {
-        &:hover {
-          color: gold;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
 
-/* Home */
+  /* Music search */
 
-.container-home {
-  font-size: 1.5rem;
-  margin-top: 3rem;
-  aside {
-    margin: 0;
-    padding: 0;
-    .user-info {
-      .user:hover::after {
-        transform: scale(1, 1);
+  .container-song {
+    .song-search {
+      .eng-title {
+        margin: 5rem 0 0.25rem 0;
+        font-weight: 300;
+        font-size: 2rem;
       }
-    }
-    .stats {
-      a {
+      .jpn-title {
+        font-size: 4rem;
+        font-weight: 700;
+      }
+      .search-form {
+        font-size: 2rem;
+        margin: 2rem 0;
+      }
+      .btn-song {
+        padding: 0.75rem 2.25rem;
+        font-size: 1.25rem;
+        text-indent: 0.3rem;
+        letter-spacing: 0.3rem;
         &:hover {
-          text-decoration: none;
-          color: #003ea6;
+          background: white;
+          color: black;
+          box-shadow: none;
         }
       }
     }
-    .micropost-form {
-      p {
-        margin: 0;
-        padding: 0;
-        text-align: left;
-      }
-      .label {
-        margin: 0 0 0.1rem 0;
-        padding: 0;
-      }
-      .search-result-non {
-        margin: 0 0 1rem 0;
-        padding: 0;
-        color: gray;
-      }
-      .search-result {
-        margin: 0 0 1rem 0;
-        padding: 0;
-        color: gold;
-      }
-      textarea {
-        resize: none;
-        width: 80%;
-        height: 5rem;
-        border-radius: 0.5rem;
-        padding: 0.1rem 0 0 0.1rem;
-        border: 0;
-      }
-      .listening {
-        margin: 0 0 2rem 0;
-        padding: 0;
-        color: #0b9ff5;
-        &:hover {
-          color: gold;
-          text-decoration: none;
-        }
-      }
+    .search-content {
+      margin: 3rem;
       .icon {
-        margin-top: 0.5rem;
-        .search {
-          padding: 0;
-          color: rgb(240, 125, 125);
+        .listening {
           &:hover {
             color: gold;
             text-decoration: none;
           }
         }
         .share {
-          padding: 0 0 0 1rem;
-          color: #07f1bf;
-          background-color: rgba(0, 0, 0, 0);
-          border: none;
           &:hover {
             color: gold;
             text-decoration: none;
@@ -2008,108 +1925,190 @@ footer {
       }
     }
   }
-  .user-search {
-    .btn-search {
-      padding: 0.75rem 2.25rem;
-      font-size: 1.25rem;
-      text-indent: 0.3rem;
-      letter-spacing: 0.3rem;
-      &:hover {
-        background: white;
-        color: black;
-        box-shadow: none;
+
+  /* Home */
+
+  .container-home {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    aside {
+      margin: 0;
+      padding: 0;
+      .user-info {
+        .user:hover::after {
+          transform: scale(1, 1);
+        }
       }
-    }
-  }
-  .microposts {
-    .row-micropost {
-      .user-img {
-        margin: 1rem 0 1rem 2rem;
-        height: 5rem;
-        width: 5rem;
+      .stats {
+        a {
+          &:hover {
+            text-decoration: none;
+            color: #003ea6;
+          }
+        }
       }
-      .user:hover::after {
-        transform: scale(1, 1);
-      }
-      .listening {
-        &:hover {
+      .micropost-form {
+        p {
+          margin: 0;
+          padding: 0;
+          text-align: left;
+        }
+        .label {
+          margin: 0 0 0.1rem 0;
+          padding: 0;
+        }
+        .search-result-non {
+          margin: 0 0 1rem 0;
+          padding: 0;
+          color: gray;
+        }
+        .search-result {
+          margin: 0 0 1rem 0;
+          padding: 0;
           color: gold;
-          text-decoration: none;
         }
-      }
-      .btn-like-non {
-        &:hover {
-          color: #ca046e;
+        textarea {
+          resize: none;
+          width: 80%;
+          height: 5rem;
+          border-radius: 0.5rem;
+          padding: 0.1rem 0 0 0.1rem;
+          border: 0;
         }
-      }
-      .trash {
-        &:hover {
-          color: rgb(164, 247, 164);
+        .listening {
+          margin: 0 0 2rem 0;
+          padding: 0;
+          color: #0b9ff5;
+          &:hover {
+            color: gold;
+            text-decoration: none;
+          }
         }
-      }
-    }
-  }
-  .pagination {
-    .page-link {
-      &:hover {
-        border-color: gold;
-      }
-    }
-  }
-}
-
-/* User show */
-
-.container-show {
-  color: white;
-  font-size: 1.5rem;
-  margin-top: 3rem;
-  .icon-style {
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 400;
-  }
-  aside {
-    margin: 0;
-    padding: 0;
-    .user-info {
-      margin: 1rem 0;
-      .user-info-img {
-        margin-bottom: 2rem;
-        border: solid 0.3rem white;
-      }
-      .user:hover::after {
-        transform: scale(1, 1);
-      }
-    }
-    .stats {
-      a {
-        &:hover {
-          text-decoration: none;
-          color: #003ea6;
+        .icon {
+          margin-top: 0.5rem;
+          .search {
+            padding: 0;
+            color: rgb(240, 125, 125);
+            &:hover {
+              color: gold;
+              text-decoration: none;
+            }
+          }
+          .share {
+            padding: 0 0 0 1rem;
+            color: #07f1bf;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            &:hover {
+              color: gold;
+              text-decoration: none;
+            }
+          }
         }
       }
     }
-    .follow-form {
-      .btn-unfollow {
+    .user-search {
+      .btn-search {
+        padding: 0.75rem 2.25rem;
+        font-size: 1.25rem;
+        text-indent: 0.3rem;
+        letter-spacing: 0.3rem;
         &:hover {
-          color: white;
-          background: rgb(163, 31, 31);
+          background: white;
+          color: black;
           box-shadow: none;
-          border: solid 0.1rem rgb(163, 31, 31);
-          .normal {
-            display: none;
+        }
+      }
+    }
+    .microposts {
+      .row-micropost {
+        .user-img {
+          margin: 1rem 0 1rem 2rem;
+          height: 5rem;
+          width: 5rem;
+        }
+        .user:hover::after {
+          transform: scale(1, 1);
+        }
+        .listening {
+          &:hover {
+            color: gold;
+            text-decoration: none;
           }
-          .active-hover {
-            display: inline;
+        }
+        .btn-like-non {
+          &:hover {
+            color: #ca046e;
+          }
+        }
+        .trash {
+          &:hover {
+            color: rgb(164, 247, 164);
           }
         }
       }
-
-      .btn-follow {
+    }
+    .pagination {
+      .page-link {
         &:hover {
-          background-color: #003ea6;
-          color: white;
-          border: solid 0.1rem #003ea6;
+          border-color: gold;
+        }
+      }
+    }
+  }
+
+  /* User show */
+
+  .container-show {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    .icon-style {
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 400;
+    }
+    aside {
+      margin: 0;
+      padding: 0;
+      .user-info {
+        margin: 1rem 0;
+        .user-info-img {
+          margin-bottom: 2rem;
+          border: solid 0.3rem white;
+        }
+        .user:hover::after {
+          transform: scale(1, 1);
+        }
+      }
+      .stats {
+        a {
+          &:hover {
+            text-decoration: none;
+            color: #003ea6;
+          }
+        }
+      }
+      .follow-form {
+        .btn-unfollow {
+          &:hover {
+            color: white;
+            background: rgb(163, 31, 31);
+            box-shadow: none;
+            border: solid 0.1rem rgb(163, 31, 31);
+            .normal {
+              display: none;
+            }
+            .active-hover {
+              display: inline;
+            }
+          }
+        }
+        .btn-follow {
+          &:hover {
+            background-color: #003ea6;
+            color: white;
+            border: solid 0.1rem #003ea6;
+          }
         }
       }
     }
@@ -2219,6 +2218,7 @@ footer {
       }
     }
   }
+
   /* User show follow */
 
   .container-show-follow {
