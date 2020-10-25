@@ -46,7 +46,7 @@ header {
     font-style: italic;
     font-size: 2rem;
     letter-spacing: 0.1rem;
-    &:hover {
+    &:active {
       text-decoration: none;
       color: #003ea6;
     }
@@ -68,7 +68,7 @@ header {
         font-size: 0.5rem;
         margin: 0;
         margin-bottom: 0.15rem;
-        &:hover {
+        &:active {
           text-decoration: none;
         }
       }
@@ -89,7 +89,7 @@ header {
       transform-origin: right top;
       transition: transform 0.3s;
     }
-    .link-style:hover::after {
+    .link-style:active::after {
       transform: scale(1, 1);
     }
   }
@@ -163,7 +163,7 @@ footer {
   text-indent: 0.3rem;
   letter-spacing: 0.3rem;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
-  &:hover {
+  &:active {
     background: white;
     color: black;
     box-shadow: none;
@@ -220,7 +220,7 @@ footer {
       text-indent: 0.2rem;
       letter-spacing: 0.2rem;
       display: block;
-      &:hover {
+      &:active {
         background: white;
         color: black;
         text-decoration: none;
@@ -289,7 +289,7 @@ footer {
       transform-origin: left top;
       transition: transform 0.3s;
     }
-    .forget-password:hover::after {
+    .forget-password:active::after {
       transform: scale(1, 1);
     }
     .keep-login {
@@ -306,7 +306,7 @@ footer {
       letter-spacing: 0.2rem;
       margin: 4rem 0 2rem 0;
       display: inline-block;
-      &:hover {
+      &:active {
         background: white;
         color: black;
         text-decoration: none;
@@ -321,7 +321,7 @@ footer {
       text-indent: 0.2rem;
       letter-spacing: 0.2rem;
       display: inline-block;
-      &:hover {
+      &:active {
         background: white;
         color: black;
         text-decoration: none;
@@ -370,7 +370,7 @@ footer {
       .img-change {
         color: white;
         letter-spacing: 0.2rem;
-        &:hover {
+        &:active {
           cursor: pointer;
           color: gold;
         }
@@ -405,7 +405,7 @@ footer {
         font-size: 1.5rem;
         text-indent: 0.2rem;
         letter-spacing: 0.2rem;
-        &:hover {
+        &:active {
           background: white;
           color: black;
           box-shadow: none;
@@ -481,7 +481,7 @@ footer {
         transform-origin: left top;
         transition: transform 0.3s;
       }
-      .user:hover::after {
+      .user:active::after {
         transform: scale(1, 1);
       }
       .history {
@@ -489,7 +489,7 @@ footer {
       }
       .listening {
         color: #0b9ff5;
-        &:hover {
+        &:active {
           color: gold;
           text-decoration: none;
         }
@@ -497,19 +497,17 @@ footer {
       .btn-like {
         color: #ca046e;
         padding: 0;
-        &:hover {
-        }
       }
       .btn-like-non {
         color: white;
         padding: 0;
-        &:hover {
+        &:active {
           color: #ca046e;
         }
       }
       .trash {
         color: white;
-        &:hover {
+        &:active {
           color: rgb(164, 247, 164);
         }
       }
@@ -559,7 +557,7 @@ footer {
       font-size: 0.75rem;
       text-indent: 0.2rem;
       letter-spacing: 0.2rem;
-      &:hover {
+      &:active {
         background: white;
         color: black;
         box-shadow: none;
@@ -592,7 +590,7 @@ footer {
     .icon {
       .listening {
         color: #0b9ff5;
-        &:hover {
+        &:active {
           color: gold;
           text-decoration: none;
         }
@@ -602,7 +600,7 @@ footer {
         color: #07f1bf;
         background-color: rgba(0, 0, 0, 0);
         border: none;
-        &:hover {
+        &:active {
           color: gold;
           text-decoration: none;
         }
@@ -658,7 +656,7 @@ footer {
         transform-origin: left top;
         transition: transform 0.3s;
       }
-      .user:hover::after {
+      .user:active::after {
         transform: scale(1, 1);
       }
     }
@@ -674,7 +672,7 @@ footer {
           padding-left: 0;
           border: 0;
         }
-        &:hover {
+        &:active {
           text-decoration: none;
           color: #003ea6;
         }
@@ -716,7 +714,7 @@ footer {
         margin: 0 0 2rem 0;
         padding: 0;
         color: #0b9ff5;
-        &:hover {
+        &:active {
           color: gold;
           text-decoration: none;
         }
@@ -726,7 +724,7 @@ footer {
         .search {
           padding: 0;
           color: rgb(240, 125, 125);
-          &:hover {
+          &:active {
             color: gold;
             text-decoration: none;
           }
@@ -736,7 +734,7 @@ footer {
           color: #07f1bf;
           background-color: rgba(0, 0, 0, 0);
           border: none;
-          &:hover {
+          &:active {
             color: gold;
             text-decoration: none;
           }
@@ -762,7 +760,7 @@ footer {
       font-size: 1.25rem;
       text-indent: 0.3rem;
       letter-spacing: 0.3rem;
-      &:hover {
+      &:active {
         background: white;
         color: black;
         box-shadow: none;
@@ -806,7 +804,7 @@ footer {
         transform-origin: left top;
         transition: transform 0.3s;
       }
-      .user:hover::after {
+      .user:active::after {
         transform: scale(1, 1);
       }
       .history {
@@ -814,7 +812,7 @@ footer {
       }
       .listening {
         color: #0b9ff5;
-        &:hover {
+        &:active {
           color: gold;
           text-decoration: none;
         }
@@ -822,19 +820,17 @@ footer {
       .btn-like {
         color: #ca046e;
         padding: 0;
-        &:hover {
-        }
       }
       .btn-like-non {
         color: white;
         padding: 0;
-        &:hover {
+        &:active {
           color: #ca046e;
         }
       }
       .trash {
         color: white;
-        &:hover {
+        &:active {
           color: rgb(164, 247, 164);
         }
       }
@@ -850,7 +846,7 @@ footer {
     .page-link {
       color: white;
       background-color: rgba(0, 0, 0, 0.25);
-      &:hover {
+      &:active {
         border-color: gold;
       }
     }
@@ -904,7 +900,7 @@ footer {
         transform-origin: left top;
         transition: transform 0.3s;
       }
-      .user:hover::after {
+      .user:active::after {
         transform: scale(1, 1);
       }
     }
@@ -920,7 +916,7 @@ footer {
           padding-left: 0;
           border: 0;
         }
-        &:hover {
+        &:active {
           text-decoration: none;
           color: #003ea6;
         }
@@ -943,10 +939,10 @@ footer {
         .normal {
           display: inline;
         }
-        .hover {
+        .active-hover {
           display: none;
         }
-        &:hover {
+        &:active {
           color: white;
           background: rgb(163, 31, 31);
           box-shadow: none;
@@ -954,7 +950,7 @@ footer {
           .normal {
             display: none;
           }
-          .hover {
+          .active-hover {
             display: inline;
           }
         }
@@ -967,7 +963,7 @@ footer {
         font-size: 1.25rem;
         text-indent: 0.3rem;
         letter-spacing: 0.3rem;
-        &:hover {
+        &:active {
           background-color: #003ea6;
           color: white;
           border: solid 0.1rem #003ea6;
@@ -993,7 +989,7 @@ footer {
       font-size: 1.25rem;
       text-indent: 0.3rem;
       letter-spacing: 0.3rem;
-      &:hover {
+      &:active {
         background: white;
         color: black;
         box-shadow: none;
@@ -1037,7 +1033,7 @@ footer {
         transform-origin: left top;
         transition: transform 0.3s;
       }
-      .user:hover::after {
+      .user:active::after {
         transform: scale(1, 1);
       }
       .history {
@@ -1045,7 +1041,7 @@ footer {
       }
       .listening {
         color: #0b9ff5;
-        &:hover {
+        &:active {
           color: gold;
           text-decoration: none;
         }
@@ -1053,19 +1049,17 @@ footer {
       .btn-like {
         color: #ca046e;
         padding: 0;
-        &:hover {
-        }
       }
       .btn-like-non {
         color: white;
         padding: 0;
-        &:hover {
+        &:active {
           color: #ca046e;
         }
       }
       .trash {
         color: white;
-        &:hover {
+        &:active {
           color: rgb(164, 247, 164);
         }
       }
@@ -1081,7 +1075,7 @@ footer {
     .page-link {
       color: white;
       background-color: rgba(0, 0, 0, 0.25);
-      &:hover {
+      &:active {
         border-color: gold;
       }
     }
@@ -1131,7 +1125,7 @@ footer {
       font-size: 1.25rem;
       text-indent: 0.3rem;
       letter-spacing: 0.3rem;
-      &:hover {
+      &:active {
         background: white;
         color: black;
         box-shadow: none;
@@ -1173,7 +1167,7 @@ footer {
         transform-origin: left top;
         transition: transform 0.3s;
       }
-      .user:hover::after {
+      .user:active::after {
         transform: scale(1, 1);
       }
       .follow-form {
@@ -1191,10 +1185,10 @@ footer {
           .normal {
             display: inline;
           }
-          .hover {
+          .active-hover {
             display: none;
           }
-          &:hover {
+          &:active {
             color: white;
             background: rgb(163, 31, 31);
             box-shadow: none;
@@ -1202,7 +1196,7 @@ footer {
             .normal {
               display: none;
             }
-            .hover {
+            .active-hover {
               display: inline;
             }
           }
@@ -1215,7 +1209,7 @@ footer {
           font-size: 1.25rem;
           text-indent: 0.3rem;
           letter-spacing: 0.3rem;
-          &:hover {
+          &:active {
             background-color: #003ea6;
             color: white;
             border: solid 0.1rem #003ea6;
@@ -1228,7 +1222,7 @@ footer {
         right: 0;
         bottom: 0;
         color: white;
-        &:hover {
+        &:active {
           color: rgb(164, 247, 164);
         }
       }
@@ -1244,7 +1238,7 @@ footer {
     .page-link {
       color: white;
       background-color: rgba(0, 0, 0, 0.25);
-      &:hover {
+      &:active {
         border-color: gold;
       }
     }
@@ -1298,7 +1292,7 @@ footer {
         transform-origin: left top;
         transition: transform 0.3s;
       }
-      .user:hover::after {
+      .user:active::after {
         transform: scale(1, 1);
       }
     }
@@ -1314,7 +1308,7 @@ footer {
           padding-left: 0;
           border: 0;
         }
-        &:hover {
+        &:active {
           text-decoration: none;
           color: #003ea6;
         }
@@ -1362,7 +1356,7 @@ footer {
         transform-origin: left top;
         transition: transform 0.3s;
       }
-      .user:hover::after {
+      .user:active::after {
         transform: scale(1, 1);
       }
       .follow-form {
@@ -1380,10 +1374,10 @@ footer {
           .normal {
             display: inline;
           }
-          .hover {
+          .active-hover {
             display: none;
           }
-          &:hover {
+          &:active {
             color: white;
             background: rgb(163, 31, 31);
             box-shadow: none;
@@ -1391,7 +1385,7 @@ footer {
             .normal {
               display: none;
             }
-            .hover {
+            .active-hover {
               display: inline;
             }
           }
@@ -1404,7 +1398,7 @@ footer {
           font-size: 1.25rem;
           text-indent: 0.3rem;
           letter-spacing: 0.3rem;
-          &:hover {
+          &:active {
             background-color: #003ea6;
             color: white;
             border: solid 0.1rem #003ea6;
@@ -1417,7 +1411,7 @@ footer {
         right: 0;
         bottom: 0;
         color: white;
-        &:hover {
+        &:active {
           color: rgb(164, 247, 164);
         }
       }
@@ -1433,7 +1427,7 @@ footer {
     .page-link {
       color: white;
       background-color: rgba(0, 0, 0, 0.25);
-      &:hover {
+      &:active {
         border-color: gold;
       }
     }
@@ -1502,7 +1496,7 @@ footer {
         font-size: 0.75rem;
         text-indent: 0.2rem;
         letter-spacing: 0.2rem;
-        &:hover {
+        &:active {
           background: white;
           color: black;
           text-decoration: none;
@@ -1570,7 +1564,7 @@ footer {
       text-indent: 0.2rem;
       letter-spacing: 0.2rem;
       display: block;
-      &:hover {
+      &:active {
         background: white;
         color: black;
         text-decoration: none;
@@ -1712,6 +1706,10 @@ footer {
     .logo {
       font-size: 3rem;
       letter-spacing: 0.3rem;
+      &:hover {
+        text-decoration: none;
+        color: #003ea6;
+      }
     }
     .nav-item {
       margin: 0 2rem;
@@ -1719,11 +1717,17 @@ footer {
         .eng-link {
           font-size: 1rem;
           margin-bottom: 0.3rem;
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
       .link-style::after {
         bottom: -0.1rem;
         height: 0.1rem;
+      }
+      .link-style:hover::after {
+        transform: scale(1, 1);
       }
     }
   }
@@ -1741,6 +1745,11 @@ footer {
     font-size: 2rem;
     text-indent: 1rem;
     letter-spacing: 1rem;
+    &:hover {
+      background: white;
+      color: black;
+      box-shadow: none;
+    }
   }
 
   /* SIGN UP */
@@ -1751,6 +1760,15 @@ footer {
     }
     .jpn-title {
       font-size: 4rem;
+    }
+    .field {
+      .btn-signup {
+        &:hover {
+          background: white;
+          color: black;
+          text-decoration: none;
+        }
+      }
     }
   }
 
@@ -1763,172 +1781,335 @@ footer {
     .jpn-title {
       font-size: 4rem;
     }
+    .field {
+      .forget-password:hover::after {
+        transform: scale(1, 1);
+      }
+      .btn-login {
+        &:hover {
+          background: white;
+          color: black;
+          text-decoration: none;
+        }
+      }
+      .btn-easy-login {
+        &:hover {
+          background: white;
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  /* User edit */
+
+  .edit-img {
+    background-image: image-url("user_edit.jpg");
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
   }
 
-  /* Popular posts */
-  .container-popular {
+  .container-edit {
+    .field {
+      .img-change {
+        &:hover {
+          cursor: pointer;
+          color: gold;
+        }
+      }
+    }
+    .user-edit {
+      .btn-edit {
+        &:hover {
+          background: white;
+          color: black;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+/* Popular posts */
+.container-popular {
+  .eng-title {
+    margin: 5rem 0 0.25rem 0;
+    font-weight: 300;
+    font-size: 2rem;
+  }
+
+  .jpn-title {
+    margin: 0 0 4rem 0;
+    font-weight: 700;
+    font-size: 4rem;
+  }
+  .microposts {
+    padding: 0 3rem;
+    font-size: 2rem;
+    .row-micropost {
+      .icon-size {
+        font-size: 1.5rem;
+      }
+      .user-img {
+        height: 10rem;
+        width: 10rem;
+      }
+      .user:hover::after {
+        transform: scale(1, 1);
+      }
+      .listening {
+        &:hover {
+          color: gold;
+          text-decoration: none;
+        }
+      }
+      .btn-like-non {
+        &:hover {
+          color: #ca046e;
+        }
+      }
+      .trash {
+        &:hover {
+          color: rgb(164, 247, 164);
+        }
+      }
+    }
+  }
+}
+
+/* Music search */
+
+.container-song {
+  .song-search {
     .eng-title {
       margin: 5rem 0 0.25rem 0;
       font-weight: 300;
       font-size: 2rem;
     }
-
     .jpn-title {
-      margin: 0 0 4rem 0;
-      font-weight: 700;
       font-size: 4rem;
+      font-weight: 700;
     }
-    .microposts {
-      padding: 0 3rem;
+    .search-form {
       font-size: 2rem;
-      .row-micropost {
-        .icon-size {
-          font-size: 1.5rem;
-        }
-        .user-img {
-          height: 10rem;
-          width: 10rem;
-        }
+      margin: 2rem 0;
+    }
+    .btn-song {
+      padding: 0.75rem 2.25rem;
+      font-size: 1.25rem;
+      text-indent: 0.3rem;
+      letter-spacing: 0.3rem;
+      &:hover {
+        background: white;
+        color: black;
+        box-shadow: none;
       }
     }
   }
-
-  /* Music search */
-
-  .container-song {
-    .song-search {
-      .eng-title {
-        margin: 5rem 0 0.25rem 0;
-        font-weight: 300;
-        font-size: 2rem;
-      }
-      .jpn-title {
-        font-size: 4rem;
-        font-weight: 700;
-      }
-      .search-form {
-        font-size: 2rem;
-        margin: 2rem 0;
-      }
-      .btn-song {
-        padding: 0.75rem 2.25rem;
-        font-size: 1.25rem;
-        text-indent: 0.3rem;
-        letter-spacing: 0.3rem;
-      }
-    }
-
-    .search-content {
-      margin: 3rem;
-    }
-  }
-
-  /* Home */
-
-  .container-home {
-    font-size: 1.5rem;
-    margin-top: 3rem;
-    aside {
-      margin: 0;
-      padding: 0;
-      .micropost-form {
-        p {
-          margin: 0;
-          padding: 0;
-          text-align: left;
-        }
-        .label {
-          margin: 0 0 0.1rem 0;
-          padding: 0;
-        }
-        .search-result-non {
-          margin: 0 0 1rem 0;
-          padding: 0;
-          color: gray;
-        }
-        .search-result {
-          margin: 0 0 1rem 0;
-          padding: 0;
+  .search-content {
+    margin: 3rem;
+    .icon {
+      .listening {
+        &:hover {
           color: gold;
+          text-decoration: none;
         }
-        textarea {
-          resize: none;
-          width: 80%;
-          height: 5rem;
-          border-radius: 0.5rem;
-          padding: 0.1rem 0 0 0.1rem;
-          border: 0;
+      }
+      .share {
+        &:hover {
+          color: gold;
+          text-decoration: none;
         }
+      }
+    }
+  }
+}
 
-        .listening {
-          margin: 0 0 2rem 0;
+/* Home */
+
+.container-home {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  aside {
+    margin: 0;
+    padding: 0;
+    .user-info {
+      .user:hover::after {
+        transform: scale(1, 1);
+      }
+    }
+    .stats {
+      a {
+        &:hover {
+          text-decoration: none;
+          color: #003ea6;
+        }
+      }
+    }
+    .micropost-form {
+      p {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+      .label {
+        margin: 0 0 0.1rem 0;
+        padding: 0;
+      }
+      .search-result-non {
+        margin: 0 0 1rem 0;
+        padding: 0;
+        color: gray;
+      }
+      .search-result {
+        margin: 0 0 1rem 0;
+        padding: 0;
+        color: gold;
+      }
+      textarea {
+        resize: none;
+        width: 80%;
+        height: 5rem;
+        border-radius: 0.5rem;
+        padding: 0.1rem 0 0 0.1rem;
+        border: 0;
+      }
+      .listening {
+        margin: 0 0 2rem 0;
+        padding: 0;
+        color: #0b9ff5;
+        &:hover {
+          color: gold;
+          text-decoration: none;
+        }
+      }
+      .icon {
+        margin-top: 0.5rem;
+        .search {
           padding: 0;
-          color: #0b9ff5;
+          color: rgb(240, 125, 125);
           &:hover {
             color: gold;
             text-decoration: none;
           }
         }
-        .icon {
-          margin-top: 0.5rem;
-          .search {
-            padding: 0;
-            color: rgb(240, 125, 125);
-            &:hover {
-              color: gold;
-              text-decoration: none;
-            }
+        .share {
+          padding: 0 0 0 1rem;
+          color: #07f1bf;
+          background-color: rgba(0, 0, 0, 0);
+          border: none;
+          &:hover {
+            color: gold;
+            text-decoration: none;
           }
-          .share {
-            padding: 0 0 0 1rem;
-            color: #07f1bf;
-            background-color: rgba(0, 0, 0, 0);
-            border: none;
-            &:hover {
-              color: gold;
-              text-decoration: none;
-            }
-          }
-        }
-      }
-    }
-    .user-search {
-      .btn-search {
-        padding: 0.75rem 2.25rem;
-        font-size: 1.25rem;
-        text-indent: 0.3rem;
-        letter-spacing: 0.3rem;
-      }
-    }
-    .microposts {
-      .row-micropost {
-        .user-img {
-          margin: 1rem 0 1rem 2rem;
-          height: 5rem;
-          width: 5rem;
         }
       }
     }
   }
-
-  /* User show */
-
-  .container-show {
-    color: white;
-    font-size: 1.5rem;
-    margin-top: 3rem;
-    .icon-style {
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: 400;
+  .user-search {
+    .btn-search {
+      padding: 0.75rem 2.25rem;
+      font-size: 1.25rem;
+      text-indent: 0.3rem;
+      letter-spacing: 0.3rem;
+      &:hover {
+        background: white;
+        color: black;
+        box-shadow: none;
+      }
     }
-    aside {
-      margin: 0;
-      padding: 0;
-      .user-info {
-        margin: 1rem 0;
-        .user-info-img {
-          margin-bottom: 2rem;
-          border: solid 0.3rem white;
+  }
+  .microposts {
+    .row-micropost {
+      .user-img {
+        margin: 1rem 0 1rem 2rem;
+        height: 5rem;
+        width: 5rem;
+      }
+      .user:hover::after {
+        transform: scale(1, 1);
+      }
+      .listening {
+        &:hover {
+          color: gold;
+          text-decoration: none;
+        }
+      }
+      .btn-like-non {
+        &:hover {
+          color: #ca046e;
+        }
+      }
+      .trash {
+        &:hover {
+          color: rgb(164, 247, 164);
+        }
+      }
+    }
+  }
+  .pagination {
+    .page-link {
+      &:hover {
+        border-color: gold;
+      }
+    }
+  }
+}
+
+/* User show */
+
+.container-show {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  .icon-style {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+  }
+  aside {
+    margin: 0;
+    padding: 0;
+    .user-info {
+      margin: 1rem 0;
+      .user-info-img {
+        margin-bottom: 2rem;
+        border: solid 0.3rem white;
+      }
+      .user:hover::after {
+        transform: scale(1, 1);
+      }
+    }
+    .stats {
+      a {
+        &:hover {
+          text-decoration: none;
+          color: #003ea6;
+        }
+      }
+    }
+    .follow-form {
+      .btn-unfollow {
+        &:hover {
+          color: white;
+          background: rgb(163, 31, 31);
+          box-shadow: none;
+          border: solid 0.1rem rgb(163, 31, 31);
+          .normal {
+            display: none;
+          }
+          .active-hover {
+            display: inline;
+          }
+        }
+      }
+
+      .btn-follow {
+        &:hover {
+          background-color: #003ea6;
+          color: white;
+          border: solid 0.1rem #003ea6;
         }
       }
     }
@@ -1938,12 +2119,43 @@ footer {
         font-size: 1.25rem;
         text-indent: 0.3rem;
         letter-spacing: 0.3rem;
+        &:hover {
+          background: white;
+          color: black;
+          box-shadow: none;
+        }
       }
     }
     .microposts {
       .row-micropost {
         .user-img {
           margin: 1rem 0 1rem 2rem;
+        }
+        .user:hover::after {
+          transform: scale(1, 1);
+        }
+        .listening {
+          &:hover {
+            color: gold;
+            text-decoration: none;
+          }
+        }
+        .btn-like-non {
+          &:hover {
+            color: #ca046e;
+          }
+        }
+        .trash {
+          &:hover {
+            color: rgb(164, 247, 164);
+          }
+        }
+      }
+    }
+    .pagination {
+      .page-link {
+        &:hover {
+          border-color: gold;
         }
       }
     }
@@ -1955,6 +2167,116 @@ footer {
     .user-search {
       .search {
         width: 25%;
+      }
+      .btn-search {
+        &:hover {
+          background: white;
+          color: black;
+          box-shadow: none;
+        }
+      }
+    }
+    .users {
+      li {
+        .user:hover::after {
+          transform: scale(1, 1);
+        }
+        .follow-form {
+          .btn-unfollow {
+            &:hover {
+              color: white;
+              background: rgb(163, 31, 31);
+              box-shadow: none;
+              border: solid 0.1rem rgb(163, 31, 31);
+              .normal {
+                display: none;
+              }
+              .active-hover {
+                display: inline;
+              }
+            }
+          }
+          .btn-follow {
+            &:hover {
+              background-color: #003ea6;
+              color: white;
+              border: solid 0.1rem #003ea6;
+            }
+          }
+          .admin-trash {
+            &:hover {
+              color: rgb(164, 247, 164);
+            }
+          }
+        }
+      }
+    }
+    .pagination {
+      .page-link {
+        &:hover {
+          border-color: gold;
+        }
+      }
+    }
+  }
+  /* User show follow */
+
+  .container-show-follow {
+    aside {
+      .user-info {
+        .user:hover::after {
+          transform: scale(1, 1);
+        }
+      }
+      .stats {
+        a {
+          &:hover {
+            text-decoration: none;
+            color: #003ea6;
+          }
+        }
+      }
+    }
+    .users {
+      li {
+        .user:hover::after {
+          transform: scale(1, 1);
+        }
+        .follow-form {
+          .btn-unfollow {
+            &:hover {
+              color: white;
+              background: rgb(163, 31, 31);
+              box-shadow: none;
+              border: solid 0.1rem rgb(163, 31, 31);
+              .normal {
+                display: none;
+              }
+              .active-hover {
+                display: inline;
+              }
+            }
+          }
+          .btn-follow {
+            &:hover {
+              background-color: #003ea6;
+              color: white;
+              border: solid 0.1rem #003ea6;
+            }
+          }
+        }
+        .admin-trash {
+          &:hover {
+            color: rgb(164, 247, 164);
+          }
+        }
+      }
+    }
+    .pagination {
+      .page-link {
+        &:hover {
+          border-color: gold;
+        }
       }
     }
   }
@@ -1970,6 +2292,15 @@ footer {
     }
     .feature {
       margin: 8rem 0 2rem 0;
+      .page-move {
+        .btn-about {
+          &:hover {
+            background: white;
+            color: black;
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
 
@@ -1982,6 +2313,15 @@ footer {
     }
     .jpn-title {
       font-size: 4rem;
+    }
+    .field {
+      .btn-reset-password {
+        &:hover {
+          background: white;
+          color: black;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
