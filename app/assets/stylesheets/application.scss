@@ -46,7 +46,7 @@ header {
     font-style: italic;
     font-size: 2rem;
     letter-spacing: 0.1rem;
-    &:hover {
+    &:active {
       text-decoration: none;
       color: #003ea6;
     }
@@ -68,7 +68,7 @@ header {
         font-size: 0.5rem;
         margin: 0;
         margin-bottom: 0.15rem;
-        &:hover {
+        &:active {
           text-decoration: none;
         }
       }
@@ -89,7 +89,7 @@ header {
       transform-origin: right top;
       transition: transform 0.3s;
     }
-    .link-style:hover::after {
+    .link-style:active::after {
       transform: scale(1, 1);
     }
   }
@@ -1712,6 +1712,10 @@ footer {
     .logo {
       font-size: 3rem;
       letter-spacing: 0.3rem;
+      &:hover {
+        text-decoration: none;
+        color: #003ea6;
+      }
     }
     .nav-item {
       margin: 0 2rem;
@@ -1719,11 +1723,17 @@ footer {
         .eng-link {
           font-size: 1rem;
           margin-bottom: 0.3rem;
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
       .link-style::after {
         bottom: -0.1rem;
         height: 0.1rem;
+      }
+      .link-style:hover::after {
+        transform: scale(1, 1);
       }
     }
   }
