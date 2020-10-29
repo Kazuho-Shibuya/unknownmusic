@@ -1,5 +1,4 @@
 <%= form_for(@micropost) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
     <p>
       <span class="fas fa-user">
@@ -9,12 +8,16 @@
       </span>
     </p>
     <% if @result_artist_name.nil? %>
-      <p><%= f.label :artist,  '検索してください', class: 'search-result-non' %></p>
+      <% if f.object.errors.include?(:artist) %>
+        <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:artist).first %></p>
+      <% else %>
+        <p><%= f.label :artist,  '検索してください', class: 'search-result-non' %></p>
+      <% end %>
     <% else %>
       <p><%= f.label :artist,  @result_artist_name, class: 'search-result' %></p>
       <%= f.hidden_field :artist, :value => @result_artist_name %>
     <% end %>
-    <p>
+    <p class="mt-4">
       <span class="fas fa-music">
         <span class="icon-style">
           <%= f.label :song, '曲名', class: 'label' %>
@@ -22,32 +25,47 @@
       </span>
     </p>
     <% if @result_track.nil? %>
-      <p><%= f.label :song,  '検索してください', class: 'search-result-non' %></p>
+      <% if f.object.errors.include?(:song) %>
+        <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:song).first %></p>
+      <% else %>
+        <p><%= f.label :song,  '検索してください', class: 'search-result-non' %></p>
+      <% end %>
     <% else %>
       <p><%= f.label :song,  @result_track, class: 'search-result' %></p>
       <%= f.hidden_field :song, :value => @result_track %>
     <% end %>
     <% if @result_listening_url.nil? %>
-      <p>
+      <p class="mt-4">
         <span class="fa fa-play">
           <span class="icon-style">
             <%= f.label :listening_url, '試聴URL', class: 'label' %>
           </span>
         </span>
       </p>
-      <p><%= f.label :listening_url,  '検索してください', class: 'search-result-non' %></p>
+      <% if f.object.errors.include?(:listening_url) %>
+        <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:listening_url).first %></p>
+      <% else %>
+        <p><%= f.label :listening_url,  '検索してください', class: 'search-result-non' %></p>
+      <% end %>
     <% else %>
-      <span>
-        <%= link_to @result_listening_url, class: 'fa fa-play listening', target: :_blank do %>
-          <span class="icon-style">試聴</span>
-          <%= f.hidden_field :listening_url, :value => @result_listening_url %>
-        <% end %>
-      </span>
+      <p class="mt-4">
+        <span>
+          <%= link_to @result_listening_url, class: 'fa fa-play listening', target: :_blank do %>
+            <span class="icon-style">試聴</span>
+            <%= f.hidden_field :listening_url, :value => @result_listening_url %>
+          <% end %>
+        </span>
+      </p>
     <% end %>
-    <p><%= f.label :content, '内容（70文字以内）', class: "label" %></p>
+    <p class="mt-4">
+      <%= f.label :content, '内容（70文字以内）', class: "label" %>
+    </p>
     <p><%= f.text_area :content, placeholder: '内容を入力してください' %></p>
+    <% if f.object.errors.include?(:content) %>
+      <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:content).first %></p>
+    <% end %>
   </div>
-  <div class="icon">
+  <div class="icon mt-2">
     <span>
       <%= link_to songs_search_path, class: 'fas fa-search search', target: :_blank do %>
         <span class="icon-style">音楽検索</span>

@@ -3,10 +3,5 @@
     <div class="alert alert-danger">
       <%= t('.errors count', errors_count: object.errors.count) %>
     </div>
-    <ul>
-      <% object.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
   </div>
 <% end %>

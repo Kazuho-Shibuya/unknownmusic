@@ -107,12 +107,10 @@ footer {
 
 /* errors */
 
-.error_explanation {
-  color: red;
-  width: 100%;
-  ul {
-    color: red;
-  }
+.error {
+  width: 50%;
+  margin: 0;
+  border-radius: 0.5rem;
 }
 
 .alert {
@@ -197,13 +195,13 @@ footer {
   }
   .field {
     font-size: 1.25rem;
-    margin: 3rem 0 0 0;
+    margin: 0 0 0 0;
     p {
       margin: 0;
       padding: 0;
     }
     .signup-form {
-      margin: 0 0 4rem 0;
+      margin: 4rem 0 0 0;
       padding: 0.1rem 0 0 0.1rem;
       border: 0;
       resize: none;
@@ -212,6 +210,7 @@ footer {
       border-radius: 0.5rem;
     }
     .btn-signup {
+      margin-top: 4rem;
       color: white;
       background: rgba(0, 0, 0, 0.1);
       border: solid 0.1rem white;
@@ -358,7 +357,7 @@ footer {
   .field {
     font-size: 1.25rem;
     .img-edit {
-      margin: 2rem 0 4rem 0;
+      margin: 2rem 0 0 0;
       padding: 0;
       .user-img {
         margin-bottom: 0.5rem;
@@ -389,7 +388,7 @@ footer {
         padding: 0;
       }
       .edit-form {
-        margin: 0 0 3rem 0;
+        margin: 3rem 0 0 0;
         padding: 0.1rem 0 0 0.1rem;
         border: 0;
         resize: none;
@@ -398,6 +397,7 @@ footer {
         border-radius: 0.5rem;
       }
       .btn-edit {
+        margin: 3rem 0 0 0;
         color: white;
         background: rgba(0, 0, 0, 0.25);
         border: solid 0.1rem white;
@@ -694,12 +694,12 @@ footer {
         padding: 0;
       }
       .search-result-non {
-        margin: 0 0 1rem 0;
+        margin: 0;
         padding: 0;
         color: gray;
       }
       .search-result {
-        margin: 0 0 1rem 0;
+        margin: 0;
         padding: 0;
         color: gold;
       }
@@ -711,9 +711,8 @@ footer {
         padding: 0.1rem 0 0 0.1rem;
         border: 0;
       }
-
       .listening {
-        margin: 0 0 2rem 0;
+        margin: 0;
         padding: 0;
         color: #0b9ff5;
         &:hover {
@@ -722,7 +721,6 @@ footer {
         }
       }
       .icon {
-        margin-top: 0.5rem;
         .search {
           padding: 0;
           color: rgb(240, 125, 125);
@@ -1547,21 +1545,22 @@ footer {
   }
   .field {
     font-size: 1.25rem;
-    margin: 6rem 0 0 0;
+    margin: 0;
     p {
       margin: 0;
       padding: 0;
     }
     .reset-password-form {
-      margin: 0 0 4rem 0;
+      margin: 4rem 0 0 0;
       padding: 0.1rem 0 0 0.1rem;
       border: 0;
       resize: none;
-      width: 75%;
+      width: 50%;
       height: 3rem;
       border-radius: 0.5rem;
     }
     .btn-reset-password {
+      margin: 4rem 0 0 0;
       color: white;
       background: rgba(0, 0, 0, 0.1);
       border: solid 0.1rem white;
@@ -1841,16 +1840,6 @@ footer {
           margin: 0 0 0.1rem 0;
           padding: 0;
         }
-        .search-result-non {
-          margin: 0 0 1rem 0;
-          padding: 0;
-          color: gray;
-        }
-        .search-result {
-          margin: 0 0 1rem 0;
-          padding: 0;
-          color: gold;
-        }
         textarea {
           resize: none;
           width: 80%;
@@ -1861,7 +1850,7 @@ footer {
         }
 
         .listening {
-          margin: 0 0 2rem 0;
+          margin: 0;
           padding: 0;
           color: #0b9ff5;
           &:hover {
