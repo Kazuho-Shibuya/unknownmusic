@@ -44,18 +44,21 @@ header {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 0.1rem;
     &:hover {
       text-decoration: none;
       color: #003ea6;
     }
   }
+  .navbar-toggler {
+    font-size: 2rem;
+  }
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
   .nav-item {
-    margin: 0.5rem 0.5rem;
+    margin: 1.25rem 0.5rem;
     text-align: center;
     .link-style {
       color: white;
