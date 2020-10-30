@@ -117,6 +117,12 @@ footer {
   margin-bottom: 0;
 }
 
+.alert-danger {
+  color: white;
+  background-color: darkred;
+  border-color: darkred;
+}
+
 /* TOP */
 
 .top-img {
@@ -196,6 +202,9 @@ footer {
   .field {
     font-size: 1.25rem;
     margin: 0 0 0 0;
+    .error {
+      margin: 0 auto;
+    }
     p {
       margin: 0;
       padding: 0;
@@ -356,6 +365,9 @@ footer {
   }
   .field {
     font-size: 1.25rem;
+    .error {
+      margin: 0 auto;
+    }
     .img-edit {
       margin: 2rem 0 0 0;
       padding: 0;
@@ -684,6 +696,10 @@ footer {
       }
     }
     .micropost-form {
+      .error {
+        width: 60%;
+        padding-left: 0;
+      }
       p {
         margin: 0;
         padding: 0;
@@ -1546,6 +1562,9 @@ footer {
   .field {
     font-size: 1.25rem;
     margin: 0;
+    .error {
+      margin: 0 auto;
+    }
     p {
       margin: 0;
       padding: 0;

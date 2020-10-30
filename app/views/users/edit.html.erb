@@ -27,6 +27,9 @@
                   <%= f.file_field :image, id: "post-img" %>
                 </label>
               </p>
+              <% if f.object.errors.include?(:image) %>
+                <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:image).first %></p>
+              <% end %>
             </div>
             <div class="user-edit">
               <%= f.text_field :name, class: 'edit-form', placeholder: '名前' %>

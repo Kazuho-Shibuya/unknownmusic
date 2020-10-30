@@ -1,7 +1,5 @@
 <% if object.errors.any? %>
-  <div class="error_explanation">
-    <div class="alert alert-danger">
-      <%= t('.errors count', errors_count: object.errors.count) %>
-    </div>
+  <div class="alert alert-danger error mt-4">
+    <%= t('.errors count', errors_count: object.errors.count) %>
   </div>
 <% end %>

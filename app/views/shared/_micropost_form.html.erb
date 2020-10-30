@@ -1,6 +1,7 @@
 <%= form_for(@micropost) do |f| %>
   <div class="field">
-    <p>
+    <%= render 'shared/error_messages', object: f.object %>
+    <p class="mt-4">
       <span class="fas fa-user">
         <span class="icon-style">
           <%= f.label :artist, 'アーティスト名', class: 'label' %>

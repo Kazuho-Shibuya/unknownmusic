@@ -8,6 +8,7 @@
         <h1 class="jpn-title text-center">新規登録</h1>
         <div class="field text-center">
           <%= form_for(@user, url: signup_path) do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
             <%= f.text_field :name, class: 'signup-form', placeholder: '名前' %>
             <% if f.object.errors.include?(:name) %>
               <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:name).first %></p>
