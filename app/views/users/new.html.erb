@@ -10,9 +10,21 @@
           <%= form_for(@user, url: signup_path) do |f| %>
             <%= render 'shared/error_messages', object: f.object %>
             <%= f.text_field :name, class: 'signup-form', placeholder: '名前' %>
+            <% if f.object.errors.include?(:name) %>
+              <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:name).first %></p>
+            <% end %>
             <%= f.email_field :email, class: 'signup-form', placeholder: 'メールアドレス' %>
+            <% if f.object.errors.include?(:email) %>
+              <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:email).first %></p>
+            <% end %>
             <%= f.password_field :password, class: 'signup-form', placeholder: 'パスワード' %>
+            <% if f.object.errors.include?(:password) %>
+              <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password).first %></p>
+            <% end %>
             <%= f.password_field :password_confirmation, class: 'signup-form', placeholder: 'パスワード（確認）' %>
+            <% if f.object.errors.include?(:password_confirmation) %>
+              <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password_confirmation).first %></p>
+            <% end %>
             <%= f.submit '登録する', class: 'btn-style btn-signup mx-auto'%>
           <% end %>
         </div>

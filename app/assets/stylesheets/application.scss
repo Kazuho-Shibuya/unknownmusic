@@ -107,16 +107,20 @@ footer {
 
 /* errors */
 
-.error_explanation {
-  color: red;
-  width: 100%;
-  ul {
-    color: red;
-  }
+.error {
+  width: 50%;
+  margin: 0;
+  border-radius: 0.5rem;
 }
 
 .alert {
   margin-bottom: 0;
+}
+
+.alert-danger {
+  color: white;
+  background-color: darkred;
+  border-color: darkred;
 }
 
 /* TOP */
@@ -124,7 +128,7 @@ footer {
 .top-img {
   background-image: image-url("top.jpg");
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center center;
 }
@@ -175,7 +179,7 @@ footer {
 .signup-img {
   background-image: image-url("signup.jpg");
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center center;
 }
@@ -197,13 +201,16 @@ footer {
   }
   .field {
     font-size: 1.25rem;
-    margin: 3rem 0 0 0;
+    margin: 0 0 0 0;
+    .error {
+      margin: 0 auto;
+    }
     p {
       margin: 0;
       padding: 0;
     }
     .signup-form {
-      margin: 0 0 4rem 0;
+      margin: 4rem 0 0 0;
       padding: 0.1rem 0 0 0.1rem;
       border: 0;
       resize: none;
@@ -212,6 +219,7 @@ footer {
       border-radius: 0.5rem;
     }
     .btn-signup {
+      margin-top: 4rem;
       color: white;
       background: rgba(0, 0, 0, 0.1);
       border: solid 0.1rem white;
@@ -234,7 +242,7 @@ footer {
 .login-img {
   background-image: image-url("login.jpg");
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center center;
 }
@@ -335,7 +343,7 @@ footer {
 .edit-img {
   background-image: image-url("user_edit.jpg");
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center center;
 }
@@ -357,8 +365,11 @@ footer {
   }
   .field {
     font-size: 1.25rem;
+    .error {
+      margin: 0 auto;
+    }
     .img-edit {
-      margin: 2rem 0 4rem 0;
+      margin: 2rem 0 0 0;
       padding: 0;
       .user-img {
         margin-bottom: 0.5rem;
@@ -389,7 +400,7 @@ footer {
         padding: 0;
       }
       .edit-form {
-        margin: 0 0 3rem 0;
+        margin: 4rem 0 0 0;
         padding: 0.1rem 0 0 0.1rem;
         border: 0;
         resize: none;
@@ -398,6 +409,7 @@ footer {
         border-radius: 0.5rem;
       }
       .btn-edit {
+        margin: 4rem 0 0 0;
         color: white;
         background: rgba(0, 0, 0, 0.25);
         border: solid 0.1rem white;
@@ -684,6 +696,10 @@ footer {
       }
     }
     .micropost-form {
+      .error {
+        width: 60%;
+        padding-left: 0;
+      }
       p {
         margin: 0;
         padding: 0;
@@ -694,12 +710,12 @@ footer {
         padding: 0;
       }
       .search-result-non {
-        margin: 0 0 1rem 0;
+        margin: 0;
         padding: 0;
         color: gray;
       }
       .search-result {
-        margin: 0 0 1rem 0;
+        margin: 0;
         padding: 0;
         color: gold;
       }
@@ -711,9 +727,8 @@ footer {
         padding: 0.1rem 0 0 0.1rem;
         border: 0;
       }
-
       .listening {
-        margin: 0 0 2rem 0;
+        margin: 0;
         padding: 0;
         color: #0b9ff5;
         &:hover {
@@ -722,7 +737,6 @@ footer {
         }
       }
       .icon {
-        margin-top: 0.5rem;
         .search {
           padding: 0;
           color: rgb(240, 125, 125);
@@ -1517,7 +1531,7 @@ footer {
 .forgot-password-img {
   background-image: image-url("forgot_password.jpg");
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center center;
 }
@@ -1525,7 +1539,7 @@ footer {
 .reset-password-img {
   background-image: image-url("reset_password.jpg");
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center center;
 }
@@ -1547,21 +1561,25 @@ footer {
   }
   .field {
     font-size: 1.25rem;
-    margin: 6rem 0 0 0;
+    margin: 0;
+    .error {
+      margin: 0 auto;
+    }
     p {
       margin: 0;
       padding: 0;
     }
     .reset-password-form {
-      margin: 0 0 4rem 0;
+      margin: 4rem 0 0 0;
       padding: 0.1rem 0 0 0.1rem;
       border: 0;
       resize: none;
-      width: 75%;
+      width: 50%;
       height: 3rem;
       border-radius: 0.5rem;
     }
     .btn-reset-password {
+      margin: 4rem 0 0 0;
       color: white;
       background: rgba(0, 0, 0, 0.1);
       border: solid 0.1rem white;
@@ -1841,16 +1859,6 @@ footer {
           margin: 0 0 0.1rem 0;
           padding: 0;
         }
-        .search-result-non {
-          margin: 0 0 1rem 0;
-          padding: 0;
-          color: gray;
-        }
-        .search-result {
-          margin: 0 0 1rem 0;
-          padding: 0;
-          color: gold;
-        }
         textarea {
           resize: none;
           width: 80%;
@@ -1861,7 +1869,7 @@ footer {
         }
 
         .listening {
-          margin: 0 0 2rem 0;
+          margin: 0;
           padding: 0;
           color: #0b9ff5;
           &:hover {

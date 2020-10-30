@@ -11,7 +11,13 @@
             <%= render 'shared/error_messages', object: f.object %>
             <%= hidden_field_tag :email, @user.email %>
             <%= f.password_field :password, class: 'reset-password-form', placeholder: 'パスワード'  %>
+            <% if f.object.errors.include?(:password) %>
+              <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password).first %></p>
+            <% end %>
             <%= f.password_field :password_confirmation, class: 'reset-password-form', placeholder: 'パスワード（確認）' %>
+            <% if f.object.errors.include?(:password_confirmation) %>
+              <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password_confirmation).first %></p>
+            <% end %>
             <%= f.submit "パスワード更新", class: "btn-style btn-reset-password mx-auto" %>
           <% end %>
         </div>

@@ -8,9 +8,7 @@
         <h1 class="jpn-title text-center">ユーザ編集</h1>
         <div class="field text-center">
           <%= form_for(@user, url: edit_user_path) do |f| %>
-            <p>
-              <%= render 'shared/error_messages', object: f.object %>
-            </p>
+            <%= render 'shared/error_messages', object: f.object %>
             <div class="img-edit">
               <p>
                 <% if @user_image.nil? %>
@@ -20,7 +18,7 @@
                 <% end %>
                 <%= f.hidden_field :user_image, :value => @user.image.to_s %>
               </p>
-              <p>
+              <p class="m-0">
                 <label class="img-change mx-auto">
                   <i class="far fa-image"></i>
                   <span>
@@ -29,12 +27,27 @@
                   <%= f.file_field :image, id: "post-img" %>
                 </label>
               </p>
+              <% if f.object.errors.include?(:image) %>
+                <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:image).first %></p>
+              <% end %>
             </div>
             <div class="user-edit">
               <%= f.text_field :name, class: 'edit-form', placeholder: '名前' %>
+              <% if f.object.errors.include?(:name) %>
+                <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:name).first %></p>
+              <% end %>
               <%= f.email_field :email, class: 'edit-form', placeholder: 'メールアドレス' %>
+              <% if f.object.errors.include?(:email) %>
+                <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:email).first %></p>
+              <% end %>
               <%= f.password_field :password, class: 'edit-form', placeholder: 'パスワード' %>
+              <% if f.object.errors.include?(:password) %>
+                <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password).first %></p>
+              <% end %>
               <%= f.password_field :password_confirmation, class: 'edit-form', placeholder: 'パスワード（確認）' %>
+              <% if f.object.errors.include?(:password_confirmation) %>
+                <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password_confirmation).first %></p>
+              <% end %>
               <p>
                 <%= f.submit '更新する', class: 'btn-style btn-edit'%>
               </p>

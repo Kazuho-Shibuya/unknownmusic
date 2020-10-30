@@ -12,7 +12,7 @@
   <body ontouchstart="">
     <main class="container-fluid">
       <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type} rounded-0") %>
       <% end %>
       <%= yield %>
     </main>
