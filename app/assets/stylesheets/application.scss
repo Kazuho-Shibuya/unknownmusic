@@ -126,6 +126,26 @@ footer {
   border-color: darkred;
 }
 
+/* Flash */
+
+.alert-success {
+  color: white;
+  background-color: darkgreen;
+  border-color: darkgreen;
+}
+
+.alert-info {
+  color: white;
+  background-color: darkblue;
+  border-color: darkblue;
+}
+
+.alert-warning {
+  color: black;
+  background-color: yellow;
+  border-color: yellow;
+}
+
 /* TOP */
 
 .top-img {
