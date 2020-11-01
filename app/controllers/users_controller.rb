@@ -103,7 +103,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     return unless @user.email == 'test@example.com'
 
-    flash[:notice] = 'テストユーザのため変更できません'
+    flash[:warning] = 'テストユーザのため変更できません'
     redirect_to root_path
   end
 

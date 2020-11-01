@@ -5,7 +5,7 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      flash[:success] = 'Micropost created!'
+      flash[:success] = '投稿しました'
       redirect_to home_url
     else
       @result_artist_name = @micropost.artist

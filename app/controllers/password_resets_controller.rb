@@ -58,7 +58,7 @@ class PasswordResetsController < ApplicationController
   def check_expiration
     return unless @user.password_reset_expired?
 
-    flash[:danger] = 'パスワードのリセットリンクは期限切れです。'
+    flash[:danger] = 'パスワードリセットのリンクは期限切れです'
     redirect_to new_password_reset_url
   end
 
@@ -66,7 +66,7 @@ class PasswordResetsController < ApplicationController
   def check_test_user
     email = params[:password_reset][:email].downcase
     if email == 'test@example.com'
-      flash[:notice] = 'テストユーザのため変更できません'
+      flash[:warning] = 'テストユーザのため変更できません'
       redirect_to root_path
     end
   end
