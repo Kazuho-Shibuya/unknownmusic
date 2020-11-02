@@ -24,7 +24,7 @@
             <% if f.object.errors.include?(:password) %>
               <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password).first %></p>
             <% end %>
-            <%= f.label :password, 'パスワード（確認）', class: 'd-block text-left mx-auto signup-label' %>
+            <%= f.label :password_confirmation, 'パスワード（確認）', class: 'd-block text-left mx-auto signup-label' %>
             <%= f.password_field :password_confirmation, class: 'signup-form', placeholder: '（例）foobar' %>
             <% if f.object.errors.include?(:password_confirmation) %>
               <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password_confirmation).first %></p>

@@ -9,9 +9,9 @@ RSpec.feature 'Sign_up', type: :feature do
 
     expect do
       click_link '新規登録'
-      fill_in '名前', with: user.name
+      fill_in '名前（ニックネーム可）', with: user.name
       fill_in 'メールアドレス', with: user.email
-      fill_in 'パスワード', with: user.password
+      fill_in 'パスワード（６文字以上）', with: user.password
       fill_in 'パスワード（確認）', with: user.password
       click_button '登録する'
     end.to change(User, :count).by(1)
