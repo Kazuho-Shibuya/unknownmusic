@@ -1,24 +1,42 @@
-# README
+# *Unknown Music* 【音楽試聴アプリ】
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**「音楽を知る、きっかけを。」**
 
-Things you may want to cover:
+*Unknown Music* は、あなたがまだ出会っていない音楽と、出会うきっかけを作るアプリです。
 
-* Ruby version
+# URL
+https://www.unknownmusic.net/
 
-* System dependencies
+# 使用方法
 
-* Configuration
+ログインページのかんたんログインよりどなたでもご覧になれます。
 
-* Database creation
+# 制作背景
+日々音楽を聴く中で下記のような声を耳にしました。
+- 「音楽が多すぎて、好きな音楽を見つけるのが大変」
+- 「音楽だけに特化したプラットフォームがない」
+- 「
 
-* Database initialization
+# 機能一覧
 
-* How to run the test suite
+# 意識した点
 
-* Services (job queues, cache servers, search engines, etc.)
+# 課題、今後実装したい機能
 
-* Deployment instructions
+# 環境・使用技術
 
-* ...
+## バックエンド
+
+## フロントエンド
+
+## 開発環境
+
+## 本番環境
+
+## インフラ構成図
+
+## ER図
+
+## テスト
+
+## その他使用技術
