@@ -8,7 +8,8 @@
         <h1 class="jpn-title text-center">パスワードを忘れた方</h1>
         <div class="field text-center">
           <%= form_for(:password_reset, url: password_resets_path) do |f| %>
-            <%= f.email_field :email, class: 'reset-password-form', placeholder: 'メールアドレス' %>
+            <%= f.label :email, 'メールアドレス', class: 'd-block text-left mx-auto reset-password-label' %>
+            <%= f.email_field :email, class: 'reset-password-form', placeholder: '（例）example@gmail.com' %>
             <%= f.submit "メール送信", class: "btn-style btn-reset-password mx-auto" %>
           <% end %>
         </div>
