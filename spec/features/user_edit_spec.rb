@@ -7,9 +7,9 @@ RSpec.feature 'User_edit', type: :feature do
 
     visit edit_user_path(user)
 
-    fill_in '名前', with: '佐藤清'
+    fill_in '名前（ニックネーム可）', with: '佐藤清'
     fill_in 'メールアドレス', with: 'tester@example.com'
-    fill_in 'パスワード', with: 'foobar'
+    fill_in 'パスワード（６文字以上）', with: 'foobar'
     fill_in 'パスワード（確認）', with: 'foobar'
     click_button '更新する'
 
