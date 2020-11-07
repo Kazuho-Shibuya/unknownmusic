@@ -35,6 +35,30 @@ html {
   min-height: 100vh;
 }
 
+.label {
+  width: 60%;
+  margin: 4rem 0 0 0;
+  padding: 0;
+}
+
+.label-name {
+  float: left;
+}
+
+.label-required {
+  float: right;
+  color: red;
+}
+
+.label-optional {
+  float: right;
+}
+
+.label-example {
+  width: 60%;
+  color: white;
+}
+
 /* header */
 
 header {
@@ -111,7 +135,7 @@ footer {
 /* errors */
 
 .error {
-  width: 50%;
+  width: 60%;
   margin: 0;
   border-radius: 0.5rem;
 }
@@ -232,17 +256,12 @@ footer {
       margin: 0;
       padding: 0;
     }
-    .signup-label {
-      width: 50%;
-      margin: 4rem 0 0 0;
-      padding: 0;
-    }
     .signup-form {
       margin: 0;
       padding: 0.1rem 0 0 0.1rem;
       border: 0;
       resize: none;
-      width: 50%;
+      width: 60%;
       height: 3rem;
       border-radius: 0.5rem;
     }
@@ -1644,6 +1663,19 @@ footer {
 
 /*　タブレットサイズ対応　*/
 @media (min-width: 768px) {
+  /* universal */
+
+  .label {
+    width: 75%;
+    margin: 4rem 0 0 0;
+    padding: 0;
+  }
+
+  .label-example {
+    width: 75%;
+    color: white;
+  }
+
   /* header */
 
   header {
@@ -1691,6 +1723,13 @@ footer {
 
   /* SIGN UP */
 
+  .container-signup {
+    .field {
+      .signup-form {
+        width: 75%;
+      }
+    }
+  }
   /* LOGIN */
 
   /* Popular posts */
@@ -1762,10 +1801,24 @@ footer {
       margin: 8rem 0 2rem 0;
     }
   }
+
+  /* errors */
+
+  .error {
+    width: 75%;
+  }
 }
 
 /*　PCサイズ対応　*/
 @media (min-width: 992px) {
+  .label {
+    width: 50%;
+  }
+
+  .label-example {
+    width: 50%;
+  }
+
   /* header */
 
   header {
@@ -1812,6 +1865,11 @@ footer {
     }
     .jpn-title {
       font-size: 4rem;
+    }
+    .field {
+      .signup-form {
+        width: 50%;
+      }
     }
   }
 
@@ -2034,5 +2092,11 @@ footer {
     .jpn-title {
       font-size: 4rem;
     }
+  }
+
+  /* errors */
+
+  .error {
+    width: 50%;
   }
 }
