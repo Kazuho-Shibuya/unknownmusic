@@ -32,19 +32,23 @@
               <% end %>
             </div>
             <div class="user-edit">
-              <%= f.text_field :name, class: 'edit-form', placeholder: '名前' %>
+              <%= f.label :name, '名前（ニックネーム可）', class: 'd-block text-left mx-auto edit-label' %>
+              <%= f.text_field :name, class: 'edit-form', placeholder: '（例）田中実' %>
               <% if f.object.errors.include?(:name) %>
                 <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:name).first %></p>
               <% end %>
-              <%= f.email_field :email, class: 'edit-form', placeholder: 'メールアドレス' %>
+              <%= f.label :email, 'メールアドレス', class: 'd-block text-left mx-auto edit-label' %>
+              <%= f.email_field :email, class: 'edit-form', placeholder: '（例）example@gmail.com' %>
               <% if f.object.errors.include?(:email) %>
                 <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:email).first %></p>
               <% end %>
-              <%= f.password_field :password, class: 'edit-form', placeholder: 'パスワード' %>
+              <%= f.label :password, 'パスワード（６文字以上）', class: 'd-block text-left mx-auto edit-label' %>
+              <%= f.password_field :password, class: 'edit-form', placeholder: '（例）foobar' %>
               <% if f.object.errors.include?(:password) %>
                 <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password).first %></p>
               <% end %>
-              <%= f.password_field :password_confirmation, class: 'edit-form', placeholder: 'パスワード（確認）' %>
+              <%= f.label :password_confirmation, 'パスワード（確認）', class: 'd-block text-left mx-auto edit-label' %>
+              <%= f.password_field :password_confirmation, class: 'edit-form', placeholder: '（例）foobar' %>
               <% if f.object.errors.include?(:password_confirmation) %>
                 <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password_confirmation).first %></p>
               <% end %>
