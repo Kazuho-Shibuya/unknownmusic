@@ -1616,14 +1616,21 @@ footer {
       margin: 0;
       padding: 0;
     }
+    .label {
+      width: 65%;
+    }
     .reset-password-form {
       margin: 0;
       padding: 0.1rem 0 0 0.1rem;
       border: 0;
       resize: none;
-      width: 50%;
+      width: 65%;
       height: 3rem;
       border-radius: 0.5rem;
+    }
+
+    .label-example {
+      width: 65%;
     }
     .btn-reset-password {
       margin: 4rem 0 0 0;
@@ -1811,6 +1818,22 @@ footer {
 
   .error {
     width: 75%;
+  }
+
+  /* Reset password */
+
+  .container-reset-password {
+    .field {
+      .label {
+        width: 50%;
+      }
+      .reset-password-form {
+        width: 50%;
+      }
+      .label-example {
+        width: 50%;
+      }
+    }
   }
 }
 
@@ -2101,7 +2124,6 @@ footer {
   /* Reset password */
 
   .container-reset-password {
-    color: white;
     .eng-title {
       font-size: 2rem;
     }
