@@ -7,9 +7,15 @@
         <p class="eng-title text-center">Forgot password</p>
         <h1 class="jpn-title text-center">パスワードを忘れた方</h1>
         <div class="field text-center">
-          <%= form_for(:password_reset, url: password_resets_path) do |f| %>
-            <%= f.label :email, 'メールアドレス', class: 'd-block text-left mx-auto reset-password-label' %>
-            <%= f.email_field :email, class: 'reset-password-form', placeholder: '（例）example@gmail.com' %>
+          <%= form_for(:password_reset, url: password_resets_path, html: {novalidate: true}) do |f| %>
+            <div class="label mx-auto">
+              <%= f.label :email, 'メールアドレス', class: 'd-inline-block label-name' %>
+              <%= f.label :email, '【必須】', class: 'd-inline-block label-required' %>
+            </div>
+            <%= f.email_field :email, class: 'reset-password-form' %>
+            <div>
+              <%= f.label :email, '（例）example@gmail.com', class: 'd-block mx-auto text-left label-example' %>
+            </div>
             <%= f.submit "メール送信", class: "btn-style btn-reset-password mx-auto" %>
           <% end %>
         </div>
