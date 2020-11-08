@@ -7,18 +7,34 @@
         <p class="eng-title text-center">Login</p>
         <h1 class="jpn-title text-center">ログイン</h1>
         <div class="field text-center">
-          <%= form_for(:session, url: login_path) do |f| %>
-            <%= f.label :email, 'メールアドレス', class: 'd-block text-left mx-auto login-label' %>
-            <%= f.email_field :email, class: 'login-form', placeholder: '（例）example@gmail.com' %>
-            <%= f.label :password, 'パスワード（６文字以上）', class: 'd-block text-left mx-auto login-label' %>
-            <%= f.password_field :password, class: 'login-form mb-2', placeholder: '（例）foobar' %>
+          <%= form_for(:session, url: login_path, html: {novalidate: true}) do |f| %>
+            <div class="label mx-auto">
+              <%= f.label :email, 'メールアドレス', class: 'd-inline-block label-name' %>
+              <%= f.label :email, '【必須】', class: 'd-inline-block label-required' %>
+            </div>
+            <div>
+              <%= f.email_field :email, class: 'login-form' %>
+            </div>
+            <div>
+              <%= f.label :email, '（例）example@gmail.com', class: 'd-block mx-auto text-left label-example' %>
+            </div>
+            <div class="label mx-auto">
+              <%= f.label :password, 'パスワード（６文字以上）', class: 'd-inline-block label-name' %>
+              <%= f.label :password, '【必須】', class: 'd-inline-block label-required' %>
+            </div>
+            <div>
+              <%= f.password_field :password, class: 'login-form mb-2' %>
+            </div>
+            <div>
+              <%= f.label :password, '（例）password', class: 'd-block mx-auto text-left label-example' %>
+            </div>
             <p>
               <%= f.label :remember_me, class: "keep-login d-block text-left mx-auto" do %>
                 <%= f.check_box :remember_me %>
                 <span>ログイン状態を保持</span>
               <% end %>
             </p>
-            <p class="mt-2 d-block text-left mx-auto forget-password">
+            <p class="mt-4 d-block text-left mx-auto forget-password">
               <%= link_to "パスワードをお忘れの場合はこちら", new_password_reset_path, class: "forget-password-link" %>
             </p>
             <%= f.submit "ログイン", class: "btn-style btn-login justify-content-center" %>
