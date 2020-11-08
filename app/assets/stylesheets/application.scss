@@ -321,7 +321,7 @@ footer {
       padding: 0.1rem 0 0 0.1rem;
       border: 0;
       resize: none;
-      width: 50%;
+      width: 60%;
       height: 3rem;
       border-radius: 0.5rem;
     }
@@ -1720,6 +1720,14 @@ footer {
   }
   /* LOGIN */
 
+  .container-login {
+    .field {
+      .login-form {
+        width: 75%;
+      }
+    }
+  }
+
   /* Popular posts */
   .container-popular {
     .microposts {
@@ -1869,6 +1877,11 @@ footer {
     }
     .jpn-title {
       font-size: 4rem;
+    }
+    .field {
+      .login-form {
+        width: 50%;
+      }
     }
   }
 
