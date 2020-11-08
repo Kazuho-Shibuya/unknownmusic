@@ -35,6 +35,30 @@ html {
   min-height: 100vh;
 }
 
+.label {
+  width: 60%;
+  margin: 3rem 0 0 0;
+  padding: 0;
+}
+
+.label-name {
+  float: left;
+}
+
+.label-required {
+  float: right;
+  color: red;
+}
+
+.label-optional {
+  float: right;
+}
+
+.label-example {
+  width: 60%;
+  color: white;
+}
+
 /* header */
 
 header {
@@ -111,7 +135,7 @@ footer {
 /* errors */
 
 .error {
-  width: 50%;
+  width: 60%;
   margin: 0;
   border-radius: 0.5rem;
 }
@@ -232,17 +256,12 @@ footer {
       margin: 0;
       padding: 0;
     }
-    .signup-label {
-      width: 50%;
-      margin: 4rem 0 0 0;
-      padding: 0;
-    }
     .signup-form {
       margin: 0;
       padding: 0.1rem 0 0 0.1rem;
       border: 0;
       resize: none;
-      width: 50%;
+      width: 60%;
       height: 3rem;
       border-radius: 0.5rem;
     }
@@ -297,22 +316,17 @@ footer {
       margin: 0;
       padding: 0;
     }
-    .login-label {
-      width: 50%;
-      margin: 4rem 0 0 0;
-      padding: 0;
-    }
     .login-form {
       margin: 0;
       padding: 0.1rem 0 0 0.1rem;
       border: 0;
       resize: none;
-      width: 50%;
+      width: 60%;
       height: 3rem;
       border-radius: 0.5rem;
     }
     .forget-password {
-      width: 50%;
+      width: 60%;
       .forget-password-link {
         color: white;
         text-decoration: none;
@@ -339,7 +353,7 @@ footer {
 
     .keep-login {
       margin: 0;
-      width: 50%;
+      width: 60%;
     }
     .btn-login {
       color: white;
@@ -432,17 +446,12 @@ footer {
         margin: 0;
         padding: 0;
       }
-      .edit-label {
-        width: 50%;
-        margin: 4rem 0 0 0;
-        padding: 0;
-      }
       .edit-form {
         margin: 0;
         padding: 0.1rem 0 0 0.1rem;
         border: 0;
         resize: none;
-        width: 50%;
+        width: 60%;
         height: 3rem;
         border-radius: 0.5rem;
       }
@@ -1607,19 +1616,21 @@ footer {
       margin: 0;
       padding: 0;
     }
-    .reset-password-label {
-      width: 50%;
-      margin: 4rem 0 0 0;
-      padding: 0;
+    .label {
+      width: 65%;
     }
     .reset-password-form {
       margin: 0;
       padding: 0.1rem 0 0 0.1rem;
       border: 0;
       resize: none;
-      width: 50%;
+      width: 65%;
       height: 3rem;
       border-radius: 0.5rem;
+    }
+
+    .label-example {
+      width: 65%;
     }
     .btn-reset-password {
       margin: 4rem 0 0 0;
@@ -1644,6 +1655,17 @@ footer {
 
 /*　タブレットサイズ対応　*/
 @media (min-width: 768px) {
+  /* universal */
+
+  .label {
+    width: 75%;
+  }
+
+  .label-example {
+    width: 75%;
+    color: white;
+  }
+
   /* header */
 
   header {
@@ -1691,7 +1713,28 @@ footer {
 
   /* SIGN UP */
 
+  .container-signup {
+    .field {
+      .signup-form {
+        width: 75%;
+      }
+    }
+  }
   /* LOGIN */
+
+  .container-login {
+    .field {
+      .login-form {
+        width: 75%;
+      }
+      .keep-login {
+        width: 75%;
+      }
+      .forget-password {
+        width: 75%;
+      }
+    }
+  }
 
   /* Popular posts */
   .container-popular {
@@ -1754,7 +1797,15 @@ footer {
       font-size: 4rem;
       margin: 0;
     }
+    .field {
+      .user-edit {
+        .edit-form {
+          width: 75%;
+        }
+      }
+    }
   }
+
   /* About */
 
   .container-about {
@@ -1762,10 +1813,40 @@ footer {
       margin: 8rem 0 2rem 0;
     }
   }
+
+  /* errors */
+
+  .error {
+    width: 75%;
+  }
+
+  /* Reset password */
+
+  .container-reset-password {
+    .field {
+      .label {
+        width: 50%;
+      }
+      .reset-password-form {
+        width: 50%;
+      }
+      .label-example {
+        width: 50%;
+      }
+    }
+  }
 }
 
 /*　PCサイズ対応　*/
 @media (min-width: 992px) {
+  .label {
+    width: 50%;
+  }
+
+  .label-example {
+    width: 50%;
+  }
+
   /* header */
 
   header {
@@ -1813,6 +1894,11 @@ footer {
     .jpn-title {
       font-size: 4rem;
     }
+    .field {
+      .signup-form {
+        width: 50%;
+      }
+    }
   }
 
   /* LOGIN */
@@ -1823,6 +1909,17 @@ footer {
     }
     .jpn-title {
       font-size: 4rem;
+    }
+    .field {
+      .login-form {
+        width: 50%;
+      }
+      .keep-login {
+        width: 50%;
+      }
+      .forget-password {
+        width: 50%;
+      }
     }
   }
 
@@ -2027,12 +2124,28 @@ footer {
   /* Reset password */
 
   .container-reset-password {
-    color: white;
     .eng-title {
       font-size: 2rem;
     }
     .jpn-title {
       font-size: 4rem;
+    }
+  }
+
+  /* errors */
+
+  .error {
+    width: 50%;
+  }
+
+  /* User edit */
+  .container-edit {
+    .field {
+      .user-edit {
+        .edit-form {
+          width: 50%;
+        }
+      }
     }
   }
 }
