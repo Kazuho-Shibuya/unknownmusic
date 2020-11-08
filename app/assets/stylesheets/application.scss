@@ -451,7 +451,7 @@ footer {
         padding: 0.1rem 0 0 0.1rem;
         border: 0;
         resize: none;
-        width: 50%;
+        width: 60%;
         height: 3rem;
         border-radius: 0.5rem;
       }
@@ -1795,7 +1795,15 @@ footer {
       font-size: 4rem;
       margin: 0;
     }
+    .field {
+      .user-edit {
+        .edit-form {
+          width: 75%;
+        }
+      }
+    }
   }
+
   /* About */
 
   .container-about {
@@ -2111,5 +2119,16 @@ footer {
 
   .error {
     width: 50%;
+  }
+
+  /* User edit */
+  .container-edit {
+    .field {
+      .user-edit {
+        .edit-form {
+          width: 50%;
+        }
+      }
+    }
   }
 }
