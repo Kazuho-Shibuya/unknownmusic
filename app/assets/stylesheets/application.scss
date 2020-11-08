@@ -326,7 +326,7 @@ footer {
       border-radius: 0.5rem;
     }
     .forget-password {
-      width: 50%;
+      width: 60%;
       .forget-password-link {
         color: white;
         text-decoration: none;
@@ -353,7 +353,7 @@ footer {
 
     .keep-login {
       margin: 0;
-      width: 50%;
+      width: 60%;
     }
     .btn-login {
       color: white;
@@ -1725,6 +1725,12 @@ footer {
       .login-form {
         width: 75%;
       }
+      .keep-login {
+        width: 75%;
+      }
+      .forget-password {
+        width: 75%;
+      }
     }
   }
 
@@ -1880,6 +1886,12 @@ footer {
     }
     .field {
       .login-form {
+        width: 50%;
+      }
+      .keep-login {
+        width: 50%;
+      }
+      .forget-password {
         width: 50%;
       }
     }
