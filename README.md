@@ -2,6 +2,7 @@
 <a href="https://github.com/Kazuho-Shibuya/unknownmusic/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/Kazuho-Shibuya/unknownmusic?style=plastic"></a>
 <a href="https://github.com/Kazuho-Shibuya/unknownmusic/issues-closed"><img alt="GitHub issues" src="https://img.shields.io/github/issues-closed/Kazuho-Shibuya/unknownmusic?style=plastic"></a>
 <a href="https://github.com/Kazuho-Shibuya/unknownmusic/languages/top"><img alt="GitHub issues" src="https://img.shields.io/github/languages/top/Kazuho-Shibuya/unknownmusic?style=plastic"></a>
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Kazuho-Shibuya/unknownmusic?style=plastic">
 <img src="https://img.shields.io/badge/-Rails-CC0000.svg?logo=rails&style=plastic">
 <img src="https://img.shields.io/badge/-HTML5-333.svg?logo=html5&style=plastic">
 <img src="https://img.shields.io/badge/-CSS3-1572B6.svg?logo=css3&style=plastic">
@@ -9,10 +10,6 @@
 <img src="https://img.shields.io/badge/-Bootstrap-563D7C.svg?logo=bootstrap&style=plastic">
 <img src="https://img.shields.io/badge/-Amazon%20AWS-232F3E.svg?logo=amazon-aws&style=plastic">
 <img src="https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=plastic">
-<img src="https://img.shields.io/badge/-Nginx-bfcfcf.svg?logo=nginx&style=plastic">
-<img src="https://img.shields.io/badge/-Visual%20Studio%20Code-007ACC.svg?logo=visual-studio-code&style=plastic">
-<img src="https://img.shields.io/badge/-Vim-019733.svg?logo=vim&style=plastic">
-<img src="https://img.shields.io/badge/-GitHub-181717.svg?logo=github&style=plastic">
 
 **「音楽を知る、きっかけを。」**
 
