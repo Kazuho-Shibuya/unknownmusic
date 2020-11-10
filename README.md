@@ -6,15 +6,9 @@
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Kazuho-Shibuya/unknownmusic?style=plastic">
 <a href="https://github.com/Kazuho-Shibuya/unknownmusic/languages/top"><img alt="GitHub issues" src="https://img.shields.io/github/languages/top/Kazuho-Shibuya/unknownmusic?style=plastic"></a>
 <img src="https://img.shields.io/badge/-Rails-CC0000.svg?logo=rails&style=plastic">
-<img src="https://img.shields.io/badge/-HTML5-333.svg?logo=html5&style=plastic">
-<img src="https://img.shields.io/badge/-CSS3-1572B6.svg?logo=css3&style=plastic">
-<img src="https://img.shields.io/badge/-jQuery-0769AD.svg?logo=jquery&style=plastic">
-<img src="https://img.shields.io/badge/-Bootstrap-563D7C.svg?logo=bootstrap&style=plastic">
 <img src="https://img.shields.io/badge/-Amazon%20AWS-232F3E.svg?logo=amazon-aws&style=plastic">
 <img src="https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=plastic">
-<img src="https://img.shields.io/badge/-Visual%20Studio%20Code-007ACC.svg?logo=visual-studio-code&style=plastic">
 <img src="https://img.shields.io/badge/-Vim-019733.svg?logo=vim&style=plastic">
-<img src="https://img.shields.io/badge/-GitHub-181717.svg?logo=github&style=plastic">
 
 **「音楽を知る、きっかけを。」**
 
@@ -52,6 +46,9 @@ https://www.unknownmusic.net/
 - テストユーザログイン機能
 - 管理ユーザ機能（全ユーザの削除可能）
 - 一覧表示機能
+- ログイン保持機能
+- パスワード再設定機能
+- ユーザ認証機能
 
 ## 音楽検索（Spotify api）
 - 音楽検索機能（アーティスト、曲名、アルバムジャケット表示）
@@ -73,9 +70,13 @@ https://www.unknownmusic.net/
 - テスト（Rspec）
 
 # 意識した点
-- 
+- 協調（issues、pull requestsの活用）
+- 独自（Spotify apiを使い、他に類を見ないテーマ）
+- 視覚（背景画像、ホバー時のデザインなど細かいところまでこだわりを持って制作）
+- 向上（常に問題を見つけ、継続的に開発）
 
 # 課題、今後実装したい機能
+- 
 
 # 環境・使用技術
 
