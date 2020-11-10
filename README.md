@@ -76,22 +76,42 @@ https://www.unknownmusic.net/
 - 向上（常に問題を見つけ、継続的に開発）
 
 # 課題、今後実装したい機能
-- 
+- 音楽カテゴリ機能追加
+  - 音楽検索時にカテゴリを表示
+  - 同様のカテゴリの音楽をおすすめに表示
+  - 投稿内容にカテゴリを追加
+  - カテゴリで検索し、投稿内容を絞り込み
 
 # 環境・使用技術
 
 ## バックエンド
+- Ruby 2.5.0
+- Rails 5.2.4.3
 
 ## フロントエンド
+- HTML5/CSS3
+- Bootstrap4
+- JavaScript
+- JQuery
+- SCSS
 
 ## 開発環境
+- Docker/Docker-compose
+- MySQL 5.7
 
 ## 本番環境
+- AWS(VPC、EC2、RDS、S3、Route53、ALB、IAM、ACM)
+- Nginx
+- Unicorn
+
+## テスト
+- Rspec
+
+## その他使用技術
+- Spotify api
 
 ## インフラ構成図
 
 ## ER図
 
-## テスト
 
-## その他使用技術
