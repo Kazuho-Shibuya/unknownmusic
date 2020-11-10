@@ -112,6 +112,8 @@ https://www.unknownmusic.net/
 
 ## インフラ構成図
 
+<img width="1440" alt="AWS_ architecture" src="https://user-images.githubusercontent.com/54101854/98677236-193b7a80-23a0-11eb-86b9-f46cc803b491.png">
+
 ## ER図
 
 
