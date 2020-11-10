@@ -67,7 +67,6 @@
 
 ## その他
 - レスポンシブ対応
-- テスト（Rspec）
 
 # 意識した点
 - 協調（issues、pull requestsの活用）
