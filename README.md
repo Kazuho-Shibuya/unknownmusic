@@ -4,7 +4,6 @@
 <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Kazuho-Shibuya/unknownmusic?style=plastic">
 <img alt="GitHub closed pull requests" src="https://img.shields.io/github/issues-pr-closed/Kazuho-Shibuya/unknownmusic?style=plastic">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Kazuho-Shibuya/unknownmusic?style=plastic">
-<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kazuho-Shibuya/unknownmusic?style=plastic">
 <a href="https://github.com/Kazuho-Shibuya/unknownmusic/languages/top"><img alt="GitHub issues" src="https://img.shields.io/github/languages/top/Kazuho-Shibuya/unknownmusic?style=plastic"></a>
 <img src="https://img.shields.io/badge/-Rails-CC0000.svg?logo=rails&style=plastic">
 <img src="https://img.shields.io/badge/-HTML5-333.svg?logo=html5&style=plastic">
