@@ -15,5 +15,8 @@ RSpec.feature 'Sign_up', type: :feature do
       fill_in 'パスワード（確認）', with: user.password
       click_button '登録する'
     end.to change(User, :count).by(1)
+
+    expect(page).to have_content 'メールを確認して、アカウントを有効にしてください。'
+    expect(current_path).to eq root_path
   end
 end
