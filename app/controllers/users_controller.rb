@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   PER = 20
 
   def index
+    @user = current_user
     @users = User.where(activated: true).page(params[:page]).per(PER).search(params[:search])
   end
 

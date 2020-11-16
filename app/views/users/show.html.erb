@@ -16,7 +16,7 @@
           <%= render 'shared/stats' %>
         </section>
         <section>
-          <%= render 'follow_form' if logged_in? %>
+          <%= render 'follow_form', object: @user, stats_user: @user if logged_in? %>
         </section>
       </aside>
       <div class="col-md-6">
