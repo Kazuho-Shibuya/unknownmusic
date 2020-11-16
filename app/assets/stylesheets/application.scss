@@ -991,7 +991,7 @@ footer {
         display: block;
       }
     }
-    .follow-form {
+    .follow-style {
       margin: 0 0 2rem 0;
       .btn-unfollow {
         background: white;
@@ -1238,7 +1238,7 @@ footer {
       .user:hover::after {
         transform: scale(1, 1);
       }
-      .follow-form {
+      .follow-style {
         float: right;
         margin-top: 1rem;
         .btn-unfollow {
@@ -1427,7 +1427,7 @@ footer {
       .user:hover::after {
         transform: scale(1, 1);
       }
-      .follow-form {
+      .follow-style {
         float: right;
         margin-top: 1rem;
         .btn-unfollow {
@@ -1765,7 +1765,7 @@ footer {
   /* User show */
   .container-show {
     aside {
-      .follow-form {
+      .follow-style {
         margin: 0 0 3rem 0;
       }
     }

@@ -1,9 +1,9 @@
-<% unless current_user?(@user) %>
-  <div class="follow-form">
-    <% if current_user.following?(@user) %>
-      <%= render 'unfollow' %>
+<% unless current_user?(object) %>
+  <div id="follow-form-<%= object.id %>" class="follow-style">
+    <% if current_user.following?(object) %>
+      <%= render 'unfollow', object: object, stats_user: stats_user %>
     <% else %>
-      <%= render 'follow' %>
+      <%= render 'follow', object: object, stats_user: stats_user %>
     <% end %>
   </div>
 <% end %>

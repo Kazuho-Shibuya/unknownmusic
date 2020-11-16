@@ -11,7 +11,18 @@
           </h1>
         </section>
         <section class="stats">
-          <%= render 'shared/stats' %>
+          <a href="<%= following_user_path(@user) %>">
+            <strong id="show-follow-following">
+              <%= @user.following.count %>
+            </strong>
+            フォロー中
+          </a>
+          <a href="<%= followers_user_path(@user) %>">
+            <strong id="show-follow-followers">
+              <%= @user.followers.count %>
+            </strong>
+            フォロワー
+          </a>
         </section>
       </aside>
       <div class="col-md-6">
