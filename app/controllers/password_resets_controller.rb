@@ -41,12 +41,11 @@ class PasswordResetsController < ApplicationController
     params.require(:user).permit(:password, :password_confirmation)
   end
 
-  # beforeフィルタ
   def get_user
     @user = User.find_by(email: params[:email])
   end
 
-  # 正しいユーザーかどうか確認する
+  # 正しいユーザかどうか確認する
   def valid_user
     unless @user&.activated? &&
            @user&.authenticated?(:reset, params[:id])
