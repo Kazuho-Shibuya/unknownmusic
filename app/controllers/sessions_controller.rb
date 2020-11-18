@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:session][:email].downcase)
-    # ユーザがデータベースにあり、かつ、認証に成功した場合
     if user&.authenticate(params[:session][:password])
       if user.activated?
         log_in user

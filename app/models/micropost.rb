@@ -10,12 +10,12 @@ class Micropost < ApplicationRecord
   validates :listening_url, presence: { message: 'を検索してください' }
   validates :content, presence: true, length: { maximum: 70 }
 
-  # マイクロポストをいいねする
+  # 投稿をいいねする
   def favorite(user)
     likes.create(user_id: user.id)
   end
 
-  # マイクロポストのいいねを解除する
+  # 投稿のいいねを解除する
   def unfavorite(user)
     likes.find_by(user_id: user.id).destroy
   end
