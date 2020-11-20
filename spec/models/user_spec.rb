@@ -73,7 +73,7 @@ RSpec.describe User, type: :model do
   end
   context 'メールアドレスが255文字以下の場合' do
     it '登録できる' do
-      user = FactoryBot.build(:user, email: 'a' * 243 + '@example.com')
+      user = FactoryBot.build(:user, email: "#{'a' * 243}@example.com")
       user.valid?
       expect(user).to be_valid
     end
@@ -81,7 +81,7 @@ RSpec.describe User, type: :model do
 
   context 'メールアドレスが256文字以上の場合' do
     it '登録できない' do
-      user = FactoryBot.build(:user, email: 'a' * 244 + '@example.com')
+      user = FactoryBot.build(:user, email: "#{'a' * 244}@example.com")
       user.valid?
       expect(user.errors[:email]).to include('は255文字以内で入力してください')
     end
