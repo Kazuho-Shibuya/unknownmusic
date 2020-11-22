@@ -10,6 +10,8 @@
 <img src="https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=plastic">
 <img src="https://img.shields.io/badge/-Vim-019733.svg?logo=vim&style=plastic">
 
+# 概要
+
 **「音楽を知る、きっかけを。」**
 
 *Unknown Music* は、気軽に音楽を発見、試聴、共有できるアプリです。
@@ -28,7 +30,7 @@
 
 ログインページのかんたんログインよりどなたでもご覧になれます。
 
-※始めるを押下→右上ヘッダー内のログインを押下→かんたんログイン（閲覧用）を押下
+※始めるを押下 → 右上ヘッダー内のログインを押下 → かんたんログイン（閲覧用）を押下
 
 # 制作背景
 日々音楽に触れる中で、下記のような声を耳にしました。
