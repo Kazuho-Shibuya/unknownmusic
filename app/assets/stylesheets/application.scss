@@ -175,46 +175,42 @@ footer {
   min-height: 100vh;
   background-size: cover;
   background-position: center center;
-}
-
-.container-top {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.container-top h1 {
-  margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
-  font-style: italic;
-  font-weight: 900;
-  font-size: 4rem;
-  letter-spacing: 0.2rem;
-}
-
-.container-top p {
-  margin-bottom: 6rem;
-  font-size: 1.25rem;
-  letter-spacing: 0.3rem;
-}
-
-.btn-top {
-  color: white;
-  background: rgba(0, 0, 0, 0.25);
-  border: solid 0.1rem white;
-  padding: 0.75rem 2.25rem;
-  font-size: 1.25rem;
-  text-indent: 0.3rem;
-  letter-spacing: 0.3rem;
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
-  &:hover {
-    background: white;
-    color: black;
-    box-shadow: none;
+  .container-top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    h1 {
+      margin-bottom: 0;
+      font-family: "Roboto", sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 4rem;
+      letter-spacing: 0.2rem;
+    }
+    p {
+      margin-bottom: 6rem;
+      font-size: 1.25rem;
+      letter-spacing: 0.3rem;
+    }
+    .btn-top {
+      color: white;
+      background: rgba(0, 0, 0, 0.25);
+      border: solid 0.1rem white;
+      padding: 0.75rem 2.25rem;
+      font-size: 1.25rem;
+      text-indent: 0.3rem;
+      letter-spacing: 0.3rem;
+      box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+      &:hover {
+        background: white;
+        color: black;
+        box-shadow: none;
+      }
+    }
   }
 }
 
@@ -751,7 +747,6 @@ footer {
       }
       .label {
         margin: 0 0 0.1rem 0;
-        padding: 0;
         display: inline;
       }
       .search-result-non {
@@ -1692,21 +1687,23 @@ footer {
 
   /* TOP */
 
-  .container-top h1 {
-    font-size: 7rem;
-  }
-
-  .container-top p {
-    margin-bottom: 11rem;
-    font-size: 2rem;
-    letter-spacing: 0.55rem;
-  }
-
-  .btn-top {
-    padding: 1rem 3rem;
-    font-size: 2rem;
-    text-indent: 1rem;
-    letter-spacing: 1rem;
+  .top-img {
+    .container-top {
+      h1 {
+        font-size: 7rem;
+      }
+      p {
+        margin-bottom: 11rem;
+        font-size: 2rem;
+        letter-spacing: 0.55rem;
+      }
+      .btn-top {
+        padding: 1rem 3rem;
+        font-size: 2rem;
+        text-indent: 1rem;
+        letter-spacing: 1rem;
+      }
+    }
   }
 
   /* SIGN UP */
