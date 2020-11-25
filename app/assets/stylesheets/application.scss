@@ -8,7 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap");
 
-/* universal */
+/* Universal */
 
 html {
   //10px
@@ -56,7 +56,7 @@ html {
   color: white;
 }
 
-/* header */
+/* Header */
 
 header {
   font-size: 0.5rem;
@@ -119,7 +119,7 @@ header {
   }
 }
 
-/* footer */
+/* Footer */
 
 footer {
   margin-top: auto;
@@ -129,7 +129,7 @@ footer {
   }
 }
 
-/* errors */
+/* Errors */
 
 .error {
   width: 60%;
@@ -167,7 +167,7 @@ footer {
   border-color: yellow;
 }
 
-/* TOP */
+/* Top */
 
 .top-img {
   background-image: image-url("top.jpg");
@@ -214,7 +214,7 @@ footer {
   }
 }
 
-/* SIGN UP */
+/* Sign up */
 
 .signup-img {
   background-image: image-url("signup.jpg");
@@ -277,7 +277,7 @@ footer {
   }
 }
 
-/* LOGIN */
+/* Login */
 
 .login-img {
   background-image: image-url("login.jpg");
@@ -1648,7 +1648,7 @@ footer {
 
 /*　タブレットサイズ対応　*/
 @media (min-width: 768px) {
-  /* universal */
+  /* Universal */
 
   .label {
     width: 75%;
@@ -1659,7 +1659,7 @@ footer {
     color: white;
   }
 
-  /* header */
+  /* Header */
 
   header {
     font-size: 1rem;
@@ -1685,7 +1685,7 @@ footer {
     }
   }
 
-  /* TOP */
+  /* Top */
 
   .top-img {
     .container-top {
@@ -1706,7 +1706,7 @@ footer {
     }
   }
 
-  /* SIGN UP */
+  /* Sign up */
 
   .container-signup {
     .field {
@@ -1715,7 +1715,7 @@ footer {
       }
     }
   }
-  /* LOGIN */
+  /* Login */
 
   .container-login {
     .field {
@@ -1842,7 +1842,7 @@ footer {
     width: 50%;
   }
 
-  /* header */
+  /* Header */
 
   header {
     font-size: 1.5rem;
@@ -1865,7 +1865,7 @@ footer {
     }
   }
 
-  /* TOP */
+  /* Top */
 
   .container-top p {
     margin-bottom: 10rem;
@@ -1880,7 +1880,7 @@ footer {
     letter-spacing: 1rem;
   }
 
-  /* SIGN UP */
+  /* Sign up */
 
   .container-signup {
     .eng-title {
@@ -1896,7 +1896,7 @@ footer {
     }
   }
 
-  /* LOGIN */
+  /* Login */
 
   .container-login {
     .eng-title {
@@ -2127,7 +2127,7 @@ footer {
     }
   }
 
-  /* errors */
+  /* Errors */
 
   .error {
     width: 50%;
