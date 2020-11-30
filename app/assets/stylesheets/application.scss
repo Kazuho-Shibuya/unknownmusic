@@ -826,77 +826,76 @@ footer {
   min-height: 100vh;
   background-size: cover;
   background-position: center center;
-}
-
-.container-edit {
-  color: white;
-  .eng-title {
-    margin: 5rem 0 0.25rem 0;
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 1.5rem;
-  }
-  .jpn-title {
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
-    margin: 0;
-  }
-  .field {
-    font-size: 1.25rem;
-    .error {
-      margin: 0 auto;
+  .container-edit {
+    color: white;
+    .eng-title {
+      margin: 5rem 0 0.25rem 0;
+      font-family: "Roboto", sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.5rem;
     }
-    .img-edit {
-      margin: 2rem 0 0 0;
-      padding: 0;
-      .user-img {
-        margin-bottom: 0.5rem;
-        border: solid 0.3rem white;
-        object-fit: cover;
-        height: 10rem;
-        width: 10rem;
-      }
-      .img-change {
-        color: white;
-        letter-spacing: 0.2rem;
-        &:hover {
-          cursor: pointer;
-          color: gold;
-        }
-        input {
-          display: none;
-        }
-      }
+    .jpn-title {
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 700;
+      font-size: 3rem;
+      margin: 0;
     }
-    .user-edit {
-      p {
-        margin: 0;
+    .field {
+      font-size: 1.25rem;
+      .error {
+        margin: 0 auto;
+      }
+      .img-edit {
+        margin: 2rem 0 0 0;
         padding: 0;
+        .user-img {
+          margin-bottom: 0.5rem;
+          border: solid 0.3rem white;
+          object-fit: cover;
+          height: 10rem;
+          width: 10rem;
+        }
+        .img-change {
+          color: white;
+          letter-spacing: 0.2rem;
+          &:hover {
+            cursor: pointer;
+            color: gold;
+          }
+          input {
+            display: none;
+          }
+        }
       }
-      .edit-form {
-        margin: 0;
-        padding: 0.1rem 0 0 0.1rem;
-        border: 0;
-        resize: none;
-        width: 60%;
-        height: 3rem;
-        border-radius: 0.5rem;
-      }
-      .btn-edit {
-        margin: 4rem 0 0 0;
-        color: white;
-        background: rgba(0, 0, 0, 0.25);
-        border: solid 0.1rem white;
-        padding: 0.75rem 2.25rem;
-        font-size: 1.5rem;
-        text-indent: 0.2rem;
-        letter-spacing: 0.2rem;
-        &:hover {
-          background: white;
-          color: black;
-          box-shadow: none;
+      .user-edit {
+        p {
+          margin: 0;
+          padding: 0;
+        }
+        .edit-form {
+          margin: 0;
+          padding: 0.1rem 0 0 0.1rem;
+          border: 0;
+          resize: none;
+          width: 60%;
+          height: 3rem;
+          border-radius: 0.5rem;
+        }
+        .btn-edit {
+          margin: 4rem 0 0 0;
+          color: white;
+          background: rgba(0, 0, 0, 0.25);
+          border: solid 0.1rem white;
+          padding: 0.75rem 2.25rem;
+          font-size: 1.5rem;
+          text-indent: 0.2rem;
+          letter-spacing: 0.2rem;
+          &:hover {
+            background: white;
+            color: black;
+            box-shadow: none;
+          }
         }
       }
     }
@@ -1757,6 +1756,33 @@ footer {
 
   /* Home */
 
+  /* User edit */
+
+  .edit-img {
+    .container-edit {
+      .eng-title {
+        margin: 5rem 0 0.25rem 0;
+        font-family: "Roboto", sans-serif;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 2rem;
+      }
+      .jpn-title {
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: 700;
+        font-size: 4rem;
+        margin: 0;
+      }
+      .field {
+        .user-edit {
+          .edit-form {
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+
   /* User show */
   .container-show {
     aside {
@@ -1774,31 +1800,6 @@ footer {
     }
     .jpn-title {
       font-size: 4rem;
-    }
-  }
-
-  /* User edit */
-
-  .container-edit {
-    .eng-title {
-      margin: 5rem 0 0.25rem 0;
-      font-family: "Roboto", sans-serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 2rem;
-    }
-    .jpn-title {
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: 700;
-      font-size: 4rem;
-      margin: 0;
-    }
-    .field {
-      .user-edit {
-        .edit-form {
-          width: 75%;
-        }
-      }
     }
   }
 
@@ -2065,6 +2066,20 @@ footer {
     }
   }
 
+  /* User edit */
+
+  .edit-img {
+    .container-edit {
+      .field {
+        .user-edit {
+          .edit-form {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
   /* User show */
 
   .container-show {
@@ -2142,16 +2157,5 @@ footer {
 
   .error {
     width: 50%;
-  }
-
-  /* User edit */
-  .container-edit {
-    .field {
-      .user-edit {
-        .edit-form {
-          width: 50%;
-        }
-      }
-    }
   }
 }
