@@ -14,7 +14,7 @@
 
 ### **「音楽を知る、きっかけを。」**
 
-*Unknown Music* は、気軽に音楽を発見、試聴、共有できるアプリです。
+*Unknown Music* は、気軽に音楽を発見、試聴、投稿できるアプリです。
 
 <img width="1440" alt="UnknownMusic" src="https://user-images.githubusercontent.com/54101854/98531981-6e09c300-22c4-11eb-922c-1a64fd10f071.png">
 
