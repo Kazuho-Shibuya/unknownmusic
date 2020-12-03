@@ -1517,11 +1517,24 @@ footer {
   }
   .about {
     margin: 4rem 0 0 0;
+    h2 {
+      margin: 0 0 2rem 0;
+    }
+    p {
+      display: inline-block;
+    }
+    .unknownmusic {
+      font-weight: 700;
+      font-style: italic;
+      letter-spacing: 0.1rem;
+    }
   }
   .feature {
     margin: 6rem 0 2rem 0;
-    span {
+    p {
       font-size: 1.25rem;
+      display: inline-block;
+      margin: 0;
     }
     .popular {
       margin-top: 1.5rem;
