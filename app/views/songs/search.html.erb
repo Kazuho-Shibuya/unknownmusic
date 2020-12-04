@@ -1,6 +1,4 @@
 <% provide(:title, '音楽検索') %>
-<% provide(:path, songs_search_path) %>
-<% provide(:placeholder, 'アーティスト名と曲名で検索') %>
 <div class="song-img">
   <div id="wrapper" class="container-song">
     <%= render 'layouts/header' %>
@@ -8,9 +6,9 @@
       <div class="col-12 text-center justify-content-center">
         <p class="eng-title text-center">Music search</p>
         <h1 class="jpn-title text-center">音楽検索</h1>
-        <%= form_with url: yield(:path), method: :get, local: true, class: "text-center" do |form| %>
+        <%= form_with url: songs_search_path, method: :get, local: true, class: "text-center" do |form| %>
           <div>
-            <%= text_field_tag :search, params[:search], placeholder: yield(:placeholder), class: "text-center search-form" %>
+            <%= text_field_tag :search, params[:search], placeholder: "アーティスト名、曲名で検索", class: "text-center search-form" %>
           </div>
           <div>
             <%= submit_tag '音楽検索', :name => nil, class: "btn-style btn-song" %>
