@@ -573,7 +573,7 @@ seventeenth_user.microposts.create!(
 sixteenth_user.microposts.create!(
   song: '清水 翔太 feat.仲宗根 泉(HY)',
   artist: '366日',
-  content: '超名曲。２人の声が合ってる。',
+  content: '超名曲。２人のハーモニーが素敵だよね〜。',
   listening_url: 'https://p.scdn.co/mp3-preview/51c1769409d61bf6a4b2508dadfce6a4eb2cd026?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
 )
 second_user.microposts.create!(
@@ -585,7 +585,7 @@ second_user.microposts.create!(
 nineteenth_user.microposts.create!(
   song: '青い珊瑚礁',
   artist: '松田聖子',
-  content: '夏が待ち遠おしい。。',
+  content: '夏が待ち遠しい。。',
   listening_url: 'https://p.scdn.co/mp3-preview/e1b80b719601febbbfd462f3dfeb81c5ec23978b?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
 )
 first_user.microposts.create!(
@@ -603,7 +603,7 @@ second_user.microposts.create!(
 eleventh_user.microposts.create!(
   song: '白日',
   artist: 'King Gnu',
-  content: '美しい。そしてかっこいい。',
+  content: '井口さんの高音って素敵だよね〜。そして曲もかっこいい。',
   listening_url: 'https://p.scdn.co/mp3-preview/2d618522895fc22ece3a7d68239d8edf17a79958?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
 )
 second_user.microposts.create!(
@@ -723,7 +723,7 @@ fifth_user.microposts.create!(
 second_user.microposts.create!(
   song: 'Emotions',
   artist: 'MAN WITH A MISSION',
-  content: 'マジて最高にかっこいい。',
+  content: 'マジで最高にかっこいい。',
   listening_url: 'https://p.scdn.co/mp3-preview/be6e64952e0c3c911b5b7fc8e5d403e9f8b71220?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
 )
 seventh_user.microposts.create!(
@@ -771,13 +771,13 @@ second_user.microposts.create!(
 thirtieth_user.microposts.create!(
   song: '紅蓮華',
   artist: 'LiSA',
-  content: '鬼滅の刃、是非みて欲しい。かっこいい曲。',
+  content: '鬼滅の刃、みんな見た？？',
   listening_url: 'https://p.scdn.co/mp3-preview/3fbebc524b4fd2295324a80baaff01bbc21038e6?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
 )
 third_user.microposts.create!(
   song: 'HANABI',
   artist: 'Mr.Children',
-  content: 'またコードブルーみたいね。',
+  content: 'この曲聴くと、コードブルーまた見たくなる！！',
   listening_url: 'https://p.scdn.co/mp3-preview/56a5664281e5a380f315b337f2a4421b780d62bd?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
 )
 fourth_user.microposts.create!(
@@ -801,7 +801,7 @@ second_user.microposts.create!(
 third_user.microposts.create!(
   song: '決意の朝に',
   artist: 'Aqua Timez',
-  content: '辛い時、負けないで聴きたい。',
+  content: '辛いとき聴きたくなる曲。',
   listening_url: 'https://p.scdn.co/mp3-preview/253019e1f54206fc07218814c2d26c637368071d?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
 )
 fourth_user.microposts.create!(
