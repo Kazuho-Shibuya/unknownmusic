@@ -1134,156 +1134,155 @@ footer {
   min-height: 100vh;
   background-size: cover;
   background-position: center center;
-}
-
-.container-users-index {
-  color: white;
-  .eng-title {
-    margin: 5rem 0 0.25rem 0;
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 1.5rem;
-  }
-  .jpn-title {
-    margin: 0 0 2rem 0;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
-  }
-  .user-search {
-    margin: 1rem 0;
-    font-size: 1.25rem;
-    .search {
-      width: 50%;
-      height: 3rem;
-      border-radius: 0.5rem;
-      padding: 0.1rem 0 0 0.5rem;
-      border: 0;
+  .container-users-index {
+    color: white;
+    .eng-title {
+      margin: 5rem 0 0.25rem 0;
+      font-family: "Roboto", sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.5rem;
     }
-    .btn-search {
-      color: white;
-      background: rgba(0, 0, 0, 0.25);
-      border: solid 0.1rem white;
-      padding: 0.75rem 2.25rem;
-      font-size: 1.25rem;
-      text-indent: 0.3rem;
-      letter-spacing: 0.3rem;
-      &:hover {
-        background: white;
-        color: black;
-        box-shadow: none;
-      }
+    .jpn-title {
+      margin: 0 0 2rem 0;
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 700;
+      font-size: 3rem;
     }
-  }
-  .users {
-    padding: 0;
-    li {
-      padding: 0 2rem;
+    .user-search {
+      margin: 1rem 0;
       font-size: 1.25rem;
-      list-style: none;
-      margin-bottom: 1rem;
-      background: rgba(0, 0, 0, 0.3);
-      box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
-      border-radius: 3rem;
-      border: solid 0.1rem white;
-      position: relative;
-      .user-img {
-        margin: 1rem 1rem 1rem 0;
-        height: 5rem;
-        width: 5rem;
+      .search {
+        width: 50%;
+        height: 3rem;
+        border-radius: 0.5rem;
+        padding: 0.1rem 0 0 0.5rem;
+        border: 0;
       }
-      .user {
+      .btn-search {
         color: white;
-        text-decoration: none;
-        position: relative;
-        display: inline-block;
-      }
-      .user::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -0.1rem;
-        width: 100%;
-        height: 0.1rem;
-        background-color: white;
-        transform: scale(0, 1);
-        transform-origin: left top;
-        transition: transform 0.3s;
-      }
-      .user:hover::after {
-        transform: scale(1, 1);
-      }
-      .follow-style {
-        float: right;
-        margin-top: 1rem;
-        .btn-unfollow {
+        background: rgba(0, 0, 0, 0.25);
+        border: solid 0.1rem white;
+        padding: 0.75rem 2.25rem;
+        font-size: 1.25rem;
+        text-indent: 0.3rem;
+        letter-spacing: 0.3rem;
+        &:hover {
           background: white;
           color: black;
-          border: solid 0.1rem white;
-          padding: 0.75rem 2.25rem;
-          font-size: 1.25rem;
-          text-indent: 0.3rem;
-          letter-spacing: 0.3rem;
           box-shadow: none;
-          .normal {
-            display: inline;
-          }
-          .hover {
-            display: none;
-          }
-          &:hover {
-            color: white;
-            background: rgb(163, 31, 31);
+        }
+      }
+    }
+    .users {
+      padding: 0;
+      li {
+        padding: 0 2rem;
+        font-size: 1.25rem;
+        list-style: none;
+        margin-bottom: 1rem;
+        background: rgba(0, 0, 0, 0.3);
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+        border-radius: 3rem;
+        border: solid 0.1rem white;
+        position: relative;
+        .user-img {
+          margin: 1rem 1rem 1rem 0;
+          height: 5rem;
+          width: 5rem;
+        }
+        .user {
+          color: white;
+          text-decoration: none;
+          position: relative;
+          display: inline-block;
+        }
+        .user::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -0.1rem;
+          width: 100%;
+          height: 0.1rem;
+          background-color: white;
+          transform: scale(0, 1);
+          transform-origin: left top;
+          transition: transform 0.3s;
+        }
+        .user:hover::after {
+          transform: scale(1, 1);
+        }
+        .follow-style {
+          float: right;
+          margin-top: 1rem;
+          .btn-unfollow {
+            background: white;
+            color: black;
+            border: solid 0.1rem white;
+            padding: 0.75rem 2.25rem;
+            font-size: 1.25rem;
+            text-indent: 0.3rem;
+            letter-spacing: 0.3rem;
             box-shadow: none;
-            border: solid 0.1rem rgb(163, 31, 31);
             .normal {
-              display: none;
-            }
-            .hover {
               display: inline;
             }
+            .hover {
+              display: none;
+            }
+            &:hover {
+              color: white;
+              background: rgb(163, 31, 31);
+              box-shadow: none;
+              border: solid 0.1rem rgb(163, 31, 31);
+              .normal {
+                display: none;
+              }
+              .hover {
+                display: inline;
+              }
+            }
           }
-        }
-        .btn-follow {
-          color: white;
-          background: rgba(0, 0, 0, 0.25);
-          border: solid 0.1rem white;
-          padding: 0.75rem 2.25rem;
-          font-size: 1.25rem;
-          text-indent: 0.3rem;
-          letter-spacing: 0.3rem;
-          &:hover {
-            background-color: #003ea6;
+          .btn-follow {
             color: white;
-            border: solid 0.1rem #003ea6;
+            background: rgba(0, 0, 0, 0.25);
+            border: solid 0.1rem white;
+            padding: 0.75rem 2.25rem;
+            font-size: 1.25rem;
+            text-indent: 0.3rem;
+            letter-spacing: 0.3rem;
+            &:hover {
+              background-color: #003ea6;
+              color: white;
+              border: solid 0.1rem #003ea6;
+            }
+          }
+        }
+        .admin-trash {
+          margin: 0 2rem 0.1rem 0;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          color: white;
+          &:hover {
+            color: rgb(164, 247, 164);
           }
         }
       }
-      .admin-trash {
-        margin: 0 2rem 0.1rem 0;
-        position: absolute;
-        right: 0;
-        bottom: 0;
+    }
+    .pagination {
+      float: right;
+      .page-item.active .page-link {
         color: white;
-        &:hover {
-          color: rgb(164, 247, 164);
-        }
-      }
-    }
-  }
-  .pagination {
-    float: right;
-    .page-item.active .page-link {
-      color: white;
-      background-color: rgba(0, 0, 0, 0.25);
-      border-color: gold;
-    }
-    .page-link {
-      color: white;
-      background-color: rgba(0, 0, 0, 0.25);
-      &:hover {
+        background-color: rgba(0, 0, 0, 0.25);
         border-color: gold;
+      }
+      .page-link {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.25);
+        &:hover {
+          border-color: gold;
+        }
       }
     }
   }
@@ -1801,13 +1800,14 @@ footer {
   }
 
   /* User index */
-
-  .container-users-index {
-    .eng-title {
-      font-size: 2rem;
-    }
-    .jpn-title {
-      font-size: 4rem;
+  .users-index-img {
+    .container-users-index {
+      .eng-title {
+        font-size: 2rem;
+      }
+      .jpn-title {
+        font-size: 4rem;
+      }
     }
   }
 
@@ -2129,11 +2129,12 @@ footer {
   }
 
   /* User index */
-
-  .container-users-index {
-    .user-search {
-      .search {
-        width: 25%;
+  .users-index-img {
+    .container-users-index {
+      .user-search {
+        .search {
+          width: 25%;
+        }
       }
     }
   }
