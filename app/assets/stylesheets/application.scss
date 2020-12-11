@@ -1818,12 +1818,6 @@ footer {
     }
   }
 
-  /* errors */
-
-  .error {
-    width: 75%;
-  }
-
   /* Reset password */
 
   .container-reset-password {
@@ -1838,6 +1832,12 @@ footer {
         width: 50%;
       }
     }
+  }
+
+  /* errors */
+
+  .error {
+    width: 75%;
   }
 }
 
