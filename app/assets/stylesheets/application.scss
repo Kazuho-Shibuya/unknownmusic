@@ -56,6 +56,14 @@ html {
   color: white;
 }
 
+.eng-title {
+  margin: 5rem 0 0.25rem 0;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
 /* Header */
 
 header {
@@ -224,13 +232,6 @@ footer {
   background-position: center center;
   .container-signup {
     color: white;
-    .eng-title {
-      margin: 5rem 0 0.25rem 0;
-      font-family: "Roboto", sans-serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 1.5rem;
-    }
     .jpn-title {
       font-family: "Noto Sans JP", sans-serif;
       font-weight: 700;
@@ -286,13 +287,6 @@ footer {
   background-position: center center;
   .container-login {
     color: white;
-    .eng-title {
-      margin: 5rem 0 0.25rem 0;
-      font-family: "Roboto", sans-serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 1.5rem;
-    }
     .jpn-title {
       font-family: "Noto Sans JP", sans-serif;
       font-weight: 700;
@@ -389,13 +383,6 @@ footer {
   background-position: center center;
   .container-popular {
     color: white;
-    .eng-title {
-      margin: 5rem 0 0.25rem 0;
-      font-family: "Roboto", sans-serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 1.5rem;
-    }
     .jpn-title {
       margin: 0 0 4rem 0;
       font-family: "Noto Sans JP", sans-serif;
@@ -490,13 +477,6 @@ footer {
     color: white;
     .song-search {
       margin-bottom: 1rem;
-      .eng-title {
-        margin: 5rem 0 0.25rem 0;
-        font-family: "Roboto", sans-serif;
-        font-style: italic;
-        font-weight: 300;
-        font-size: 1.5rem;
-      }
       .jpn-title {
         font-family: "Noto Sans JP", sans-serif;
         font-weight: 700;
@@ -824,13 +804,6 @@ footer {
   background-position: center center;
   .container-edit {
     color: white;
-    .eng-title {
-      margin: 5rem 0 0.25rem 0;
-      font-family: "Roboto", sans-serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 1.5rem;
-    }
     .jpn-title {
       font-family: "Noto Sans JP", sans-serif;
       font-weight: 700;
@@ -1136,13 +1109,6 @@ footer {
   background-position: center center;
   .container-users-index {
     color: white;
-    .eng-title {
-      margin: 5rem 0 0.25rem 0;
-      font-family: "Roboto", sans-serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 1.5rem;
-    }
     .jpn-title {
       margin: 0 0 2rem 0;
       font-family: "Noto Sans JP", sans-serif;
@@ -1299,13 +1265,6 @@ footer {
   .container-about {
     color: white;
     font-size: 1.5rem;
-    .eng-title {
-      margin: 5rem 0 0.25rem 0;
-      font-family: "Roboto", sans-serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 1.5rem;
-    }
     .jpn-title {
       font-family: "Noto Sans JP", sans-serif;
       font-weight: 700;
@@ -1579,13 +1538,6 @@ footer {
 
 .container-reset-password {
   color: white;
-  .eng-title {
-    margin: 5rem 0 0.25rem 0;
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 1.5rem;
-  }
   .jpn-title {
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 700;
@@ -1769,10 +1721,6 @@ footer {
   .edit-img {
     .container-edit {
       .eng-title {
-        margin: 5rem 0 0.25rem 0;
-        font-family: "Roboto", sans-serif;
-        font-style: italic;
-        font-weight: 300;
         font-size: 2rem;
       }
       .jpn-title {
@@ -1944,8 +1892,6 @@ footer {
   .popular-img {
     .container-popular {
       .eng-title {
-        margin: 5rem 0 0.25rem 0;
-        font-weight: 300;
         font-size: 2rem;
       }
       .jpn-title {
@@ -1975,8 +1921,6 @@ footer {
     .container-song {
       .song-search {
         .eng-title {
-          margin: 5rem 0 0.25rem 0;
-          font-weight: 300;
           font-size: 2rem;
         }
         .jpn-title {
