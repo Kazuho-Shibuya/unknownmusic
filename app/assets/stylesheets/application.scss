@@ -1678,6 +1678,12 @@ footer {
     }
   }
 
+  /* Errors */
+
+  .error {
+    width: 75%;
+  }
+
   /* Top */
 
   .top-img {
@@ -1833,12 +1839,6 @@ footer {
       }
     }
   }
-
-  /* errors */
-
-  .error {
-    width: 75%;
-  }
 }
 
 /*　PCサイズ対応　*/
@@ -1872,6 +1872,12 @@ footer {
         height: 0.1rem;
       }
     }
+  }
+
+  /* Errors */
+
+  .error {
+    width: 50%;
   }
 
   /* Top */
@@ -2163,11 +2169,5 @@ footer {
     .jpn-title {
       font-size: 4rem;
     }
-  }
-
-  /* Errors */
-
-  .error {
-    width: 50%;
   }
 }
