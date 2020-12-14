@@ -64,6 +64,13 @@ html {
   font-size: 1.5rem;
 }
 
+.jpn-title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+}
+
 /* Header */
 
 header {
@@ -232,12 +239,6 @@ footer {
   background-position: center center;
   .container-signup {
     color: white;
-    .jpn-title {
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: 700;
-      font-size: 3rem;
-      margin: 0;
-    }
     .field {
       font-size: 1.25rem;
       margin: 0 0 0 0;
@@ -287,12 +288,6 @@ footer {
   background-position: center center;
   .container-login {
     color: white;
-    .jpn-title {
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: 700;
-      font-size: 3rem;
-      margin: 0;
-    }
     .field {
       font-size: 1.25rem;
       margin: 3rem 0 0 0;
@@ -385,9 +380,6 @@ footer {
     color: white;
     .jpn-title {
       margin: 0 0 4rem 0;
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: 700;
-      font-size: 3rem;
     }
     .icon-style {
       font-family: "Noto Sans JP", sans-serif;
@@ -477,12 +469,6 @@ footer {
     color: white;
     .song-search {
       margin-bottom: 1rem;
-      .jpn-title {
-        font-family: "Noto Sans JP", sans-serif;
-        font-weight: 700;
-        font-size: 3rem;
-        margin: 0;
-      }
       .search-form {
         width: 50%;
         font-size: 1rem;
@@ -804,12 +790,6 @@ footer {
   background-position: center center;
   .container-edit {
     color: white;
-    .jpn-title {
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: 700;
-      font-size: 3rem;
-      margin: 0;
-    }
     .field {
       font-size: 1.25rem;
       .error {
@@ -1111,9 +1091,6 @@ footer {
     color: white;
     .jpn-title {
       margin: 0 0 2rem 0;
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: 700;
-      font-size: 3rem;
     }
     .user-search {
       margin: 1rem 0;
@@ -1265,12 +1242,6 @@ footer {
   .container-about {
     color: white;
     font-size: 1.5rem;
-    .jpn-title {
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: 700;
-      font-size: 3rem;
-      margin: 0;
-    }
     h3 {
       margin: 0;
       font-size: 1.5rem;
@@ -1538,12 +1509,6 @@ footer {
 
 .container-reset-password {
   color: white;
-  .jpn-title {
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
-    margin: 0;
-  }
   .field {
     font-size: 1.25rem;
     margin: 0;
@@ -1724,10 +1689,7 @@ footer {
         font-size: 2rem;
       }
       .jpn-title {
-        font-family: "Noto Sans JP", sans-serif;
-        font-weight: 700;
         font-size: 4rem;
-        margin: 0;
       }
       .field {
         .user-edit {
@@ -1896,7 +1858,6 @@ footer {
       }
       .jpn-title {
         margin: 0 0 4rem 0;
-        font-weight: 700;
         font-size: 4rem;
       }
       .microposts {
@@ -1925,7 +1886,6 @@ footer {
         }
         .jpn-title {
           font-size: 4rem;
-          font-weight: 700;
         }
         .search-form {
           font-size: 2rem;
