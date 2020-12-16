@@ -76,6 +76,38 @@ html {
   font-weight: 400;
 }
 
+.history {
+  color: gray;
+}
+
+.listening {
+  color: #0b9ff5;
+  &:hover {
+    color: gold;
+    text-decoration: none;
+  }
+}
+
+.btn-like {
+  color: #ca046e;
+  padding: 0;
+}
+
+.btn-like-non {
+  color: white;
+  padding: 0;
+  &:hover {
+    color: #ca046e;
+  }
+}
+
+.trash {
+  color: white;
+  &:hover {
+    color: rgb(164, 247, 164);
+  }
+}
+
 /* Header */
 
 header {
@@ -426,33 +458,6 @@ footer {
         .user:hover::after {
           transform: scale(1, 1);
         }
-        .history {
-          color: gray;
-        }
-        .listening {
-          color: #0b9ff5;
-          &:hover {
-            color: gold;
-            text-decoration: none;
-          }
-        }
-        .btn-like {
-          color: #ca046e;
-          padding: 0;
-        }
-        .btn-like-non {
-          color: white;
-          padding: 0;
-          &:hover {
-            color: #ca046e;
-          }
-        }
-        .trash {
-          color: white;
-          &:hover {
-            color: rgb(164, 247, 164);
-          }
-        }
       }
     }
   }
@@ -726,33 +731,6 @@ footer {
         .user:hover::after {
           transform: scale(1, 1);
         }
-        .history {
-          color: gray;
-        }
-        .listening {
-          color: #0b9ff5;
-          &:hover {
-            color: gold;
-            text-decoration: none;
-          }
-        }
-        .btn-like {
-          color: #ca046e;
-          padding: 0;
-        }
-        .btn-like-non {
-          color: white;
-          padding: 0;
-          &:hover {
-            color: #ca046e;
-          }
-        }
-        .trash {
-          color: white;
-          &:hover {
-            color: rgb(164, 247, 164);
-          }
-        }
       }
     }
     .pagination {
@@ -1020,33 +998,6 @@ footer {
         }
         .user:hover::after {
           transform: scale(1, 1);
-        }
-        .history {
-          color: gray;
-        }
-        .listening {
-          color: #0b9ff5;
-          &:hover {
-            color: gold;
-            text-decoration: none;
-          }
-        }
-        .btn-like {
-          color: #ca046e;
-          padding: 0;
-        }
-        .btn-like-non {
-          color: white;
-          padding: 0;
-          &:hover {
-            color: #ca046e;
-          }
-        }
-        .trash {
-          color: white;
-          &:hover {
-            color: rgb(164, 247, 164);
-          }
         }
       }
     }
