@@ -108,6 +108,13 @@ html {
   }
 }
 
+.user {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
 /* Header */
 
 header {
@@ -437,12 +444,6 @@ footer {
           height: 5rem;
           width: 5rem;
         }
-        .user {
-          color: white;
-          text-decoration: none;
-          position: relative;
-          display: inline-block;
-        }
         .user::after {
           content: "";
           position: absolute;
@@ -559,12 +560,6 @@ footer {
           border: solid 0.3rem white;
           width: 10rem;
           height: 10rem;
-        }
-        .user {
-          color: white;
-          text-decoration: none;
-          position: relative;
-          display: inline-block;
         }
         .user::after {
           content: "";
@@ -710,12 +705,6 @@ footer {
           height: 5rem;
           width: 5rem;
         }
-        .user {
-          color: white;
-          text-decoration: none;
-          position: relative;
-          display: inline-block;
-        }
         .user::after {
           content: "";
           position: absolute;
@@ -845,12 +834,6 @@ footer {
           width: 10rem;
           height: 10rem;
         }
-        .user {
-          color: white;
-          text-decoration: none;
-          position: relative;
-          display: inline-block;
-        }
         .user::after {
           content: "";
           position: absolute;
@@ -978,12 +961,6 @@ footer {
           height: 5rem;
           width: 5rem;
         }
-        .user {
-          color: white;
-          text-decoration: none;
-          position: relative;
-          display: inline-block;
-        }
         .user::after {
           content: "";
           position: absolute;
@@ -1073,12 +1050,6 @@ footer {
           margin: 1rem 1rem 1rem 0;
           height: 5rem;
           width: 5rem;
-        }
-        .user {
-          color: white;
-          text-decoration: none;
-          position: relative;
-          display: inline-block;
         }
         .user::after {
           content: "";
@@ -1265,12 +1236,6 @@ footer {
           width: 10rem;
           height: 10rem;
         }
-        .user {
-          color: white;
-          text-decoration: none;
-          position: relative;
-          display: inline-block;
-        }
         .user::after {
           content: "";
           position: absolute;
@@ -1328,12 +1293,6 @@ footer {
           margin: 1rem 1rem 1rem 0;
           height: 5rem;
           width: 5rem;
-        }
-        .user {
-          color: white;
-          text-decoration: none;
-          position: relative;
-          display: inline-block;
         }
         .user::after {
           content: "";
