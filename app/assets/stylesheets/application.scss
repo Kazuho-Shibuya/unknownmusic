@@ -517,13 +517,6 @@ footer {
         }
       }
       .icon {
-        .listening {
-          color: #0b9ff5;
-          &:hover {
-            color: gold;
-            text-decoration: none;
-          }
-        }
         .share {
           color: #07f1bf;
           background-color: rgba(0, 0, 0, 0);
@@ -633,11 +626,6 @@ footer {
         .listening {
           margin: 0;
           padding: 0;
-          color: #0b9ff5;
-          &:hover {
-            color: gold;
-            text-decoration: none;
-          }
         }
         .icon {
           .search {
@@ -1829,11 +1817,6 @@ footer {
           .listening {
             margin: 0;
             padding: 0;
-            color: #0b9ff5;
-            &:hover {
-              color: gold;
-              text-decoration: none;
-            }
           }
           .icon {
             margin-top: 0.5rem;
