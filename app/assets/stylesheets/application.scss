@@ -91,6 +91,9 @@ html {
 .btn-like {
   color: #ca046e;
   padding: 0;
+  &:hover {
+    color: #ca046e;
+  }
 }
 
 .btn-like-non {
