@@ -43,7 +43,7 @@
           </span>
           <span class="col">
             <% if current_user?(micropost.user) %>
-              <%= link_to "", micropost, method: :delete, class: 'far fa-trash-alt icon-size trash',
+              <%= link_to "", micropost, method: :delete, class: 'far fa-trash-alt icon-size btn-trash',
                                        data: { confirm: "本当に削除しますか？" } %>
             <% end %>
           </span>
