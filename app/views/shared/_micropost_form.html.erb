@@ -51,7 +51,7 @@
     <% else %>
       <p class="mt-4">
         <span>
-          <%= link_to @result_listening_url, class: 'fa fa-play listening', target: :_blank do %>
+          <%= link_to @result_listening_url, class: 'fa fa-play btn-listening', target: :_blank do %>
             <span class="icon-style">試聴</span>
             <%= f.hidden_field :listening_url, :value => @result_listening_url %>
           <% end %>
