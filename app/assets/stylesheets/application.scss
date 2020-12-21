@@ -80,7 +80,7 @@ html {
   color: gray;
 }
 
-.listening {
+.btn-listening {
   color: #0b9ff5;
   &:hover {
     color: gold;
@@ -116,6 +116,27 @@ html {
   text-decoration: none;
   position: relative;
   display: inline-block;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.user::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  width: 100%;
+  height: 0.1rem;
+  background-color: white;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+
+.user:hover::after {
+  transform: scale(1, 1);
 }
 
 /* Header */
@@ -447,21 +468,6 @@ footer {
           height: 5rem;
           width: 5rem;
         }
-        .user::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -0.1rem;
-          width: 100%;
-          height: 0.1rem;
-          background-color: white;
-          transform: scale(0, 1);
-          transform-origin: left top;
-          transition: transform 0.3s;
-        }
-        .user:hover::after {
-          transform: scale(1, 1);
-        }
       }
     }
   }
@@ -557,21 +563,6 @@ footer {
           width: 10rem;
           height: 10rem;
         }
-        .user::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -0.1rem;
-          width: 100%;
-          height: 0.1rem;
-          background-color: white;
-          transform: scale(0, 1);
-          transform-origin: left top;
-          transition: transform 0.3s;
-        }
-        .user:hover::after {
-          transform: scale(1, 1);
-        }
       }
       .stats {
         overflow: auto;
@@ -626,7 +617,7 @@ footer {
           padding: 0.1rem 0 0 0.1rem;
           border: 0;
         }
-        .listening {
+        .btn-listening {
           margin: 0;
           padding: 0;
         }
@@ -695,21 +686,6 @@ footer {
           margin: 1rem 0 0 0;
           height: 5rem;
           width: 5rem;
-        }
-        .user::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -0.1rem;
-          width: 100%;
-          height: 0.1rem;
-          background-color: white;
-          transform: scale(0, 1);
-          transform-origin: left top;
-          transition: transform 0.3s;
-        }
-        .user:hover::after {
-          transform: scale(1, 1);
         }
       }
     }
@@ -825,21 +801,6 @@ footer {
           width: 10rem;
           height: 10rem;
         }
-        .user::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -0.1rem;
-          width: 100%;
-          height: 0.1rem;
-          background-color: white;
-          transform: scale(0, 1);
-          transform-origin: left top;
-          transition: transform 0.3s;
-        }
-        .user:hover::after {
-          transform: scale(1, 1);
-        }
       }
       .stats {
         overflow: auto;
@@ -952,21 +913,6 @@ footer {
           height: 5rem;
           width: 5rem;
         }
-        .user::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -0.1rem;
-          width: 100%;
-          height: 0.1rem;
-          background-color: white;
-          transform: scale(0, 1);
-          transform-origin: left top;
-          transition: transform 0.3s;
-        }
-        .user:hover::after {
-          transform: scale(1, 1);
-        }
       }
     }
     .pagination {
@@ -1041,21 +987,6 @@ footer {
           margin: 1rem 1rem 1rem 0;
           height: 5rem;
           width: 5rem;
-        }
-        .user::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -0.1rem;
-          width: 100%;
-          height: 0.1rem;
-          background-color: white;
-          transform: scale(0, 1);
-          transform-origin: left top;
-          transition: transform 0.3s;
-        }
-        .user:hover::after {
-          transform: scale(1, 1);
         }
         .follow-style {
           float: right;
@@ -1227,21 +1158,6 @@ footer {
           width: 10rem;
           height: 10rem;
         }
-        .user::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -0.1rem;
-          width: 100%;
-          height: 0.1rem;
-          background-color: white;
-          transform: scale(0, 1);
-          transform-origin: left top;
-          transition: transform 0.3s;
-        }
-        .user:hover::after {
-          transform: scale(1, 1);
-        }
       }
       .stats {
         overflow: auto;
@@ -1284,21 +1200,6 @@ footer {
           margin: 1rem 1rem 1rem 0;
           height: 5rem;
           width: 5rem;
-        }
-        .user::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -0.1rem;
-          width: 100%;
-          height: 0.1rem;
-          background-color: white;
-          transform: scale(0, 1);
-          transform-origin: left top;
-          transition: transform 0.3s;
-        }
-        .user:hover::after {
-          transform: scale(1, 1);
         }
         .follow-style {
           float: right;
@@ -1817,7 +1718,7 @@ footer {
             padding: 0.1rem 0 0 0.1rem;
             border: 0;
           }
-          .listening {
+          .btn-listening {
             margin: 0;
             padding: 0;
           }
