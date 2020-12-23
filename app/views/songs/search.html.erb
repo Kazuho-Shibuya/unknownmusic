@@ -51,7 +51,7 @@
                         <span class="icon-style">試聴</span>
                       <% end %>
                     </span>
-                    <%= button_tag(class: "share") do %>
+                    <%= button_tag(class: "btn-share") do %>
                       <%= hidden_field_tag :listening_url, search_tracks_item["preview_url"] %>
                       <%= content_tag :span, '', class: "fas fa-share" do %>
                         <span class="icon-style">投稿</span>
