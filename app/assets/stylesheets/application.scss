@@ -111,6 +111,16 @@ html {
   }
 }
 
+.btn-share {
+  color: #07f1bf;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  &:hover {
+    color: gold;
+    text-decoration: none;
+  }
+}
+
 .user {
   color: white;
   text-decoration: none;
@@ -525,17 +535,6 @@ footer {
           border: solid 0.1rem white;
         }
       }
-      .icon {
-        .share {
-          color: #07f1bf;
-          background-color: rgba(0, 0, 0, 0);
-          border: none;
-          &:hover {
-            color: gold;
-            text-decoration: none;
-          }
-        }
-      }
     }
   }
 }
@@ -630,15 +629,8 @@ footer {
               text-decoration: none;
             }
           }
-          .share {
+          .btn-share {
             padding: 0 0 0 1rem;
-            color: #07f1bf;
-            background-color: rgba(0, 0, 0, 0);
-            border: none;
-            &:hover {
-              color: gold;
-              text-decoration: none;
-            }
           }
         }
       }
@@ -1732,15 +1724,8 @@ footer {
                 text-decoration: none;
               }
             }
-            .share {
+            .btn-share {
               padding: 0 0 0 1rem;
-              color: #07f1bf;
-              background-color: rgba(0, 0, 0, 0);
-              border: none;
-              &:hover {
-                color: gold;
-                text-decoration: none;
-              }
             }
           }
         }
