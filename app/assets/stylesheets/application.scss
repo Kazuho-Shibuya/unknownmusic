@@ -149,6 +149,28 @@ html {
   transform: scale(1, 1);
 }
 
+.stats {
+  overflow: auto;
+  margin: 0 0 3rem 0;
+  padding: 0;
+  a {
+    color: white;
+    padding: 0 1rem;
+    display: inline-block;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: #003ea6;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
 /* Header */
 
 header {
@@ -563,27 +585,6 @@ footer {
           height: 10rem;
         }
       }
-      .stats {
-        overflow: auto;
-        margin: 0 0 3rem 0;
-        padding: 0;
-        a {
-          color: white;
-          padding: 0 1rem;
-          display: inline-block;
-          &:first-child {
-            padding-left: 0;
-            border: 0;
-          }
-          &:hover {
-            text-decoration: none;
-            color: #003ea6;
-          }
-        }
-        strong {
-          display: block;
-        }
-      }
       .micropost-form {
         .error {
           width: 60%;
@@ -792,27 +793,6 @@ footer {
           border: solid 0.3rem white;
           width: 10rem;
           height: 10rem;
-        }
-      }
-      .stats {
-        overflow: auto;
-        margin: 0 0 3rem 0;
-        padding: 0;
-        a {
-          color: white;
-          padding: 0 1rem;
-          display: inline-block;
-          &:first-child {
-            padding-left: 0;
-            border: 0;
-          }
-          &:hover {
-            text-decoration: none;
-            color: #003ea6;
-          }
-        }
-        strong {
-          display: block;
         }
       }
       .follow-style {
@@ -1149,27 +1129,6 @@ footer {
           border: solid 0.3rem white;
           width: 10rem;
           height: 10rem;
-        }
-      }
-      .stats {
-        overflow: auto;
-        margin: 0 0 3rem 0;
-        padding: 0;
-        a {
-          color: white;
-          padding: 0 1rem;
-          display: inline-block;
-          &:first-child {
-            padding-left: 0;
-            border: 0;
-          }
-          &:hover {
-            text-decoration: none;
-            color: #003ea6;
-          }
-        }
-        strong {
-          display: block;
         }
       }
     }
