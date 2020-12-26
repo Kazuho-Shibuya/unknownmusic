@@ -171,6 +171,28 @@ html {
   }
 }
 
+.microposts {
+  padding: 0 2rem;
+  font-size: 1.25rem;
+  list-style: none;
+  margin-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 3rem;
+  border: solid 0.1rem white;
+  .row-micropost {
+    padding: 0;
+    .icon-size {
+      font-size: 1rem;
+    }
+    .user-img {
+      margin: 1rem 0 0 0;
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+}
+
 /* Header */
 
 header {
@@ -481,27 +503,6 @@ footer {
     .jpn-title {
       margin: 0 0 4rem 0;
     }
-    .microposts {
-      padding: 0 2rem;
-      font-size: 1.25rem;
-      list-style: none;
-      margin-bottom: 1rem;
-      background: rgba(0, 0, 0, 0.3);
-      box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
-      border-radius: 3rem;
-      border: solid 0.1rem white;
-      .row-micropost {
-        padding: 0;
-        .icon-size {
-          font-size: 1rem;
-        }
-        .user-img {
-          margin-top: 1rem;
-          height: 5rem;
-          width: 5rem;
-        }
-      }
-    }
   }
 }
 
@@ -658,27 +659,6 @@ footer {
           background: white;
           color: black;
           box-shadow: none;
-        }
-      }
-    }
-    .microposts {
-      padding: 0 2rem;
-      font-size: 1.25rem;
-      list-style: none;
-      margin-bottom: 1rem;
-      background: rgba(0, 0, 0, 0.3);
-      box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
-      border-radius: 3rem;
-      border: solid 0.1rem white;
-      .row-micropost {
-        padding: 0;
-        .icon-size {
-          font-size: 1rem;
-        }
-        .user-img {
-          margin: 1rem 0 0 0;
-          height: 5rem;
-          width: 5rem;
         }
       }
     }
@@ -863,27 +843,6 @@ footer {
           background: white;
           color: black;
           box-shadow: none;
-        }
-      }
-    }
-    .microposts {
-      padding: 0 2rem;
-      font-size: 1.25rem;
-      list-style: none;
-      margin-bottom: 1rem;
-      background: rgba(0, 0, 0, 0.3);
-      box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
-      border-radius: 3rem;
-      border: solid 0.1rem white;
-      .row-micropost {
-        padding: 0;
-        .icon-size {
-          font-size: 1rem;
-        }
-        .user-img {
-          margin: 1rem 0 0 0;
-          height: 5rem;
-          width: 5rem;
         }
       }
     }
@@ -1706,8 +1665,6 @@ footer {
         .row-micropost {
           .user-img {
             margin: 1rem 0 1rem 2rem;
-            height: 5rem;
-            width: 5rem;
           }
         }
       }
