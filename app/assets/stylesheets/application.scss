@@ -193,6 +193,22 @@ html {
   }
 }
 
+.pagination {
+  float: right;
+  .page-item.active .page-link {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-color: gold;
+  }
+  .page-link {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    &:hover {
+      border-color: gold;
+    }
+  }
+}
+
 /* Header */
 
 header {
@@ -662,21 +678,6 @@ footer {
         }
       }
     }
-    .pagination {
-      float: right;
-      .page-item.active .page-link {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.25);
-        border-color: gold;
-      }
-      .page-link {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.25);
-        &:hover {
-          border-color: gold;
-        }
-      }
-    }
   }
 }
 
@@ -846,21 +847,6 @@ footer {
         }
       }
     }
-    .pagination {
-      float: right;
-      .page-item.active .page-link {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.25);
-        border-color: gold;
-      }
-      .page-link {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.25);
-        &:hover {
-          border-color: gold;
-        }
-      }
-    }
   }
 }
 
@@ -974,21 +960,6 @@ footer {
           &:hover {
             color: rgb(164, 247, 164);
           }
-        }
-      }
-    }
-    .pagination {
-      float: right;
-      .page-item.active .page-link {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.25);
-        border-color: gold;
-      }
-      .page-link {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.25);
-        &:hover {
-          border-color: gold;
         }
       }
     }
@@ -1171,21 +1142,6 @@ footer {
           &:hover {
             color: rgb(164, 247, 164);
           }
-        }
-      }
-    }
-    .pagination {
-      float: right;
-      .page-item.active .page-link {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.25);
-        border-color: gold;
-      }
-      .page-link {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.25);
-        &:hover {
-          border-color: gold;
         }
       }
     }
