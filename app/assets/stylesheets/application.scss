@@ -209,6 +209,32 @@ html {
   }
 }
 
+.user-search {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  .search {
+    width: 75%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0 0 0.1rem;
+    border: 0;
+  }
+  .btn-search {
+    color: white;
+    background: rgba(0, 0, 0, 0.25);
+    border: solid 0.1rem white;
+    padding: 0.75rem 2.25rem;
+    font-size: 1.25rem;
+    text-indent: 0.3rem;
+    letter-spacing: 0.3rem;
+    &:hover {
+      background: white;
+      color: black;
+      box-shadow: none;
+    }
+  }
+}
+
 /* Header */
 
 header {
@@ -653,31 +679,6 @@ footer {
         }
       }
     }
-    .user-search {
-      margin: 1rem 0;
-      font-size: 1.25rem;
-      .search {
-        width: 75%;
-        height: 3rem;
-        border-radius: 0.5rem;
-        padding: 0.1rem 0 0 0.1rem;
-        border: 0;
-      }
-      .btn-search {
-        color: white;
-        background: rgba(0, 0, 0, 0.25);
-        border: solid 0.1rem white;
-        padding: 0.75rem 2.25rem;
-        font-size: 1.25rem;
-        text-indent: 0.3rem;
-        letter-spacing: 0.3rem;
-        &:hover {
-          background: white;
-          color: black;
-          box-shadow: none;
-        }
-      }
-    }
   }
 }
 
@@ -822,31 +823,6 @@ footer {
         }
       }
     }
-    .user-search {
-      margin: 1rem 0;
-      font-size: 1.25rem;
-      .search {
-        width: 75%;
-        height: 3rem;
-        border-radius: 0.5rem;
-        padding: 0.1rem 0 0 0.1rem;
-        border: 0;
-      }
-      .btn-search {
-        color: white;
-        background: rgba(0, 0, 0, 0.25);
-        border: solid 0.1rem white;
-        padding: 0.75rem 2.25rem;
-        font-size: 1.25rem;
-        text-indent: 0.3rem;
-        letter-spacing: 0.3rem;
-        &:hover {
-          background: white;
-          color: black;
-          box-shadow: none;
-        }
-      }
-    }
   }
 }
 
@@ -864,28 +840,8 @@ footer {
       margin: 0 0 2rem 0;
     }
     .user-search {
-      margin: 1rem 0;
-      font-size: 1.25rem;
       .search {
-        width: 50%;
-        height: 3rem;
-        border-radius: 0.5rem;
         padding: 0.1rem 0 0 0.5rem;
-        border: 0;
-      }
-      .btn-search {
-        color: white;
-        background: rgba(0, 0, 0, 0.25);
-        border: solid 0.1rem white;
-        padding: 0.75rem 2.25rem;
-        font-size: 1.25rem;
-        text-indent: 0.3rem;
-        letter-spacing: 0.3rem;
-        &:hover {
-          background: white;
-          color: black;
-          box-shadow: none;
-        }
       }
     }
     .users {
@@ -1609,14 +1565,6 @@ footer {
           }
         }
       }
-      .user-search {
-        .btn-search {
-          padding: 0.75rem 2.25rem;
-          font-size: 1.25rem;
-          text-indent: 0.3rem;
-          letter-spacing: 0.3rem;
-        }
-      }
       .microposts {
         .row-micropost {
           .user-img {
@@ -1657,14 +1605,6 @@ footer {
             margin-bottom: 2rem;
             border: solid 0.3rem white;
           }
-        }
-      }
-      .user-search {
-        .btn-search {
-          padding: 0.75rem 2.25rem;
-          font-size: 1.25rem;
-          text-indent: 0.3rem;
-          letter-spacing: 0.3rem;
         }
       }
       .microposts {
