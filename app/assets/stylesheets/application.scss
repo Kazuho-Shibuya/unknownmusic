@@ -235,6 +235,16 @@ html {
   }
 }
 
+.user-info {
+  margin: 1rem 0;
+  .user-info-img {
+    margin-bottom: 2rem;
+    border: solid 0.3rem white;
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
 /* Header */
 
 header {
@@ -619,15 +629,6 @@ footer {
     aside {
       margin: 0 0 3rem 2rem;
       padding: 0;
-      .user-info {
-        margin: 1rem 0;
-        .user-info-img {
-          margin-bottom: 2rem;
-          border: solid 0.3rem white;
-          width: 10rem;
-          height: 10rem;
-        }
-      }
       .micropost-form {
         .error {
           width: 60%;
@@ -768,15 +769,6 @@ footer {
     aside {
       margin: 0 0 1rem 2rem;
       padding: 0;
-      .user-info {
-        margin: 1rem 0;
-        .user-info-img {
-          margin-bottom: 2rem;
-          border: solid 0.3rem white;
-          width: 10rem;
-          height: 10rem;
-        }
-      }
       .follow-style {
         margin: 0 0 2rem 0;
         .btn-unfollow {
@@ -1013,15 +1005,6 @@ footer {
     aside {
       margin: 0 0 1rem 2rem;
       padding: 0;
-      .user-info {
-        margin: 1rem 0;
-        .user-info-img {
-          margin-bottom: 2rem;
-          border: solid 0.3rem white;
-          width: 10rem;
-          height: 10rem;
-        }
-      }
     }
     h2 {
       margin-bottom: 1rem;
@@ -1599,13 +1582,6 @@ footer {
       aside {
         margin: 0;
         padding: 0;
-        .user-info {
-          margin: 1rem 0;
-          .user-info-img {
-            margin-bottom: 2rem;
-            border: solid 0.3rem white;
-          }
-        }
       }
       .microposts {
         .row-micropost {
