@@ -631,7 +631,6 @@ footer {
       padding: 0;
       .micropost-form {
         .error {
-          width: 60%;
           padding-left: 0;
         }
         p {
@@ -1511,6 +1510,9 @@ footer {
         margin: 0;
         padding: 0;
         .micropost-form {
+          .error {
+            width: 60%;
+          }
           p {
             margin: 0;
             padding: 0;
