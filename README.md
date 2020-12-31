@@ -103,7 +103,7 @@
 - MySQL 5.7
 
 ## 本番環境
-- AWS(VPC、EC2、RDS、S3、Route53、ALB、IAM、ACM)
+- AWS(VPC、EC2、RDS、S3、Route53、ALB、IAM、ACM、SES)
 - Nginx
 - Unicorn
 
