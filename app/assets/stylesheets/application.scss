@@ -1504,49 +1504,17 @@ footer {
 
   .home-img {
     .container-home {
-      font-size: 1.5rem;
-      margin-top: 3rem;
       aside {
         margin: 0;
-        padding: 0;
         .micropost-form {
           .error {
             width: 60%;
           }
-          p {
-            margin: 0;
-            padding: 0;
-            text-align: left;
-          }
           .label {
-            margin: 0 0 0.1rem 0;
-            padding: 0;
-          }
-          textarea {
-            resize: none;
-            width: 80%;
-            height: 5rem;
-            border-radius: 0.5rem;
-            padding: 0.1rem 0 0 0.1rem;
-            border: 0;
-          }
-          .btn-listening {
-            margin: 0;
             padding: 0;
           }
           .icon {
             margin-top: 0.5rem;
-            .search {
-              padding: 0;
-              color: rgb(240, 125, 125);
-              &:hover {
-                color: gold;
-                text-decoration: none;
-              }
-            }
-            .btn-share {
-              padding: 0 0 0 1rem;
-            }
           }
         }
       }
