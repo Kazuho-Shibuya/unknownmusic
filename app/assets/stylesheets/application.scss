@@ -245,6 +245,35 @@ html {
   }
 }
 
+.btn-unfollow {
+  background: white;
+  color: black;
+  border: solid 0.1rem white;
+  padding: 0.75rem 2.25rem;
+  font-size: 1.25rem;
+  text-indent: 0.3rem;
+  letter-spacing: 0.3rem;
+  box-shadow: none;
+  .normal {
+    display: inline;
+  }
+  .hover {
+    display: none;
+  }
+  &:hover {
+    color: white;
+    background: rgb(163, 31, 31);
+    box-shadow: none;
+    border: solid 0.1rem rgb(163, 31, 31);
+    .normal {
+      display: none;
+    }
+    .hover {
+      display: inline;
+    }
+  }
+}
+
 /* Header */
 
 header {
@@ -770,34 +799,6 @@ footer {
       padding: 0;
       .follow-style {
         margin: 0 0 2rem 0;
-        .btn-unfollow {
-          background: white;
-          color: black;
-          border: solid 0.1rem white;
-          padding: 0.75rem 2.25rem;
-          font-size: 1.25rem;
-          text-indent: 0.3rem;
-          letter-spacing: 0.3rem;
-          box-shadow: none;
-          .normal {
-            display: inline;
-          }
-          .hover {
-            display: none;
-          }
-          &:hover {
-            color: white;
-            background: rgb(163, 31, 31);
-            box-shadow: none;
-            border: solid 0.1rem rgb(163, 31, 31);
-            .normal {
-              display: none;
-            }
-            .hover {
-              display: inline;
-            }
-          }
-        }
         .btn-follow {
           color: white;
           background: rgba(0, 0, 0, 0.25);
@@ -855,34 +856,6 @@ footer {
         .follow-style {
           float: right;
           margin-top: 1rem;
-          .btn-unfollow {
-            background: white;
-            color: black;
-            border: solid 0.1rem white;
-            padding: 0.75rem 2.25rem;
-            font-size: 1.25rem;
-            text-indent: 0.3rem;
-            letter-spacing: 0.3rem;
-            box-shadow: none;
-            .normal {
-              display: inline;
-            }
-            .hover {
-              display: none;
-            }
-            &:hover {
-              color: white;
-              background: rgb(163, 31, 31);
-              box-shadow: none;
-              border: solid 0.1rem rgb(163, 31, 31);
-              .normal {
-                display: none;
-              }
-              .hover {
-                display: inline;
-              }
-            }
-          }
           .btn-follow {
             color: white;
             background: rgba(0, 0, 0, 0.25);
@@ -1028,34 +1001,6 @@ footer {
         .follow-style {
           float: right;
           margin-top: 1rem;
-          .btn-unfollow {
-            background: white;
-            color: black;
-            border: solid 0.1rem white;
-            padding: 0.75rem 2.25rem;
-            font-size: 1.25rem;
-            text-indent: 0.3rem;
-            letter-spacing: 0.3rem;
-            box-shadow: none;
-            .normal {
-              display: inline;
-            }
-            .hover {
-              display: none;
-            }
-            &:hover {
-              color: white;
-              background: rgb(163, 31, 31);
-              box-shadow: none;
-              border: solid 0.1rem rgb(163, 31, 31);
-              .normal {
-                display: none;
-              }
-              .hover {
-                display: inline;
-              }
-            }
-          }
           .btn-follow {
             color: white;
             background: rgba(0, 0, 0, 0.25);
