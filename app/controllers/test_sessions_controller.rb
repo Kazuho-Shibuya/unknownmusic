@@ -4,7 +4,7 @@ class TestSessionsController < ApplicationController
     return if user.blank?
 
     session[:user_id] = user.id
-    flash[:success] = 'テストユーザとしてログインしました。'
+    flash[:success] = 'テストユーザとしてログインしました'
     redirect_to user
   end
 end
