@@ -51,13 +51,13 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to signup_path, id: 'sign-up', class: 'link-style' do %>
+            <%= link_to new_user_path, id: 'sign-up', class: 'link-style' do %>
               <p class="eng-link">Sign up</p>
               <p class="jpn-link">新規登録</p>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to login_path, id: 'login', class: 'link-style' do %>
+            <%= link_to new_session_path, id: 'login', class: 'link-style' do %>
               <p class="eng-link">Login</p>
               <p class="jpn-link">ログイン</p>
             <% end %>

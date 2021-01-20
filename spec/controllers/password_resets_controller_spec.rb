@@ -33,7 +33,7 @@ RSpec.describe PasswordResetsController, type: :controller do
 
   describe '#edit' do
     before do
-      get :edit
+      get :edit, params: { id: user.id }
     end
 
     it '正常にレスポンスを返さないこと' do

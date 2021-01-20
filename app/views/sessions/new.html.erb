@@ -7,7 +7,7 @@
         <p class="eng-title text-center">Login</p>
         <h1 class="jpn-title text-center">ログイン</h1>
         <div class="field text-center">
-          <%= form_for(:session, url: login_path, html: {novalidate: true}) do |f| %>
+          <%= form_for(:session, url: sessions_path, html: {novalidate: true}) do |f| %>
             <div class="label mx-auto">
               <%= f.label :email, 'メールアドレス', class: 'd-inline-block label-name' %>
               <%= f.label :email, '【必須】', class: 'd-inline-block label-required' %>
