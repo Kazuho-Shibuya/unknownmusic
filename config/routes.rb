@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  get 'password_resets/new'
-  get 'password_resets/edit'
   root 'static_pages#top'
-  get  '/signup', to: 'users#new'
-  post '/signup', to: 'users#create'
-  get  '/login',   to: 'sessions#new'
-  post '/login',   to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
   patch '/users/:id/edit', to: 'users#update'
   get '/home', to: 'users#home'
@@ -25,4 +19,5 @@ Rails.application.routes.draw do
   resources :relationships,       only: %i[create destroy]
   resources :likes, only: %i[create destroy]
   resources :test_sessions, only: :create
+  resources :sessions
 end

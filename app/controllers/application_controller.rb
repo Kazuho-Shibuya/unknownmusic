@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
 
     store_location
     flash[:danger] = 'ログインしてください'
-    redirect_to login_url
+    redirect_to new_session_url
   end
 end

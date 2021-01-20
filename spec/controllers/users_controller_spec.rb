@@ -10,7 +10,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it 'ログインページに遷移すること' do
-      expect(response).to redirect_to login_url
+      expect(response).to redirect_to new_session_url
     end
 
     it 'ステータスが302であること' do
@@ -79,7 +79,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it 'ログインページに遷移すること' do
-      expect(response).to redirect_to login_url
+      expect(response).to redirect_to new_session_url
     end
 
     it 'ステータスが302であること' do
@@ -93,7 +93,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it 'ログインページに遷移すること' do
-      expect(response).to redirect_to login_url
+      expect(response).to redirect_to new_session_url
     end
 
     it 'ステータスが302であること' do
@@ -104,7 +104,7 @@ RSpec.describe UsersController, type: :controller do
   describe '#destroy' do
     it 'ログインページに遷移すること' do
       delete :destroy, params: { id: user.id }
-      expect(response).to redirect_to login_url
+      expect(response).to redirect_to new_session_url
     end
 
     it 'ステータスが302であること' do
@@ -119,7 +119,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it 'ログインページに遷移すること' do
-      expect(response).to redirect_to login_url
+      expect(response).to redirect_to new_session_url
     end
 
     it 'ステータスが302であること' do
@@ -133,7 +133,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it 'ログインページに遷移すること' do
-      expect(response).to redirect_to login_url
+      expect(response).to redirect_to new_session_url
     end
 
     it 'ステータスが302であること' do
@@ -147,7 +147,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it 'ログインページに遷移すること' do
-      expect(response).to redirect_to login_url
+      expect(response).to redirect_to new_session_url
     end
 
     it 'ステータスが302であること' do

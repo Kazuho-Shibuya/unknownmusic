@@ -7,7 +7,7 @@
         <p class="eng-title text-center">Sign up</p>
         <h1 class="jpn-title text-center">新規登録</h1>
         <div class="field text-center">
-          <%= form_for(@user, url: signup_path, html: {novalidate: true}) do |f| %>
+          <%= form_for(@user, html: {novalidate: true}) do |f| %>
             <%= render 'shared/error_messages', object: f.object %>
             <div class="label mx-auto">
               <%= f.label :name, '名前（ニックネーム可）', class: 'd-inline-block label-name' %>
