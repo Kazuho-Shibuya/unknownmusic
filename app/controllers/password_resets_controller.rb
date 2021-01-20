@@ -11,12 +11,9 @@ class PasswordResetsController < ApplicationController
     if @user
       @user.create_reset_digest
       @user.send_password_reset_email
-      flash[:info] = 'パスワード再設定メールを送信しました。届かない場合は再度メールアドレスを確認して送信してください'
-      redirect_to root_url
-    else
-      flash[:info] = 'パスワード再設定メールを送信しました。届かない場合は再度メールアドレスを確認して送信してください'
-      render 'new'
     end
+    flash[:info] = 'パスワード再設定メールを送信しました。届かない場合は再度メールアドレスを確認して送信してください'
+    render 'new'
   end
 
   def edit; end
