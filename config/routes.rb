@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   resources :likes, only: %i[create destroy]
   resources :test_sessions, only: :create
   resources :sessions
+  resources :signups
 end
