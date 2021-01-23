@@ -1,5 +1,8 @@
-<% if object.errors.any? %>
-  <div class="alert alert-danger error mt-4">
-    <%= t('.errors count', errors_count: object.errors.count) %>
-  </div>
+<% if object.blank? %>
+<% else %>
+  <% if object.errors.any? %>
+    <div class="alert alert-danger error mt-4">
+      <%= t('.errors count', errors_count: object.errors.count) %>
+    </div>
+  <% end %>
 <% end %>
