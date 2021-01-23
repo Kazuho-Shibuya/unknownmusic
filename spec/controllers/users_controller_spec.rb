@@ -32,34 +32,6 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-  describe '#edit' do
-    before do
-      get :edit, params: { id: user.id }
-    end
-
-    it 'ログインページに遷移すること' do
-      expect(response).to redirect_to new_session_url
-    end
-
-    it 'ステータスが302であること' do
-      expect(response.status).to eq 302
-    end
-  end
-
-  describe '#update' do
-    before do
-      patch :update, params: { id: user.id }
-    end
-
-    it 'ログインページに遷移すること' do
-      expect(response).to redirect_to new_session_url
-    end
-
-    it 'ステータスが302であること' do
-      expect(response.status).to eq 302
-    end
-  end
-
   describe '#destroy' do
     it 'ログインページに遷移すること' do
       delete :destroy, params: { id: user.id }
@@ -102,7 +74,7 @@ RSpec.describe UsersController, type: :controller do
 
   describe '#home' do
     before do
-      get :home
+      get :home, params: { id: user.id }
     end
 
     it 'ログインページに遷移すること' do
