@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: %i[index edit update destroy
+  before_action :logged_in_user, only: %i[index destroy
                                           following followers home]
-  before_action :correct_user,   only: %i[edit update]
   before_action :admin_user,     only: :destroy
   before_action :check_test_user, { only: %i[edit update destroy] }
   before_action :set_micropost, only: %i[home]
@@ -18,16 +17,9 @@ class UsersController < ApplicationController
     redirect_to(root_url) && return unless @user.activated?
   end
 
-  def edit; end
-
-  def update
-    if @user.update(user_params)
-      flash[:success] = 'プロフィールを更新しました'
-      redirect_to @user
-    else
-      @user_image = User.find(params[:id]).image.to_s
-      render 'edit'
-    end
+  def home
+    @user = User.find(params[:id])
+    @feed_items = @feed_items.search(params[:search])
   end
 
   def destroy
@@ -50,21 +42,7 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
-  def home
-    @feed_items = @feed_items.search(params[:search])
-  end
-
   private
-
-  def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :image)
-  end
-
-  # 正しいユーザかどうか確認
-  def correct_user
-    @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
-  end
 
   # 管理者かどうか確認
   def admin_user
