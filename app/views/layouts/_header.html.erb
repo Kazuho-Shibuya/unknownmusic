@@ -44,7 +44,7 @@
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to logout_path, id: 'logout', class: 'link-style' do %>
+            <%= link_to session_path(current_user), id: 'logout', class: 'link-style', method: :delete do %>
               <p class="eng-link">Logout</p>
               <p class="jpn-link">ログアウト</p>
             <% end %>
