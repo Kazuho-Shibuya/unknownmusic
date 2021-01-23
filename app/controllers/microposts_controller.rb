@@ -6,7 +6,7 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
       flash[:success] = '投稿しました'
-      redirect_to home_url
+      redirect_to home_user_url(current_user)
     else
       @result_artist_name = @micropost.artist
       @result_track = @micropost.song
