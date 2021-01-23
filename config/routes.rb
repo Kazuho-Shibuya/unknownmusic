@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root 'static_pages#top'
-  get '/logout', to: 'sessions#destroy'
   get '/about', to: 'static_pages#about'
   get 'songs/search', to: 'songs#search'
   post '/search_result', to: 'static_pages#search_result'
