@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
   root 'static_pages#top'
-  get '/about', to: 'static_pages#about'
   get 'songs/search', to: 'songs#search'
-  post '/search_result', to: 'static_pages#search_result'
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   resources :users do
     member do
       get :following, :followers, :home
+    end
+  end
+  resources :static_pages, except: %i[index new create edit update show destroy] do
+    collection do
+      get :top, :about
+      post :search_result
     end
   end
   resources :account_activations, only: :edit
