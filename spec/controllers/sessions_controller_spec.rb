@@ -33,7 +33,7 @@ RSpec.describe SessionsController, type: :controller do
 
   describe '#destroy' do
     before do
-      get :destroy
+      get :destroy, params: { id: user.id }
     end
 
     it '正常にレスポンスを返していないこと' do
