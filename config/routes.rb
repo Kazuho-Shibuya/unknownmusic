@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#top'
-  get 'songs/search', to: 'songs#search'
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
+
   resources :users do
     member do
       get :following, :followers, :home
@@ -21,6 +21,11 @@ Rails.application.routes.draw do
   resources :test_sessions, only: :create
   resources :sessions, only: %i[new create destroy]
   resources :signups, only: %i[new create]
+  resources :songs, except: %i[index new create edit update show destroy] do
+    collection do
+      get :search
+    end
+  end
   namespace :mypage do
     resources :users, only: %i[edit update]
   end
