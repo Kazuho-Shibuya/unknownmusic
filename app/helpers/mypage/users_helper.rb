@@ -1,0 +1,2 @@
+module Mypage::UsersHelper
+end
