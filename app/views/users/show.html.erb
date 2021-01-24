@@ -23,7 +23,7 @@
         <section class="text-right user-search">
           <%= render 'users/search' %>
         </section>
-        <%= render @microposts %>
+        <%= render @microposts.sorted %>
         <%= paginate @microposts, theme: 'twitter-bootstrap-4' %>
       </div>
     </div>
