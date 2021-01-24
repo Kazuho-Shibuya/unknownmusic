@@ -3,10 +3,13 @@ require 'rails_helper'
 RSpec.describe Mypage::UsersController, type: :controller do
   let(:user) { FactoryBot.create(:user) }
   let(:user_params) { FactoryBot.attributes_for(:user) }
+  before do
+    allow(controller).to receive(:current_user).and_return(user)
+  end
 
   describe '#edit' do
     before do
-      get :edit, params: { id: user.id }
+      get :edit
     end
 
     it '正常にレスポンスを返していること' do
@@ -20,11 +23,11 @@ RSpec.describe Mypage::UsersController, type: :controller do
 
   describe '#update' do
     before do
-      patch :update, params: { id: user.id, user: user_params }
+      patch :update, params: { user: user_params }
     end
 
     it 'ユーザページに遷移すること' do
-      expect(response).to redirect_to user_url
+      expect(response).to redirect_to user_url(user)
     end
 
     it 'ステータスが302であること' do
