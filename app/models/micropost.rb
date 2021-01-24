@@ -3,7 +3,7 @@ class Micropost < ApplicationRecord
   belongs_to :user
   has_many :likes, dependent: :destroy
   has_many :favorite_users, through: :likes, source: :user
-  default_scope -> { order(created_at: :desc) }
+  scope :sorted, -> { order(created_at: :desc) }
   validates :user_id, presence: true
   validates :artist, presence: { message: 'を検索してください' }
   validates :song, presence: { message: 'を検索してください' }
