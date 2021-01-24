@@ -7,12 +7,12 @@
         <p class="eng-title text-center">User edit</p>
         <h1 class="jpn-title text-center">ユーザ編集</h1>
         <div class="field text-center">
-          <%= form_for(@user, url: mypage_user_path, html: {novalidate: true}) do |f| %>
+          <%= form_for(current_user, url: mypage_users_path, html: {novalidate: true}) do |f| %>
             <%= render 'shared/error_messages', object: f.object %>
             <div class="img-edit">
               <p>
                 <% if @user_image.nil? %>
-                  <% @user_image = @user.image.to_s %>
+                  <% @user_image = current_user.image.to_s %>
                 <% else %>
                 <% end %>
                 <%= image_tag @user_image, id: "img-prev", class: "img-fluid rounded-circle user-img" %>

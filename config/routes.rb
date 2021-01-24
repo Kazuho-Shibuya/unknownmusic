@@ -29,6 +29,6 @@ Rails.application.routes.draw do
   end
 
   namespace :mypage do
-    resources :users, only: %i[edit update]
+    resource :users, only: %i[edit update]
   end
 end

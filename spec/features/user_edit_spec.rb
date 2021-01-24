@@ -5,7 +5,7 @@ RSpec.feature 'User_edit', type: :feature do
     user = FactoryBot.create(:user)
     login(user)
 
-    visit edit_mypage_user_path(user)
+    visit edit_mypage_users_path(user)
 
     fill_in '名前（ニックネーム可）', with: '佐藤清'
     fill_in 'メールアドレス', with: 'tester@example.com'
