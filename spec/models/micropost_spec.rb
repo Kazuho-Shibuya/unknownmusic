@@ -62,3 +62,26 @@ RSpec.describe Micropost, type: :model do
     end
   end
 end
+
+# == Schema Information
+#
+# Table name: microposts
+#
+#  id            :bigint           not null, primary key
+#  artist        :string(255)
+#  content       :text(65535)
+#  likes_count   :integer          default(0), not null
+#  listening_url :text(65535)
+#  song          :string(255)
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  user_id       :bigint
+#
+# Indexes
+#
+#  index_microposts_on_user_id  (user_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (user_id => users.id)
+#
