@@ -1,16 +1,18 @@
 class MicropostsController < ApplicationController
+  require './app/modules/spotify_api'
+
   before_action :logged_in_user, only: %i[create destroy]
   before_action :correct_user,   only: :destroy
 
   def create
     @micropost = current_user.microposts.build(micropost_params)
+    spotify_api = Spotify_api.new
+    access_token = spotify_api.get_access_token
+    @search_result = spotify_api.search_id(access_token, micropost_params[:search_result_id])
     if @micropost.save
       flash[:success] = '投稿しました'
       redirect_to home_user_url(current_user)
     else
-      @result_artist_name = @micropost.artist
-      @result_track = @micropost.song
-      @result_listening_url = @micropost.listening_url
       @feed_items = []
       render 'users/home'
     end
@@ -31,7 +33,7 @@ class MicropostsController < ApplicationController
   private
 
   def micropost_params
-    params.require(:micropost).permit(:song, :artist, :listening_url, :content)
+    params.require(:micropost).permit(:song, :artist, :listening_url, :content, :search_result_id)
   end
 
   def correct_user

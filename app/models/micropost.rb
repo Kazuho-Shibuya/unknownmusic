@@ -9,6 +9,7 @@ class Micropost < ApplicationRecord
   validates :song, presence: { message: 'を検索してください' }
   validates :listening_url, presence: { message: 'を検索してください' }
   validates :content, presence: true, length: { maximum: 70 }
+  attr_accessor :search_result_id
 
   # 投稿をいいねする
   def favorite(user)

@@ -1,4 +1,7 @@
 <%= form_for(@micropost) do |f| %>
+  <% logger.debug('hidden') %>
+  <% logger.debug(@search_result["id"]) %>
+  <%= f.hidden_field :search_result_id, :value => @search_result["id"] %>
   <div class="field">
     <%= render 'shared/error_messages', object: f.object %>
     <p class="mt-4">
@@ -8,15 +11,14 @@
         </span>
       </span>
     </p>
-    <% if @result_artist_name.nil? %>
+    <% if @search_result["artists"][0]["name"].nil? %>
       <% if f.object.errors.include?(:artist) %>
         <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:artist).first %></p>
       <% else %>
         <p><%= f.label :artist,  '検索してください', class: 'search-result-non' %></p>
       <% end %>
     <% else %>
-      <p><%= f.label :artist,  @result_artist_name, class: 'search-result' %></p>
-      <%= f.hidden_field :artist, :value => @result_artist_name %>
+      <p><%= f.label :artist,  @search_result["artists"][0]["name"], class: 'search-result' %></p>
     <% end %>
     <p class="mt-4">
       <span class="fas fa-music">
@@ -25,17 +27,16 @@
         </span>
       </span>
     </p>
-    <% if @result_track.nil? %>
+    <% if @search_result["name"].nil? %>
       <% if f.object.errors.include?(:song) %>
         <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:song).first %></p>
       <% else %>
         <p><%= f.label :song,  '検索してください', class: 'search-result-non' %></p>
       <% end %>
     <% else %>
-      <p><%= f.label :song,  @result_track, class: 'search-result' %></p>
-      <%= f.hidden_field :song, :value => @result_track %>
+      <p><%= f.label :song,  @search_result["name"], class: 'search-result' %></p>
     <% end %>
-    <% if @result_listening_url.nil? %>
+    <% if @search_result["preview_url"].nil? %>
       <p class="mt-4">
         <span class="fa fa-play">
           <span class="icon-style">
@@ -51,9 +52,8 @@
     <% else %>
       <p class="mt-4">
         <span>
-          <%= link_to @result_listening_url, class: 'fa fa-play btn-listening', target: :_blank do %>
+          <%= link_to @search_result["preview_url"], class: 'fa fa-play btn-listening', target: :_blank do %>
             <span class="icon-style">試聴</span>
-            <%= f.hidden_field :listening_url, :value => @result_listening_url %>
           <% end %>
         </span>
       </p>
