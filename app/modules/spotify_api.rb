@@ -39,7 +39,29 @@ class Spotify_api
       http.request(request)
     end
 
-    response_hash = response.body
-    JSON.parse(response_hash)
+    response_json = response.body
+    JSON.parse(response_json)
+  end
+
+  def search_id(access_token, search_result)
+    get_uri = "https://api.spotify.com/v1/tracks/#{search_result}"
+    uri_encode = URI.encode(get_uri)
+    uri = URI.parse(uri_encode)
+    request = Net::HTTP::Get.new(uri)
+    request.content_type = 'application/json'
+    request['Accept'] = 'application/json'
+    request['Authorization'] = "Bearer #{access_token}"
+    request['Accept-Language'] = 'ja;q=1'
+
+    req_options = {
+      use_ssl: uri.scheme == 'https'
+    }
+
+    response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+      http.request(request)
+    end
+
+    response_json = response.body
+    JSON.parse(response_json)
   end
 end

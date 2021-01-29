@@ -18,11 +18,12 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-12 text-center justify-content-center">
-        <% if @search_infomations.present? %>
-          <% search_tracks_items = @search_infomations["tracks"]["items"] %>
+        <% if @search_results.present? %>
+          <% search_tracks_items = @search_results["tracks"]["items"] %>
           <% if search_tracks_items.present? %>
             <% search_tracks_items.each do |search_tracks_item| %>
               <%= form_with url: search_result_static_pages_path, local: true, class: "text-center justify-content-center search-content" do |f| %>
+                <%= f.hidden_field :search_tracks_item_id, :value => search_tracks_item["id"] %>
                 <div class="artist-song">
                   <span class="fas fa-user">
                     <span class="icon-style">
@@ -34,8 +35,6 @@
                       <%= search_tracks_item["name"] %>
                     </span>
                   </span>
-                  <%= f.hidden_field :artist, :value => search_tracks_item["artists"][0]["name"] %>
-                  <%= f.hidden_field :song, :value => search_tracks_item["name"] %>
                 </div>
                 <div class="album-image">
                   <% if search_tracks_item["album"]["images"][0].any? %>
@@ -52,7 +51,6 @@
                       <% end %>
                     </span>
                     <%= button_tag(class: "btn-share") do %>
-                      <%= hidden_field_tag :listening_url, search_tracks_item["preview_url"] %>
                       <%= content_tag :span, '', class: "fas fa-share" do %>
                         <span class="icon-style">投稿</span>
                       <% end %>

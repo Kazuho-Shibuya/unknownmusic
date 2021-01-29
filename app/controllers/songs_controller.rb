@@ -6,6 +6,6 @@ class SongsController < ApplicationController
 
     spotify_api = Spotify_api.new
     access_token = spotify_api.get_access_token
-    @search_infomations = spotify_api.search(access_token, params[:search])
+    @search_results = spotify_api.search(access_token, params[:search])
   end
 end
