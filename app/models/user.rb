@@ -36,7 +36,7 @@ class User < ApplicationRecord
   # 永続セッションのためにユーザをデータベースに記憶する
   def remember
     self.remember_token = User.new_token
-    update_attribute(:remember_digest, User.digest(remember_token))
+    update(remember_digest: User.digest(remember_token))
   end
 
   # 渡されたトークンがダイジェストと一致したらtrueを返す
@@ -49,12 +49,12 @@ class User < ApplicationRecord
 
   # ユーザーのログイン情報を破棄する
   def forget
-    update_attribute(:remember_digest, nil)
+    update(remember_digest: nil)
   end
 
   # アカウントを有効にする
   def activate
-    update_columns(activated: true, activated_at: Time.zone.now)
+    update(activated: true, activated_at: Time.zone.now)
   end
 
   # 有効化用のメールを送信する
@@ -65,7 +65,7 @@ class User < ApplicationRecord
   # パスワード再設定の属性を設定する
   def create_reset_digest
     self.reset_token = User.new_token
-    update_columns(reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now)
+    update(reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now)
   end
 
   # パスワード再設定のメールを送信する
