@@ -1,4 +1,4 @@
-$("#follow-form-<%= @user.id %>").html("<%= j(render 'users/follow', object: @user, stats_user: @stats_user) %>");　
+$("#follow-form-<%= @user.id %>").html("<%= j(render 'users/follow', object: @user, stats_user: @stats_user) %>");
 $("#show-followers").html('<%= @user.followers.count %>');
 $("#show-follow-following").html('<%= @stats_user.following.count %>');
 $("#show-follow-followers").html('<%= @stats_user.followers.count %>');
