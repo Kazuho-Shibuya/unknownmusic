@@ -23,30 +23,6 @@ RSpec.describe Micropost, type: :model do
     end
   end
 
-  context '曲が空欄の場合' do
-    it '投稿できない' do
-      micropost = FactoryBot.build(:micropost, song: nil)
-      micropost.valid?
-      expect(micropost.errors[:song]).to include('を検索してください')
-    end
-  end
-
-  context 'アーティストが空欄の場合' do
-    it '投稿できない' do
-      micropost = FactoryBot.build(:micropost, artist: nil)
-      micropost.valid?
-      expect(micropost.errors[:artist]).to include('を検索してください')
-    end
-  end
-
-  context '試聴URLが空欄の場合' do
-    it '投稿できない' do
-      micropost = FactoryBot.build(:micropost, listening_url: nil)
-      micropost.valid?
-      expect(micropost.errors[:listening_url]).to include('を検索してください')
-    end
-  end
-
   context '内容が70文字以内の場合' do
     it '投稿できる' do
       micropost = FactoryBot.build(:micropost, content: 'あ' * 70)

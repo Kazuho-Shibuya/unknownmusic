@@ -5,16 +5,28 @@ class MicropostsController < ApplicationController
   before_action :correct_user,   only: :destroy
 
   def create
-    @micropost = current_user.microposts.build(micropost_params)
-    spotify_api = Spotify_api.new
-    access_token = spotify_api.get_access_token
-    @search_result = spotify_api.search_id(access_token, micropost_params[:search_result_id])
-    if @micropost.save
-      flash[:success] = '投稿しました'
-      redirect_to home_user_url(current_user)
-    else
+    if micropost_params[:search_result_id].blank?
+      flash.now[:danger] = '曲を検索してください'
+      @micropost = Micropost.new
       @feed_items = []
       render 'users/home'
+    else
+      spotify_api = Spotify_api.new
+      access_token = spotify_api.get_access_token
+      @search_result = spotify_api.search_id(access_token, micropost_params[:search_result_id])
+      share_params = {}
+      share_params['song'] = @search_result['name']
+      share_params['artist'] = @search_result['artists'][0]['name']
+      share_params['listening_url'] = @search_result['preview_url']
+      share_params['content'] = micropost_params[:content]
+      @micropost = current_user.microposts.build(share_params)
+      if @micropost.save
+        flash[:success] = '投稿しました'
+        redirect_to home_user_url(current_user)
+      else
+        @feed_items = []
+        render 'users/home'
+      end
     end
   end
 
@@ -33,7 +45,7 @@ class MicropostsController < ApplicationController
   private
 
   def micropost_params
-    params.require(:micropost).permit(:song, :artist, :listening_url, :content, :search_result_id)
+    params.require(:micropost).permit(:content, :search_result_id)
   end
 
   def correct_user

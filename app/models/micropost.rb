@@ -5,9 +5,6 @@ class Micropost < ApplicationRecord
   has_many :favorite_users, through: :likes, source: :user
   scope :sorted, -> { order(created_at: :desc) }
   validates :user_id, presence: true
-  validates :artist, presence: { message: 'を検索してください' }
-  validates :song, presence: { message: 'を検索してください' }
-  validates :listening_url, presence: { message: 'を検索してください' }
   validates :content, presence: true, length: { maximum: 70 }
   attr_accessor :search_result_id
 
