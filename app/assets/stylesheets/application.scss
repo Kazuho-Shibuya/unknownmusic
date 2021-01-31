@@ -292,6 +292,13 @@ body {
   }
 }
 
+.full-screen-img {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
 /* Header */
 
 header {
@@ -407,10 +414,6 @@ footer {
 
 .top-img {
   background-image: image-url("top.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
   .container-top {
     position: absolute;
     top: 50%;
@@ -454,10 +457,6 @@ footer {
 
 .signup-img {
   background-image: image-url("signup.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
   .container-signup {
     color: white;
     .field {
@@ -503,10 +502,6 @@ footer {
 
 .login-img {
   background-image: image-url("login.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
   .container-login {
     color: white;
     .field {
@@ -593,10 +588,6 @@ footer {
 
 .popular-img {
   background-image: image-url("popular.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
   .container-popular {
     color: white;
     .jpn-title {
@@ -665,10 +656,6 @@ footer {
 
 .home-img {
   background-image: image-url("home.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
   .container-home {
     color: white;
     font-size: 1.5rem;
@@ -733,10 +720,6 @@ footer {
 
 .edit-img {
   background-image: image-url("user_edit.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
   .container-edit {
     color: white;
     .field {
@@ -804,10 +787,6 @@ footer {
 
 .show-img {
   background-image: image-url("show.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
   .container-show {
     color: white;
     font-size: 1.5rem;
@@ -826,10 +805,6 @@ footer {
 
 .users-index-img {
   background-image: image-url("user_index.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
   .container-users-index {
     color: white;
     .jpn-title {
@@ -880,10 +855,6 @@ footer {
 
 .about-img {
   background-image: image-url("about.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
   .container-about {
     color: white;
     h3 {
@@ -956,10 +927,6 @@ footer {
 
 .show-follow-img {
   background-image: image-url("show_follow.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
   .container-show-follow {
     color: white;
     font-size: 1.5rem;
@@ -1010,18 +977,10 @@ footer {
 
 .forgot-password-img {
   background-image: image-url("forgot_password.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
 }
 
 .reset-password-img {
   background-image: image-url("reset_password.jpg");
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
 }
 
 .container-reset-password {
