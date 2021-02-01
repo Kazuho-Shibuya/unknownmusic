@@ -12,7 +12,7 @@ class PasswordResetsController < ApplicationController
       @user.create_reset_digest
       @user.send_password_reset_email
     end
-    flash[:info] = 'パスワード再設定メールを送信しました。届かない場合は再度メールアドレスを確認して送信してください'
+    flash.now[:info] = 'パスワード再設定メールを送信しました。届かない場合は再度メールアドレスを確認して送信してください'
     render 'new'
   end
 
