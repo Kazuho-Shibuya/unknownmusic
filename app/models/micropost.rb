@@ -1,12 +1,16 @@
 class Micropost < ApplicationRecord
   require 'nkf'
+
   belongs_to :user
   has_many :likes, dependent: :destroy
   has_many :favorite_users, through: :likes, source: :user
-  scope :sorted, -> { order(created_at: :desc) }
+
+  attr_accessor :search_result_id
+
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 70 }
-  attr_accessor :search_result_id
+
+  scope :sorted, -> { order(created_at: :desc) }
 
   # 投稿をいいねする
   def favorite(user)
