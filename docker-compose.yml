@@ -27,9 +27,9 @@ services:
       - "3306:3306"
     environment:
       MYSQL_DATABASE: unknownmusic_development
-      MYSQL_ROOT_PASSWORD: ENV['MYSQL_ROOT_PASSWORD']
-      MYSQL_USER: ENV['MYSQL_USER']
-      MYSQL_PASSWORD: ENV['MYSQL_PASSWORD']
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
     #dbのデータを永続化しておく
     volumes:
       - mysql-data:/var/lib/mysql
@@ -40,9 +40,9 @@ services:
       - "3307:3306"
     environment:
       MYSQL_DATABASE: unknownmusic_test
-      MYSQL_ROOT_PASSWORD: ENV['MYSQL_ROOT_PASSWORD']
-      MYSQL_USER: ENV['MYSQL_USER']
-      MYSQL_PASSWORD: ENV['MYSQL_PASSWORD']
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
 
   nginx:
     build:
