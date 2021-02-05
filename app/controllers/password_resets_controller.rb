@@ -64,6 +64,6 @@ class PasswordResetsController < ApplicationController
     return unless email == 'test@example.com'
 
     flash[:warning] = 'テストユーザのため変更できません'
-    redirect_to root_path
+    redirect_to root_url
   end
 end

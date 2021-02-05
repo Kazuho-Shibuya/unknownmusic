@@ -33,7 +33,7 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.find_by(id: params[:id])
     @micropost.destroy
     flash[:success] = '投稿は削除されました'
-    redirect_to request.referer || root_url
+    redirect_back fallback_location: root_url
   end
 
   def index
