@@ -1,11 +1,11 @@
 class Micropost < ApplicationRecord
   require 'nkf'
 
+  attr_accessor :search_result_id
+
   belongs_to :user
   has_many :likes, dependent: :destroy
   has_many :favorite_users, through: :likes, source: :user
-
-  attr_accessor :search_result_id
 
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 70 }
