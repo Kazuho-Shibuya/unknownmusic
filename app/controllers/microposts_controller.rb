@@ -2,7 +2,6 @@ class MicropostsController < ApplicationController
   require './app/modules/spotify_api'
 
   before_action :logged_in_user, only: %i[create destroy]
-  before_action :correct_user,   only: :destroy
 
   def create
     if micropost_params[:search_result_id].blank?
@@ -31,6 +30,7 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
+    @micropost = current_user.microposts.find_by(id: params[:id])
     @micropost.destroy
     flash[:success] = '投稿は削除されました'
     redirect_to request.referer || root_url
@@ -46,10 +46,5 @@ class MicropostsController < ApplicationController
 
   def micropost_params
     params.require(:micropost).permit(:content, :search_result_id)
-  end
-
-  def correct_user
-    @micropost = current_user.microposts.find_by(id: params[:id])
-    redirect_to root_url if @micropost.nil?
   end
 end
