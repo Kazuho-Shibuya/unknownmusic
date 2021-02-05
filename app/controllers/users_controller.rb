@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   before_action :set_micropost, only: %i[home]
 
   def index
-    @user = current_user
     @users = User.where(activated: true).page(params[:page]).search(params[:search])
   end
 
