@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: %i[index destroy
                                           following followers home]
   before_action :admin_user,     only: :destroy
-  before_action :check_test_user, { only: %i[edit update destroy] }
+  before_action :check_test_user, only: %i[destroy]
   before_action :set_micropost, only: %i[home]
   PER = 20
 
