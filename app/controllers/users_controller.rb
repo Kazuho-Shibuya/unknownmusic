@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: %i[index destroy
                                           following followers home]
-  before_action :admin_user,     only: :destroy
+  before_action :check_admin_user,     only: :destroy
   before_action :check_test_user, only: %i[destroy]
   before_action :set_micropost, only: %i[home]
 
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   private
 
   # 管理者かどうか確認
-  def admin_user
+  def check_admin_user
     redirect_to(root_url) unless current_user.admin?
   end
 
