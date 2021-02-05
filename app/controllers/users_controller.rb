@@ -4,16 +4,15 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
   before_action :check_test_user, only: %i[destroy]
   before_action :set_micropost, only: %i[home]
-  PER = 20
 
   def index
     @user = current_user
-    @users = User.where(activated: true).page(params[:page]).per(PER).search(params[:search])
+    @users = User.where(activated: true).page(params[:page]).search(params[:search])
   end
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.page(params[:page]).per(PER).search(params[:search])
+    @microposts = @user.microposts.page(params[:page]).search(params[:search])
     redirect_to(root_url) && return unless @user.activated?
   end
 
@@ -31,14 +30,14 @@ class UsersController < ApplicationController
   def following
     @title = 'フォロー中'
     @user  = User.find(params[:id])
-    @users = @user.following.page(params[:page]).per(PER)
+    @users = @user.following.page(params[:page])
     render 'show_follow'
   end
 
   def followers
     @title = 'フォロワー'
     @user  = User.find(params[:id])
-    @users = @user.followers.page(params[:page]).per(PER)
+    @users = @user.followers.page(params[:page])
     render 'show_follow'
   end
 
@@ -60,6 +59,6 @@ class UsersController < ApplicationController
 
   def set_micropost
     @micropost = current_user.microposts.build
-    @feed_items = current_user.feed.page(params[:page]).per(20)
+    @feed_items = current_user.feed.page(params[:page])
   end
 end
