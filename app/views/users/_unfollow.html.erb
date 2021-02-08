@@ -1,7 +1,7 @@
 <%= form_for(current_user.active_relationships.find_by(followed_id: object.id),
              html: { method: :delete },
                           remote: true) do |f| %>
-  <div><%= hidden_field_tag :stats_user_id, current_user.id %></div>
+  <%= hidden_field_tag :stats_user_id, current_user.id %>
   <%= button_tag :type => "submit", :class =>"btn-style btn-unfollow" do %>
     <span class="normal">フォロー中</span>
     <span class="hover">フォロー解除</span>
