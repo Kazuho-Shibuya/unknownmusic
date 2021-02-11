@@ -12,7 +12,7 @@
       <% if f.object.errors.include?(:artist) %>
         <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:artist).first %></p>
       <% else %>
-        <p><%= f.label :artist,  '検索してください', class: 'search-result-non' %></p>
+        <p><%= f.label :artist,  '音楽検索してください', class: 'search-result-non' %></p>
       <% end %>
     <% else %>
       <%= f.hidden_field :search_result_id, value: @search_result["id"] %>
@@ -29,7 +29,7 @@
       <% if f.object.errors.include?(:song) %>
         <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:song).first %></p>
       <% else %>
-        <p><%= f.label :song,  '検索してください', class: 'search-result-non' %></p>
+        <p><%= f.label :song,  '音楽検索してください', class: 'search-result-non' %></p>
       <% end %>
     <% else %>
       <p><%= f.text_field :song, value: @search_result["name"], class: 'search-result', :disabled => true %></p>
@@ -45,7 +45,7 @@
       <% if f.object.errors.include?(:listening_url) %>
         <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:listening_url).first %></p>
       <% else %>
-        <p><%= f.label :listening_url,  '検索してください', class: 'search-result-non' %></p>
+        <p><%= f.label :listening_url,  '音楽検索してください', class: 'search-result-non' %></p>
       <% end %>
     <% else %>
       <p class="mt-4">
