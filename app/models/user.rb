@@ -12,7 +12,7 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   before_save   :downcase_email
-  before_create :create_activation_digest
+  before_create :set_activation_digest
 
   mount_uploader :image, ImageUploader
 
@@ -119,7 +119,7 @@ class User < ApplicationRecord
   end
 
   # 有効化トークンとダイジェストを作成および代入する
-  def create_activation_digest
+  def set_activation_digest
     self.activation_token  = User.new_token
     self.activation_digest = User.digest(activation_token)
   end
