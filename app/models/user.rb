@@ -103,9 +103,9 @@ class User < ApplicationRecord
   end
 
   # ユーザを検索する
-  def self.search(search)
-    if search
-      where(['name LIKE ?', "%#{search}%"])
+  def self.search(search_user)
+    if search_user
+      where(['name LIKE ?', "%#{search_user}%"])
     else
       all
     end
