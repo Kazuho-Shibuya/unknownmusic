@@ -20,12 +20,6 @@ class UsersController < ApplicationController
     @feed_items = @feed_items.search(params[:search])
   end
 
-  def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = 'ユーザを削除しました'
-    redirect_to users_url
-  end
-
   def following
     @title = 'フォロー中'
     @user  = User.find(params[:id])
