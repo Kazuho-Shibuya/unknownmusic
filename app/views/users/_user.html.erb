@@ -4,8 +4,9 @@
   <%= render 'follow_form', object: user, stats_user: @user if logged_in? %>
   <div class='admin-trash'>
     <% if current_user.admin? && !current_user?(user) %>
-      <%= link_to "", user, method: :delete, class: 'far fa-trash-alt admin-trash',
-                                       data: { confirm: "本当に削除しますか？" } %>
+      <%= link_to "", admin_path(user), method: :delete, class: 'far fa-trash-alt admin-trash',
+                                       data: { confirm: "本当に削除しますか？" },
+                                       controller: 'admin' %>
     <% end %>
   </div>
 </li>

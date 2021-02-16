@@ -32,18 +32,6 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-  describe '#destroy' do
-    it 'ログインページに遷移すること' do
-      delete :destroy, params: { id: user.id }
-      expect(response).to redirect_to new_session_url
-    end
-
-    it 'ステータスが302であること' do
-      get :destroy, params: { id: user.id }
-      expect(response.status).to eq 302
-    end
-  end
-
   describe '#following' do
     before do
       get :following, params: { id: user.id }

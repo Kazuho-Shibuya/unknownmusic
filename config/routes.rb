@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   resources :test_sessions, only: :create
   resources :sessions, only: %i[new create destroy]
   resources :signups, only: %i[new create]
+  resources :admin, only: %i[destroy]
 
-  resources :users do
+  resources :users, except: %i[destroy] do
     member do
       get :following, :followers, :home
     end
