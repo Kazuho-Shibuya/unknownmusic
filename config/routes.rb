@@ -23,10 +23,8 @@ Rails.application.routes.draw do
       post :search_result
     end
   end
-  resources :songs, except: %i[index new create edit update show destroy] do
-    collection do
-      get :search
-    end
+  namespace :song do
+    resources :search, only: %i[index]
   end
 
   namespace :mypage do
