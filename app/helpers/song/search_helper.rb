@@ -1,0 +1,2 @@
+module Song::SearchHelper
+end

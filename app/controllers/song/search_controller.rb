@@ -1,7 +1,5 @@
-class SongsController < ApplicationController
-  require './app/modules/spotify_api'
-
-  def search
+class Song::SearchController < ApplicationController
+  def index
     return if params[:search].blank?
 
     spotify_api = Spotify_api.new
