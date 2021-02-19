@@ -56,6 +56,7 @@ end
 #                    session DELETE /sessions/:id(.:format)                                                                  sessions#destroy
 #                    signups POST   /signups(.:format)                                                                       signups#create
 #                 new_signup GET    /signups/new(.:format)                                                                   signups#new
+#                      admin DELETE /admin/:id(.:format)                                                                     admin#destroy
 #             following_user GET    /users/:id/following(.:format)                                                           users#following
 #             followers_user GET    /users/:id/followers(.:format)                                                           users#followers
 #                  home_user GET    /users/:id/home(.:format)                                                                users#home
@@ -66,11 +67,10 @@ end
 #                       user GET    /users/:id(.:format)                                                                     users#show
 #                            PATCH  /users/:id(.:format)                                                                     users#update
 #                            PUT    /users/:id(.:format)                                                                     users#update
-#                            DELETE /users/:id(.:format)                                                                     users#destroy
 #           top_static_pages GET    /static_pages/top(.:format)                                                              static_pages#top
 #         about_static_pages GET    /static_pages/about(.:format)                                                            static_pages#about
 # search_result_static_pages POST   /static_pages/search_result(.:format)                                                    static_pages#search_result
-#               search_songs GET    /songs/search(.:format)                                                                  songs#search
+#          song_search_index GET    /song/search(.:format)                                                                   song/search#index
 #          edit_mypage_users GET    /mypage/users/edit(.:format)                                                             mypage/users#edit
 #               mypage_users PATCH  /mypage/users(.:format)                                                                  mypage/users#update
 #                            PUT    /mypage/users(.:format)                                                                  mypage/users#update
