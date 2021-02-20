@@ -6,7 +6,7 @@
       <div class="col-12 text-center justify-content-center">
         <p class="eng-title text-center">Music search</p>
         <h1 class="jpn-title text-center">音楽検索</h1>
-        <%= form_with url: search_songs_path, method: :get, local: true, class: "text-center" do |form| %>
+        <%= form_with url: song_search_index_path, method: :get, local: true, class: "text-center" do |form| %>
           <div>
             <%= text_field_tag :search, params[:search], placeholder: "アーティスト名、曲名で検索", class: "text-center search-form" %>
           </div>
