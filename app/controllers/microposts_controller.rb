@@ -12,7 +12,8 @@ class MicropostsController < ApplicationController
     else
       spotify_api = Spotify_api.new
       access_token = spotify_api.get_access_token
-      @search_result = spotify_api.search_id(access_token, micropost_params[:search_result_id])
+      uri_id = spotify_api.get_uri_id(micropost_params[:search_result_id])
+      @search_result = spotify_api.search(access_token, uri_id)
       share_params = {}
       share_params['song'] = @search_result['name']
       share_params['artist'] = @search_result['artists'][0]['name']

@@ -9,7 +9,8 @@ class StaticPagesController < ApplicationController
   def search_result
     spotify_api = Spotify_api.new
     access_token = spotify_api.get_access_token
-    @search_result = spotify_api.search_id(access_token, params[:search_tracks_item_id])
+    uri_id = spotify_api.get_uri_id(params[:search_tracks_item_id])
+    @search_result = spotify_api.search(access_token, uri_id)
     render 'users/home'
   end
 
