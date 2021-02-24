@@ -1,6 +1,4 @@
 class MicropostsController < ApplicationController
-  require './app/modules/spotify_api'
-
   before_action :logged_in_user, only: %i[create destroy]
 
   def create

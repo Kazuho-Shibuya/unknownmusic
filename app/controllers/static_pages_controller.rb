@@ -1,6 +1,4 @@
 class StaticPagesController < ApplicationController
-  require './app/modules/spotify_api'
-
   before_action :logged_in_user, only: %i[search_result]
   before_action :set_micropost, only: %i[search_result]
 
