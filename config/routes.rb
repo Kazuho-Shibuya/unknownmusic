@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :sessions, only: %i[new create destroy]
   resources :signups, only: %i[new create]
   resources :admin, only: %i[destroy]
+  resources :about, only: %i[index]
 
   resources :users, except: %i[destroy] do
     member do
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
   end
   resources :static_pages, except: %i[index new create edit update show destroy] do
     collection do
-      get :top, :about
+      get :top
       post :search_result
     end
   end
