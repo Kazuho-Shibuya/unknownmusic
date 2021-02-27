@@ -12,8 +12,6 @@ class StaticPagesController < ApplicationController
     render 'users/home'
   end
 
-  def about; end
-
   private
 
   def set_micropost
