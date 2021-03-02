@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe AboutController, type: :controller do
-  describe '#about' do
+  describe '#index' do
     before do
-      get :about
+      get :index
     end
 
     it '正常にレスポンスを返すこと' do
