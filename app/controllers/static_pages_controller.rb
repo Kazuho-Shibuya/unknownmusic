@@ -2,8 +2,6 @@ class StaticPagesController < ApplicationController
   before_action :logged_in_user, only: %i[search_result]
   before_action :set_micropost, only: %i[search_result]
 
-  def top; end
-
   def search_result
     spotify_api = Spotify_api.new
     access_token = spotify_api.get_access_token
