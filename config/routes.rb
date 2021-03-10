@@ -19,13 +19,9 @@ Rails.application.routes.draw do
       get :following, :followers, :home
     end
   end
-  resources :static_pages, except: %i[index new create edit update show destroy] do
-    collection do
-      post :search_result
-    end
-  end
+
   namespace :song do
-    resources :search, only: %i[index]
+    resources :search, only: %i[index create]
   end
 
   namespace :mypage do
