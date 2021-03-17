@@ -13,10 +13,11 @@ Rails.application.routes.draw do
   resources :admin, only: %i[destroy]
   resources :about, only: %i[index]
   resources :top, only: %i[index]
+  resources :home, only: %i[index]
 
   resources :users, except: %i[destroy] do
     member do
-      get :following, :followers, :home
+      get :following, :followers
     end
   end
 
