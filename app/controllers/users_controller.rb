@@ -1,9 +1,8 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: %i[index destroy
-                                          following followers home]
-  before_action :check_admin_user,     only: :destroy
+                                          following followers]
+  before_action :check_admin_user,     only: %i[destroy]
   before_action :check_test_user, only: %i[destroy]
-  before_action :set_micropost, only: %i[home]
 
   def index
     @users = User.where(activated: true).page(params[:page]).search(params[:search])
@@ -13,11 +12,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @microposts = @user.microposts.page(params[:page]).search(params[:search])
     redirect_to(root_url) && return unless @user.activated?
-  end
-
-  def home
-    @user = User.find(params[:id])
-    @feed_items = @feed_items.search(params[:search])
   end
 
   def following
