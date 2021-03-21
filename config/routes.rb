@@ -57,9 +57,9 @@ end
 #                     admin DELETE /admin/:id(.:format)                                                                     admin#destroy
 #               about_index GET    /about(.:format)                                                                         about#index
 #                 top_index GET    /top(.:format)                                                                           top#index
+#                home_index GET    /home(.:format)                                                                          home#index
 #            following_user GET    /users/:id/following(.:format)                                                           users#following
 #            followers_user GET    /users/:id/followers(.:format)                                                           users#followers
-#                 home_user GET    /users/:id/home(.:format)                                                                users#home
 #                     users GET    /users(.:format)                                                                         users#index
 #                           POST   /users(.:format)                                                                         users#create
 #                  new_user GET    /users/new(.:format)                                                                     users#new
