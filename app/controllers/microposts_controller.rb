@@ -20,7 +20,7 @@ class MicropostsController < ApplicationController
       @micropost = current_user.microposts.build(share_params)
       if @micropost.save
         flash[:success] = '投稿しました'
-        redirect_to home_user_url(current_user)
+        redirect_to home_index_url(current_user)
       else
         @feed_items = []
         render 'users/home'
