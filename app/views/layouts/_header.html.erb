@@ -26,7 +26,7 @@
         </li>
         <% if logged_in? %>
           <li class="nav-item">
-            <%= link_to home_user_path(current_user), id: 'home', class: 'link-style' do %>
+            <%= link_to home_index_path(current_user), id: 'home', class: 'link-style' do %>
               <p class="eng-link">Home</p>
               <p class="jpn-link">ホーム</p>
             <% end %>
