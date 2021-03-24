@@ -16,7 +16,7 @@ class Song::SearchController < ApplicationController
     access_token = spotify_api.get_access_token
     uri_id = spotify_api.get_uri_id(params[:search_tracks_item_id])
     @search_result = spotify_api.search(access_token, uri_id)
-    render 'users/home'
+    render 'home/index'
   end
 
   private
