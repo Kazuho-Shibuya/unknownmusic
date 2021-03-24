@@ -6,7 +6,7 @@ class MicropostsController < ApplicationController
       flash.now[:danger] = '曲を検索してください'
       @micropost = Micropost.new
       @feed_items = []
-      render 'users/home'
+      render 'home/index'
     else
       spotify_api = Spotify_api.new
       access_token = spotify_api.get_access_token
@@ -23,7 +23,7 @@ class MicropostsController < ApplicationController
         redirect_to home_index_url(current_user)
       else
         @feed_items = []
-        render 'users/home'
+        render 'home/index'
       end
     end
   end
