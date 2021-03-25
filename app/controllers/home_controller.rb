@@ -3,7 +3,6 @@ class HomeController < ApplicationController
   before_action :set_micropost
 
   def index
-    @user = User.find(params[:id])
     @feed_items = @feed_items.search(params[:search])
   end
 
