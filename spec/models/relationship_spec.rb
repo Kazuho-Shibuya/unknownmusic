@@ -6,7 +6,8 @@ RSpec.describe Relationship, type: :model do
     it 'フォローフォロワーの関係が作成できる' do
       followed_user = user
       follower_user = user
-      relationship = FactoryBot.build(:relationship, followed_id: followed_user.id, follower_id: follower_user.id)
+      relationship = FactoryBot.build(:relationship, followed_id: followed_user.id,
+                                                     follower_id: follower_user.id)
       expect(relationship).to be_valid
     end
   end
