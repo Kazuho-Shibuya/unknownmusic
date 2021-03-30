@@ -1,4 +1,4 @@
-class Spotify_api
+class SpotifyApi
   require 'net/http'
   require 'uri'
 
