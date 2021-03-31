@@ -6,7 +6,7 @@ RSpec.describe AdminController, type: :controller do
   describe '#destroy' do
     it 'ログインページに遷移すること' do
       delete :destroy, params: { id: user.id }
-      expect(response).to redirect_to users_url
+      expect(response).to redirect_to new_session_url
     end
 
     it 'ステータスが302であること' do
