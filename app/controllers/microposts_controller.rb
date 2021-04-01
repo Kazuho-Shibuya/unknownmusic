@@ -8,7 +8,7 @@ class MicropostsController < ApplicationController
       @feed_items = []
       render 'home/index'
     else
-      spotify_api = Spotify_api.new
+      spotify_api = SpotifyApi.new
       access_token = spotify_api.get_access_token
       uri_id = spotify_api.get_uri_id(micropost_params[:search_result_id])
       @search_result = spotify_api.search(access_token, uri_id)
