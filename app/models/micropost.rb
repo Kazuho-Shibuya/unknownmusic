@@ -28,28 +28,26 @@ class Micropost < ApplicationRecord
   end
 
   def self.search(search_song)
-    if search_song
-      column = 'content LIKE ? OR content LIKE ? OR song LIKE ? OR song LIKE ? OR artist LIKE ? OR artist LIKE ?'
-      value = "%#{search_song}%"
-      if search_song.is_japanese?
-        if search_song.is_kana?
-          change_romaji = search_song.to_roman
-        elsif search_song.is_hira?
-          change_romaji = search_song.to_roma
-        else
-          change_hira = search_song.to_kanhira
-          change_romaji = change_hira.to_roma
-        end
-        value_romaji = "%#{change_romaji}%"
-        where([column, value, value_romaji, value, value_romaji, value, value_romaji])
+    return all unless search_song
+
+    column = 'content LIKE ? OR content LIKE ? OR song LIKE ? OR song LIKE ? OR artist LIKE ? OR artist LIKE ?'
+    value = "%#{search_song}%"
+    if search_song.is_japanese?
+      if search_song.is_kana?
+        change_romaji = search_song.to_roman
+      elsif search_song.is_hira?
+        change_romaji = search_song.to_roma
       else
-        change_hira = search_song.to_kana
-        change_kana = NKF.nkf('-w --katakana', change_hira)
-        value_kana = "%#{change_kana}%"
-        where([column, value, value_kana, value, value_kana, value, value_kana])
+        change_hira = search_song.to_kanhira
+        change_romaji = change_hira.to_roma
       end
+      value_romaji = "%#{change_romaji}%"
+      where([column, value, value_romaji, value, value_romaji, value, value_romaji])
     else
-      all
+      change_hira = search_song.to_kana
+      change_kana = NKF.nkf('-w --katakana', change_hira)
+      value_kana = "%#{change_kana}%"
+      where([column, value, value_kana, value, value_kana, value, value_kana])
     end
   end
 end
