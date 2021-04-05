@@ -27,24 +27,24 @@ class Micropost < ApplicationRecord
     favorite_users.include?(user)
   end
 
-  def self.search(search_song)
-    return all unless search_song
+  def self.search(search_content)
+    return all unless search_content
 
     column = 'content LIKE ? OR content LIKE ? OR song LIKE ? OR song LIKE ? OR artist LIKE ? OR artist LIKE ?'
-    value = "%#{search_song}%"
-    if search_song.is_japanese?
-      if search_song.is_kana?
-        change_romaji = search_song.to_roman
-      elsif search_song.is_hira?
-        change_romaji = search_song.to_roma
+    value = "%#{search_content}%"
+    if search_content.is_japanese?
+      if search_content.is_kana?
+        change_romaji = search_content.to_roman
+      elsif search_content.is_hira?
+        change_romaji = search_content.to_roma
       else
-        change_hira = search_song.to_kanhira
+        change_hira = search_content.to_kanhira
         change_romaji = change_hira.to_roma
       end
       value_romaji = "%#{change_romaji}%"
       where([column, value, value_romaji, value, value_romaji, value, value_romaji])
     else
-      change_hira = search_song.to_kana
+      change_hira = search_content.to_kana
       change_kana = NKF.nkf('-w --katakana', change_hira)
       value_kana = "%#{change_kana}%"
       where([column, value, value_kana, value, value_kana, value, value_kana])
