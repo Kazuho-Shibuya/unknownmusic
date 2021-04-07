@@ -27,6 +27,21 @@ class Micropost < ApplicationRecord
     favorite_users.include?(user)
   end
 
+  # 言語を変更する
+  def change_language(content)
+    if content.is_japanese?
+      if content.is_kana?
+        content.to_roman
+      elsif content.is_hira?
+        content.to_roma
+      else
+        content.to_kanhira.to_roma
+      end
+    else
+      NKF.nkf('-w --katakana', content.to_kana)
+    end
+  end
+
   # 投稿内容を検索する
   def self.search(search_micropost)
     return all unless search_micropost
