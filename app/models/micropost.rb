@@ -28,7 +28,7 @@ class Micropost < ApplicationRecord
   end
 
   # 言語を変更する
-  def change_language(content)
+  def self.change_language(content)
     if content.is_japanese?
       if content.is_kana?
         content.to_roman
@@ -43,28 +43,13 @@ class Micropost < ApplicationRecord
   end
 
   # 投稿内容を検索する
-  def self.search(search_micropost)
-    return all unless search_micropost
+  def self.search(search_content)
+    return all unless search_content
 
     column = 'content LIKE ? OR content LIKE ? OR song LIKE ? OR song LIKE ? OR artist LIKE ? OR artist LIKE ?'
-    value = "%#{search_micropost}%"
-    if search_micropost.is_japanese?
-      if search_micropost.is_kana?
-        change_romaji = search_micropost.to_roman
-      elsif search_micropost.is_hira?
-        change_romaji = search_micropost.to_roma
-      else
-        change_hira = search_micropost.to_kanhira
-        change_romaji = change_hira.to_roma
-      end
-      value_romaji = "%#{change_romaji}%"
-      where([column, value, value_romaji, value, value_romaji, value, value_romaji])
-    else
-      change_hira = search_micropost.to_kana
-      change_kana = NKF.nkf('-w --katakana', change_hira)
-      value_kana = "%#{change_kana}%"
-      where([column, value, value_kana, value, value_kana, value, value_kana])
-    end
+    content = "%#{search_content}%"
+    change_language_content = "%#{change_language(search_content)}%"
+    where([column, content, change_language_content, content, change_language_content, content, change_language_content])
   end
 end
 
