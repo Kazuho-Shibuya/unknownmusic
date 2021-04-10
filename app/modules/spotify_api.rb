@@ -30,7 +30,7 @@ class SpotifyApi
   end
 
   def search(access_token, get_uri)
-    uri_encode = URI.encode(get_uri)
+    uri_encode = Addressable::URI.encode(get_uri)
     uri = URI.parse(uri_encode)
     request = Net::HTTP::Get.new(uri)
     request.content_type = 'application/json'
