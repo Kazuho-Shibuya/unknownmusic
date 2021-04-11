@@ -49,7 +49,8 @@ class Micropost < ApplicationRecord
     column = 'content LIKE ? OR content LIKE ? OR song LIKE ? OR song LIKE ? OR artist LIKE ? OR artist LIKE ?'
     content = "%#{search_content}%"
     change_language_content = "%#{change_language(search_content)}%"
-    where([column, content, change_language_content, content, change_language_content, content, change_language_content])
+    where([column, content, change_language_content, content, change_language_content, content,
+           change_language_content])
   end
 end
 
