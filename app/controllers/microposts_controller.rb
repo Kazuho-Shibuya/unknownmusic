@@ -8,10 +8,7 @@ class MicropostsController < ApplicationController
       @feed_items = []
       render 'home/index'
     else
-      spotify_api = SpotifyApi.new
-      access_token = spotify_api.get_access_token
-      uri_id = spotify_api.get_uri_id(micropost_params[:search_result_id])
-      @search_result = spotify_api.search(access_token, uri_id)
+      @search_result = spotify_params(micropost_params[:search_result_id])
       share_params = {}
       share_params['song'] = @search_result['name']
       share_params['artist'] = @search_result['artists'][0]['name']
@@ -45,5 +42,12 @@ class MicropostsController < ApplicationController
 
   def micropost_params
     params.require(:micropost).permit(:content, :search_result_id)
+  end
+
+  def spotify_params(search_result_id)
+    spotify_api = SpotifyApi.new
+    access_token = spotify_api.get_access_token
+    uri_id = spotify_api.get_uri_id(search_result_id)
+    spotify_api.search(access_token, uri_id)
   end
 end
