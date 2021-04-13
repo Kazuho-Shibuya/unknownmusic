@@ -9,12 +9,7 @@ class MicropostsController < ApplicationController
       render 'home/index'
     else
       @search_result = spotify_params(micropost_params[:search_result_id])
-      share_params = {}
-      share_params['song'] = @search_result['name']
-      share_params['artist'] = @search_result['artists'][0]['name']
-      share_params['listening_url'] = @search_result['preview_url']
-      share_params['content'] = micropost_params[:content]
-      @micropost = current_user.microposts.build(share_params)
+      @micropost = current_user.microposts.build(set_share_params)
       if @micropost.save
         flash[:success] = '投稿しました'
         redirect_to home_index_url(current_user)
@@ -49,5 +44,10 @@ class MicropostsController < ApplicationController
     access_token = spotify_api.get_access_token
     uri_id = spotify_api.get_uri_id(search_result_id)
     spotify_api.search(access_token, uri_id)
+  end
+
+  def set_share_params
+    { song: @search_result['name'], artist: @search_result['artists'][0]['name'],
+      listening_url: @search_result['preview_url'], content: micropost_params[:content] }
   end
 end
