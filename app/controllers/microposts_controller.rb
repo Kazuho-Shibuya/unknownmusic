@@ -5,8 +5,7 @@ class MicropostsController < ApplicationController
     if micropost_params[:search_result_id].blank?
       flash.now[:danger] = '曲を検索してください'
       @micropost = Micropost.new
-      @feed_items = []
-      render 'home/index'
+      render_home
     else
       @search_result = spotify_params(micropost_params[:search_result_id])
       @micropost = current_user.microposts.build(set_share_params)
@@ -14,8 +13,7 @@ class MicropostsController < ApplicationController
         flash[:success] = '投稿しました'
         redirect_to home_index_url(current_user)
       else
-        @feed_items = []
-        render 'home/index'
+        render_home
       end
     end
   end
@@ -49,5 +47,10 @@ class MicropostsController < ApplicationController
   def set_share_params
     { song: @search_result['name'], artist: @search_result['artists'][0]['name'],
       listening_url: @search_result['preview_url'], content: micropost_params[:content] }
+  end
+
+  def render_home
+    @feed_items = []
+    render 'home/index'
   end
 end
