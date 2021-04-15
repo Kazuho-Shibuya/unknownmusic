@@ -7,7 +7,7 @@ class MicropostsController < ApplicationController
       @micropost = Micropost.new
       render_home
     else
-      @search_result = spotify_params(micropost_params[:search_result_id])
+      @search_result = set_spotify_params(micropost_params[:search_result_id])
       @micropost = current_user.microposts.build(set_share_params)
       if @micropost.save
         flash[:success] = '投稿しました'
@@ -37,7 +37,7 @@ class MicropostsController < ApplicationController
     params.require(:micropost).permit(:content, :search_result_id)
   end
 
-  def spotify_params(search_result_id)
+  def set_spotify_params(search_result_id)
     spotify_api = SpotifyApi.new
     access_token = spotify_api.get_access_token
     uri_id = spotify_api.get_uri_id(search_result_id)
