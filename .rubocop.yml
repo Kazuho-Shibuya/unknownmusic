@@ -39,8 +39,8 @@ Layout/LineLength:
   Max: 100
 
 # メソッドの行数
-# Metrics/MethodLength:
-#  Max: 20
+Metrics/MethodLength:
+  Max: 15
 
 # 基準値を超えた警告
 #Metrics/AbcSize:
