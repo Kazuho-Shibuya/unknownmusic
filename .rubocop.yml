@@ -43,9 +43,9 @@ Metrics/MethodLength:
   Max: 15
 
 # 基準値を超えた警告
-#Metrics/AbcSize:
-#  Enabled: true
-#  Max: 20
+Metrics/AbcSize:
+  Enabled: true
+  Max: 30
 
 #versionupによって指定
 Lint/RaiseException:
@@ -65,9 +65,6 @@ Style/HashTransformValues:
 
 Rails/SkipsModelValidations:
   Enabled: false
-
-Metrics/AbcSize:
-  Max: 20
 
 Rails/HelperInstanceVariable:
   Enabled: false
