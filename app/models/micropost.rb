@@ -46,7 +46,8 @@ class Micropost < ApplicationRecord
   def self.search(search_content)
     return all unless search_content
 
-    column = 'content LIKE ? OR content LIKE ? OR song LIKE ? OR song LIKE ? OR artist LIKE ? OR artist LIKE ?'
+    column = 'content LIKE ? OR content LIKE ? OR song LIKE ? OR song LIKE ?
+              OR artist LIKE ? OR artist LIKE ?'
     content = "%#{search_content}%"
     change_language_content = "%#{change_language(search_content)}%"
     where([column, content, change_language_content, content, change_language_content, content,
