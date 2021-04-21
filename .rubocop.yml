@@ -47,6 +47,10 @@ Metrics/AbcSize:
   Enabled: true
   Max: 30
 
+# ブロックの行数
+Metrics/BlockLength:
+  Enabled: false
+
 #versionupによって指定
 Lint/RaiseException:
   Enabled: true
