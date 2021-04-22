@@ -51,6 +51,10 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Enabled: false
 
+# inverse_ofの指定
+Rails/InverseOf:
+  Enabled: false
+
 #versionupによって指定
 Lint/RaiseException:
   Enabled: true
