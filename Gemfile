@@ -66,6 +66,7 @@ group :test do
   gem 'faker', '1.7.3'
   gem 'launchy', '~> 2.4.3'
   gem 'selenium-webdriver'
+  gem 'simplecov'
 end
 
 group :production, :staging do
