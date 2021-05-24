@@ -108,7 +108,7 @@
 - Unicorn
 
 ## テスト
-- RSpec(100 examples)
+- RSpec 83.51% covered
 
 ## その他使用技術
 - Spotify api
