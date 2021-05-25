@@ -24,7 +24,7 @@ gem 'kaminari', '>= 1.2.1'
 gem 'mini_magick'
 gem 'miyabi'
 gem 'mysql2', '~> 0.5.3'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'rails_12factor', group: :production
 gem 'rails-i18n'
 gem 'romkan', '~> 0.4.0'
