@@ -526,7 +526,10 @@ sixteenth_user = User.find_by(id: 16)
 seventeenth_user = User.find_by(id: 17)
 eighteenth_user = User.find_by(id: 18)
 nineteenth_user = User.find_by(id: 19)
+twentysecond_user = User.find_by(id: 22)
+twentyfourth_user = User.find_by(id: 24)
 thirtieth_user = User.find_by(id: 30)
+fortyseventh_user = User.find_by(id: 47)
 
 first_user.microposts.create!(
   song: '夜に駆ける',
@@ -846,6 +849,42 @@ second_user.microposts.create!(
   content: '恋もいいけどこの曲もめっちゃ好き。',
   listening_url: 'https://p.scdn.co/mp3-preview/00276fb8495ac59e91ea0085a494f8888a6b0ff0?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
 )
+eleventh_user.microposts.create!(
+  song: 'Pale Blue',
+  artist: '米津玄師',
+  content: '米津さんの曲はいつも最高！',
+  listening_url: 'https://p.scdn.co/mp3-preview/c600314607f37998c56a206bbec7404d920235ee?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
+)
+twentysecond_user.microposts.create!(
+  song: 'もう少しだけ',
+  artist: 'YOASOBI',
+  content: '不動のYOASOBI。',
+  listening_url: 'https://p.scdn.co/mp3-preview/16c1f73dd860bd79315533aae987b142cfd937bf?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
+)
+thirteenth_user.microposts.create!(
+  song: '不思議',
+  artist: '星野 源',
+  content: 'ドラマで流れるタイミングがペスト！',
+  listening_url: 'https://p.scdn.co/mp3-preview/92a761a8a349c17a468b692ade2e730536e435bc?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
+)
+twentyfourth_user.microposts.create!(
+  song: 'ドライフラワー',
+  artist: '優里',
+  content: '綺麗な歌声。',
+  listening_url: 'https://p.scdn.co/mp3-preview/41b1b37df1256eacdcd963913e8e2b431a235217?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
+)
+fortyseventh_user.microposts.create!(
+  song: 'なないろ',
+  artist: 'BUMP OF CHICKEN',
+  content: '朝にぴったり♪',
+  listening_url: 'https://p.scdn.co/mp3-preview/2584f40ade54f8b553f6f2b500fafb482a3f90ad?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
+)
+thirtieth_user.microposts.create!(
+  song: 'Broken Heart of Gold',
+  artist: 'ONE OK ROCK',
+  content: 'るろうに剣心公開か〜',
+  listening_url: 'https://p.scdn.co/mp3-preview/834fcc021ad1c80a2702b1f177a47b6f87f7cfb0?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
+)
 
 # フォロー
 users = User.all
@@ -875,17 +914,47 @@ following.each { |followed| fifth_user.follow(followed) }
 followers.each { |follower| follower.follow(fifth_user) }
 
 # いいね
-users = User.order(:created_at).take(18)
+users = User.order(:created_at).last(21)
+user_id = 15
+micropost_id = 54
+users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
+
+users = User.order(:created_at).take(17)
+user_id = 8
+micropost_id = 55
+users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
+
+users = User.order(:created_at).last(20)
+user_id = 22
+micropost_id = 56
+users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
+
+users = User.order(:created_at).take(35)
+user_id = 17
+micropost_id = 57
+users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
+
+users = User.order(:created_at).last(16)
+user_id = 27
+micropost_id = 58
+users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
+
+users = User.order(:created_at).take(24)
+user_id = 9
+micropost_id = 59
+users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
+
+users = User.order(:created_at).last(44)
 user_id = 1
 micropost_id = 1
 users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
 
-users = User.order(:created_at).take(13)
+users = User.order(:created_at).take(42)
 user_id = 3
 micropost_id = 37
 users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
 
-users = User.order(:created_at).take(12)
+users = User.order(:created_at).last(12)
 user_id = 15
 micropost_id = 35
 users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
@@ -895,7 +964,7 @@ user_id = 30
 micropost_id = 41
 users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
 
-users = User.order(:created_at).take(11)
+users = User.order(:created_at).last(50)
 user_id = 4
 micropost_id = 43
 users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
@@ -910,12 +979,12 @@ user_id = 18
 micropost_id = 3
 users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
 
-users = User.order(:created_at).take(7)
+users = User.order(:created_at).take(27)
 user_id = 11
-micropost_id = 13
+micropost_id = 3
 users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
 
-users = User.order(:created_at).take(5)
+users = User.order(:created_at).last(5)
 user_id = 13
 micropost_id = 21
 users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
@@ -930,7 +999,7 @@ user_id = 2
 micropost_id = 45
 users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
 
-users = User.order(:created_at).take(3)
+users = User.order(:created_at).last(3)
 user_id = 2
 micropost_id = 2
 users.each { |user| user.likes.create!(user_id: user_id, micropost_id: micropost_id) }
