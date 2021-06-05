@@ -864,7 +864,7 @@ twentysecond_user.microposts.create!(
 thirteenth_user.microposts.create!(
   song: '不思議',
   artist: '星野 源',
-  content: 'ドラマで流れるタイミングがペスト！',
+  content: 'ドラマで流れるタイミングがベスト！',
   listening_url: 'https://p.scdn.co/mp3-preview/92a761a8a349c17a468b692ade2e730536e435bc?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
 )
 twentyfourth_user.microposts.create!(
