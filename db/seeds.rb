@@ -880,10 +880,10 @@ fortyseventh_user.microposts.create!(
   listening_url: 'https://p.scdn.co/mp3-preview/2584f40ade54f8b553f6f2b500fafb482a3f90ad?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
 )
 thirtieth_user.microposts.create!(
-  song: 'Broken Heart of Gold',
+  song: 'Renegades',
   artist: 'ONE OK ROCK',
-  content: 'るろうに剣心公開か〜',
-  listening_url: 'https://p.scdn.co/mp3-preview/834fcc021ad1c80a2702b1f177a47b6f87f7cfb0?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
+  content: 'るろうに剣心いいよね〜',
+  listening_url: 'https://p.scdn.co/mp3-preview/332f9aba55e8c727d7271a93db0524f40041c162?cid=94ea968e9d334bd3be33c1c3fbb25cc0'
 )
 
 # フォロー
