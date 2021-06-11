@@ -4,13 +4,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: dockerize -wait tcp://db:3306 -timeout 20s bundle exec unicorn_rails -p 3000 -c /var/www/rails/unknownmusic/config/unicorn.conf.rb
+    command: dockerize -wait tcp://db:3306 -timeout 20s bundle exec unicorn_rails -p 4000 -c /var/www/rails/unknownmusic/config/unicorn.conf.rb
     tty: true
     stdin_open: true
     depends_on:
       - db
     ports:
-      - "3000:3000"
+      - "4000:4000"
     environment:
       TZ: Asia/Tokyo
     volumes:
