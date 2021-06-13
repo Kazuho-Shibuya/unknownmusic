@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
   let(:user) { FactoryBot.create(:user) }
-  let(:user_params) { FactoryBot.attributes_for(:user) }
 
   describe '#index' do
     before do
