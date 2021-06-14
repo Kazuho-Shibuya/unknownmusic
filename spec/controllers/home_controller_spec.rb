@@ -8,11 +8,11 @@ RSpec.describe HomeController, type: :controller do
       get :index, params: { id: user.id }
     end
 
-    it 'ログインページに遷移すること' do
+    example 'ログインページに遷移すること' do
       expect(response).to redirect_to new_session_url
     end
 
-    it 'ステータスが302であること' do
+    example 'ステータスが302であること' do
       expect(response.status).to eq 302
     end
   end

@@ -8,11 +8,11 @@ RSpec.describe PasswordResetsController, type: :controller do
       get :new
     end
 
-    it '正常にレスポンスを返すこと' do
+    example '正常にレスポンスを返すこと' do
       expect(response).to be_successful
     end
 
-    it 'ステータスが200であること' do
+    example 'ステータスが200であること' do
       expect(response.status).to eq 200
     end
   end
@@ -22,11 +22,11 @@ RSpec.describe PasswordResetsController, type: :controller do
       post :create, params: { password_reset: { email: user.email } }
     end
 
-    it '正常にレスポンスを返すこと' do
+    example '正常にレスポンスを返すこと' do
       expect(response).to be_successful
     end
 
-    it 'ステータスが200であること' do
+    example 'ステータスが200であること' do
       expect(response.status).to eq 200
     end
   end
@@ -36,11 +36,11 @@ RSpec.describe PasswordResetsController, type: :controller do
       get :edit, params: { id: user.id }
     end
 
-    it '正常にレスポンスを返さないこと' do
+    example '正常にレスポンスを返さないこと' do
       expect(response).to_not be_successful
     end
 
-    it 'ステータスが302であること' do
+    example 'ステータスが302であること' do
       expect(response.status).to eq 302
     end
   end
@@ -50,11 +50,11 @@ RSpec.describe PasswordResetsController, type: :controller do
       patch :update, params: { id: user.id }
     end
 
-    it '正常にレスポンスを返さないこと' do
+    example '正常にレスポンスを返さないこと' do
       expect(response).to_not be_successful
     end
 
-    it 'ステータスが302であること' do
+    example 'ステータスが302であること' do
       expect(response.status).to eq 302
     end
   end

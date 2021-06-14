@@ -6,11 +6,11 @@ RSpec.describe AboutController, type: :controller do
       get :index
     end
 
-    it '正常にレスポンスを返すこと' do
+    example '正常にレスポンスを返すこと' do
       expect(response).to be_successful
     end
 
-    it 'ステータスが200であること' do
+    example 'ステータスが200であること' do
       expect(response.status).to eq 200
     end
   end
