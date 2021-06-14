@@ -11,12 +11,12 @@ RSpec.describe UserMailer, type: :mailer do
       end
       part.body.raw_source
     end
-    it 'メールヘッダーの内容が正しいこと' do
+    example 'メールヘッダーの内容が正しいこと' do
       expect(mail.from).to eq ['noreply@unknownmusic.net']
       expect(mail.subject).to eq 'アカウントの有効化'
     end
 
-    it 'メール内容が正しいこと' do
+    example 'メール内容が正しいこと' do
       expect(mail_body).to match user.name
       expect(mail_body).to match user.activation_token
       expect(mail_body).to match CGI.escape(user.email)
@@ -31,13 +31,13 @@ RSpec.describe UserMailer, type: :mailer do
       end
       part.body.raw_source
     end
-    it 'メールヘッダーの内容が正しいこと' do
+    example 'メールヘッダーの内容が正しいこと' do
       user.reset_token = User.new_token
       expect(mail.from).to eq ['noreply@unknownmusic.net']
       expect(mail.subject).to eq 'パスワードのリセット'
     end
 
-    it 'メール内容が正しいこと' do
+    example 'メール内容が正しいこと' do
       user.reset_token = User.new_token
       expect(mail_body).to match user.reset_token
       expect(mail_body).to match CGI.escape(user.email)

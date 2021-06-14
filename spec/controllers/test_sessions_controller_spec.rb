@@ -6,11 +6,11 @@ RSpec.describe TestSessionsController, type: :controller do
       post :create
     end
 
-    it '正常にレスポンスを返すこと' do
+    example '正常にレスポンスを返すこと' do
       expect(response).to be_successful
     end
 
-    it 'ステータスが204であること' do
+    example 'ステータスが204であること' do
       expect(response.status).to eq 204
     end
   end

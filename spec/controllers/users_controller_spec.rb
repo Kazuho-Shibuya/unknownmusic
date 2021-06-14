@@ -8,11 +8,11 @@ RSpec.describe UsersController, type: :controller do
       get :index
     end
 
-    it 'ログインページに遷移すること' do
+    example 'ログインページに遷移すること' do
       expect(response).to redirect_to new_session_url
     end
 
-    it 'ステータスが302であること' do
+    example 'ステータスが302であること' do
       expect(response.status).to eq 302
     end
   end
@@ -22,11 +22,11 @@ RSpec.describe UsersController, type: :controller do
       get :show, params: { id: user.id }
     end
 
-    it '正常にレスポンスを返していること' do
+    example '正常にレスポンスを返していること' do
       expect(response).to be_successful
     end
 
-    it 'ステータスが200であること' do
+    example 'ステータスが200であること' do
       expect(response.status).to eq 200
     end
   end
@@ -36,11 +36,11 @@ RSpec.describe UsersController, type: :controller do
       get :following, params: { id: user.id }
     end
 
-    it 'ログインページに遷移すること' do
+    example 'ログインページに遷移すること' do
       expect(response).to redirect_to new_session_url
     end
 
-    it 'ステータスが302であること' do
+    example 'ステータスが302であること' do
       expect(response.status).to eq 302
     end
   end
@@ -50,11 +50,11 @@ RSpec.describe UsersController, type: :controller do
       get :followers, params: { id: user.id }
     end
 
-    it 'ログインページに遷移すること' do
+    example 'ログインページに遷移すること' do
       expect(response).to redirect_to new_session_url
     end
 
-    it 'ステータスが302であること' do
+    example 'ステータスが302であること' do
       expect(response.status).to eq 302
     end
   end

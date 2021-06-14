@@ -8,11 +8,11 @@ RSpec.describe AccountActivationsController, type: :controller do
       get :edit, params: { id: user.id }
     end
 
-    it '正常にレスポンスを返さないこと' do
+    example '正常にレスポンスを返さないこと' do
       expect(response).to_not be_successful
     end
 
-    it 'ステータスが302であること' do
+    example 'ステータスが302であること' do
       expect(response.status).to eq 302
     end
   end

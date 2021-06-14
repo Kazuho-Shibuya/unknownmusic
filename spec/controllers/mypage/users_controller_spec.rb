@@ -12,11 +12,11 @@ RSpec.describe Mypage::UsersController, type: :controller do
       get :edit
     end
 
-    it '正常にレスポンスを返していること' do
+    example '正常にレスポンスを返していること' do
       expect(response).to be_successful
     end
 
-    it 'ステータスが200であること' do
+    example 'ステータスが200であること' do
       expect(response.status).to eq 200
     end
   end
@@ -26,11 +26,11 @@ RSpec.describe Mypage::UsersController, type: :controller do
       patch :update, params: { user: user_params }
     end
 
-    it 'ユーザページに遷移すること' do
+    example 'ユーザページに遷移すること' do
       expect(response).to redirect_to user_url(user)
     end
 
-    it 'ステータスが302であること' do
+    example 'ステータスが302であること' do
       expect(response.status).to eq 302
     end
   end

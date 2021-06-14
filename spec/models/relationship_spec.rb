@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Relationship, type: :model do
   let(:user) { FactoryBot.create(:user) }
   context 'フォローユーザとフォロワーユーザがいる場合' do
-    it 'フォローフォロワーの関係が作成できる' do
+    example 'フォローフォロワーの関係が作成できる' do
       followed_user = user
       follower_user = user
       relationship = FactoryBot.build(:relationship, followed_id: followed_user.id,
@@ -13,7 +13,7 @@ RSpec.describe Relationship, type: :model do
   end
 
   context 'フォローユーザがいない場合' do
-    it 'フォローフォロワーの関係が作成できない' do
+    example 'フォローフォロワーの関係が作成できない' do
       relationship = FactoryBot.build(:relationship, followed_id: nil)
       relationship.valid?
       expect(relationship.errors[:followed_id]).to include('を入力してください')
@@ -21,7 +21,7 @@ RSpec.describe Relationship, type: :model do
   end
 
   context 'フォロワーユーザがいない場合' do
-    it 'フォローフォロワーの関係が作成できない' do
+    example 'フォローフォロワーの関係が作成できない' do
       relationship = FactoryBot.build(:relationship, follower_id: nil)
       relationship.valid?
       expect(relationship.errors[:follower_id]).to include('を入力してください')
