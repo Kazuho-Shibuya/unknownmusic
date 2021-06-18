@@ -16,13 +16,7 @@
             <div>
               <%= f.text_field :name, class: 'signup-form' %>
             </div>
-            <% if f.object.errors.include?(:name) %>
-              <% f.object.errors.full_messages_for(:name).each do |err_msg| %>
-                <p class="alert alert-danger error mx-auto text-left">
-                  <%= err_msg %>
-                </p>
-              <% end %>
-            <% end %>
+            <%= render 'shared/colum_error_messages', { object: f.object, colum: :name } %>
             <div>
               <%= f.label :name, '（例）田中実', class: 'd-block mx-auto text-left label-example ' %>
             </div>
@@ -33,13 +27,7 @@
             <div>
               <%= f.email_field :email, class: 'signup-form', novalidate: false %>
             </div>
-            <% if f.object.errors.include?(:email) %>
-              <% f.object.errors.full_messages_for(:email).each do |err_msg| %>
-                <p class="alert alert-danger error mx-auto text-left">
-                  <%= err_msg %>
-                </p>
-              <% end %>
-            <% end %>
+            <%= render 'shared/colum_error_messages', { object: f.object, colum: :email } %>
             <div>
               <%= f.label :email, '（例）example@gmail.com', class: 'd-block mx-auto text-left label-example' %>
             </div>
@@ -50,13 +38,7 @@
             <div>
               <%= f.password_field :password, class: 'signup-form' %>
             </div>
-            <% if f.object.errors.include?(:password) %>
-              <% f.object.errors.full_messages_for(:password).each do |err_msg| %>
-                <p class="alert alert-danger error mx-auto text-left">
-                  <%= err_msg %>
-                </p>
-              <% end %>
-            <% end %>
+            <%= render 'shared/colum_error_messages', { object: f.object, colum: :password } %>
             <div>
               <%= f.label :password, '（例）password', class: 'd-block mx-auto text-left label-example' %>
             </div>
@@ -67,13 +49,7 @@
             <div>
               <%= f.password_field :password_confirmation, class: 'signup-form' %>
             </div>
-            <% if f.object.errors.include?(:password_confirmation) %>
-              <% f.object.errors.full_messages_for(:password_confirmation).each do |err_msg| %>
-                <p class="alert alert-danger error mx-auto text-left">
-                  <%= err_msg %>
-                </p>
-              <% end %>
-            <% end %>
+            <%= render 'shared/colum_error_messages', { object: f.object, colum: :password_confirmation } %>
             <div>
               <%= f.label :password_confirmation, '（例）password', class: 'd-block mx-auto text-left label-example' %>
             </div>
