@@ -1,0 +1,7 @@
+<% if object.errors.include?(colum) %>
+  <% object.errors.full_messages_for(colum).each do |err_msg| %>
+    <p class="alert alert-danger error mx-auto text-left">
+      <%= err_msg %>
+    </p>
+  <% end %>
+<% end %>
