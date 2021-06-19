@@ -27,9 +27,7 @@
                   <%= f.file_field :image, id: "post-img" %>
                 </label>
               </p>
-              <% if f.object.errors.include?(:image) %>
-                <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:image).first %></p>
-              <% end %>
+              <%= render 'shared/colum_error_messages', { object: f.object, colum: :image } %>
             </div>
             <div class="user-edit">
               <div class="label mx-auto">
@@ -37,9 +35,7 @@
                 <%= f.label :name, '【任意】', class: 'd-inline-block label-optional' %>
               </div>
               <%= f.text_field :name, class: 'edit-form' %>
-              <% if f.object.errors.include?(:name) %>
-                <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:name).first %></p>
-              <% end %>
+              <%= render 'shared/colum_error_messages', { object: f.object, colum: :name } %>
               <div>
                 <%= f.label :name, '（例）田中実', class: 'd-block mx-auto text-left label-example ' %>
               </div>
@@ -50,9 +46,7 @@
               <div>
                 <%= f.email_field :email, class: 'edit-form' %>
               </div>
-              <% if f.object.errors.include?(:email) %>
-                <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:email).first %></p>
-              <% end %>
+              <%= render 'shared/colum_error_messages', { object: f.object, colum: :email } %>
               <div>
                 <%= f.label :email, '（例）example@gmail.com', class: 'd-block mx-auto text-left label-example' %>
               </div>
@@ -63,9 +57,7 @@
               <div>
                 <%= f.password_field :password, class: 'edit-form' %>
               </div>
-              <% if f.object.errors.include?(:password) %>
-                <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password).first %></p>
-              <% end %>
+              <%= render 'shared/colum_error_messages', { object: f.object, colum: :password } %>
               <div>
                 <%= f.label :password, '（例）password', class: 'd-block mx-auto text-left label-example' %>
               </div>
@@ -76,9 +68,7 @@
               <div>
                 <%= f.password_field :password_confirmation, class: 'edit-form' %>
               </div>
-              <% if f.object.errors.include?(:password_confirmation) %>
-                <p class="alert alert-danger error mx-auto text-left"><%= f.object.errors.full_messages_for(:password_confirmation).first %></p>
-              <% end %>
+              <%= render 'shared/colum_error_messages', { object: f.object, colum: :password_confirmation } %>
               <div>
                 <%= f.label :password_confirmation, '（例）password', class: 'd-block mx-auto text-left label-example' %>
               </div>
