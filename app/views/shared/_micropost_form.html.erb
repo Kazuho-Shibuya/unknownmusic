@@ -10,7 +10,11 @@
     </p>
     <% if @search_result.nil? %>
       <% if f.object.errors.include?(:artist) %>
-        <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:artist).first %></p>
+        <% f.object.errors.full_messages_for(:artist).each do |err_msg| %>
+          <p class="alert alert-danger error text-left">
+            <%= err_msg %>
+          </p>
+        <% end %>
       <% else %>
         <p><%= f.label :artist,  '音楽検索してください', class: 'search-result-non' %></p>
       <% end %>
@@ -27,7 +31,11 @@
     </p>
     <% if @search_result.nil? %>
       <% if f.object.errors.include?(:song) %>
-        <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:song).first %></p>
+        <% f.object.errors.full_messages_for(:song).each do |err_msg| %>
+          <p class="alert alert-danger error text-left">
+            <%= err_msg %>
+          </p>
+        <% end %>
       <% else %>
         <p><%= f.label :song,  '音楽検索してください', class: 'search-result-non' %></p>
       <% end %>
@@ -43,7 +51,11 @@
         </span>
       </p>
       <% if f.object.errors.include?(:listening_url) %>
-        <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:listening_url).first %></p>
+        <% f.object.errors.full_messages_for(:listening_url).each do |err_msg| %>
+          <p class="alert alert-danger error text-left">
+            <%= err_msg %>
+          </p>
+        <% end %>
       <% else %>
         <p><%= f.label :listening_url,  '音楽検索してください', class: 'search-result-non' %></p>
       <% end %>
@@ -61,7 +73,11 @@
     </p>
     <p><%= f.text_area :content, placeholder: '内容を入力してください' %></p>
     <% if f.object.errors.include?(:content) %>
-      <p class="alert alert-danger error text-left"><%= f.object.errors.full_messages_for(:content).first %></p>
+      <% f.object.errors.full_messages_for(:content).each do |err_msg| %>
+        <p class="alert alert-danger error text-left">
+          <%= err_msg %>
+        </p>
+      <% end %>
     <% end %>
   </div>
   <div class="icon mt-2">
