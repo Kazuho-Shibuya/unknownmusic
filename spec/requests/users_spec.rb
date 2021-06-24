@@ -8,7 +8,7 @@ RSpec.describe 'Users', type: :request do
       get users_path
     end
 
-    example 'ログインページにリダイレクトされること' do
+    example 'ログインページにリダイレクトすること' do
       expect(response).to redirect_to new_session_url
     end
 
@@ -18,6 +18,10 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET #show' do
+    example 'ステータスが200であること' do
+      get user_path user.id
+      expect(response).to have_http_status(200)
+    end
   end
 
   describe 'GET #following' do
