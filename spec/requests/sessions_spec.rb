@@ -16,4 +16,18 @@ RSpec.describe 'Sessions', type: :request do
       expect(response).to have_http_status(200)
     end
   end
+
+  describe 'DELETE #destroy' do
+    before do
+      delete session_path user
+    end
+
+    example 'トップページにリダイレクトすること' do
+      expect(response).to redirect_to root_url
+    end
+
+    example 'ステータスが302であること' do
+      expect(response.status).to eq 302
+    end
+  end
 end
