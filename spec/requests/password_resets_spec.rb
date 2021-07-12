@@ -30,4 +30,11 @@ RSpec.describe 'PasswordResets', type: :request do
       expect(response).to have_http_status(302)
     end
   end
+
+  describe 'PATCH #update' do
+    example 'ステータスが302であること' do
+      patch password_reset_path user.id
+      expect(response.status).to eq 302
+    end
+  end
 end
