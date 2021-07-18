@@ -1,4 +1,5 @@
 class Mypage::UsersController < ApplicationController
+  before_action :logged_in_user
   before_action :check_test_user
 
   def edit; end
