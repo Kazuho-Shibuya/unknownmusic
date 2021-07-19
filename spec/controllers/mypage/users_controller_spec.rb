@@ -7,20 +7,6 @@ RSpec.describe Mypage::UsersController, type: :controller do
     allow(controller).to receive(:current_user).and_return(user)
   end
 
-  describe '#edit' do
-    before do
-      get :edit
-    end
-
-    example '正常にレスポンスを返していること' do
-      expect(response).to be_successful
-    end
-
-    example 'ステータスが200であること' do
-      expect(response.status).to eq 200
-    end
-  end
-
   describe '#update' do
     before do
       patch :update, params: { user: user_params }
