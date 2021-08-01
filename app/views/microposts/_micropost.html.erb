@@ -2,7 +2,7 @@
   <li id="micropost-<%= micropost.id %>">
     <div class="row row-micropost">
       <div class="col-2 px-0 text-center">
-        <%= image_tag micropost.user.image.to_s, class: "img-fluid rounded-circle user-img" %>
+        <%= link_to image_tag(micropost.user.image.to_s, class: "img-fluid rounded-circle user-img"),  micropost.user %>
       </div>
       <div class="col-10">
         <div class="row">
