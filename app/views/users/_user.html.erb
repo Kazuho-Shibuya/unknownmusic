@@ -1,5 +1,5 @@
 <li class="user<%= user.id %>">
-  <%= image_tag user.image.to_s, class: "img-fluid rounded-circle user-img" %>
+  <%= link_to image_tag(user.image.to_s, class: "img-fluid rounded-circle user-img"), user %>
   <%= link_to user.name, user, class: "user" %>
   <%= render 'follow_form', object: user, stats_user: @user if logged_in? %>
   <div class='admin-trash'>
