@@ -192,6 +192,9 @@ body {
       margin: 1rem 0 0 0;
       height: 5rem;
       width: 5rem;
+      &:hover {
+        border: solid 0.2rem white;
+      }
     }
   }
 }
