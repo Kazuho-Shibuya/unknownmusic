@@ -834,6 +834,9 @@ footer {
           margin: 1rem 1rem 1rem 0;
           height: 5rem;
           width: 5rem;
+          &:hover {
+            border: solid 0.2rem white;
+          }
         }
         .follow-style {
           float: right;
