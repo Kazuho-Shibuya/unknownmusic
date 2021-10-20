@@ -5,13 +5,13 @@ class AdminController < ApplicationController
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = 'ユーザを削除しました'
-    redirect_to users_url
+    redirect_to users_path
   end
 
   private
 
   # 管理者かどうか確認
   def check_admin_user
-    redirect_to(root_url) unless current_user.admin?
+    redirect_to(root_path) unless current_user.admin?
   end
 end
