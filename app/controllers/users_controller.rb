@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.page(params[:page]).search(params[:search])
-    redirect_to(root_url) && return unless @user.activated?
+    redirect_to(root_path) && return unless @user.activated?
   end
 
   def following

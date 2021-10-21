@@ -8,7 +8,7 @@ class LikesController < ApplicationController
     @micropost.favorite(current_user)
     @micropost.reload
     respond_to do |format|
-      format.html { redirect_back fallback_location: root_url }
+      format.html { redirect_back fallback_location: root_path }
       format.js
     end
   end
@@ -20,7 +20,7 @@ class LikesController < ApplicationController
     @micropost.unfavorite(current_user)
     @micropost.reload
     respond_to do |format|
-      format.html { redirect_back fallback_location: root_url }
+      format.html { redirect_back fallback_location: root_path }
       format.js
     end
   end

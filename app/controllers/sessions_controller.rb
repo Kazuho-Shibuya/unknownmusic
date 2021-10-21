@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         redirect_back_or user
       else
         flash[:warning] = 'アカウントが有効ではありません。メールの有効化リンクをクリックしてください'
-        redirect_to root_url
+        redirect_to root_path
       end
     else
       flash.now[:danger] = 'メールアドレスとパスワードの組み合わせが無効です'
@@ -22,6 +22,6 @@ class SessionsController < ApplicationController
   def destroy
     log_out if logged_in?
     flash[:success] = 'ログアウトしました'
-    redirect_to root_url
+    redirect_to root_path
   end
 end

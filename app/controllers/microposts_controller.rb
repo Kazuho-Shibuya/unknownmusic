@@ -11,7 +11,7 @@ class MicropostsController < ApplicationController
       @micropost = current_user.microposts.build(set_share_params)
       if @micropost.save
         flash[:success] = '投稿しました'
-        redirect_to home_index_url(current_user)
+        redirect_to home_index_path(current_user)
       else
         render_home
       end
@@ -22,7 +22,7 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.find_by(id: params[:id])
     @micropost.destroy
     flash[:success] = '投稿は削除されました'
-    redirect_back fallback_location: root_url
+    redirect_back fallback_location: root_path
   end
 
   def index

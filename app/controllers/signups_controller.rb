@@ -8,7 +8,7 @@ class SignupsController < ApplicationController
     if @signup_user.save
       @signup_user.send_activation_email
       flash[:info] = 'メールを確認して、アカウントを有効にしてください'
-      redirect_to root_url
+      redirect_to root_path
     else
       render 'new'
     end
