@@ -46,7 +46,7 @@ class PasswordResetsController < ApplicationController
   def valid_user
     unless @user&.activated? &&
            @user&.authenticated?(:reset, params[:id])
-      redirect_to root_url
+      redirect_to root_path
     end
   end
 
@@ -55,7 +55,7 @@ class PasswordResetsController < ApplicationController
     return unless @user.password_reset_expired?
 
     flash[:danger] = 'パスワードリセットのリンクは期限切れです'
-    redirect_to new_password_reset_url
+    redirect_to new_password_reset_path
   end
 
   # テストユーザかどうか確認する
@@ -64,6 +64,6 @@ class PasswordResetsController < ApplicationController
     return unless email == 'test@example.com'
 
     flash[:warning] = 'テストユーザのため変更できません'
-    redirect_to root_url
+    redirect_to root_path
   end
 end

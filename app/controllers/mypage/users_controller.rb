@@ -25,6 +25,6 @@ class Mypage::UsersController < ApplicationController
     return unless current_user_email == 'test@example.com'
 
     flash[:warning] = 'テストユーザのため変更できません'
-    redirect_to root_url
+    redirect_to root_path
   end
 end
