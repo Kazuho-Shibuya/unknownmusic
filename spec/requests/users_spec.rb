@@ -9,7 +9,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     example 'ログインページにリダイレクトすること' do
-      expect(response).to redirect_to new_session_url
+      expect(response).to redirect_to new_session_path
     end
 
     example 'ステータスが302であること' do
@@ -30,7 +30,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     example 'ログインページにリダイレクトすること' do
-      expect(response).to redirect_to new_session_url
+      expect(response).to redirect_to new_session_path
     end
 
     example 'ステータスが302であること' do
@@ -44,7 +44,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     example 'ログインページにリダイレクトすること' do
-      expect(response).to redirect_to new_session_url
+      expect(response).to redirect_to new_session_path
     end
 
     example 'ステータスが302であること' do

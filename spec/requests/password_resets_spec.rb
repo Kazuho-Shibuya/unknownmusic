@@ -23,7 +23,7 @@ RSpec.describe 'PasswordResets', type: :request do
     end
 
     example 'トップページにリダイレクトすること' do
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to root_path
     end
 
     example 'ステータスが302であること' do
