@@ -69,9 +69,9 @@
       </p>
     <% end %>
     <p class="mt-4">
-      <%= f.label :content, '内容（70文字以内）', class: "label" %>
+      <%= f.label :content, 'コメント', class: "label" %>
     </p>
-    <p><%= f.text_area :content, placeholder: '内容を入力してください' %></p>
+    <p><%= f.text_area :content, placeholder: '曲について一言！' %></p>
     <% if f.object.errors.include?(:content) %>
       <% f.object.errors.full_messages_for(:content).each do |err_msg| %>
         <p class="alert alert-danger error text-left">
