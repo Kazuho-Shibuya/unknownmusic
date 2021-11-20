@@ -7,7 +7,7 @@ CarrierWave.configure do |config|
       region: 'ap-northeast-1'
     }
 
-    config.fog_directory = 'unknownmusic-image'
+    config.fog_directory = ENV['S3_BUCKET'],
     config.cache_storage = :fog
     config.storage = :fog
   else
