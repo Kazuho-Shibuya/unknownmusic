@@ -1,28 +1,40 @@
-# ユーザ
+ユーザ
 User.create!(
-  [
-    {
-      name: '渋谷 一帆',
-      email: ENV['ADMIN_EMAIL'],
-      password: ENV['ADMIN_PASS'],
-      password_confirmation: ENV['ADMIN_PASS'],
-      admin: true,
-      activated: true,
-      activated_at: Time.zone.now,
-      image: File.open('./app/assets/images/admin_user.jpg')
-    },
-    {
-      name: 'テストユーザ',
-      email: 'test@example.com',
-      password: 'password',
-      password_confirmation: 'password',
-      admin: false,
-      activated: true,
-      activated_at: Time.zone.now,
-      image: File.open('./app/assets/images/test_login_user.jpg')
-    }
-  ]
+  name: '渋谷 一帆',
+  email: ENV['ADMIN_EMAIL'],
+  password: ENV['ADMIN_PASS'],
+  password_confirmation: ENV['ADMIN_PASS'],
+  admin: true,
+  activated: true,
+  activated_at: Time.zone.now,
+  image: File.open('./app/assets/images/admin_user.jpg')
 )
+
+# # ユーザ
+# User.create!(
+#   [
+#     {
+#       name: '渋谷 一帆',
+#       email: ENV['ADMIN_EMAIL'],
+#       password: ENV['ADMIN_PASS'],
+#       password_confirmation: ENV['ADMIN_PASS'],
+#       admin: true,
+#       activated: true,
+#       activated_at: Time.zone.now,
+#       image: File.open('./app/assets/images/admin_user.jpg')
+#     },
+#     {
+#       name: 'テストユーザ',
+#       email: 'test@example.com',
+#       password: 'password',
+#       password_confirmation: 'password',
+#       admin: false,
+#       activated: true,
+#       activated_at: Time.zone.now,
+#       image: File.open('./app/assets/images/test_login_user.jpg')
+#     }
+#   ]
+# )
 
 # # ダミーユーザ
 # User.create!(
