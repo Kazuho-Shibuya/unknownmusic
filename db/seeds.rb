@@ -7,7 +7,7 @@ User.create!(
   admin: true,
   activated: true,
   activated_at: Time.zone.now,
-  # image: File.open('./app/assets/images/admin_user.jpg')
+  image: File.open('./app/assets/images/admin_user.jpg')
 )
 
 # # ユーザ
