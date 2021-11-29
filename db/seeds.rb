@@ -2,7 +2,7 @@
 User.create!(
   [
     {
-      id: '1',
+      id: 1,
       name: '渋谷 一帆',
       email: ENV['ADMIN_EMAIL'],
       password: ENV['ADMIN_PASS'],
@@ -13,7 +13,7 @@ User.create!(
       # image: File.open('./app/assets/images/admin_user.jpg')
     },
     {
-      id: '2',
+      id: 2,
       name: 'テストユーザ',
       email: 'test@example.com',
       password: 'password',
@@ -30,7 +30,7 @@ User.create!(
 User.create!(
   [
     {
-      id: '3',
+      id: 3,
       name: '高田 莉子',
       email: 'riko@gmail.com',
       password: 'password',
@@ -41,7 +41,7 @@ User.create!(
       # image: File.open('./app/assets/images/riko.jpg')
     },
     {
-      id: '4',
+      id: 4,
       name: '宮本 明日香',
       email: 'asuka@gmail.com',
       password: 'password',
@@ -52,7 +52,7 @@ User.create!(
       # image: File.open('./app/assets/images/asuka.jpg')
     },
     {
-      id: '5',
+      id: 5,
       name: 'Amelie Smith',
       email: 'amelie@gmail.com',
       password: 'password',
@@ -63,7 +63,7 @@ User.create!(
       # image: File.open('./app/assets/images/amelie.jpg')
     },
     {
-      id: '6',
+      id: 6,
       name: '藤田 仁',
       email: 'hitoshi@gmail.com',
       password: 'password',
@@ -74,7 +74,7 @@ User.create!(
       # image: File.open('./app/assets/images/hitoshi.jpg')
     },
     {
-      id: '7',
+      id: 7,
       name: '清水 芽衣',
       email: 'mei@gmail.com',
       password: 'password',
@@ -85,7 +85,7 @@ User.create!(
       # image: File.open('./app/assets/images/mei.jpg')
     },
     {
-      id: '8',
+      id: 8,
       name: '長谷川 匠',
       email: 'takumi@gmail.com',
       password: 'password',
@@ -96,7 +96,7 @@ User.create!(
       # image: File.open('./app/assets/images/takumi.jpg')
     },
     {
-      id: '9',
+      id: 9,
       name: '藤井 蓮',
       email: 'renn@gmail.com',
       password: 'password',
@@ -107,7 +107,7 @@ User.create!(
       # image: File.open('./app/assets/images/renn.jpg')
     },
     {
-      id: '10',
+      id: 10,
       name: '山崎 誠',
       email: 'makoto@gmail.com',
       password: 'password',
@@ -118,7 +118,7 @@ User.create!(
       # image: File.open('./app/assets/images/makoto.jpg')
     },
     {
-      id: '11',
+      id: 11,
       name: '前田 愛子',
       email: 'aiko@gmail.com',
       password: 'password',
@@ -129,7 +129,7 @@ User.create!(
       # image: File.open('./app/assets/images/aiko.jpg')
     },
     {
-      id: '12',
+      id: 12,
       name: 'James Johnson',
       email: 'james@gmail.com',
       password: 'password',
@@ -140,7 +140,7 @@ User.create!(
       # image: File.open('./app/assets/images/james.jpg')
     },
     {
-      id: '13',
+      id: 13,
       name: '武田 悠人',
       email: 'yuuto@gmail.com',
       password: 'password',
@@ -151,7 +151,7 @@ User.create!(
       # image: File.open('./app/assets/images/yuuto.jpg')
     },
     {
-      id: '14',
+      id: 14,
       name: '近藤 蒼',
       email: 'ao@gmail.com',
       password: 'password',
@@ -162,7 +162,7 @@ User.create!(
       # image: File.open('./app/assets/images/ao.jpg')
     },
     {
-      id: '15',
+      id: 15,
       name: 'Eric Williams',
       email: 'eric@gmail.com',
       password: 'password',
@@ -173,7 +173,7 @@ User.create!(
       # image: File.open('./app/assets/images/eric.jpg')
     },
     {
-      id: '16',
+      id: 16,
       name: '中野 愛美',
       email: 'aimi@gmail.com',
       password: 'password',
@@ -184,7 +184,7 @@ User.create!(
       # image: File.open('./app/assets/images/aimi.jpg')
     },
     {
-      id: '17',
+      id: 17,
       name: 'Judy Brown',
       email: 'judy@gmail.com',
       password: 'password',
@@ -195,7 +195,7 @@ User.create!(
       # image: File.open('./app/assets/images/judy.jpg')
     },
     {
-      id: '18',
+      id: 18,
       name: '大塚 太郎',
       email: 'tarou@gmail.com',
       password: 'password',
@@ -206,7 +206,7 @@ User.create!(
       # image: File.open('./app/assets/images/tarou.jpg')
     },
     {
-      id: '19',
+      id: 19,
       name: '武田 陸',
       email: 'riku@gmail.com',
       password: 'password',
@@ -217,7 +217,7 @@ User.create!(
       # image: File.open('./app/assets/images/riku.jpg')
     },
     {
-      id: '20',
+      id: 20,
       name: 'Bonnie Jones',
       email: 'bonnie@gmail.com',
       password: 'password',
@@ -228,7 +228,7 @@ User.create!(
       # image: File.open('./app/assets/images/bonnie.jpg')
     },
     {
-      id: '21',
+      id: 21,
       name: '石井 秀人',
       email: 'hideto@gmail.com',
       password: 'password',
@@ -239,7 +239,7 @@ User.create!(
       # image: File.open('./app/assets/images/hideto.jpg')
     },
     {
-      id: '22',
+      id: 22,
       name: '高田 翔',
       email: 'kakeru@gmail.com',
       password: 'password',
@@ -250,7 +250,7 @@ User.create!(
       # image: File.open('./app/assets/images/kakeru.jpg')
     },
     {
-      id: '23',
+      id: 23,
       name: 'Sofia Miller',
       email: 'sofia@example.com',
       password: 'password',
@@ -261,7 +261,7 @@ User.create!(
       # image: File.open('./app/assets/images/sofia.jpg')
     },
     {
-      id: '24',
+      id: 24,
       name: '原 楓',
       email: 'kaede@gmail.com',
       password: 'password',
@@ -272,7 +272,7 @@ User.create!(
       # image: File.open('./app/assets/images/kaede.jpg')
     },
     {
-      id: '25',
+      id: 25,
       name: '増田 しずく',
       email: 'shizuku@gmail.com',
       password: 'password',
@@ -283,7 +283,7 @@ User.create!(
       # image: File.open('./app/assets/images/shizuku.jpg')
     },
     {
-      id: '26',
+      id: 26,
       name: '中島 明里',
       email: 'akari@gmail.com',
       password: 'password',
@@ -294,7 +294,7 @@ User.create!(
       # image: File.open('./app/assets/images/akari.jpg')
     },
     {
-      id: '27',
+      id: 27,
       name: 'Olivia Davis',
       email: 'olivia@example.com',
       password: 'password',
@@ -305,7 +305,7 @@ User.create!(
       # image: File.open('./app/assets/images/olivia.jpg')
     },
     {
-      id: '28',
+      id: 28,
       name: '野口 優花',
       email: 'yuuka@gmail.com',
       password: 'password',
@@ -316,7 +316,7 @@ User.create!(
       # image: File.open('./app/assets/images/yuuka.jpg')
     },
     {
-      id: '29',
+      id: 29,
       name: '加藤 多代',
       email: 'tayo@gmail.com',
       password: 'password',
@@ -327,7 +327,7 @@ User.create!(
       # image: File.open('./app/assets/images/tayo.jpg')
     },
     {
-      id: '30',
+      id: 30,
       name: '橋本 絵理香',
       email: 'erika@gmail.com',
       password: 'password',
@@ -338,7 +338,7 @@ User.create!(
       # image: File.open('./app/assets/images/erika.jpg')
     },
     {
-      id: '31',
+      id: 31,
       name: '木村 佳澄',
       email: 'kasumi@gmail.com',
       password: 'password',
@@ -349,7 +349,7 @@ User.create!(
       # image: File.open('./app/assets/images/kasumi.jpg')
     },
     {
-      id: '32',
+      id: 32,
       name: 'George Garcia',
       email: 'george@example.com',
       password: 'password',
@@ -360,7 +360,7 @@ User.create!(
       # image: File.open('./app/assets/images/george.jpg')
     },
     {
-      id: '33',
+      id: 33,
       name: '斎藤 七海',
       email: 'nanami@gmail.com',
       password: 'password',
@@ -371,7 +371,7 @@ User.create!(
       # image: File.open('./app/assets/images/nanami.jpg')
     },
     {
-      id: '34',
+      id: 34,
       name: '松井 優',
       email: 'yuu@gmail.com',
       password: 'password',
@@ -382,7 +382,7 @@ User.create!(
       # image: File.open('./app/assets/images/yuu.jpg')
     },
     {
-      id: '35',
+      id: 35,
       name: '佐藤 奏歌',
       email: 'souka@gmail.com',
       password: 'password',
@@ -393,7 +393,7 @@ User.create!(
       # image: File.open('./app/assets/images/souka.jpg')
     },
     {
-      id: '36',
+      id: 36,
       name: 'Evans Rodriguez',
       email: 'evans@example.com',
       password: 'password',
@@ -404,7 +404,7 @@ User.create!(
       # image: File.open('./app/assets/images/evans.jpg')
     },
     {
-      id: '37',
+      id: 37,
       name: '杉山 鈴',
       email: 'suzu@gmail.com',
       password: 'password',
@@ -415,7 +415,7 @@ User.create!(
       # image: File.open('./app/assets/images/suzu.jpg')
     },
     {
-      id: '38',
+      id: 38,
       name: '松田 奈緒',
       email: 'nao@gmail.com',
       password: 'password',
@@ -426,7 +426,7 @@ User.create!(
       # image: File.open('./app/assets/images/nao.jpg')
     },
     {
-      id: '39',
+      id: 39,
       name: '岩崎 瞳',
       email: 'hitomi@gmail.com',
       password: 'password',
@@ -437,7 +437,7 @@ User.create!(
       # image: File.open('./app/assets/images/hitomi.jpg')
     },
     {
-      id: '40',
+      id: 40,
       name: 'Bill Wilson',
       email: 'bill@example.com',
       password: 'password',
@@ -448,7 +448,7 @@ User.create!(
       # image: File.open('./app/assets/images/bill.jpg')
     },
     {
-      id: '41',
+      id: 41,
       name: '中川 樹',
       email: 'ituki@gmail.com',
       password: 'password',
@@ -459,7 +459,7 @@ User.create!(
       # image: File.open('./app/assets/images/ituki.jpg')
     },
     {
-      id: '42',
+      id: 42,
       name: '近藤 真央',
       email: 'mao@gmail.com',
       password: 'password',
@@ -470,7 +470,7 @@ User.create!(
       # image: File.open('./app/assets/images/mao.jpg')
     },
     {
-      id: '43',
+      id: 43,
       name: '宮本 遥',
       email: 'haruka@gmail.com',
       password: 'password',
@@ -481,7 +481,7 @@ User.create!(
       # image: File.open('./app/assets/images/haruka.jpg')
     },
     {
-      id: '44',
+      id: 44,
       name: '原 美香',
       email: 'mika@gmail.com',
       password: 'password',
@@ -492,7 +492,7 @@ User.create!(
       # image: File.open('./app/assets/images/mika.jpg')
     },
     {
-      id: '45',
+      id: 45,
       name: '宮崎 誉',
       email: 'homare@gmail.com',
       password: 'password',
@@ -503,7 +503,7 @@ User.create!(
       # image: File.open('./app/assets/images/homare.jpg')
     },
     {
-      id: '46',
+      id: 46,
       name: '金子 舞',
       email: 'mai@gmail.com',
       password: 'password',
@@ -514,7 +514,7 @@ User.create!(
       # image: File.open('./app/assets/images/mai.jpg')
     },
     {
-      id: '47',
+      id: 47,
       name: '木下 ふみ',
       email: 'fumi@gmail.com',
       password: 'password',
@@ -525,7 +525,7 @@ User.create!(
       # image: File.open('./app/assets/images/fumi.jpg')
     },
     {
-      id: '48',
+      id: 48,
       name: '高田 隼人',
       email: 'hayato@gmail.com',
       password: 'password',
@@ -536,7 +536,7 @@ User.create!(
       # image: File.open('./app/assets/images/hayato.jpg')
     },
     {
-      id: '49',
+      id: 49,
       name: '錦 雄太',
       email: 'yuuta@gmail.com',
       password: 'password',
@@ -547,7 +547,7 @@ User.create!(
       # image: File.open('./app/assets/images/yuuta.jpg')
     },
     {
-      id: '50',
+      id: 50,
       name: '中林 慎吾',
       email: 'sinngo@gmail.com',
       password: 'password',
