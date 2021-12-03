@@ -64,7 +64,9 @@ class User < ApplicationRecord
 
   # 有効化用のメールを送信する
   def send_activation_email
+    logger.debug("でばっく")
     UserMailer.account_activation(self).deliver_now
+    logger.debug("でばっくおおおおおおおお")
   end
 
   # パスワード再設定の属性を設定する
