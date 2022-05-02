@@ -1,6 +1,6 @@
 class Mypage::UsersController < ApplicationController
   before_action :logged_in_user
-  before_action :check_test_user
+  before_action :confirmation_test_user
 
   def edit; end
 
@@ -20,7 +20,7 @@ class Mypage::UsersController < ApplicationController
   end
 
   # テストユーザかどうか確認する
-  def check_test_user
+  def confirmation_test_user
     current_user_email = current_user.email
     return unless current_user_email == 'test@example.com'
 
