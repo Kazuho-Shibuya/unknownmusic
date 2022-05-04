@@ -19,10 +19,8 @@ class Mypage::UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :image)
   end
 
-  # テストユーザかどうか確認する
   def confirmation_test_user
-    current_user_email = current_user.email
-    return unless current_user_email == 'test@example.com'
+    return unless current_user.email == 'test@example.com'
 
     flash[:warning] = 'テストユーザのため変更できません'
     redirect_to root_path
