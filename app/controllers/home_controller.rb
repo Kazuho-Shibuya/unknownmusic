@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :logged_in_user
+  before_action :confirmation_logged_in_user?
   before_action :set_micropost
 
   def index

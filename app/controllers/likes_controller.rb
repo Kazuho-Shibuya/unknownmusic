@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :logged_in_user
+  before_action :confirmation_logged_in_user?
 
   def create
     @micropost = Micropost.find(params[:micropost_id])

@@ -1,5 +1,5 @@
 class Song::SearchController < ApplicationController
-  before_action :logged_in_user, only: %i[create]
+  before_action :confirmation_logged_in_user?, only: %i[create]
   before_action :set_micropost, only: %i[create]
 
   def index
