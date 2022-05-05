@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :logged_in_user, only: %i[create destroy]
+  before_action :confirmation_logged_in_user?, only: %i[create destroy]
 
   def create
     if micropost_params[:search_result_id].blank?

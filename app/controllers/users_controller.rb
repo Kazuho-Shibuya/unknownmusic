@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: %i[index following followers]
+  before_action :confirmation_logged_in_user?, only: %i[index following followers]
 
   def index
     @users = User.where(activated: true).page(params[:page]).search(params[:search])

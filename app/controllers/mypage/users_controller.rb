@@ -1,5 +1,5 @@
 class Mypage::UsersController < ApplicationController
-  before_action :logged_in_user
+  before_action :confirmation_logged_in_user?
   before_action :confirmation_test_user
 
   def edit; end
