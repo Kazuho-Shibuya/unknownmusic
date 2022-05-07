@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
   before_action :confirmation_logged_in_user?
-  before_action :check_admin_user
+  before_action :confirmation_admin_user?
 
   def destroy
     User.find(params[:id]).destroy
@@ -10,8 +10,7 @@ class AdminController < ApplicationController
 
   private
 
-  # 管理者かどうか確認
-  def check_admin_user
+  def confirmation_admin_user?
     redirect_to(root_path) unless current_user.admin?
   end
 end
