@@ -26,10 +26,9 @@ class MicropostsController < ApplicationController
   end
 
   def index
-    sort_except = Micropost.except(:order)
     count_like = Like.group(:micropost_id).order(Arel.sql('count(micropost_id) desc'))
                      .limit(10).pluck(:micropost_id)
-    @all_ranks = sort_except.find(count_like)
+    @all_ranks = Micropost.except(:order).find(count_like)
   end
 
   private
