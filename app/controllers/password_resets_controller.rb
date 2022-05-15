@@ -42,7 +42,6 @@ class PasswordResetsController < ApplicationController
     @user = User.find_by(email: params[:email])
   end
 
-  # 正しいユーザかどうか確認する
   def valid_user
     unless @user&.activated? &&
            @user&.authenticated?(:reset, params[:id])
