@@ -49,7 +49,6 @@ class PasswordResetsController < ApplicationController
     end
   end
 
-  # トークンが期限切れかどうか確認する
   def check_expiration
     return unless @user.password_reset_expired?
 
