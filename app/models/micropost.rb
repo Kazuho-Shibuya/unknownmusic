@@ -12,17 +12,14 @@ class Micropost < ApplicationRecord
 
   scope :sorted, -> { order(created_at: :desc) }
 
-  # 投稿をいいねする
   def favorite(user)
     likes.create(user_id: user.id)
   end
 
-  # 投稿のいいねを解除する
   def unfavorite(user)
     likes.find_by(user_id: user.id).destroy
   end
 
-  # 現在のユーザがいいねしていたらtrueを返す
   def favorite?(user)
     favorite_users.include?(user)
   end
