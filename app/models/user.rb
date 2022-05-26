@@ -85,17 +85,14 @@ class User < ApplicationRecord
              .or(Micropost.where(user_id: id))
   end
 
-  # ユーザをフォローする
   def follow(other_user)
     following << other_user
   end
 
-  # ユーザをフォロー解除する
   def unfollow(other_user)
     active_relationships.find_by(followed_id: other_user.id).destroy
   end
 
-  # 現在のユーザがフォローしてたらtrueを返す
   def following?(other_user)
     following.include?(other_user)
   end
@@ -111,7 +108,6 @@ class User < ApplicationRecord
 
   private
 
-  # メールアドレスをすべて小文字にする
   def downcase_email
     self.email = email.downcase
   end
