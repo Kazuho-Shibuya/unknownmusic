@@ -5,10 +5,9 @@
 <img alt="GitHub closed pull requests" src="https://img.shields.io/github/issues-pr-closed/Kazuho-Shibuya/unknownmusic?style=plastic">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Kazuho-Shibuya/unknownmusic?style=plastic">
 <a href="https://github.com/Kazuho-Shibuya/unknownmusic/languages/top"><img alt="GitHub issues" src="https://img.shields.io/github/languages/top/Kazuho-Shibuya/unknownmusic?style=plastic"></a>
-<img src="https://img.shields.io/badge/-Rails-CC0000.svg?logo=rails&style=plastic">
+<img src="https://img.shields.io/badge/-Rails-CC0000.svg?logo=ruby-on-rails&style=plastic">
 <img src="https://img.shields.io/badge/-Amazon%20AWS-232F3E.svg?logo=amazon-aws&style=plastic">
 <img src="https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=plastic">
-<img src="https://img.shields.io/badge/-Vim-019733.svg?logo=vim&style=plastic">
 
 # 概要
 
