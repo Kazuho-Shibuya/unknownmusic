@@ -13,7 +13,8 @@
 
 ### **「音楽を知る、きっかけを。」**
 
-*Unknown Music* は、気軽に音楽を発見、試聴、投稿できるアプリです。
+*Unknown Music* は、気軽に音楽を発見、試聴、投稿できるアプリです。<br>
+完全独学＋全て実務未経験だった技術を使用し、6ヶ月間（2020/05-2020/11）で開発しました。
 
 <img width="1440" alt="UnknownMusic" src="https://user-images.githubusercontent.com/54101854/98531981-6e09c300-22c4-11eb-922c-1a64fd10f071.png">
 
