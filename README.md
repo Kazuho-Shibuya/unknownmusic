@@ -11,7 +11,7 @@
 
 # Overview
 
-### **「Discover the music」**
+### **Discover the music**
 
 *Unknown Music* is an app that allows you to easily discover, listen to and contribute to music. Developed a Music Listening App between 2020/05 and 2020/11 using technology that was completely self-taught + all with no practical experience.
 
