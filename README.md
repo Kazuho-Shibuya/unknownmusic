@@ -13,7 +13,7 @@
 
 ### **Discover the music**
 
-*Unknown Music* is an app that allows you to easily discover, listen to and contribute to music. Developed a Music Listening App between 2020/05 and 2020/11 using technology that was completely self-taught + all with no practical experience.
+*Unknown Music* is an app that allows you to easily discover, listen to and contribute to music. Developed a Music Listening App between May and November 2020 using technology that was completely self-taught + all with no practical experience.
 
 <img width="1440" alt="UnknownMusic" src="https://user-images.githubusercontent.com/54101854/98531981-6e09c300-22c4-11eb-922c-1a64fd10f071.png">
 
