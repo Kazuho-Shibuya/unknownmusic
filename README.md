@@ -1,4 +1,4 @@
-# *Unknown Music* 【Music listening app】
+# *Unknown Music*
 <a href="https://github.com/Kazuho-Shibuya/unknownmusic/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/Kazuho-Shibuya/unknownmusic?style=plastic"></a>
 <a href="https://github.com/Kazuho-Shibuya/unknownmusic/issues-closed"><img alt="GitHub issues" src="https://img.shields.io/github/issues-closed/Kazuho-Shibuya/unknownmusic?style=plastic"></a>
 <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Kazuho-Shibuya/unknownmusic?style=plastic">
@@ -13,8 +13,7 @@
 
 ### **「Discover the music」**
 
-*Unknown Music* is an app that allows you to easily discover, listen to and contribute to music.<br>
-Developed a Music Listening App (2020/05 - 2020/11) using technology that was completely self-taught + all with no practical experience.
+*Unknown Music* is an app that allows you to easily discover, listen to and contribute to music. Developed a Music Listening App between 2020/05 and 2020/11 using technology that was completely self-taught + all with no practical experience.
 
 <img width="1440" alt="UnknownMusic" src="https://user-images.githubusercontent.com/54101854/98531981-6e09c300-22c4-11eb-922c-1a64fd10f071.png">
 
@@ -42,9 +41,10 @@ Therefore, I thought that an application **for discovering and listening to musi
 - Password reset
 - User authentication
 
-## Music （ Spotify API ）
-- Search （ Artist, song title and album cover display. ）
-- Audition （ One-tap listening. ）
+## Music
+- Search using  Spotify API
+- Artist, song title and album cover display
+- One-tap listening
 - Post
 
 ## Post
@@ -54,25 +54,29 @@ Therefore, I thought that an application **for discovering and listening to musi
 - Search
 
 ## Follow and Unfollow
-- Follow and Unfollow user （ Asynchronous ）
-- Display of the number of users being followed and the number of followers ( Asynchronous ）
-- List of following users and followers.
+- Asynchronous follow and unfollow user
+- Asynchronous display of the number of users being followed and the number of followers
+- List of following users and followers
 
 ## Others
 - Responsive support
 - Popular posts
 
 # Strong points
-- Cooperation （ Issues、Pull requests ）
-- Unique （ using Spotify API and Unparalleled themes. ）
-- Design （ Background image, Created with attention to detail, including the design when hovering. ）
-- improvement （ Constant problem identification and continuous development ）
+- Cooperation
+ - Issues、Pull requests
+- Unique
+ - using Spotify API and Unparalleled themes
+- Design
+ - Background image, Created with attention to detail, including the design when hovering
+- improvement
+ - Constant problem identification and continuous development
 
 # Issues, functions to be implemented in the future
 - Additional music category functionality
   - Display categories when searching for music
   - Show music in similar categories in recommendations
-  - Add categories to the content of your posts.
+  - Add categories to the content of your posts
   - Search by category and refine your posts
 
 # Environment and technology
@@ -107,6 +111,4 @@ Therefore, I thought that an application **for discovering and listening to musi
 
 <img width="1440" alt="AWS_ architecture" src="https://user-images.githubusercontent.com/54101854/98677236-193b7a80-23a0-11eb-86b9-f46cc803b491.png">
 
-Thank you for watching until the end.
-
-If you have any questions, please contact me at businessfive25@gmail.com
+Thank you for watching until the end. If you have any questions, please contact me at businessfive25@gmail.com
