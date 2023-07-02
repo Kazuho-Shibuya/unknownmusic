@@ -32,23 +32,23 @@ Therefore, I thought that an application **for discovering and listening to musi
 
 ## User
 - New registration
-- Login/Logout
+- Login and Logout
 - Test user login
 - Admin user
-- List of user
+- List of users
 - Login retention
 - Password reset
 - User authentication
 
 ## Music
-- Search using  Spotify API
-- Artist, song title and album cover display
+- Search using Spotify API
+  - Artist, song title and album cover display
 - One-tap listening
 - Post
 
 ## Post
 - Submit, listen to and delete
-- List of post
+- List of posts
 - Like
 - Search
 
@@ -63,15 +63,15 @@ Therefore, I thought that an application **for discovering and listening to musi
 
 # Strong points
 - Cooperation
- - Issues、Pull requests
+  - Issues, Pull requests
 - Unique
- - using Spotify API and Unparalleled themes
+  - using Spotify API and Unparalleled themes
 - Design
- - Background image, Created with attention to detail, including the design when hovering
+  - Background image, Created with attention to detail, including the design when hovering
 - improvement
- - Constant problem identification and continuous development
+  - Constant problem identification and continuous development
 
-# Issues, functions to be implemented in the future
+# Functions to be implemented in the future
 - Additional music category functionality
   - Display categories when searching for music
   - Show music in similar categories in recommendations
@@ -92,11 +92,13 @@ Therefore, I thought that an application **for discovering and listening to musi
 - SCSS
 
 ## Development
-- Docker/Docker-compose
+- Docker
+- Docker-compose
 - MySQL 5.7
 
 ## Production
-- AWS(VPC、EC2、RDS、S3、Route53、ALB、IAM、ACM、SES)
+- AWS
+  - VPC, EC2, RDS, S3, Route53, ALB, IAM, ACM,SES
 - Nginx
 - Unicorn
 
