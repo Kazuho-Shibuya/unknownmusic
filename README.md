@@ -25,7 +25,6 @@
 In our daily exposure to music, I have heard the following comments.
 - "I want information only about music, but social medias are noisy."
 - "There are few opportunities to encounter new music."
-- "It takes a lot of time to listen to the songs you are interested in."
 
 Therefore, I thought that an application **for discovering and listening to music in a casual way, specialising only in music**, would solve the above problems and created this application.
 
