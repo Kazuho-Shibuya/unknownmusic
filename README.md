@@ -63,52 +63,50 @@ Therefore, I thought that an application **for discovering and listening to musi
 - Popular posts
 
 # Strong points
-- Cooperation （ issues、pull requests ）
-- 独自（Spotify apiを使い、他に類を見ないテーマ）
-- 視覚（背景画像、ホバー時のデザインなど細かいところまでこだわりを持って制作）
-- 向上（常に問題を見つけ、継続的に開発）
+- Cooperation （ Issues、Pull requests ）
+- Unique （ using Spotify API and Unparalleled themes. ）
+- Design （ Background image, Created with attention to detail, including the design when hovering. ）
+- improvement （ Constant problem identification and continuous development ）
 
-# 課題、今後実装したい機能
-- 音楽カテゴリ機能追加
-  - 音楽検索時にカテゴリを表示
-  - 同様のカテゴリの音楽をおすすめに表示
-  - 投稿内容にカテゴリを追加
-  - カテゴリで検索し、投稿内容を絞り込み
+# Issues, functions to be implemented in the future
+- Additional music category functionality
+  - Display categories when searching for music
+  - Show music in similar categories in recommendations
+  - Add categories to the content of your posts.
+  - Search by category and refine your posts
 
-# 環境・使用技術
+# Environment and technology
 
-## バックエンド
+## Back end
 - Ruby 2.5.0
 - Rails 5.2.4.4
 
-## フロントエンド
+## Front end
 - HTML5/CSS3
 - Bootstrap4
 - JavaScript
 - JQuery
 - SCSS
 
-## 開発環境
+## Development
 - Docker/Docker-compose
 - MySQL 5.7
 
-## 本番環境
+## Production
 - AWS(VPC、EC2、RDS、S3、Route53、ALB、IAM、ACM、SES)
 - Nginx
 - Unicorn
 
-## テスト
+## Test
 - RSpec 83.51% covered
 
-## その他使用技術
+## Others
 - Spotify api
 
-## インフラ構成図
+## Infrastructure configuration diagram
 
 <img width="1440" alt="AWS_ architecture" src="https://user-images.githubusercontent.com/54101854/98677236-193b7a80-23a0-11eb-86b9-f46cc803b491.png">
 
-最後までご覧いただき、ありがとうございました。
+Thank you for watching until the end.
 
-何かございましたら、下記までご連絡をいただけますと幸いです。
-
-→ [Twitterはこちらになります](https://twitter.com/kazuho_web)
+If you have any questions, please contact me at businessfive25@gmail.com
